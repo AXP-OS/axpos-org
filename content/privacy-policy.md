@@ -3,7 +3,7 @@ title: Privacy Policy
 toc: true
 ---
 
-Last [changed](https://codeberg.org/AXP-OS_releases/axpos.org/blame/commit/hugo/privacy-policy.md): `2025-02-10`
+Last [changed](https://codeberg.org/AXP-OS_releases/axpos-org/blame/branch/hugo/content/privacy-policy.md): `2025-02-10`
 
 # The AXP.OS Project
 

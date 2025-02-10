@@ -3,7 +3,7 @@ title: Terms & Conditions
 toc: true
 ---
 
-Last [changed](https://codeberg.org/AXP-OS_releases/axpos.org/blame/commit/hugo/privacy-policy.md): `2025-02-10`
+Last [changed](https://codeberg.org/AXP-OS_releases/axpos-org/blame/branch/hugo/content/terms.md): `2025-02-10`
 
 Please read these terms and conditions carefully before using Our Services.
 

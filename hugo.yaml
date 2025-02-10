@@ -73,7 +73,7 @@ params:
 
   editURL:
     enable: true
-    base: "https://codeberg.org/AXP-OS_releases/axpos-org/blame/branch/hugo"
+    base: "https://codeberg.org/AXP-OS_releases/axpos-org/blame/branch/hugo/content"
 
   # set global variables
   # usage:
