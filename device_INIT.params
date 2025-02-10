@@ -1,0 +1,24 @@
+#!/bin/bash
+###############################################################################
+# device specs for creating a new page
+###############################################################################
+export HUGO_VENDOR=
+export HUGO_NAME=
+export HUGO_CODENAME=
+export HUGO_ANDROID=
+export HUGO_ENCRYPTION=
+export HUGO_FIRMWARE=
+export HUGO_RELOCKABLE=
+export HUGO_VERIFIEDBOOT=
+export HUGO_FLAVORS=
+export HUGO_STATE=
+export HUGO_SUPPORTLEVEL=
+export HUGO_DEBUGBOOTPATH=
+export HUGO_FACTORYZIP=
+export HUGO_ISAB=
+export HUGO_ISPIXEL=
+export HUGO_KILINK=
+export HUGO_CI_GUIDE=
+export HUGO_CI_GUIDE_PATH=
+export HUGO_XDALINK=
+export HUGO_FIRSTRELEASE=

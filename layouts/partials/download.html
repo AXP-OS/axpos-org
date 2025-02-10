@@ -1,0 +1,114 @@
+<h3>Download</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Flavor<br>(<a href="/Flavors" target="_blank">what's this?</a>)</th>
+      <th>OS Zip</th>
+      {{- if eq .factory "yes" -}}<th>FACTORY zip</th>{{ end }}
+      {{- if eq .relock "yes" -}}<th>AVB key<br>(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</th>{{ end }}
+      <th>Release key<br>(<a href="/docs/knowledge/signatures/#build-signatures" target="_blank">what's this?</a>)</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{- if in .flavors "Regular" -}}
+    <tr>
+      <td><i>Regular</i></td>
+      <td>
+	<a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/" target="_blank">
+	  <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+	</a>
+      </td>
+      {{- if eq .factory "yes" -}}
+      <td>
+	<a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/factory/" target="_blank">
+	  <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+	</a>
+      </td>
+      {{ end }}
+      {{- if eq .relock "yes" -}}
+      <td>
+	<a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_avb_pkmd.bin" target="_blank">
+	  <div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+	</a>
+      </td>
+      {{ end }}
+      <td>
+	<a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_pubkey" target="_blank"i>
+	  <div style="text-align: center;">{{ (printf "{{< icon name=\"otakey\" attributes=\"height=1.6em\" >}}" | markdownify) }}</div><center><i>(right click, save-as)</i></center>
+	</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+	<a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/" target="_blank">
+	  <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+	</a>
+      </td>
+      {{- if eq .factory "yes" -}}
+      <td>
+	<a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/factory/" target="_blank">
+	  <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+        </a>
+      </td>
+      <td></td>
+      {{ else }}
+      <td></td>
+      {{ end }}
+      {{ if eq .relock "yes" }}<td></td>{{ end }}
+     </tr>
+    {{ end }}
+
+    {{- if in .flavors "Slim" -}}
+    <tr>
+     <td><i/>Slim</i></td>
+     <td>
+        <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/" target="_blank">
+         <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+        </a>
+     </td>
+    {{- if eq .factory "yes" -}}
+     <td>
+        <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/factory/" target="_blank">
+         <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+        </a>
+     </td>
+     {{ end }}
+     {{- if eq .relock "yes" -}}
+     <td>
+        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_avb_pkmd.bin" target="_blank">
+         <div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+        </a>
+     </td>
+     {{ end }}
+     <td>
+        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_pubkey" target="_blank">
+         <div style="text-align: center;">{{ (printf "{{< icon name=\"otakey\" attributes=\"height=1.6em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+        </a><i>(right click, save-as)</i>
+     </td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>
+        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/" target="_blank">
+         <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+        </a>
+     </td>
+     {{- if eq .factory "yes" -}}
+     <td>
+        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/factory/" target="_blank">
+         <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+        </a>
+     </td>
+     <td></td>
+    {{ else }}
+    <td></td>
+    {{ end }}
+    {{ if eq .relock "yes" }}<td></td>{{ end }}
+   </tr>
+   {{ end }}
+ </tbody>
+</table>

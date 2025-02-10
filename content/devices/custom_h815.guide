@@ -1,0 +1,28 @@
+#### Pre-requirements
+
+AXP.OS for the LG G4 is a special release as it is one of the rare devices where we still support [FDE](https://github.com/AXP-OS/build/wiki/Device-Encryption) because all attempts to get FBE working (backporting FBE to the msm8992 kernel) failed.
+
+So to get the most out of your device we enforce the usage of F2FS which requires that you follow these simple steps first (AXP.OS won't even boot otherwise):
+
+_**Note: The following process will WIPE all your user data, photos, everything. .. and no, there is no other option. So you better have a backup and you better have tested the restore of that backup actually works.**_
+
+1. flash latest **"321 or later" <-- !** TWRP build first!
+   - download from [here](https://leech.binbash.rocks:8008/TWRP/g4/)
+   - `fastboot flash recovery <TWRP.....img>`
+1. boot TWRP
+1. Select `Wipe`
+1. `Swipe` to `Factory Reset` (this will also clear any encryption metadata ever stored)
+1. Press the `HOME` button
+1. Select `Wipe`
+1. Select `Advanced Wipe`
+1. Select only `Cache` (**not** Dalvik/ART cache)
+1. Select `Repair or Change File System`
+1. Select `Change File System`
+1. Select `F2FS` and swipe to change it
+1. Press the `HOME` button
+1. Select `Wipe`
+1. Select `Format data`
+1. Type `yes`
+1. Verify the output says it was formatted with `f2fs`!
+1. Press the `HOME` button
+1. continue with the regular _Install (non A/B)_ guide: 

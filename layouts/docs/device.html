@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }}'>
+    {{ partial "sidebar.html" (dict "context" .) }}
+    {{ partial "toc.html" . }}
+    <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
+        {{ partial "breadcrumb.html" . }}
+        <div class="content">
+            <h1>{{ .Title }}</h1>
+            {{ $docbaseurl := "" }}
+
+            {{ $devicename := .Param "title" }}
+            {{ $android := .Param "android" }}
+            {{ $codename := .Param "codename" }}
+            {{ $encryption := .Param "encryption" }}
+            {{ $firmware := .Param "firmware" }}
+            {{ $relock := .Param "relockable" }}
+            {{ $verifiedboot := .Param "verifiedboot" }}
+            {{ $flavors := .Param "flavors" }}
+            {{ $state := .Param "state" }}
+            {{ $supportlevel := .Param "supportlevel" }}
+            {{ $debugbootpath := .Param "debugbootpath" }}
+            {{ $isab := .Param "isab" }}
+            {{ $factory := .Param "factoryzip" }}
+            {{ $kilink := .Param "kilink" }}
+            {{ $ispixel := .Param "ispixel" }}
+            {{ $custominstall := .Param "custominstall" }}
+            {{ $custominstall_path := .Param "custominstall_path" }}
+            {{ $xdalink := .Param "xdalink" }}
+            {{ $firstrelease := .Param "firstrelease" }}
+
+            {{ partial "overview" (dict "docbaseurl" $docbaseurl "devicename" $devicename "codename" $codename "flavors" $flavors "debugbootpath" $debugbootpath "isab" $isab "supportlevel" $supportlevel "relock" $relock "encryption" $encryption "verifiedboot" $verifiedboot "state" $state "firmware" $firmware "android" $android "firstrelease" $firstrelease) }}
+	    {{ partial "guide" (dict "docbaseurl" $docbaseurl "devicename" $devicename "codename" $codename "flavors" $flavors "debugbootpath" $debugbootpath "isab" $isab "supportlevel" $supportlevel "kilink" $kilink "relock" $relock "ispixel" $ispixel "custominstall" $custominstall "custominstall_path" $custominstall_path "firmware" $firmware "xdalink" $xdalink) }}
+            {{ partial "download" (dict "docbaseurl" $docbaseurl "devicename" $devicename "codename" $codename "flavors" $flavors "debugbootpath" $debugbootpath "isab" $isab "supportlevel" $supportlevel "relock" $relock "factory" $factory) }}
+
+        </div>
+        {{ partial "components/last-updated.html" . }}
+        {{ partial "components/pager.html" . }}
+        {{ partial "components/comments.html" . }}
+      </main>
+    </article>
+  </div>
+{{ end }}

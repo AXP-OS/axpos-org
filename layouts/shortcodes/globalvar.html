@@ -1,0 +1,15 @@
+{{ $key := .Get "key" }}
+{{ $format := .Get "format" | default "false" }}
+{{ $uri := .Get "uripath" | default "link" }}
+{{ $linkname := .Get "linkname" | default $uri }}
+{{ $value := index $.Site.Params.globalvars $key }}
+
+{{ if eq $format "true" }}
+    {{ $value | markdownify }}
+{{ else }}
+  {{ if strings.HasPrefix $value "http" }}
+    <a href="{{- $value -}}{{- $uri -}}" target="_blank" rel="noopener noreferrer">{{- $linkname -}}</a>
+  {{ else }}
+    {{- $value -}}
+  {{ end }}
+{{ end }}

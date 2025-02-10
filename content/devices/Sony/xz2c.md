@@ -1,0 +1,25 @@
+---
+title: "Sony XZ2 compact"
+codename: xz2c
+android: 13
+encryption: "FBEv2"
+firmware: "manual"
+relockable: "no"
+verifiedboot: "yes"
+flavors: "Regular"
+state: "!! ALPHA !!"
+supportlevel: community
+debugbootpath: /cache
+factoryzip: "no"
+isab: "yes"
+ispixel: "no"
+kilink: 
+custominstall: ""
+custominstall_path: ""
+xdalink: ""
+firstrelease: "_[IN-PROGRESS](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/13)_"
+
+type: docs
+layout: device
+prev: devices/Sony
+---

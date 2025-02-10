@@ -1,0 +1,4 @@
+{{ $markdownTemplate := readFile "device.md" }}
+{{ $parsedTemplate := $markdownTemplate | .Page.RenderString }}
+{{ $parsedTemplate | markdownify }}
+{{ $markdownTemplate }}

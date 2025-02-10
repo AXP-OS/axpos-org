@@ -1,0 +1,24 @@
+#!/bin/bash
+###############################################################################
+# device specs for creating a new page
+###############################################################################
+export HUGO_VENDOR="LG"
+export HUGO_NAME="LG G4 (H815)"
+export HUGO_CODENAME="h815"
+export HUGO_ANDROID="11"
+export HUGO_ENCRYPTION="FDE"
+export HUGO_FIRMWARE="manual"
+export HUGO_RELOCKABLE="no"
+export HUGO_VERIFIEDBOOT="no"
+export HUGO_FLAVORS="Regular"
+export HUGO_STATE="stable"
+export HUGO_SUPPORTLEVEL="team"
+export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
+export HUGO_FACTORYZIP="no"
+export HUGO_ISAB="no"
+export HUGO_ISPIXEL=
+export HUGO_KILINK=
+export HUGO_CI_GUIDE="yes"
+export HUGO_CI_GUIDE_PATH="content/devices/custom_${HUGO_CODENAME}.guide"
+export HUGO_XDALINK="https://xdaforums.com/t/rom-a11-official-microg-hardened-h815-axp-os-18-1.4708920/"
+export HUGO_FIRSTRELEASE="2024-12-20"

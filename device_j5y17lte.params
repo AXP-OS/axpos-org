@@ -1,0 +1,24 @@
+#!/bin/bash
+###############################################################################
+# device specs for creating a new page
+###############################################################################
+export HUGO_VENDOR="Samsung"
+export HUGO_NAME="Samsung J5 (2017)"
+export HUGO_CODENAME="j5y17lte"
+export HUGO_ANDROID="10"
+export HUGO_ENCRYPTION="FBEv1"
+export HUGO_FIRMWARE="manual"
+export HUGO_RELOCKABLE="no"
+export HUGO_VERIFIEDBOOT="no"
+export HUGO_FLAVORS="Regular"
+export HUGO_STATE="stable"
+export HUGO_SUPPORTLEVEL="team"
+export HUGO_DEBUGBOOTPATH="/cache"
+export HUGO_FACTORYZIP="no"
+export HUGO_ISAB="no"
+export HUGO_ISPIXEL="no"
+export HUGO_KILINK="klte-and-maybe-hlte"
+export HUGO_CI_GUIDE="yes"
+export HUGO_CI_GUIDE_PATH="content/devices/custom_${HUGO_CODENAME}.guide"
+export HUGO_XDALINK="https://xdaforums.com/t/rom-a10-official-microg-hardened-j5y17lte-axp-os-17-1.4644557/"
+export HUGO_FIRSTRELEASE="2024-06-20"

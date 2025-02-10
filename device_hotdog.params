@@ -1,0 +1,22 @@
+#!/bin/bash
+###############################################################################
+# device specs for creating a new page
+###############################################################################
+export HUGO_VENDOR="OnePlus"
+export HUGO_NAME="OnePlus 7T Pro"
+export HUGO_CODENAME="hotdog"
+export HUGO_ANDROID="13"
+export HUGO_ENCRYPTION="FBEv2"
+export HUGO_FIRMWARE="included"
+export HUGO_RELOCKABLE="no"
+export HUGO_VERIFIEDBOOT="yes"
+export HUGO_FLAVORS="Regular"
+export HUGO_STATE="stable"
+export HUGO_SUPPORTLEVEL="team"
+export HUGO_DEBUGBOOTPATH="/metadata"
+export HUGO_FACTORYZIP="no"
+export HUGO_ISAB="yes"
+export HUGO_ISPIXEL="no"
+export HUGO_KILINK="guacamolehotdog"
+export HUGO_XDALINK="https://xdaforums.com/t/rom-a13-official-microg-hardened-hotdog-axp-os-20-0.4625525/"
+export HUGO_FIRSTRELEASE="2023-07-23"

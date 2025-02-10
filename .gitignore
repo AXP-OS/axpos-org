@@ -1,0 +1,10 @@
+# Hugo output
+public/
+resources/
+.hugo_build.lock
+
+# Editor
+.vscode/
+
+# Misc
+static/img/imp.png

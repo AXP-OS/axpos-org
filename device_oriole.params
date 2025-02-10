@@ -1,0 +1,22 @@
+#!/bin/bash
+###############################################################################
+# device specs for creating a new page
+###############################################################################
+export HUGO_VENDOR="Google"
+export HUGO_NAME="Google Pixel 6"
+export HUGO_CODENAME="oriole"
+export HUGO_ANDROID="13"
+export HUGO_ENCRYPTION="FBEv1"
+export HUGO_FIRMWARE="included"
+export HUGO_RELOCKABLE="yes"
+export HUGO_VERIFIEDBOOT="yes"
+export HUGO_FLAVORS="Regular"
+export HUGO_STATE="stable"
+export HUGO_SUPPORTLEVEL="community"
+export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
+export HUGO_FACTORYZIP="yes"
+export HUGO_ISAB="yes"
+export HUGO_ISPIXEL="yes"
+export HUGO_KILINK=
+export HUGO_XDALINK=
+export HUGO_FIRSTRELEASE="2025-02-08"
