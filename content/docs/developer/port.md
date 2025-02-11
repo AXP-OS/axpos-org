@@ -47,7 +47,7 @@ AXP.OS includes extendrom by default so this would conflict with any manual incl
 
 ### extract and push vendor/firmware
 
-1. extract the latest vendor OTA (e.g. by [ROME](https://code.binbash.rocks:8443/mAid/android_rome)) for ZIPs or [SALT](https://github.com/steadfasterX/salt) for KDZ's. **Example sources** where you can find those are:
+1. extract the latest vendor OTA (e.g. by [ROME](https://code.binbash.rocks/mAid/android_rome)) for ZIPs or [SALT](https://github.com/steadfasterX/salt) for KDZ's. **Example sources** where you can find those are:
    - _NOTE1: ensure you select a trusted source, I cannot guarantee that the following are trusted though!_
    - _NOTE2: ensure you choose the latest "global" one (i.e. never provider specific ones) for the supported Android version (which is reflected by the device tree branch name)_
    - OnePlus: e.g. on [XDA](https://www.google.com/search?q=site%3Axdaforums.com+OTA+oneplus+%3CREPLACE-WITH-DEVICE-NAME%3E)
@@ -132,7 +132,7 @@ check: `../axp/Scripts/LineageOS-<VERSION>/CVE_Patchers/android_kernel_<vendor>_
 #### troubleshooting kernel patching
 
 - if kernel defconfig can't be found: add it manually to [getDefconfig](https://github.com/AXP-OS/build/blob/a1508ef817cded844cb984131e0868b2cbc84801/Scripts/Common/Functions.sh#L873)
-- if it does not _compile_: follow [generate & test kernel patches](https://github.com/AXP-OS/build/wiki/port-guide#generate--test-kernel-patches) and add exceptions to [Fix_CVE_Patchers.sh](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Fix_CVE_Patchers.sh)
+- if it does not _compile_: follow [generate & test kernel patches](/docs/developer/port/#generate--test-kernel-patches) and add exceptions to [Fix_CVE_Patchers.sh](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Fix_CVE_Patchers.sh)
 - if it does not _boot_: overwrite the device default CONFIG (e.g. like [this](https://github.com/sfX-android/automation_scripts/blob/d20f7dce494c72e956eb4e7efde2c0705cb969b3/roles/axp/common/templates/divested.vars.j5y17lte.j2#L13C8-L13C28))
 
 ## Build-Process automation
