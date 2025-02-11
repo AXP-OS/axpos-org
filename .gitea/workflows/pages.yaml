@@ -91,6 +91,7 @@ jobs:
           username: ${{ gitea.actor }}
           git_name: ${{ gitea.actor }}
           force: false
+          commit_message: "rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
           folder: ./public
 
   #mirror:
