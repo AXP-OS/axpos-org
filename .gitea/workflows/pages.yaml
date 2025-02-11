@@ -103,6 +103,16 @@ jobs:
             --baseURL "${{ vars.AXPOS_WEB_URL }}/"
           cp .domains public/
 
+      - name: "Deploy into pages branch"
+        uses: https://itsblue.dev/actions/codeberg-pages-deploy@v1
+        with:
+          token: ${{ secrets.LOCAL_TOKEN_REPO_RW }}
+          username: ${{ gitea.actor }}
+          git_name: "gitea-actions[bot]"
+          force: false
+          commit_message: "rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
+          folder: ./public
+
       - name: Push changes to main branch
         run: |
           CMT=0
@@ -117,16 +127,6 @@ jobs:
             git commit -m "changed by hugo compile"
             git push
           fi
-
-      - name: "Deploy into pages branch"
-        uses: https://itsblue.dev/actions/codeberg-pages-deploy@v1
-        with:
-          token: ${{ secrets.LOCAL_TOKEN_REPO_RW }}
-          username: ${{ gitea.actor }}
-          git_name: ${{ gitea.actor }}
-          force: false
-          commit_message: "rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
-          folder: ./public
 
   mirror:
     needs: build
