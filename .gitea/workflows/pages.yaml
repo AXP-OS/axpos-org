@@ -96,5 +96,5 @@ jobs:
   mirror:
     needs: build
     uses: AXP.OS/axpos-org/.gitea/workflows/mirror_releases_org.yaml@hugo
-    with:
-     token: ${{ secrets.LOCAL_TOKEN_RO }}
+    secrets:
+     LOCAL_TOKEN_RO: ${{ secrets.LOCAL_TOKEN_RO }}
