@@ -83,7 +83,7 @@ jobs:
           TZ: Europe/Berlin
         run: |
           git submodule update --remote
-          if [ "${{ inputs.forceimp }}" == "true" ];then 
+          if [ -z "${{ inputs.forceimp }}" ] || [ "${{ inputs.forceimp }}" == "true" ];then 
             ./text_convert.sh "${{ vars.AXPOS_WEB_IMPRINT }}" static/img/imp.png
           fi
           if [ "${{ inputs.force }}" == "true" ];then
