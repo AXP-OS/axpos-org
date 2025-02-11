@@ -117,7 +117,7 @@ jobs:
           if [ $CMT -eq 1 -o $CMTL -gt 0 ];then 
             git config user.name "gitea-actions[bot]"
             git config user.email "<sherlock@binbash.rocks>"
-            git commit -m "changed by hugo compile"
+            git commit -m "changed by hugo compile 🛠️"
             git push
             echo "pushed changes 🚀 !"
           else
@@ -130,8 +130,9 @@ jobs:
           token: ${{ secrets.LOCAL_TOKEN_REPO_RW }}
           username: ${{ gitea.actor }}
           git_name: "gitea-actions[bot]"
+          git_email: "sherlock@binbash.rocks"
           force: true
-          commit_message: "rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
+          commit_message: "🛠️ rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
           folder: ./public
 
   mirror:
