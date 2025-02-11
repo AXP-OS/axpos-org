@@ -16,7 +16,7 @@ ispixel: "yes"
 kilink: 
 custominstall: ""
 custominstall_path: ""
-xdalink: ""
+xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-oriole-axp-os-20-0.4718167/"
 firstrelease: "2025-02-08"
 
 type: docs
