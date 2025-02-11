@@ -109,7 +109,7 @@ jobs:
           token: ${{ secrets.LOCAL_TOKEN_REPO_RW }}
           username: ${{ gitea.actor }}
           git_name: "gitea-actions[bot]"
-          force: true
+          force: false
           commit_message: "rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
           folder: ./public
 
