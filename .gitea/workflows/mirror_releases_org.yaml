@@ -11,12 +11,8 @@
 name: "Mirror RELEASE repo to ${{ vars.MIRROR_RELEASE_ORG_NAME }}"
 run-name: Initiated by ${{ gitea.actor }}
 on:
-#  push:
-#    branches:
-#      - pages
-  pull_request:       # deployment will push to pages via PR
   workflow_dispatch:  # button (shown only when in default branch)
-  workflow_call:      # allow to call it
+  workflow_call:      # allow to call it after page has been built
 
 jobs:
   build:
