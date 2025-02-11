@@ -105,11 +105,18 @@ jobs:
 
       - name: Push changes to main branch
         run: |
-          git add -A
-          git config user.name "gitea-actions[bot]"
-          git config user.email "<sherlock@binbash.rocks>"
-          git commit -m "changed by hugo compile"
-          git push
+          CMT=0
+          # add unstaged changes
+          git add -A || CMT=1
+          # check for uncommitted changes
+          CMTL=$(git status --porcelain=v1 | wc -l 2>/dev/null)
+          # commit if any of the above require it
+          if [ $CMT -eq 1 -o $CMTL -gt 0 ];then 
+            git config user.name "gitea-actions[bot]"
+            git config user.email "<sherlock@binbash.rocks>"
+            git commit -m "changed by hugo compile"
+            git push
+          fi
 
       - name: "Deploy into pages branch"
         uses: https://itsblue.dev/actions/codeberg-pages-deploy@v1
