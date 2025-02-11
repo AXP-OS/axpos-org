@@ -90,7 +90,7 @@ jobs:
           token: ${{ secrets.LOCAL_TOKEN_REPO_RW }}
           username: ${{ gitea.actor }}
           git_name: ${{ gitea.actor }}
-          force: true
+          force: false
           folder: ./public
 
   #mirror:
