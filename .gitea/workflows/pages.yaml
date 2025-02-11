@@ -95,4 +95,4 @@ jobs:
 
   mirror:
     needs: build
-    uses: ${{ github.repository }}/.gitea/workflows/mirror_releases_org.yaml@hugo
+    uses: AXP.OS/axpos-org/.gitea/workflows/mirror_releases_org.yaml@hugo
