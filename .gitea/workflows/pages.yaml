@@ -94,6 +94,8 @@ jobs:
           commit_message: "rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
           folder: ./public
 
-  #mirror:
-  #  needs: build
-  #  uses: ./.gitea/workflows/mirror_releases_org.yaml
+  mirror:
+    needs: build
+    uses: ./.gitea/workflows/mirror_releases_org.yaml
+    secrets:
+      token: ${{ secrets.LOCAL_TOKEN_RO }}
