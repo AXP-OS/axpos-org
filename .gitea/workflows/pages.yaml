@@ -16,12 +16,12 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: 'Override ALL existing device pages?'
+        description: 'Force rebuild existing device page(s)?'
         required: false
         default: false
         type: boolean
       forcewhat:
-        description: 'specify "all | <device-codename> [_SPACE_ <device-codename>]"'
+        description: 'specify: <leave-emtpy> or "all" | "<device-codename> [_SPACE_ <device-codename>]"'
         required: false
         type: string
 
@@ -80,7 +80,7 @@ jobs:
           git submodule update --remote
           ./text_convert.sh "${{ vars.AXPOS_WEB_IMPRINT }}" static/img/imp.png
           if [ "${{ inputs.force }}" == "true" ];then
-            if [ "${{ inputs.forcewhat }}" == "all" ];then
+            if [ -z "${{ inputs.forcewhat }}" ] || [ "${{ inputs.forcewhat }}" == "all" ];then
               ./create_page.sh all force
             else
               for p in ${{ inputs.forcewhat }};do
