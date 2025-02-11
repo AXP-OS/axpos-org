@@ -98,3 +98,4 @@ jobs:
   mirror:
     needs: build
     uses: ./.gitea/workflows/mirror_releases_org.yaml
+    secrets: inherit
