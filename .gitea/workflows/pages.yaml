@@ -93,5 +93,6 @@ jobs:
           force: true
           folder: ./public
 
-      - name: "Sync with mirror"
-        uses: ./.gitea/workflows/mirror_releases_org.yaml
+  mirror:
+    needs: build
+    uses: ./.gitea/workflows/mirror_releases_org.yaml@hugo
