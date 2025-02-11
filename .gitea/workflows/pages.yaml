@@ -1,8 +1,9 @@
-#####################################################################################
+############################################################################################
 # documentation:
 # - https://docs.gitea.com/usage/actions/overview
 # - https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
-#####################################################################################
+# - https://docs.gitea.com/usage/actions/faq#what-workflow-trigger-events-does-gitea-support
+############################################################################################
 name: Deploy to Codeberg Pages
 
 on:
