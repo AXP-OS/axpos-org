@@ -31,11 +31,11 @@ _*) Please note: the test build might get removed during regular clean-up tasks 
 - [ ] SELinux enforced (`Android Settings -> Privacy -> Trust`)
 - [ ] Encryption enforced (`Android Settings -> Privacy -> Trust`)
 - [ ] pre-rooted (`Magisk App -> "Magisk" must be shown as "installed"`)
-- [ ] signature spoofing support (see Enable [Google Support](/docs/guides/setup/#optional-activate-google-support))
+- [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/#optional-activate-google-support))
 - [ ] microG included (`microG Settings -> Selftest -> ensure all checkboxes are ticked`)
 - [ ] current [Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases) included
 - [ ] Enable WireGuard VPN Kernel module (`Wireguard App -> grant root -> enable kernel support in settings`)
-- [ ] OpenEUICC app included for devices supporting euicc ([Enable eSIM](/docs/knowledge/faq/#esim-management-if-supported-by-device))
+- [ ] OpenEUICC app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device))
 - [ ] Home Launcher Neo Launcher included
 - [ ] F-Droid included
     - [ ] extended list of F-Droid repositories (`F-Droid App -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`)
@@ -44,7 +44,7 @@ _*) Please note: the test build might get removed during regular clean-up tasks 
 - [ ] boot debug log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](/devices). Add the output in a comment)
 - [ ] OTA update
 - [ ] `OEM unlock` option is **NOT** shown in developer options
-- [ ] locking the bootloader on supported devices (see the [device page](/devices))
+- [ ] locking the bootloader on supported devices (see the [device page](https://axpos.org/devices))
 ```
 
 ### Slim
@@ -59,15 +59,15 @@ _*) Please note: the test build might get removed during regular clean-up tasks 
 - [ ] Encryption enforced (`Android Settings -> Privacy -> Trust`)
 - [ ] microG install test (microG is NOT included within Slim builds but its usage has been prepared):
     - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation)
-    - [ ] signature spoofing support (see Enable [Google Support](/docs/guides/setup/#optional-activate-google-support))
+    - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/#optional-activate-google-support))
     - [ ]`microG Settings -> Selftest -> ensure all checkboxes are ticked`
-- [ ] OpenEUICC app included for devices supporting euicc ([Enable eSIM](/docs/knowledge/faq/#esim-management-if-supported-by-device))
+- [ ] OpenEUICC app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device))
 - [ ] F-Droid included
     - [ ] extended list of F-Droid repositories (`F-Droid App -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`)
 - [ ] AuroraStore App included
 - [ ] AOSmium WebView installed (`Developer Options -> WebView implementation`)
 - [ ] OTA update
 - [ ] `OEM unlock` option is **NOT** shown in developer options
-- [ ] locking the bootloader on supported devices (see the [device page](/devices))
+- [ ] locking the bootloader on supported devices (see the [device page](https://axpos.org/devices))
 ```
 
