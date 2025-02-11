@@ -17,6 +17,10 @@ Please read this first: <a href="{{ printf "%s" .docbaseurl }}/Flavors" target="
   <li>Issue tracker <a href="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=closed&labels=36" target="_blank">won't fix</a></li>
 </ul>
 
+<h3>Boot modes</h3>
+
+Each device has its own method to access its special boot modes, see: <a href="https://wiki.lineageos.org/devices/{{ .codename }}/#special-boot-modes" target="_blank">{{ .codename }} (@LineageOS wiki)</a>
+
 <h3>Firmware</h3>
 
 {{- if eq .firmware "included" -}}
