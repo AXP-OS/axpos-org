@@ -11,14 +11,11 @@
 name: "Mirror RELEASE repo to ${{ vars.MIRROR_RELEASE_ORG_NAME }}"
 run-name: Initiated by ${{ gitea.actor }}
 on:
-#  push:
-#    branches:
-#      - hugo
+  push:
+    branches:
+      - pages
   workflow_dispatch:  # button shown only when in default branch
-  workflow_run:
-    workflows: [Deploy to Codeberg Pages]
-    types:
-      - completed
+
 
 jobs:
   build:
