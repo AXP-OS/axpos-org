@@ -103,12 +103,20 @@ jobs:
             --baseURL "${{ vars.AXPOS_WEB_URL }}/"
           cp .domains public/
 
+      - name: Push changes to main branch
+        run: |
+          git add -A
+          git config user.name "gitea-actions[bot]"
+          git config user.email "<sherlock@binbash.rocks>"
+          git commit -m "changed by hugo compile"
+          git push
+
       - name: "Deploy into pages branch"
         uses: https://itsblue.dev/actions/codeberg-pages-deploy@v1
         with:
           token: ${{ secrets.LOCAL_TOKEN_REPO_RW }}
           username: ${{ gitea.actor }}
-          git_name: ${{ gitea.actor }}
+          git_name: "gitea-actions[bot]"
           force: false
           commit_message: "rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
           folder: ./public
