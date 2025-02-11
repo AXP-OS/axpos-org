@@ -12,6 +12,9 @@ on:
       - pages
   workflow_dispatch:  # button shown only when in default branch
   workflow_call:  # allow to call it
+  secrets:
+    LOCAL_TOKEN_RO:
+      required: false
 
 jobs:
   build:
