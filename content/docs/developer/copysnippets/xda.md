@@ -46,3 +46,8 @@ Read all about [B]AXP.OS[/B] on its [URL='https://axpos.org']homepage[/URL]
 [HEADING=2]Credits[/HEADING]
 - See [URL='https://axpos.org/about/#the-os']here[/URL]
 ```
+
+## Tags
+```
+axp, axp.os, hardened, magisk, microg, root,
+```
