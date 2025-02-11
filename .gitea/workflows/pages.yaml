@@ -92,5 +92,6 @@ jobs:
           git_name: ${{ gitea.actor }}
           force: true
           folder: ./public
-  mirror:
-    uses: ./.gitea/workflows/mirror_releases_org.yaml
+
+      - name: "Sync with mirror"
+        uses: ./.gitea/workflows/mirror_releases_org.yaml
