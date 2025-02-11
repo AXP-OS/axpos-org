@@ -86,6 +86,7 @@ jobs:
               for p in ${{ inputs.forcewhat }};do
                 ./create_page.sh device_${p}.params force
               done
+            fi
           else
             ./create_page.sh all
           fi
