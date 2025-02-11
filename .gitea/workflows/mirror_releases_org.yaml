@@ -1,4 +1,8 @@
 #####################################################################################
+# documentation:
+# - https://docs.gitea.com/usage/actions/overview
+# - https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+#####################################################################################
 # Mirror this repo to e.g. Codeberg
 # - create repo if needed
 # - sync otherwise
@@ -7,14 +11,14 @@
 name: "Mirror RELEASE repo to ${{ vars.MIRROR_RELEASE_ORG_NAME }}"
 run-name: Initiated by ${{ gitea.actor }}
 on:
-  push:
-    branches:
-      - pages
+#  push:
+#    branches:
+#      - hugo
   workflow_dispatch:  # button shown only when in default branch
-  workflow_call:  # allow to call it
-  secrets:
-    LOCAL_TOKEN_RO:
-      required: false
+  workflow_run:
+    workflows: [Deploy to Codeberg Pages]
+    types:
+      - completed
 
 jobs:
   build:
