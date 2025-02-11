@@ -83,8 +83,11 @@ jobs:
           TZ: Europe/Berlin
         run: |
           git submodule update --remote
-          if [ -z "${{ inputs.forceimp }}" ] || [ "${{ inputs.forceimp }}" == "true" ];then 
+          if [ -z "${{ inputs.forceimp }}" ] || [ "${{ inputs.forceimp }}" == "true" ];then
+            echo "convert imp.png"
             ./text_convert.sh "${{ vars.AXPOS_WEB_IMPRINT }}" static/img/imp.png
+          else
+            echo "skipping imp bc forceimp: ${{ inputs.forceimp }}"
           fi
           if [ "${{ inputs.force }}" == "true" ];then
             if [ -z "${{ inputs.forcewhat }}" ] || [ "${{ inputs.forcewhat }}" == "all" ];then
@@ -103,18 +106,9 @@ jobs:
             --baseURL "${{ vars.AXPOS_WEB_URL }}/"
           cp .domains public/
 
-      - name: "Deploy into pages branch"
-        uses: https://itsblue.dev/actions/codeberg-pages-deploy@v1
-        with:
-          token: ${{ secrets.LOCAL_TOKEN_REPO_RW }}
-          username: ${{ gitea.actor }}
-          git_name: "gitea-actions[bot]"
-          force: true
-          commit_message: "rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
-          folder: ./public
-
       - name: Push changes to main branch
         run: |
+          git status
           CMT=0
           # add unstaged changes
           git add -A || CMT=1
@@ -126,7 +120,20 @@ jobs:
             git config user.email "<sherlock@binbash.rocks>"
             git commit -m "changed by hugo compile"
             git push
+            echo "pushed changes 🚀 !"
+          else
+            echo "nothing to commit 🥺"
           fi
+
+      - name: "Deploy into pages branch"
+        uses: https://itsblue.dev/actions/codeberg-pages-deploy@v1
+        with:
+          token: ${{ secrets.LOCAL_TOKEN_REPO_RW }}
+          username: ${{ gitea.actor }}
+          git_name: "gitea-actions[bot]"
+          force: true
+          commit_message: "rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
+          folder: ./public
 
   mirror:
     needs: build
