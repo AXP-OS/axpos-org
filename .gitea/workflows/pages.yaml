@@ -96,3 +96,6 @@ jobs:
   mirror:
     needs: build
     uses: ./.gitea/workflows/mirror_releases_org.yaml@hugo
+    with:
+      repository: ${{ github.repository }}
+      ref: ${{ github.ref }}
