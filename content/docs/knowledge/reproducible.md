@@ -83,7 +83,7 @@ Example (_due to the ramp-up phase the tags are missing the `_a13` here_):
 
 #### Automatic (recommended)
 
-1. setup your build environment: https://github.com/AXP-OS/build/wiki/build
+1. setup your [build environment](https://axpos.org/docs/developer/building/)
 2. ensure you set these ansible override variables (in the Semaphore device "environment"):
    - `git_repo_main_manifests: "https://github.com/AXP-OS/manifest.git"`
    - `git_repo_main_branch: "<REPLACE-WITH_TAG-NAME>"`
@@ -128,7 +128,7 @@ as all this is still quite new (finalized in November 2024) and has a tons of de
 for builds before 2024-11:
 
 - **marked with `90%`**: missing [scripted DOS patches](https://github.com/sfX-android/automation_scripts/blob/1bc1c14868d7ac63562ac0fc7c16d3df434ffd6c/roles/axp/common/tasks/git_push.yml#L30-L34) `device/<vendor>/<model>` (reason: scripted changes were simply not covered before. newer releases will cover these)
-- **marked with `90%`**: missing `vendor/<vendor>/XXX` (reason: there was no proper handling before. newer releases will push to [axp.os-private](https://code.binbash.rocks:8443/AXP.OS))
+- **marked with `90%`**: missing `vendor/<vendor>/XXX` (reason: there was no proper handling before. newer releases will push to [axp.os-private](https://code.binbash.rocks/AXP.OS))
 - **marked with `90%`**: all kernel+device repos will be redundantly re-pushed for every tag for every device (reason: there was no git push filter before. newer releases will push only their own kernel and device repos)
 - **marked with `99%`**: missing `vendor/divested` (reason: this is not a repo on its own but created by DivestOS during the patch process)
 - **marked with `99%`**: missing info about the link between `vendor/firmware/CarrierSettings/` and `vendor/divested-carriersettings` (they get copied by the automation process to the final location)
