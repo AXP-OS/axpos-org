@@ -15,11 +15,16 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      forceupdate:
-        description: 'Override existing device pages?'
+      force:
+        description: 'Override ALL existing device pages?'
         required: false
         default: false
         type: boolean
+      forcewhat:
+        description: 'specify "all | <device-codename> [_SPACE_ <device-codename>]"'
+        required: false
+        type: string
+
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 #permissions:
@@ -74,8 +79,13 @@ jobs:
         run: |
           git submodule update --remote
           ./text_convert.sh "${{ vars.AXPOS_WEB_IMPRINT }}" static/img/imp.png
-          if [ "${{ inputs.forceupdate }}" == "true" ];then
-            ./create_page.sh all force
+          if [ "${{ inputs.force }}" == "true" ];then
+            if [ "${{ inputs.forcewhat }}" == "all" ];then
+              ./create_page.sh all force
+            else
+              for p in ${{ inputs.forcewhat }};do
+                ./create_page.sh device_${p}.params force
+              done
           else
             ./create_page.sh all
           fi
