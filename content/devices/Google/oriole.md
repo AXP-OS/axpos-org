@@ -6,7 +6,7 @@ encryption: "FBEv1"
 firmware: "included"
 relockable: "yes"
 verifiedboot: "yes"
-flavors: "Regular"
+flavors: "Regular, Slim"
 state: "stable"
 supportlevel: community
 debugbootpath: /mnt/vendor/persist
