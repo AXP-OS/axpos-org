@@ -72,25 +72,22 @@ _**We are in progress of moving our sources away from Github.**_<br/>
 The main goal is to have all needed on our self-hosted Gitea instance and mirror everything to e.g. (but not limited to) Codeberg.org.
 
 **AXP.OS sources** are available here _(mirrored from https://code.binbash.rocks/AXP.OS)_:
-- https://codeberg.org/AXP-OS
-- https://codeberg.org/AXP-OS_limited _(free registration required)_
+- https://codeberg.org/AXP-OS<br />_(note: transition from https://github.com/AXP-OS still in progress, access missing repos there)_
 
 At the moment **releases** can be found here: https://codeberg.org/AXP-OS_releases (will be moved to the main org soon)
 
 The repositories mentioned above are **mirrors** of the project's own Gitea instance, which is available here: https://code.binbash.rocks/AXP.OS _(free registration required)_.
 
-For **reproducible builds**, the project currently only uses Github, but we will eventually move them to Codeberg or another hoster:
+For **reproducible builds**, the project currently uses Github + Codeberg, but it is planned to move them to just Codeberg or another hoster soon:
 - [Github](https://github.com/AXP-OS)
+- https://codeberg.org/AXP-OS_limited _(free registration required)_
 
 ### Why do some repositories require a registration?
 
-The reason why you need to login first is just and only as they might contain problematic parts.
-
-All sources are (and remain) accessible after a free registration on either our own Gitea instance or its mirror(s).
-
-You can also build AXP.OS without these repositories if you replace the missing parts. So if you absolutely want to avoid registering with one of these services, you don't have to use any of them. Just contact us for a list.
-
-Splitting the problematic parts from the rest of the sources also makes it easier keeping the main project/builds alive.
+1. Solely because they could contain problematic parts
+1. If an official mirror(s) requires a registration it is for [reproducible builds](/Reproducible-builds) **only**
+1. You can build AXP.OS **without** these repositories by just using the normal [AXP.OS manifest](https://github.com/AXP-OS/manifest/) and will not miss a thing
+1. Splitting the problematic parts from the rest of the sources also makes it easier keeping the main project/builds alive in case of trouble
 
 ## Imported
 
