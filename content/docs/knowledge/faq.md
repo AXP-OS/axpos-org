@@ -68,11 +68,29 @@ If you using Google play it might want updating the Google play services. Please
 
 ### Is there a list where the source code is hosted?
 
-1. **main** source code: https://code.binbash.rocks/AXP.OS (requires login!)
-2. **mirror** of 1: https://codeberg.org/AXP-OS/ (requires login!)
-3. public **releases**: https://codeberg.org/AXP-OS_releases
-4. public repos: https://code.binbash.rocks/AXP.OS-public
-5. repos used for **reproducible builds**: https://github.com/AXP-OS
+_**We are in progress of moving our sources away from Github.**_<br/>
+The main goal is to have all needed on our self-hosted Gitea instance and mirror everything to e.g. (but not limited to) Codeberg.org.
+
+**AXP.OS sources** are available here _(mirrored from https://code.binbash.rocks/AXP.OS)_:
+- https://codeberg.org/AXP-OS
+- https://codeberg.org/AXP-OS_limited _(free registration required)_
+
+At the moment **releases** can be found here: https://codeberg.org/AXP-OS_releases (will be moved to the main org soon)
+
+The repositories mentioned above are **mirrors** of the project's own Gitea instance, which is available here: https://code.binbash.rocks/AXP.OS _(free registration required)_.
+
+For **reproducible builds**, the project currently only uses Github, but we will eventually move them to Codeberg or another hoster:
+- [Github](https://github.com/AXP-OS)
+
+### Why do some repositories require a registration?
+
+The reason why you need to login first is just and only as they might contain problematic parts.
+
+All sources are (and remain) accessible after a free registration on either our own Gitea instance or its mirror(s).
+
+You can also build AXP.OS without these repositories if you replace the missing parts. So if you absolutely want to avoid registering with one of these services, you don't have to use any of them. Just contact us for a list.
+
+Splitting the problematic parts from the rest of the sources also makes it easier keeping the main project/builds alive.
 
 ## Imported
 
