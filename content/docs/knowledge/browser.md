@@ -9,10 +9,10 @@ aliases:
 
 ![image](https://github.com/user-attachments/assets/89bfb426-ed34-49dd-9733-8aa3eb54e5ca)
 
-AXP.OS comes with its own **WebView** implementation and **browser** named [AOSmium](https://code.binbash.rocks/AXP.OS/app_aosmium) and build by the AXP.OS project.
+AXP.OS comes with its own **WebView** implementation and **browser** named [AOSmium](https://codeberg.org/AXP-OS/app_aosmium) and build by the AXP.OS project.
 
 The WebView is _built-in_ and will be automatically kept updated with OS updates.<br/> 
-Out-of-Band updates can be installed manually via: [Releases](https://codeberg.org/AXP-OS_releases/app_aosmium/releases).<br/>
+Out-of-Band updates can be installed manually via: [Releases](https://codeberg.org/AXP-OS/app_aosmium/releases).<br/>
 The builds there are properly signed so you can safely use them without trouble on next OTA update.
 
 _Note: At the moment it is unclear if or when there will be an F-Droid version for the webview or the browser._
