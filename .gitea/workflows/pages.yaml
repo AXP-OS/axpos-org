@@ -135,6 +135,9 @@ jobs:
           commit_message: "🛠️ rebuild for https://code.binbash.rocks/AXP.OS/axpos-org/commit/${{ github.sha }}"
           folder: ./public
 
+      - name: Set a delay before starting the mirror
+        run: sleep 10s
+
   mirror:
     needs: build
     uses: ./.gitea/workflows/mirror.yaml
