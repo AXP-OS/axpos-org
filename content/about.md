@@ -29,6 +29,12 @@ AXP.OS is a fully-fledged operating system in its own right, i.e. an [O]perating
 
 *) _since January 2025 due to the {{< globalvar key="docBaseUrl" uripath="/Divest_EOL" linkname="EOL of DivestOS" >}}_
 
+## The Credits
+
+Besides the above mentioned projects AXP.OS appreciates the work of the whole Open Source community.
+
+In order to keep this page readable all credits can be found [here](/credits).
+
 ## Project Milestones
 
 {{% steps %}}
