@@ -79,16 +79,14 @@ params:
   # usage:
   # {{< globalvar key="docBaseUrl" uripath="/Features" linkname="enhancements and additions" >}}
   # {{< globalvar key="about_info" format="true" >}}
+  # {{ printf "%s" .docbaseurl }} within a partial
   globalvars:
-    docBaseUrl: #"https://github.com/AXP-OS/build/wiki"
     about_info: |
       The main goal of this project is to strive for a balance between a<br/><br/>
       <b>privacy and</b><br/><b>security-oriented</b><br/>yet <b>usable</b><br/><br/>Operating System - and last but not least ... even for <i>advanced*</i> users.
       <br/><br/>
       <i>*i.e. including full control over your own device - if desired</i>
     downloadServerBaseUrl: "https://leech.binbash.rocks:8008"
-  # fallback, e.g. required e.g. in "steps" shortcode
-  docBaseUrl: #"https://github.com/AXP-OS/build/wiki"
 
 markup:
   # allow raw html / used e.g. in steps

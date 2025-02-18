@@ -24,10 +24,10 @@ AXP.OS is a fully-fledged operating system in its own right, i.e. an [O]perating
 - using massively patches from: [GrapheneOS](https://github.com/GrapheneOS)
 - using several patches from: [CalyxOS](https://gitlab.com/CalyxOS/)
 - using several patches from: DivestOS by [Divested Computing Group](https://github.com/Divested-Mobile/DivestOS-Build)
-- on top of this: massive {{< globalvar key="docBaseUrl" uripath="/Features" linkname="enhancements and additions" >}} by the AXP.OS project
-- details about the above can be found at the {{< globalvar key="docBaseUrl" uripath="/Technical-Details" linkname="Technical Details" >}} page
+- on top of this: massive [enhancements and additions](https://axpos.org/Features) by the AXP.OS project
+- details about the above can be found at the [Technical Details](https://axpos.org/Technical-Details) page
 
-*) _since January 2025 due to the {{< globalvar key="docBaseUrl" uripath="/Divest_EOL" linkname="EOL of DivestOS" >}}_
+*) _since January 2025 due to the [EOL of DivestOS](https://axpos.org/Divest_EOL)_
 
 ## The Credits
 
