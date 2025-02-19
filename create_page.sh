@@ -46,8 +46,8 @@ fi
 
 if [ "$1" == "all" ];then
     echo "Will create ALL pages"
-    for dev in $(ls -1 device_*.params |grep -v INIT);do
-        source device_INIT.params
+    for dev in $(ls -1 params/device_*.params |grep -v INIT);do
+        source params/device_INIT.params
         source $dev
         F_CHKFILES
         if [ -f "content/devices/${HUGO_VENDOR}/${HUGO_CODENAME}.md" ] && [ "$2" != "force" ];then
@@ -59,8 +59,8 @@ if [ "$1" == "all" ];then
     done
 else
     if [ -f "$1" ];then
-        source device_INIT.params
-        source $1
+        source params/device_INIT.params
+        source params/$1
         F_CHKFILES
         hugo new --kind device content/devices/${HUGO_VENDOR}/${HUGO_CODENAME}.md $HARGS
     else

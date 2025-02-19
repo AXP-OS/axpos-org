@@ -44,6 +44,7 @@ In order to keep this page readable all credits can be found [here](/credits).
 ### 2025-02
 - new website using [HUGO](https://gohugo.io/) running [hextra](https://github.com/imfing/hextra) theme
 - shifting device guides from Github to https://axpos.org basing on templates to ease maintenance and adding new devices
+- CVE Kernel patcher adapted
 
 ### 2025-01
 
