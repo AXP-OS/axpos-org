@@ -8,18 +8,18 @@ aliases:
 ---
 "_Flavors_" are different variants of AXP.OS which came up with the [EOL of Divest](/Divest_EOL) which AXP.OS was based on up to the end of 2024.
 
-### AXP.OS - Pro VS. Slim
+### AXP.OS - Pro vs. Slim
 
 The differences are described here: [Features](/Features)
 
-### AXP.OS-Slim VS. DivestOS
+### AXP.OS - Slim vs. DivestOS
 
 **Most requested** comparisons between the _Slim_ flavor and _**DivestOS**_.
 
-The differences between the AXP.OS _Pro_ and _Slim_ flavor is described here: [Features](/Features)
+Note: The differences between the AXP.OS _Pro_ and _Slim_ flavor is described here: [Features](/Features)
 
 #### MicroG implementation
-
+{{% details title="Click to reveal" closed="true" %}}
 |Statement|DivestOS|AXP.OS-Slim|
 |-|:-:|:-:|
 |not a privileged system app or system app|**X**|**X**|
@@ -43,6 +43,7 @@ The differences between the AXP.OS _Pro_ and _Slim_ flavor is described here: [F
 - ²) _Can be implemented, if there is a demand / [request](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new) for this._
 
 There is a issue pending which will adapt the current implementation to fit the DivestOS one here.
+{{% /details %}}
 
 ## Switching between flavors
 
