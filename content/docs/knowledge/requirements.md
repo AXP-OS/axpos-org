@@ -52,6 +52,7 @@ There are situations when a device which was previously supported gets removed a
 1. the sources (Android and/or Kernel) cannot be patched properly anymore
 1. patches (especially backported ASB ones) which breaks booting or core features of Android (e.g. WiFi etc)
 1. any other critical issue (e.g. important core features don't work anymore, device is not booting anymore, ...) and there is no user willing to help in debugging
+1. devices with AXP.OS [community - level](/docs/knowledge/supportlevels/#by-the-axp-community) support will be released to the _unstable_ channel first and **require** a feedback by the community before they are released to the _stable_ channel. If there is no feedback by the community the device will likely get removed from the next build run and even from the support list if there is no feedback for longer time
 
 ## Processing requests
 
