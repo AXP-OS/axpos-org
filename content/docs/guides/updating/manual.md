@@ -15,7 +15,7 @@ toc: true
 1. Keep an eye on the [Automation channel](/docs/overview)
 1. Always do a [Backup](/docs/guides/backuprestore)!
 1. Using Magisk hide? un-do this before upgrading
-1. Download ({{< globalvar key="downloadServerBaseUrl" uripath="/axp" linkname="Regular" >}} / {{< globalvar key="downloadServerBaseUrl" uripath="/axp-slim" linkname="Slim" >}}) the latest release for your device and flavor (_for Pixels: choose "OS zip"_)
+1. Download ({{< globalvar key="downloadServerBaseUrl" uripath="/axp" linkname="Pro" >}} / {{< globalvar key="downloadServerBaseUrl" uripath="/axp-slim" linkname="Slim" >}}) the latest release for your device and flavor (_for Pixels: choose "OS zip"_)
 1. open `Android Settings -> Updater -> 3 dots menu -> Local update` and select the downloaded zip
 1. follow the instructions and ensure you do not miss the hint above regarding Magisk
 
@@ -28,7 +28,7 @@ toc: true
 1. Keep an eye on the [Automation channel](/docs/overview)
 1. Always do a [Backup](/docs/guides/backuprestore)!
 1. Using Magisk hide? un-do this before upgrading
-1. Download ({{< globalvar key="downloadServerBaseUrl" uripath="/axp" linkname="Regular" >}} / {{< globalvar key="downloadServerBaseUrl" uripath="/axp-slim" linkname="Slim" >}}) the latest release for your device and flavor (_for Pixels: choose "OS zip"_)
+1. Download ({{< globalvar key="downloadServerBaseUrl" uripath="/axp" linkname="Pro" >}} / {{< globalvar key="downloadServerBaseUrl" uripath="/axp-slim" linkname="Slim" >}}) the latest release for your device and flavor (_for Pixels: choose "OS zip"_)
 1. Verify the build [Signature](/docs/knowledge/signatures/#build-signatures) and hash sum
 1. reboot your device into recovery and select `Apply update -> Apply from ADB`
 1. use `adb sideload AXP.OS.zip` to flash the update
@@ -51,7 +51,7 @@ If there is a need for a flashable one without factory reset [let us know](/docs
 1. Read the [Changelog](/devices/changelogs)!
 1. Keep an eye on the [Automation channel](/docs/overview)
 1. Always do a [Backup](/docs/guides/backuprestore)!
-1. Download ({{< globalvar key="downloadServerBaseUrl" uripath="/axp" linkname="Regular" >}} / {{< globalvar key="downloadServerBaseUrl" uripath="/axp-slim" linkname="Slim" >}}) the latest release for your device and flavor (_choose "Factory zip"_)
+1. Download ({{< globalvar key="downloadServerBaseUrl" uripath="/axp" linkname="Pro" >}} / {{< globalvar key="downloadServerBaseUrl" uripath="/axp-slim" linkname="Slim" >}}) the latest release for your device and flavor (_choose "Factory zip"_)
 1. Verify the build [Signature](/docs/knowledge/signatures/#build-signatures) and hash sum
 1. reboot your device into fastboot mode
 1. flash the Factory zip:

@@ -6,7 +6,7 @@ encryption: "FBEv1"
 firmware: "manual"
 relockable: "no"
 verifiedboot: "no"
-flavors: "Regular"
+flavors: "Pro"
 state: "stable"
 supportlevel: team
 debugbootpath: /cache

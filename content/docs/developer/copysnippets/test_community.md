@@ -20,10 +20,10 @@ _*) Please note: the test build might get removed during regular clean-up tasks 
 4. go through the list and tick each item you have tested
 ```
 
-### Regular
+### Pro
 
 ```
-## Tested AXP.OS (Regular) core features
+## Tested AXP.OS (Pro) core features
 
 - [ ] current ASB patch - System (`Android Settings -> Info/About Phone -> Android Version` must be current)
 - [ ] current ASB patch - Kernel (`Android Settings -> Info/About Phone -> Kernel version -> build date` must be current. Kernel version must have `-pXXX` inside the version string)

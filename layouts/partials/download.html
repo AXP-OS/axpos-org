@@ -12,9 +12,9 @@
   </thead>
   <tbody>
 
-    {{- if in .flavors "Regular" -}}
+    {{- if in .flavors "Pro" -}}
     <tr>
-      <td><i>Regular</i></td>
+      <td><i>Pro</i></td>
       <td>
 	<a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/" target="_blank">
 	  <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>

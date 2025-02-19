@@ -57,9 +57,9 @@ Information to financially support the below projects/people is also listed wher
 - [@stevesoltys](https://github.com/stevesoltys) - SeedVault
 - [arkenfox user.js (@Thorin-Oakenpants)](https://github.com/arkenfox/user.js) - used by AOSmium
 - [Etar-Group](https://github.com/Etar-Group/Etar-Calendar) - Etar calendar
-- [@topjohnwu](https://github.com/topjohnwu/Magisk) - Magisk - _Regular_ flavor only - [Patreon](https://www.patreon.com/topjohnwu), [Paypal](https://www.paypal.com/paypalme/magiskdonate)
-- [MicroG](https://microg.org/) - _Regular_ flavor only - Donate: [LiberaPay](https://liberapay.com/microG), [Github Sponsor](https://github.com/sponsors/mar-v-in)
-- [@saulhdev](https://github.com/saulhdev) & [contributors](https://github.com/NeoApplications/Neo-Launcher/graphs/contributors) - Neo Launcher - _Regular_ flavor only - Donate: [Paypal](https://www.paypal.com/paypalme/saulhdev)
+- [@topjohnwu](https://github.com/topjohnwu/Magisk) - Magisk - _Pro_ flavor only - [Patreon](https://www.patreon.com/topjohnwu), [Paypal](https://www.paypal.com/paypalme/magiskdonate)
+- [MicroG](https://microg.org/) - _Pro_ flavor only - Donate: [LiberaPay](https://liberapay.com/microG), [Github Sponsor](https://github.com/sponsors/mar-v-in)
+- [@saulhdev](https://github.com/saulhdev) & [contributors](https://github.com/NeoApplications/Neo-Launcher/graphs/contributors) - Neo Launcher - _Pro_ flavor only - Donate: [Paypal](https://www.paypal.com/paypalme/saulhdev)
 
 ## Patches
 

@@ -15,7 +15,7 @@ That being said there is one **exception** to this rule:<br/>
 If there is a factory image available (e.g. any Google Pixel device) it is required to flash the factory image via _**fastboot**_ (see the installation guide for your device!) for the very first flash. If you switch between [Flavors](/Flavors) you can safely use the recovery instead as they share the same firmware.
 
 Official AXP.OS recovery images can be found in the subdirectory named `recovery/` of each device's download path.
-- Regular: https://leech.binbash.rocks:8008/axp/ ([tor](http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/))
+- Pro: https://leech.binbash.rocks:8008/axp/ ([tor](http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/))
 - Slim: https://leech.binbash.rocks:8008/axp-slim/ ([tor](http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/))
 
 Flashing the recovery image depends on the device but is usually made in fastboot mode:

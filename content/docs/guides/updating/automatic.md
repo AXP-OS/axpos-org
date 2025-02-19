@@ -20,7 +20,7 @@ Here the major steps for updating your system:
 1. always watch the [automation channel](/docs/overview), too - major impacts will be announced here first
 1. if you don't want to wait for the regular updater check, open `Android Settings -> Updater -> Press the circled arrow to check for updates`
 
-_Regular_ flavor users (not needed when using the _Slim_ flavor):
+_Pro_ flavor users (not needed when using the _Slim_ flavor):
 
 3. {{< callout type="warning" >}}before actually _installing_ (on non-A/B devices) or at latest before _rebooting_ (on A/B devices) you should **unhide** Magisk if it is currently hidden!* {{< /callout >}}
 4. in any case ensure you understood the [Magisk hints](https://github.com/sfX-android/android_vendor_extendrom/wiki/FAQ#magisk-requires-additional-setup-on-start) _(even when not using the hide Magisk app functionality)_

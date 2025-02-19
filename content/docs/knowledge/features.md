@@ -12,22 +12,22 @@ AXP.OS is a more private and more secure aftermarket mobile operating system bas
 <br />
 {{< globalvar key="about_info" format="true" >}}
 
-The _Regular_ [flavor](/Flavors) of AXP.OS comes pre-rooted which is a major difference between many (if not all) other custom OS and requires to read the documentation properly and acting wisely (i.e. not installing APKs from random sources, open every link in mails you get, etc). While the OS comes pre-rooted it is not _active_ at all and requires to _actively install_ the Magisk companion app + run the requirements installer once to make it usable first. That means if you do not need root you can simply skip that step and there will be no `su` binary available at all.
+The _Pro_ [flavor](/Flavors) of AXP.OS comes pre-rooted which is a major difference between many (if not all) other custom OS and requires to read the documentation properly and acting wisely (i.e. not installing APKs from random sources, open every link in mails you get, etc). While the OS comes pre-rooted it is not _active_ at all and requires to _actively install_ the Magisk companion app + run the requirements installer once to make it usable first. That means if you do not need root you can simply skip that step and there will be no `su` binary available at all.
 
-The _Slim_ [flavor](/Flavors) on the other site does **not** come pre-rooted while it has drawbacks regarding usability and is not that intensively tested as the _regular_ one.
+The _Slim_ [flavor](/Flavors) on the other site does **not** come pre-rooted while it has drawbacks regarding usability and is not that intensively tested as the _Pro_ one.
 
-**If you are not sure which one to choose, use the _regular_ build or ask in the support channel.**
+**If you are not sure which one to choose, ask in the support channel.**
 
 ### Divest Notice
 
 _Up to `Dec 2024` AXP.OS was based on [DivestOS](https://web.archive.org/web/20241227223444/https://divestos.org/), see the EOL notice for Divest and its impact on AXP.OS [here](/Divest_EOL)._
 
 Due to this AXP.OS started in 2025 offering different [flavors](/Flavors).<br/>
-The _regular_ one is still the main flavor and so default on new devices but users [can request](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose) a _slim_ variant which gives a "Divest-like" experience.
+The _Pro_ one is still the main flavor and so default on new devices but users [can request](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose) a _slim_ variant which gives a "Divest-like" experience.
 
 ## Flavor comparison
 
-|Feature|Regular|Slim|
+|Feature|Pro|Slim|
 |-|:-:|:-:|
 |Using Graphene's [hardened malloc](https://github.com/GrapheneOS/hardened_malloc) ([comparison](https://github.com/struct/isoalloc/blob/master/SECURITY_COMPARISON.MD))|**X**|**X**|
 |OTA (Over The Air) updates|**X**|**X**|
@@ -76,8 +76,8 @@ The _Main(!) focus_ column is a bit vague or better said subjective as all OS cl
 |[CalyxOS](https://calyxos.org/)|Usability, Privacy|wide range of supported devices, _high_ usability|no focus on security|
 |[GrapheneOS](http://grapheneos.org/)|Security, Privacy|best in class focus on security, _good_ usability|Google Pixel devices only, usually does not support older Android versions|
 |[/e/ OS](https://e.foundation/e-os/)|Usability, Privacy|wide range of supported devices, _very high_ usability|no focus on security, does not support devices with older Android versions, late ASB patches|
-|[AXP.OS](https://axpos.org/)|Usability, Security, Privacy|best balance between Usability, Security, Privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported|
-|[AXP.OS-slim](https://axpos.org/)|Security, Privacy|Security, Privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported, reduced usability compared to the regular flavor|
+|[AXP.OS - Pro](https://axpos.org/)|Usability, Security, Privacy|best balance between Usability, Security, Privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported|
+|[AXP.OS - Slim](https://axpos.org/)|Security, Privacy|Security, Privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported, reduced usability compared to the Pro flavor|
 
 Privacy examples:
 - reducing/disabling Call-Home functions

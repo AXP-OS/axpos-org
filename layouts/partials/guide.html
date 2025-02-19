@@ -71,8 +71,8 @@ Please read this first: <a href="{{ printf "%s" .docbaseurl }}/Flavors" target="
 
 <p><strong>If you see a different ID during boot you should immediately request <a href="{{ printf "%s" .docbaseurl }}#support" target="_blank">support</a> and stop using the device!</strong></p>
 
-{{- if in .flavors "Regular" -}}
-<h5>Regular build</h5>
+{{- if in .flavors "Pro" -}}
+<h5>Pro build</h5>
 
 {{ $filename := printf "content/devices/fp_%s_regular" .codename }}
 {{ if fileExists $filename }}

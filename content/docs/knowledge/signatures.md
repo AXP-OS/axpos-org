@@ -120,7 +120,7 @@ aHG7a9L9NCl/wNlpsNql7Mo87x74ekws9ibHOXfBRIuk9P/TZ8e30PyC8nDQyYTrixoJEIT7wwtUm//E
 ## Build signatures
 
 Build keys (i.e. OTA release-key + AVB key where available) for all AXP.OS devices can be found here:
-- [Regular flavor](https://github.com/sfX-android/update_verifier/tree/main/AXP.OS)
+- [Pro flavor](https://github.com/sfX-android/update_verifier/tree/main/AXP.OS)
 - [Slim flavor](https://github.com/sfX-android/update_verifier/tree/main/AXP.OS-slim)
 
 AXP.OS provides OTA (Over The Air) updates which are signed with the releasekey to allow verifying the integrity of an update.

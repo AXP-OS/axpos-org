@@ -5,7 +5,7 @@ toc: true
 aliases:
     - /Setup
 ---
-## _Regular_ flavor only
+## _Pro_ flavor only
 
 ### Setup Magisk
 
@@ -32,7 +32,7 @@ additionally to the above do not touch these when your bootloader is [locked](/B
 
 Ensure you set these on the ignore list for F-Droid and Aurora (see next topics).
 
-## _Regular_ and _Slim_ flavor
+## _Pro_ and _Slim_ flavor
 
 ### Setup Aurora
 
@@ -86,7 +86,7 @@ For the rest checkout: [Recommended Apps](/docs/knowledge/faq/#can-you-recommend
 
 ### Optional: Activate Google support
 
-The _Regular_ flavor of AXP.OS comes with [microG](https://microg.org/) included, as well with the Google Play store (internal name "Phonesky") but **both are not activated by default** (this exactly wanted that way, leaving the choice to the user).
+The _Pro_ flavor of AXP.OS comes with [microG](https://microg.org/) included, as well with the Google Play store (internal name "Phonesky") but **both are not activated by default** (this exactly wanted that way, leaving the choice to the user).
 
 If you are using the _Slim_ flavor you can install MicroG on your own though. Just keep in mind that you **can NOT lock the bootloader** in this case!
 
@@ -109,7 +109,7 @@ From now on all apps which requests signature spoofing will PROMPT you and you c
 
 This means the app must explicitly requests signature spoofing and you might need to do that step manually for apps which don't (like the Google Play store).
 
-#### Google Play store (Regular flavor)
+#### Google Play store (Pro flavor)
 
 If you do **not** want to use any google service simply **disable** the Google Play app and do not enable Signature spoofing support for Google Play. If you **want** to use it, read on.
 
@@ -126,7 +126,7 @@ This might or might not work for your apps. So before enabling Google Play this 
 
 If the above does not work for you or you do not trust its state of implementation (as said its quite new) you can use the native Play Store.
 
-The AXP.OS-_Regular_ flavor comes with a patched Google Play store based on the great work of [Nanolx](https://gitlab.com/Nanolx/microg-phonesky-iap-support) but [greatly enhanced](https://github.com/AXP-OS/packages_apps_phonesky) to support more recent Android versions, latest Play store release and more bug-free (i.e. no crashes).
+The AXP.OS-_Pro_ flavor comes with a patched Google Play store based on the great work of [Nanolx](https://gitlab.com/Nanolx/microg-phonesky-iap-support) but [greatly enhanced](https://github.com/AXP-OS/packages_apps_phonesky) to support more recent Android versions, latest Play store release and more bug-free (i.e. no crashes).
 
 1. Ensure signature spoofing is enabled in developer options (see above)
 1. Find the Google Play store in the app drawer, long press it and open the (i) - "App info" screen

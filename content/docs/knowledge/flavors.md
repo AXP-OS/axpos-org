@@ -8,7 +8,7 @@ aliases:
 ---
 "_Flavors_" are different variants of AXP.OS which came up with the [EOL of Divest](/Divest_EOL) which AXP.OS was based on up to the end of 2024.
 
-### AXP.OS - Regular VS. Slim
+### AXP.OS - Pro VS. Slim
 
 The differences are described here: [Features](/Features)
 
@@ -16,7 +16,7 @@ The differences are described here: [Features](/Features)
 
 **Most requested** comparisons between the _Slim_ flavor and _**DivestOS**_.
 
-The differences between the AXP.OS _Regular_ and _Slim_ flavor is described here: [Features](/Features)
+The differences between the AXP.OS _Pro_ and _Slim_ flavor is described here: [Features](/Features)
 
 #### MicroG implementation
 
@@ -54,7 +54,7 @@ The same applies when switching from **DivestOS to AXP.OS** (regardless which fl
 
 1. _When your device bootloader is locked:_ unlock it (as this will factory reset, skip the next step)
 1. boot into recovery and format data/factory reset
-1. grab the recovery/boot image from the _other_ flavor ([Recovery Images](/Recovery-images))<br/>(e.g. if you want to go `Slim -> Regular` then get the _Regular_ one)
+1. grab the recovery/boot image from the _other_ flavor ([Recovery Images](/Recovery-images))<br/>(e.g. if you want to go `Slim -> Pro` then get the _Pro_ one)
 1. flash the _other_ flavor recovery/boot image in fastboot (e.g. `fastboot flash recovery AXP.OS-18.1-20250124-RECOVERY-klte.img`)
 1. boot into recovery and follow the _**Install / Upgrade**_" topic from AXP.OS device's guide, ensure you flash to BOTH slots!
 1. let it boot, verify everything is working as it should and verify its the wanted flavor in Android settings

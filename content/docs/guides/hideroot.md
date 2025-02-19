@@ -65,7 +65,7 @@ If it does not work:
 
 **) _You cannot uninstall the trouble-app from android (ever) because otherwise Magisk hide will not work. so you always need to keep that app(s) but never starting it!_
 
-#### IMPORTANT: AXP.OS updates (Regular flavor)
+#### IMPORTANT: AXP.OS updates (Pro flavor)
 
 > [!CAUTION]
 > Magisk will clone itself into the work profile whenever you select to hide/unhide it. This is absolutely important to know as the root check of an app will for sure check if there is the origin Magisk app installed.

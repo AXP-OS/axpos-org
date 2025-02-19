@@ -136,7 +136,7 @@ About [CrowdSec](https://www.crowdsec.net/about)
 *   Privacy Policy: [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore/-/blob/master/POLICY.md)
 *   Privacy Policy: [Google](https://policies.google.com/privacy)
 
-## _Regular_ flavor
+## _Pro_ flavor
 
 ### Neo Launcher
 
