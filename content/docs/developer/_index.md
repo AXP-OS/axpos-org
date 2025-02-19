@@ -1,6 +1,6 @@
 ---
 title: Developer Guides
 type: docs
-weight: 9
+weight: 300
 prev: documentation
 ---

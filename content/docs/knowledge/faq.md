@@ -93,7 +93,7 @@ For **reproducible builds**, the project currently uses Github + Codeberg, but i
 
 The document starting from here is a markdown replacement of the original made by: [Divested Computing Group](https://web.archive.org/web/20241231213231/https://divestos.org/pages/faq), so all credits goes to them.
 
-AXP.OS used DivestOS as a base up to December 2024 (see [Divest_EOL](Divest_EOL)) but the following still reflects the current state for AXP.OS (as of January 2025).
+AXP.OS used DivestOS as a base up to December 2024 (see [Divest_EOL](/Divest_EOL)) but the following still reflects the current state for AXP.OS (as of January 2025).
 
 Nevertheless the whole page get a full re-work after the `Divest->AXP.OS` cleanups are finalized and the dust has settled again.. Until then expect broken links and incomplete/not 100% matching content.
 

@@ -2,7 +2,9 @@
 title: "Credits"
 type: docs
 toc: true
-#aliases:
+weight: 11
+aliases:
+    - /credits
 ---
 
 The following do not necessarily have any direct involvement in AXP.OS.<br />_If you would like to be added, changed or removed please create an issue on the [issue tracker](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues)!_
