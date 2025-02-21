@@ -22,8 +22,6 @@ aliases:
 
 #### 1. Matrix Chat (_recommended_)
 
-1. Choose a Matrix client of your choice ([Element / X ](https://element.io/download), [SchildiChat](https://schildi.chat/) are recommended)
-1. Create an account on a trusted homeserver of your choice: [here](https://matrix.org/ecosystem/hosting/) or [here](https://servers.joinmatrix.org/)
 1. Setup your [Matrix client](/matrix-setup)
 1. Join the AXP.OS support room: [#axp.os:binbash.rocks](https://matrix.to/#/#axp.os:binbash.rocks)
 
