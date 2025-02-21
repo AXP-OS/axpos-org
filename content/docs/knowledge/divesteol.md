@@ -104,15 +104,15 @@ The automation had to be adapted again as well to reflect the changes above.
 
 The **ASB patching** process has been adapted and [implemented](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common/tasks/main.yml#L38-L41) via Ansible.
 
-#### [3] Hypatia
+### [3] Hypatia
 
  **Hypatia** has been [forked](https://code.binbash.rocks/AXP.OS/packages_apps_LoveLaceAV) already, a server has been setup, ci/cd building of the apk works and half of the dozens of signature sources have been [automated](https://github.com/sfX-android/automation_scripts/tree/ansible/roles/hypatiadb) to fetch and convert for hypatia. Atm it is unclear how the project will be named and when it will been released officially though. In any case it is planned to make it available via F-Droid. There is also an attempt to maintain it [here](https://github.com/MaintainTeam/Hypatia/issues/1).
 
-#### [4] Webview replacement
+### [4] Webview replacement
 
 **Webview** has been forked and is [available](Browser) already.
 
-#### [5] Divest-like flavor
+### [5] Divest-like flavor
 
 The (so-called) **Slim** flavor was requested by several users which should not contain root or Google Play and provide a Divest-like experience. The issue tracker has been updated to ask users which variant the request is made for (defaults to the _Pro_ flavor). So if you came here as a Divest user and want such build feel free to [open a FR](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new?template=.github%2fISSUE_TEMPLATE%2fsupport-new-device-request.yaml) and select the SLIM flavor there. Read more about these AOS flavors [here](/Flavors).
 
