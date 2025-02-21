@@ -18,7 +18,7 @@ toc: true
 ## The OS
 
 No, this is not a _ROM_, a term often used for hacky adjustments of existing OS builds.<br/>
-AXP.OS is a fully-fledged operating system in its own right, i.e. an [O]perating [S]ystem.
+AXP.OS is a fully-fledged operating system in its own right, i.e. an **O**perating **S**ystem.
 
 - based on*: [LineageOS](https://github.com/LineageOS/) which itself is based on [AOSP](https://source.android.com/)
 - using massively patches from: [GrapheneOS](https://github.com/GrapheneOS)
@@ -44,7 +44,8 @@ In order to keep this page readable all credits can be found [here](/credits).
 ### 2025-02
 - new website using [HUGO](https://gohugo.io/) running [hextra](https://github.com/imfing/hextra) theme
 - shifting device guides from Github to https://axpos.org basing on templates to ease maintenance and adding new devices
-- CVE Kernel patcher adapted
+- CVE Kernel patcher adapted and automated! Read all about the journey [here](https://axpos.org/docs/knowledge/divesteol/#1-cve-kernel-patcher)
+- adapted/replaced/optimized/removed almost all dependencies we had with DivestOS
 
 ### 2025-01
 
@@ -67,6 +68,6 @@ In order to keep this page readable all credits can be found [here](/credits).
 
 ### 2023-03-31
 
-- Initial project start / First public(!) changes
+- Initial project start / first public(!) appearance
 
 {{% /steps %}}

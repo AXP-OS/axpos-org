@@ -26,7 +26,7 @@ Information to financially support the below projects/people is also listed wher
 - [Gitea](https://gitea.com/) - all CI/CD, used by code.binbash.rocks - Donate: [open collective](https://opencollective.com/gitea)
 - [Codeberg](https://codeberg.org) - public mirror - Donate: [All options](https://docs.codeberg.org/improving-codeberg/donate/)
 - [GitHub](https://github.com) - public mirror
-- [MagicBroccoli](https://magicbroccoli.de) - Unofficial XMPP MUC - Donate: [All options](https://magicbroccoli.de/donate/) maintained by @Derelict
+- [MagicBroccoli](https://magicbroccoli.de) - Unofficial XMPP MUC - Donate: [All options](https://magicbroccoli.de/donate/). MUC maintainer: @Derelict
 
 ## Website
 
