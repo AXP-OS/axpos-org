@@ -36,9 +36,9 @@ Main challenges which need to be solved (not ordered):
 The **kernel patching** is essential for an ongoing enhanced security. This part has been checked quickly and it seems to be solvable. Automation is the key though 
 and it already has been [started to work](https://github.com/sfX-android/automation_scripts/tree/ansible/roles/kernel_patcher) on that topic. From what is known currently it *should* be possible to achieve continuing this part and even automate all or whole parts at least. As the process has just been started with it is unclear what challenges are behind the next corner though. **Even though the process of patching itself IS release critical the January build will not contain any new Kernel patches to not delay releases even more.** While the process is still ongoing we are close :)
 
-#### EDIT: 2025-02-20
+#### UPDATE: 2025-02-20
 
-i guess (i.e. hope) that I can finish soon the work on the CVE patcher. its code [had to be adapted](https://codeberg.org/AXP-OS/cve_checker/compare/8472020ac4f2b677fdd356d7af5b6318689c0834...main) and also the build automation routines had to be changed at several places. 
+I guess (i.e. hope) that I can finish soon the work on the CVE patcher. its code [had to be adapted](https://codeberg.org/AXP-OS/cve_checker/compare/8472020ac4f2b677fdd356d7af5b6318689c0834...main) and also the build automation routines had to be changed at several places. 
 
 all the main changes have been done but there's still/just some fine tuning left.
 
@@ -81,8 +81,23 @@ the patch count was wrong, too bc if a patch passed the pre-flight check it was 
 
 Kernel patches have been applied successfully up to **2025-02-19** on a first test device! Next step is doing clean builds and tests with all other devices asap.
 
-
 **TL;DR: we will get CVE kernel patches with the February builds but in a (slightly) reduced manner.**
+
+#### UPDATE: 2025-02-21
+
+so.. there was still not just fine tuning left it seems. anyways but now the previously used workarounds which ensured proper patch handling have been moved to the cve patcher directly, i.e. it will write the correct patch lines including:
+- fallback to patch cmd
+- when fallback applies it will parse the patch and grab its metadata (author,date,subject)
+- and applies the patch with that metadata + a link to the git repo pointing to the origin patch
+
+Also the patch count is now 100% accurate! instead of counting those which _might_ apply (Divest) and instead of counting which _should_ apply (see [UPDATE: 2025-02-20](#update-2025-02-20)) we now count (cve_checker [v0.8.3 or later](https://codeberg.org/AXP-OS/cve_checker/releases)) the REAL amount of successfully **applied(!)** patches. nothing more, nothing less.
+
+Some patches for Dec 2024 and January 2025 were not properly downloaded in one of the previous attempts so they have been re-imported.
+
+I started to deprecate the use of [git submodules](https://github.com/AXP-OS/build/blob/axp/.gitmodules) within the main build repo already while they are still there to ensure nothing breaks during the current work on the CVE kernel patcher. Especially for the kernel patches this makes no sense anymore and these have been moved to the [manifest](https://github.com/AXP-OS/manifest/commit/af49c33a44fe122b89e8d316d544e3cd66ed2bc2) instead.
+
+The automation had to be adapted again as well to reflect the changes above.
+
 
 
 ### [2] ASB patching process
