@@ -74,7 +74,7 @@ Please read this first: <a href="{{ printf "%s" .docbaseurl }}/Flavors" target="
 {{- if in .flavors "Pro" -}}
 <h5>Pro build</h5>
 
-{{ $filename := printf "content/devices/fp_%s_regular" .codename }}
+{{ $filename := printf "content/devices/fp_%s_pro" .codename }}
 {{ if fileExists $filename }}
   {{ $markdown := readFile $filename | markdownify }}
   {{ $markdown }}
