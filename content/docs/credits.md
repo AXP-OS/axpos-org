@@ -81,6 +81,14 @@ Information to financially support the below projects/people is also listed wher
 ## Misc
 
 - [@KartikBapna](https://xdaforums.com/m/kartikbapna.9871197/) - Checklist template for basic OS tests
+- [@hagezi](https://github.com/hagezi) - DNS [blocklist](/Features)
+
+## Device testers
+
+- [@SerYo](https://code.binbash.rocks/SerYo) - klte, oriole
+- [@rocky-184](https://code.binbash.rocks/rocky-184) - enchilada
+- [@mr4zu](https://code.binbash.rocks/mr4zu) - sunfish
+- [@kilou78](https://code.binbash.rocks/kilou78) - klte
 
 ## Translations
 
