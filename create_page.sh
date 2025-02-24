@@ -58,7 +58,7 @@ if [ "$1" == "all" ];then
         fi
     done
 else
-    if [ -f "$1" ];then
+    if [ -f "params/$1" ];then
         source params/device_INIT.params
         source params/$1
         F_CHKFILES
