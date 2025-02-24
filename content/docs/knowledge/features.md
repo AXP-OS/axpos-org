@@ -46,6 +46,7 @@ The _Pro_ one is still the main flavor and so default on new devices but users [
 |Extra Apps included by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES)<br/>_([F-Droid](https://f-droid.org/), [AuroraStore](https://f-droid.org/de/packages/com.aurora.store/), [FossifyGallery](https://f-droid.org/en/packages/org.fossify.gallery/))_|**X**|**X**|
 |extended list of F-Droid repositories ([1](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/molly.xml),[2](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/nailyk.xml),[3](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/threema.xml),[4](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/futo_org.xml))<br/>(**must be explicitly enabled**)|**X**|**X**|
 |[eSIM](https://github.com/AXP-OS/packages_apps_OpenEUICC) support (A10 and later) for devices supporting euicc<br/>(**must be explicitly enabled**)|**X**|**X**|
+|Internal DNS content blocker ([blocklist](https://github.com/hagezi/dns-blocklists?tab=readme-ov-file#ledger-multi-pro---extended-protection-recommended-))|**X**|**X**|
 |Re-locking the bootloader on supported devices|**X**|**X**|
 |Reproducible builds - see the [details](/Reproducible-builds)|**X**|**X**|
 |[MicroG](https://microg.org/) included<br/>(**requires to explicitly enable signature spoofing**)|**X**|¹|
