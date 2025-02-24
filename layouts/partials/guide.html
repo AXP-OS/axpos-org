@@ -29,6 +29,7 @@ Please read this first: <a href="{{ printf "%s" .docbaseurl }}/Flavors" target="
 <p>AXP.OS for the <i>{{ .devicename }}</i> does <b>not</b> include any firmware so you need to ensure having the correct one <b>manually</b>. Skipping this step might result in unexpected behavior and problems later on.</p>
 
 <p>For this follow the <a href="{{ printf "%s" .docbaseurl }}/Firmware" target="_blank">firmware guide</a> (this step needs to be done only once).</p>
+<p>If there is no specific guide for your device or model check the firmware guide for <a href="https://wiki.lineageos.org/devices/{{ .codename }}/fw_update/" target="_blank">{{ .codename }} (@LineageOS wiki)</a> and ensure you choose the Android version matching the AXP.OS release.</p>
 {{ end }}
 
 <h3>Install / Upgrade</h3>
