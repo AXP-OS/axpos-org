@@ -78,6 +78,10 @@ Information to financially support the below projects/people is also listed wher
 - [@flamefire89]() - ASB backports - Donate: [GitHub Sponsors](https://github.com/sponsors/flamefire)
 - [@steadfasterX](https://github.com/sfX-android) - extendrom, AOSmium, CI/CD, automation, hosting, build, administration + maintenance, tons of patches, ........ and SO much more :)
 
+## Misc
+
+- [@KartikBapna](https://xdaforums.com/m/kartikbapna.9871197/) - Checklist template for basic OS tests
+
 ## Translations
 
 - [Weblate](https://weblate.org) - [donate](https://weblate.org/donate)
