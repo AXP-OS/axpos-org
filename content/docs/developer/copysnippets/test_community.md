@@ -38,10 +38,10 @@ _Major tests which HAVE TO succeed for any flavor_
 - [ ] **SELinux enforced** (`Android Settings -> Privacy -> Trust`)
 - [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`)
 - [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/#optional-activate-google-support))
-- [ ] **F-Droid** included
+- [ ] **F-Droid** included and expected version
 - [ ] **OpenEUICC** app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device))
-- [ ] **AuroraStore** App included
-- [ ] **AOSmium WebView** installed (`Developer Options -> WebView implementation`)
+- [ ] **AuroraStore** App included and expected version
+- [ ] **AOSmium WebView** installed (`Developer Options -> WebView implementation`) and expected version
 - [ ] **OTA update** (`Android Settings -> Updater -> 3dots -> Preferences -> Server Choice -> "UNSTABLE"`)
 - [ ] **Developer options**: `OEM unlock` option is **NOT** shown in developer options
 - [ ] **locking the bootloader**: on supported devices (see the [device page](https://axpos.org/devices))
@@ -50,11 +50,11 @@ _Major tests which HAVE TO succeed for any flavor_
 
 _Required only when the flavor you are testing is: Pro_
 
-- [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`)
-- [ ] **MicroG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`)
-- [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included
+- [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`) and expected version
+- [ ] **MicroG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and expected version
+- [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and expected version
 - [ ] **WireGuard VPN Kernel module** (`Wireguard App -> grant root -> enable kernel support in settings`)
-- [ ] Home **Launcher Neo Launcher** included
+- [ ] Home **Launcher Neo Launcher** included and expected version
 - [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`)
 - [ ] **boot debug** log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](/devices). Add the output in a comment)
 
