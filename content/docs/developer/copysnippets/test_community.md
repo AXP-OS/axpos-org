@@ -23,6 +23,11 @@ _*) Please note: the test build might get removed during regular clean-up tasks 
 ## AXP.OS Quality Control Checklist
 
 ```
+## Device
+
+- codename: 
+- flavor: Slim | Pro
+
 ### AXP.OS - Core features
 
 _Major tests which HAVE TO succeed for any flavor_
