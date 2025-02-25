@@ -29,6 +29,7 @@ Apps which are still getting releases on github.com use the old one until fully 
 
 - [AOSmium](https://codeberg.org/AXP-OS_releases/app_aosmium) WebView + Browser
 - [LoveLaceAV](https://codeberg.org/AXP-OS_releases/app_aosmium)
+- [Phonesky](https://codeberg.org/AXP-OS/packages_apps_phonesky)
 
 AXP.OS users can install releases from these sources as an update to the included version.
 
@@ -59,7 +60,6 @@ hmgnRN1uCE69yYloqvfvoIoaSBdmyA==
 
 ### not yet migrated apps
 
-- AXP.OS [Phonesky](https://github.com/AXP-OS/packages_apps_phonesky)
 - [OpenEUICC](https://github.com/AXP-OS/packages_apps_OpenEUICC)
 
 AXP.OS users cannot install the CI/CD releases for these apps from github as the key differs from the one during the build process (build uses the new key, github releases signs with the old one).
