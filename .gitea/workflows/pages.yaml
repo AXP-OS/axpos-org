@@ -138,6 +138,5 @@ jobs:
   mirror:
     needs: build
     uses: ./.gitea/workflows/mirror.yaml
+    runs-on: docker-node-latest
     secrets: inherit
-    container:
-      image: node:current-bookworm
