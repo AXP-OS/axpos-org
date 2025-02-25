@@ -1,9 +1,7 @@
 ---
 title: "Changelogs"
 type: docs
-toc: true
-aliases:
-    - /Changelogs
+toc: false
 ---
 
 Select a year from the left menu
