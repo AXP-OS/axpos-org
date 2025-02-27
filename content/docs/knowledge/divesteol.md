@@ -8,7 +8,7 @@ aliases:
 
 Since the hard "over and out" cut ([source](https://web.archive.org/web/20241227223444/https://divestos.org/pages/news#end)) of Divest OS it was unclear if and how AXP.OS will continue.
 
-State: `2025-02-20`
+State: `2025-02-27`
 
 ## Tasks
 
@@ -16,7 +16,7 @@ Main challenges which need to be solved (not ordered):
 
 ### critical
 
-- [ ] automating CVE kernel patcher [1] (90% done)
+- [x] automating CVE kernel patcher [1]
 - [x] automating the ASB patching process [2]
 - [x] Webview replacement / automating Mulch patching [4]
     - [x] F-Droid release (undecided if)
