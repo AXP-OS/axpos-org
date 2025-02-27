@@ -22,18 +22,21 @@ Starting in January 2025 apps will use a new signing key which affects both auto
 
 **TL;DR: the new key is way smaller while the security level is dramatically increased (521-bit ECDSA == 15360-bit RSA).**
 
-All apps which have been fully migrated to the [AXP.OS git server](https://code.binbash.rocks) will use the new key.<br/>
-Apps which are still getting releases on github.com use the old one until fully migrated.
+All apps have been fully migrated to the [AXP.OS git server](https://code.binbash.rocks) and uses the new key.<br/>
+Releases will be made on [Codeberg](https://codeberg.org/AXP-OS/) and mirrored to [Github](https://github.com/AXP-OS).
 
-### full migrated apps
+### Current
 
-- [AOSmium](https://codeberg.org/AXP-OS_releases/app_aosmium) WebView + Browser
-- [LoveLaceAV](https://codeberg.org/AXP-OS_releases/app_aosmium)
-- [Phonesky](https://codeberg.org/AXP-OS/packages_apps_phonesky)
+_Since January 2025_
+
+- [AOSmium @Codeberg](https://codeberg.org/AXP-OS/app_aosmium) | [AOSmium @Github](https://github.com/AXP-OS/app_aosmium) (no LFS!)
+- [LoveLaceAV @Codeberg](https://codeberg.org/AXP-OS/packages_apps_LoveLaceAV) | [LoveLaceAV @Github](https://github.com/AXP-OS/packages_apps_LoveLaceAV)
+- [Phonesky @Codeberg](https://codeberg.org/AXP-OS/packages_apps_phonesky) | [Phonesky @Github](https://github.com/AXP-OS/packages_apps_phonesky)
+- [OpenEUICC @Codeberg](https://codeberg.org/AXP-OS/packages_apps_OpenEUICC) | [OpenEUICC @Github](https://github.com/AXP-OS/packages_apps_OpenEUICC)
 
 AXP.OS users can install releases from these sources as an update to the included version.
 
-```
+```bash
 Signer #1 certificate DN: CN=APK SIGNING KEY, OU=AXP.OS, O=AXP.OS, L=N/A, ST=N/A, C=DE
 Signer #1 certificate SHA-256 digest: 005c9805d501bf50c1a8bfd3204b6908843088581fdcf3db8ab4f688ffc0e7b6
 Signer #1 certificate SHA-1 digest: 53c4021704a4a565e4833d0620eb38f6808e1316
@@ -58,13 +61,15 @@ gYwAMIGIAkIBrPhoYHbix9fESALKBCQvW2Z4RULHJs7CwFSEc71rNN30QWHA5W8sRkfUgZJzFGcFQmhf
 hmgnRN1uCE69yYloqvfvoIoaSBdmyA==
 ```
 
-### not yet migrated apps
+### Legacy
 
-- [OpenEUICC](https://github.com/AXP-OS/packages_apps_OpenEUICC)
+_Before January 2025_
 
-AXP.OS users cannot install the CI/CD releases for these apps from github as the key differs from the one during the build process (build uses the new key, github releases signs with the old one).
+{{% details title="Click to reveal" closed="true" %}}
 
-```
+AXP.OS users using an AXP.OS January 2025 or later build cannot install the CI/CD releases for these apps as the signing key differs from the one during the build process (build uses the new key, github releases signs with the old one).
+
+```bash
 Signer #1 certificate DN: CN=axp, OU=axp, O=AXP.OS, C=DE
 Signer #1 certificate SHA-256 digest: c84042a34189d034b01408f2cfc8d929ac91ccd0054bdafa7ccc791b0a16d103
 Signer #1 certificate SHA-1 digest: 834bc49132e21a1384d4456fada4b23f39c38417
@@ -116,6 +121,7 @@ aHG7a9L9NCl/wNlpsNql7Mo87x74ekws9ibHOXfBRIuk9P/TZ8e30PyC8nDQyYTrixoJEIT7wwtUm//E
 9pN2rAeeWrtitn5arERsVF7ePo4+bqg4teoBQe8WT0d0wGBLCtvq2iYbISs/JviSz7PiU3UxTRGpA+70
 3cKy09HESvU39zEWgEzyTXF7EZZPibJUbHCC+3YFzpjU5Ob2gFdEOwPY6BtJjAL8Q/L7
 ```
+{{% /details %}}
 
 ## Build signatures
 
