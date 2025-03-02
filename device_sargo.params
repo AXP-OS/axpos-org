@@ -1,0 +1,22 @@
+#!/bin/bash
+###############################################################################
+# device specs for creating a new page
+###############################################################################
+export HUGO_VENDOR="Google"
+export HUGO_NAME="Google Pixel 3a"
+export HUGO_CODENAME="sargo"
+export HUGO_ANDROID="13"
+export HUGO_ENCRYPTION="ICE"
+export HUGO_FIRMWARE="included"
+export HUGO_RELOCKABLE="yes"
+export HUGO_VERIFIEDBOOT="yes"
+export HUGO_FLAVORS="Slim"
+export HUGO_STATE="stable"
+export HUGO_SUPPORTLEVEL="community"
+export HUGO_DEBUGBOOTPATH="/metadata"
+export HUGO_FACTORYZIP="yes"
+export HUGO_ISAB="yes"
+export HUGO_ISPIXEL="yes"
+export HUGO_KILINK=
+export HUGO_XDALINK=""
+export HUGO_FIRSTRELEASE="2025-03-01"
