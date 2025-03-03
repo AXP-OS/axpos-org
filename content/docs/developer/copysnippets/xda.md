@@ -7,7 +7,7 @@ toc: true
 
 ## Title
 ~~~
-[ROM][A>>>ANDROIDVERSION<<<][OFFICIAL][microG][hardened][>>>CODENAME<<<] AXP.OS >>>LOSVERSION<<<
+[ROM][A-XXXXandroidversionnumXXXX][OFFICIAL][microG][hardened][XXXXcodenameXXXX] AXP.OS XXXXlosversionXXXX
 ~~~
 
 ## Post
@@ -32,19 +32,19 @@ Operating System - and last but not least ... even for [I]advanced*[/I] users.
 Read all about [B]AXP.OS[/B] on its [URL='https://axpos.org']homepage[/URL]
 
 [/CENTER]
-[HEADING=1][CENTER][B]Installation Guide & Download:[/B] [URL='https://axpos.org/devices/>>>CODENAME<<<']here[/URL][/CENTER][/HEADING]
+[HEADING=1][CENTER][B]Installation Guide & Download:[/B] [URL='https://axpos.org/devices/XXXXvendorXXXX/XXXXcodenameXXXX']here[/URL][/CENTER][/HEADING]
 [HEADING=2][CENTER]if you skip reading the guide ^^^ you WILL fail[/CENTER][/HEADING]
 [HEADING=1][CENTER][/CENTER][/HEADING]
 [HEADING=1][CENTER]Support:[/CENTER][/HEADING]
 [HEADING=2][CENTER]via this thread and [URL='https://axpos.org/docs/overview/#support']here[/URL][/CENTER][/HEADING]
 
 [HEADING=2][B]Sources[/B][/HEADING]
-- LineageOS [URL='https://github.com/LineageOS/android/tree/lineage->>>LOSVERSION<<<']manifest[/URL]
-- AXP.OS [URL='https://github.com/AXP-OS/manifest/blob/axp-a>>>ANDROIDVERSION<<</axp.xml']manifest[/URL] (extends the LOS one, including the related related [B]kernel[/B] [URL='XXXXXXXXXXXXX']source[/URL])
+- LineageOS [URL='https://github.com/LineageOS/android/tree/lineage-XXXXlosversionXXXX']manifest[/URL]
+- AXP.OS [URL='https://github.com/AXP-OS/manifest/blob/axp-aXXXXandroidversionnumXXXX/axp.xml']manifest[/URL] (extends the LOS one, including the related related [B]kernel[/B] [URL='XXXXurlXXXX']source[/URL])
 - Note: AXP.OS is one of the few projects that offer full [URL='https://axpos.org/docs/knowledge/reproducible/']reproducible builds[/URL].
  
 [HEADING=2]Credits[/HEADING]
-- See [URL='https://axpos.org/about/#the-os']here[/URL]
+- See [URL='https://axpos.org/docs/credits/']here[/URL]
 ```
 
 ## Tags
