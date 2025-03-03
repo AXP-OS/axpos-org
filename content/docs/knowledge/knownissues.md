@@ -213,8 +213,9 @@ This page documents known problems, along with workarounds if available, for the
 
 #### klte and maybe hlte
 
-*   SD cards might fail to mount or format. \[vold + selinux?\]
-*   USB ADB only works when MTP mode isn't set. \[FunctionFS corruption?\]
+* SD cards might fail to mount or format. \[vold + selinux?\]
+* USB ADB only works when MTP mode isn't set. \[FunctionFS corruption?\]
+* Fingerprint sensor does not work [deblobber?!]
 
 #### m8/m8d
 
