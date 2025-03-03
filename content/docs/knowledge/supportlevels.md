@@ -32,4 +32,4 @@ verified & tested: **by the AXP community**
 |`AXP community`|tested and verified functionality of the OS, apps and any promoted features based on **user reports**|**X**|**X**|
 |`AXP community`|the whole state (including bootloader lock where applicable) is based on **user reports**|**X**|**X**|
 |`AXP team`|**limited** support as there is no way to re-produce issues (bug reports can still be opened though)|**X**|**X**|
-|`N/A`|every update will be tested on a real device before releasing|||
+|`AXP community`|every update will be tested on a real device before releasing|**X**|**X**|
