@@ -90,6 +90,8 @@ Information to financially support the below projects/people is also listed wher
 - [@rocky-184](https://code.binbash.rocks/rocky-184) - enchilada
 - [@mr4zu](https://code.binbash.rocks/mr4zu) - sunfish
 - [@kilou78](https://code.binbash.rocks/kilou78) - klte
+- [@Confined5290](https://code.binbash.rocks/Confined5290) - sargo
+- [@jschroeter-user](https://code.binbash.rocks/jschroeter-user) - klte
 
 ## Translations
 
