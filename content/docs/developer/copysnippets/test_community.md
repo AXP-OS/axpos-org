@@ -53,7 +53,7 @@ _Required only when the flavor you are testing is: Pro_
 - [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`) and expected version
 - [ ] **MicroG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and expected version
 - [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and expected version
-- [ ] **WireGuard VPN Kernel module** (`Wireguard App -> grant root -> enable kernel support in settings`)
+- [ ] **WireGuard VPN Kernel module** (Install [Wireguard](https://download.wireguard.com/android-client/) or [WG Tunnel](https://f-droid.org/packages/com.zaneschepke.wireguardautotunnel/). `Wireguard App -> grant root -> enable kernel support in settings`. `WG Tunnel -> Settings -> Use Kernel module -> grant root`)
 - [ ] Home **Launcher Neo Launcher** included and expected version
 - [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`)
 - [ ] **boot debug** log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](/devices). Add the output in a comment)
