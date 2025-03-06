@@ -28,6 +28,10 @@ eSIM Management is not enabled by default and available on supported devices onl
 *   If you received only a server and activation code, input it into the respective fields, and tap the checkbox to continue.
 *   After a few moments your eSIM should be provisioned and start working.
 
+### Is AXP.OS secure?
+
+See [AXP.OS patch level](/docs/knowledge/patchlevels) for details.
+
 ### Debug logs
 
 See [Grab-Logs](/Grab-Logs)
