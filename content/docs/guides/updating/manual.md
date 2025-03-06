@@ -14,7 +14,7 @@ toc: true
 1. Read the [Changelog](/devices/changelogs)!
 1. Keep an eye on the [Automation channel](/docs/overview)
 1. Always do a [Backup](/docs/guides/backuprestore)!
-1. Using Magisk hide? un-do this before upgrading
+1. Using Magisk hide? [Undo the hiding of Magisk](/docs/guides/hideroot/#undo-hide) before upgrading
 1. Download ({{< globalvar key="downloadServerBaseUrl" uripath="/axp" linkname="Pro" >}} / {{< globalvar key="downloadServerBaseUrl" uripath="/axp-slim" linkname="Slim" >}}) the latest release for your device and flavor (_for Pixels: choose "OS zip"_)
 1. open `Android Settings -> Updater -> 3 dots menu -> Local update` and select the downloaded zip
 1. follow the instructions and ensure you do not miss the hint above regarding Magisk
@@ -27,7 +27,7 @@ toc: true
 1. Read the [Changelog](/devices/changelogs)!
 1. Keep an eye on the [Automation channel](/docs/overview)
 1. Always do a [Backup](/docs/guides/backuprestore)!
-1. Using Magisk hide? un-do this before upgrading
+1. Using Magisk hide? [Undo the hiding of Magisk](/docs/guides/hideroot/#undo-hide) before upgrading
 1. Download ({{< globalvar key="downloadServerBaseUrl" uripath="/axp" linkname="Pro" >}} / {{< globalvar key="downloadServerBaseUrl" uripath="/axp-slim" linkname="Slim" >}}) the latest release for your device and flavor (_for Pixels: choose "OS zip"_)
 1. Verify the build [Signature](/docs/knowledge/signatures/#build-signatures) and hash sum
 1. reboot your device into recovery and select `Apply update -> Apply from ADB`

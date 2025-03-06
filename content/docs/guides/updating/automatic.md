@@ -22,7 +22,7 @@ Here the major steps for updating your system:
 
 _Pro_ flavor users (not needed when using the _Slim_ flavor):
 
-3. {{< callout type="warning" >}}before actually _installing_ (on non-A/B devices) or at latest before _rebooting_ (on A/B devices) you should **unhide** Magisk if it is currently hidden!* {{< /callout >}}
+3. {{< callout type="warning" >}}before actually _installing_ (on non-A/B devices) or at latest before _rebooting_ (on A/B devices) you should [undo the hiding of Magisk](/docs/guides/hideroot/#undo-hide) if it is currently hidden!* {{< /callout >}}
 4. in any case ensure you understood the [Magisk hints](https://github.com/sfX-android/android_vendor_extendrom/wiki/FAQ#magisk-requires-additional-setup-on-start) _(even when not using the hide Magisk app functionality)_
 
 
@@ -32,7 +32,7 @@ _Pro_ flavor users (not needed when using the _Slim_ flavor):
 If that happens:
 1. try a reboot
 1. if it still does not show up: ensure you remove any leftovers of the previously hidden Magisk (i.e open the App drawer and search for your previously chosen Magisk app name)
-1. then install the [official Magisk apk](https://github.com/topjohnwu/Magisk/releases) and hide it again. When downloading Magisk it is recommended to use the latest version as written in the Changelog and **not** simply the latest one available!
+1. then install the [official Magisk apk](https://github.com/topjohnwu/Magisk/releases) and [hide Magisk](/docs/guides/hideroot) again. When downloading Magisk it is recommended to use the latest version as written in the Changelog and **not** simply the latest one available!
  
 Do **not (i.e. NEVER EVER)** INSTALL Magisk via the "Install" button! Just the apk is enough. Anything else can lead into a non-booting system. See also this important [hints](https://github.com/sfX-android/android_vendor_extendrom/wiki/FAQ#magisk-requires-additional-setup-on-start).
 {{< /callout >}}
@@ -42,7 +42,7 @@ Do **not (i.e. NEVER EVER)** INSTALL Magisk via the "Install" button! Just the a
 1. Read the [Changelog](/devices/changelogs)!
 1. Keep an eye on the [Automation channel](/docs/overview)
 1. Always do a [Backup](/docs/guides/backuprestore)!
-1. Using Magisk hide? un-do this before upgrading
+1. Using Magisk hide? [Undo the hiding of Magisk](/docs/guides/hideroot/#undo-hide) before upgrading
 1. `Android settings -> System -> Updater`
 1. Follow the process
 
