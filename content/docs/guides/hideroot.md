@@ -30,7 +30,7 @@ The problem is that the implementation in **how** and how **deep** they check di
 > [!CAUTION]
 > For each of those checks which are not covered here Magisk modules may exist:<br/>
 >
-> AXP.OS strongly discourages using any of these if you are not want to expose your whole system to a third party. They might work, might don't do any harm and are not suspicious at all but we cannot and will not check or approve any of these modules.
+> AXP.OS strongly discourages using any of these if you do not want to expose your whole system to a third party. They might work just fine, might don't do any harm and are not suspicious at all but we cannot and will not check or approve any of these modules.
 > 
 > Last but not least:<br/>**If your bootloader is in _locked_ state Magisk modules can even brick your whole device!**
 
