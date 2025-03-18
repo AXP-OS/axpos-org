@@ -14,7 +14,7 @@ AXP.OS is a more private and more secure aftermarket mobile operating system bas
 
 The _Pro_ [flavor](/Flavors) of AXP.OS comes pre-rooted which is a major difference between many (if not all) other custom OS and requires to read the documentation properly and acting wisely (i.e. not installing APKs from random sources, open every link in mails you get, etc). While the OS comes pre-rooted it is not _active_ at all and requires to _actively install_ the Magisk companion app + run the requirements installer once to make it usable first. That means if you do not need root you can simply skip that step and there will be no `su` binary available at all.
 
-The _Slim_ [flavor](/Flavors) on the other site does **not** come pre-rooted while it has drawbacks regarding usability and is not that intensively tested as the _Pro_ one.
+The _Slim_ [flavor](/Flavors) on the other side, does **not** come pre-rooted, which has some drawbacks regarding usability, and is not as intensively tested as the _Pro_ one.
 
 **If you are not sure which one to choose, ask in the support channel.**
 
