@@ -4,6 +4,8 @@ type: docs
 toc: true
 aliases:
     - /Possible-fixes-for-stubborn-apps
+    - /stubborn
+    - /s
 ---
 Some problems you might encounter are:
 
@@ -30,8 +32,10 @@ The solution is quite simple: the app HAS TO be linked with the play store (i.e.
 
 ### Possible solutions
 
+#### Pro flavor / or Magisk manually installed
+
 1. Uninstall the app and install it directly from the Google play store
-2. OR: Backup the app with [NeoBackup](https://f-droid.org/packages/com.machiav3lli.backup/), then in the NeoBackup settings set the _"package name of the installation program"_ to `com.android.vending`, then restore the previous backup'ed app
+2. Backup the app with [Neo Backup](https://f-droid.org/packages/com.machiav3lli.backup/), then in the Neo Backup settings: `Service -> "The installer package name"` set the name to `com.android.vending`, then simply restore the previous backup'ed app
 
 After that check the app info page again -> it should show "installed by Google Play Store".
 
@@ -39,3 +43,6 @@ If you use e.g. Aurora to keep your apps updated ensure you blacklist these apps
 
 Last but not least check the topic in the [AXP.OS FAQ](/docs/knowledge/faq/#no-gcm-available--google-play-service-required)
 
+#### Slim flavor
+
+Due to the new introduced _Slim_ flavor (and so lacking root permission) a different solution is in the works ([details](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/53)).
