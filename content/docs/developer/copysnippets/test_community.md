@@ -4,17 +4,16 @@ type: docs
 toc: true
 #aliases:
 ---
+## AXP.OS test build info
+
 ```
 A test build has been released :tada: !
 Check it out here:
-- [download](https://leech.binbash.rocks:8008/axp-unstable/)*
-- [factory](https://leech.binbash.rocks:8008/axpYYYY/XXXX/factory/)
-
-_*) Please note: the test build might get removed during regular clean-up tasks @midnight. If you missed to fetch it in time let us know._
+- [download](https://leech.binbash.rocks:8008/axp<XXXX>/<XXXX>/tests/)
 
 ## YOUR feedback is required:
 
-1. copy the following snippet
+1. copy the following snippet: [Quality Control Checklist](https://axpos.org/docs/developer/copysnippets/test_community/#axpos-quality-control-checklist)
 2. add a new comment with that snippet as content
 3. save it
 4. go through the list and tick each item you have tested
