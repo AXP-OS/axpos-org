@@ -32,7 +32,7 @@ Check it out here:
 _Major tests which HAVE TO succeed for any flavor_
 
 - [ ] **current ASB patch - System** (`Android Settings -> Info/About Phone -> Android Version` must be current)
-- [ ] **current ASB patch - Kernel** (`Android Settings -> Info/About Phone -> Kernel version -> build date` must be current. Kernel version must have `-pXXX` inside the version string)
+- [ ] **current ASB patch - Kernel** (`Android Settings -> Info/About Phone -> Android Version -> Kernel version -> build date` must be current. Kernel version must have `-pXXX` inside the version string)
 - [ ] paste a **screenshot** of the Android version screen (must show `AXP.OS version, Android security update, Kernel version`)
 - [ ] **SELinux enforced** (`Android Settings -> Privacy -> Trust`)
 - [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`)
@@ -54,14 +54,14 @@ _Required only when the flavor you are testing is: Pro_
 - [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and expected version
 - [ ] **WireGuard VPN Kernel module** (Install [Wireguard](https://download.wireguard.com/android-client/) or [WG Tunnel](https://f-droid.org/packages/com.zaneschepke.wireguardautotunnel/). `Wireguard App -> grant root -> enable kernel support in settings`. `WG Tunnel -> Settings -> Use Kernel module -> grant root`)
 - [ ] Home **Launcher Neo Launcher** included and expected version
-- [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`)
+- [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Settings -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`)
 - [ ] **boot debug** log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](/devices). Add the output in a comment)
 
 #### AXP.OS - Slim tests
 
 _Required only when the flavor you are testing is: Slim_
 
-- [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG`)
+- [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Settings -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG`)
 - [ ] **MicroG install test** (microG is NOT included within Slim builds but its usage has been prepared):
     - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation)
     - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/#optional-activate-google-support))
