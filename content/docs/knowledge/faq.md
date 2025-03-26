@@ -600,7 +600,7 @@ Yes, you can route them via the main profile VPN. Enable this in Settings > Netw
 
 Yes, it explicitely allows Tor apps to bypass a Tor based VPN when block connections is enabled to allow them to safely work. Supported Tor providers are Orbot, Tor VPN, and Tor Services. Supported apps are Briar, Cwtch, OnionShare, and Tor Browser.
 
-#### Why can't I access AXP.OS.org (or divested.dev)?
+#### Why can't I access AXP.OS.org (or other websites of the project)?
 
 *   The primary web servers are rarely down.
 *   In order to manage resource usage the divested.dev web servers block hundreds of million of IP addresses via dozens of static blocklists and dynamic log analysis via our [SCFW3](https://codeberg.org/divested/scfw3) tool.
@@ -618,9 +618,6 @@ Yes, it explicitely allows Tor apps to bypass a Tor based VPN when block connect
     *   [Internet Storm Center](https://www.dshield.org/ipinfo)
 *   Additional website mirrors are listed at the footer of the webpage.
 *   Additional F-Droid mirrors are listed [here](/pages/our_apps#repos).
-*   divested.dev is accessible via the eeyo.re Cloudflare mirror.
-*   AXP.OS.org is accessible via the AXP.OS.eeyo.re Cloudflare mirror.
-*   F-Droid, Carrion, Hypatia, and the AXP.OS Updater all have support for these mirrors.
 
 ### Freedom
 
@@ -638,10 +635,6 @@ Android is a legitimately fantastic operating system and no other mobile platfor
 
 Please see the [community](/pages/community) page.
 
-#### How do you say AXP.OS?
-
-*   \[die-vEst OH ES\]
-*   /daɪˈvɛstˌoʊ ˈɛs/
 
 #### What VPN/email/boat rental services do you recommend?
 
@@ -662,9 +655,6 @@ Not a poorly documented, code over the wall, haphazardly maintained "ROM".
 *   UnifiedNlp is not required for apps to acquire location.
 *   Network location providers, such as Play and UnifiedNlp, do not make GPS acquire a lock quicker.
 
-#### How long does it take to compile all supported devices?
-
-As of 2024/12/23, it takes a bit over two days on an all NVME, 64GB RAM, Ryzen 7950X system.
 
 #### Why do older branches compile quicker?
 
