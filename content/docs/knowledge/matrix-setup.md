@@ -10,12 +10,14 @@ aliases:
 For comprehensive insights check out the [join Matrix guide](https://joinmatrix.org/guide/)
 {{< /callout >}}
 
-#### Initial setup
+#### Installation
 
 1. Choose a Matrix client of your choice ([Element / X ](https://element.io/download), [SchildiChat](https://schildi.chat/) are recommended)
 1. Create an account on a trusted homeserver of your choice: [here](https://matrix.org/ecosystem/hosting/) or [here](https://servers.joinmatrix.org/)
-1. Setup your [Matrix client](/matrix-setup)
-1. Join the AXP.OS support room: [#axp.os:binbash.rocks](https://matrix.to/#/#axp.os:binbash.rocks)
+1. Setup your [Matrix client](/docs/knowledge/matrix-setup/#initial-setup)
+1. Join the [AXP.OS Matrix space](/docs/overview/#support)
+
+#### Initial setup
 
 {{< callout type="warning" >}}
 The configuration options might look different between the chosen Matrix client and can also be named differently or even missing.
