@@ -23,7 +23,21 @@ aliases:
 #### 1. Matrix Chat (_recommended_)
 
 1. Setup your [Matrix client](/matrix-setup)
-1. Join the AXP.OS support room: [#axp.os:binbash.rocks](https://matrix.to/#/#axp.os:binbash.rocks)
+1. Join the AXP.OS Matrix _Space_: [#axp.os-space:binbash.rocks](https://matrix.to/#/#axp.os-space:binbash.rocks)
+    - _The Matrix space contains all rooms related to AXP.OS which you can then join by a simple click_
+1. In your client: open to join at least these:
+    - **AXP.OS - Support**
+    - **sfX Automation**
+    - _if you requested a new device/flavor:_ **AXP.OS - Device Bringup**
+    - _if you want to test new unstable builds:_ **AXP.OS - Release Tests**
+
+If your client does **not** support Matrix spaces you can join the following rooms manually:
+- General Support: [#axp.os-support:binbash.rocks](https://matrix.to/#/#axp.os-support:binbash.rocks)
+- New build announcements: [#build-announcements:binbash.rocks](https://matrix.to/#/#telegram_sfX_CI:binbash.rocks)
+- New device/flavor bringup: [#axp.os-bringup:binbash.rocks](https://matrix.to/#/#axp.os-bringup:binbash.rocks)
+- Unstable/beta versions: [#axp.os-beta:binbash.rocks](https://matrix.to/#/#axp.os-beta:binbash.rocks)
+
+_Note: Joining the Matrix **space** (see above) instead is highly recommended as it ensures you do not miss new/changed rooms._
 
 #### 2. XDA Forum
  
