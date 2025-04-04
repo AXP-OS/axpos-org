@@ -1,14 +1,14 @@
 ---
-title: "Fairphone FP3"
+title: "Fairphone 3"
 codename: FP3
 android: 13
 encryption: "FBEv1"
 firmware: "included"
-relockable: "yes*"
+relockable: "yes"
 verifiedboot: "yes"
 flavors: "Slim"
 state: "!! ALPHA !!"
-supportlevel: team
+supportlevel: community
 debugbootpath: /mnt/vendor/persist
 factoryzip: "no"
 isab: "yes"
