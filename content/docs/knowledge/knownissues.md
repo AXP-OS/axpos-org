@@ -137,7 +137,7 @@ This page documents known problems, along with workarounds if available, for the
 
 ## FP3
 
-### Bootloader lock 
+### FP3 - Bootloader lock 
 
 {{< callout type="error" emoji="⚠️" >}}
 The security of the FP3 bootloader can be considered as **broken**
