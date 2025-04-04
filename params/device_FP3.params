@@ -3,7 +3,7 @@
 # device specs for creating a new page
 ###############################################################################
 export HUGO_VENDOR="Fairphone"
-export HUGO_NAME="Fairphone FP3"
+export HUGO_NAME="Fairphone 3"
 export HUGO_CODENAME="FP3"
 export HUGO_ANDROID="13"
 export HUGO_ENCRYPTION="FBEv1"
