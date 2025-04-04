@@ -84,7 +84,7 @@ jobs:
           git submodule update --remote
 
           # everything after v0.9.7 breaks devices pages!
-          cd themes/hextra/ && git fetch --all && git checkout refs/tags/v0.9.7
+          cd themes/hextra/ && git fetch --tags && git checkout refs/tags/v0.9.7
           cd ../..
 
           if [ -z "${{ inputs.forceimp }}" ] || [ "${{ inputs.forceimp }}" == "true" ];then
