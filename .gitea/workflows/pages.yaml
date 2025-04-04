@@ -82,6 +82,11 @@ jobs:
           TZ: Europe/Berlin
         run: |
           git submodule update --remote
+
+          # everything after v0.9.7 breaks devices pages!
+          cd themes/hextra/ && git reset --hard v0.9.7
+          cd ../..
+
           if [ -z "${{ inputs.forceimp }}" ] || [ "${{ inputs.forceimp }}" == "true" ];then
             echo "convert imp.png"
             ./text_convert.sh "${{ vars.AXPOS_WEB_IMPRINT }}" static/img/imp.png
