@@ -13,7 +13,7 @@ aliases:
 
 This page documents known problems, along with workarounds if available, for the system and apps.
 
-### Apps
+# Apps
 
 *   F-Droid will reset its database on the second start in many cases. \[upstream\]
 *   To use gmail.com with the F-Droid variant of FairEmail you must use an App Password.
@@ -21,9 +21,9 @@ This page documents known problems, along with workarounds if available, for the
 *   SMT / Fossify Gallery will fail to render images on select older devices. Disable 'deep zooming' in its settings to workaround. \[hardware limitations\]
 *   Games like "Call of Duty Mobile" (CODM) might crash \[hardened_malloc\]
 
-### System
+# System
 
-#### Not Supported
+## Not Supported
 
 *   Adoptable Storage is NOT supported. This feature is unmaintained in AOSP and DOES NOT WORK. You WILL LOSE DATA if you use it.
 *   Changing device identifiers like the IMEI is NOT supported.
@@ -38,7 +38,7 @@ This page documents known problems, along with workarounds if available, for the
 *   Signature spoofing is NOT supported.
 *   Torrents will not be offered for downloads/updates. They don't work well on mobile and they leak IP addresses of users.
 
-#### Notes
+## Notes
 
 *   16.0 and higher will warn when running an app that is not targeting Android 9.0 API for the first time.
 *   17.1 and higher will warn when running a 32-bit app for the first time on a 64-bit device. Sometimes this warning is not accurate.
@@ -60,7 +60,7 @@ This page documents known problems, along with workarounds if available, for the
 *   You can quickly access the default keyboard settings by long pressing on the comma key.
 *   Etar may not have its battery management set unrestricted. It'll prompt on opening if it doesn't. When restricted it cannot provide reliable event notifications.
 
-#### Papercuts
+## Papercuts
 
 *   On 20.0, when taking a picture from an app the confirm/retry buttons will be invisible. Tap in the bottom right to confirm/attach the image. Fixed in April 2024 update.
 *   When tethering hotspot clients through the active VPN via the "Allow clients to use VPNs" option it must be noted that they will bypass the VPN if it is stopped/disabled/deactivated even with "Block connections without VPN" enabled.
@@ -93,7 +93,7 @@ This page documents known problems, along with workarounds if available, for the
 *   When `Private DNS` is enabled for the system, Chromium based browsers will automatically handle DNS themself bypassing the /etc/hosts based blocking function. Disable `Secure DNS` to work around.
 *   When `Private DNS` is disabled for the system, using anything in the VPN slot will likely bypass the /etc/hosts based blocking function. [Read here](/pages/faq#privateDNS) for more information.
 
-#### Bugs
+## Bugs
 
 *   There have been reports of new Bluetooth connections being automatically granted contacts permission even when not chosen during pairing. This may be a UI issue when the device requires a PIN to be entered, as opposed to simply confirmed, where the code defaults the permission on but the user interface shows it off. It is recommended to toggle this contacts option during pairing as a possible workaround, and confirm it is disabled after pairing. Please take extra caution if the connecting device is Internet connected such as many modern cars are. Users should also review this permission for all existing paired devices.
 *   15.1 will bootloop if a pin/password/pattern is not set or is removed/unset. \[???\][\[tracking\]](https://github.com/Divested-Mobile/DivestOS-Build/issues/154)\[help wanted\]
@@ -102,50 +102,66 @@ This page documents known problems, along with workarounds if available, for the
 *   Select older devices running 17.1/10 or higher will fail to connect to 802.11w (optional/required) enabled Wi-Fi networks due to lack of PMF support. \[hardware\]
 *   System profiles option to disable lock screen under certain scenarios can prevent the navigation bar from working. \[upstream\][\[tracking 1\]](https://gitlab.com/LineageOS/issues/android/-/issues/4434)[\[tracking 2\]](https://gitlab.com/LineageOS/issues/android/-/issues/6093)
 
-### Devices
+# Devices
 
-#### apollo/thor
+## apollo/thor
 
 *   Encryption is not supported. \[upstream blobs\]
 
-#### athene
+## athene
 
 *   Wi-Fi country code MUST be set via advanced settings before connecting. Will bootloop otherwise. \[???\]
 *   Using GPS causes a reboot. \[???\]
 *   Encryption is not supported. \[???\]
 
-#### bacon
+## bacon
 
 *   Video recording doesn't work \[???\]\[help wanted\]
 
-#### beryllium/dipper/equuleus/polaris/ursa
+## beryllium/dipper/equuleus/polaris/ursa
 
 *   (confirmed report) Camera is non-functional. \[kernel\]\[help wanted\]
 
-#### clark
+## clark
 
 *   Camera is very slow to start and sometimes won't start at all. \[upstream\]
 *   Camera can be very slow to take pictures at higher resoutions. \[???\]
 
-#### crackling
+## crackling
 
 *   Mobile data doesn't work. \[hmalloc incompatibility\]\[help wanted\]
 
-#### d852
+## d852
 
 *   Sensors will not work unless you have a hybrid v220k modem which requires an a10b bootloader. \[firmware\]
 
-#### FP4
+## FP3
+
+### Bootloader lock 
+
+{{< callout type="error" emoji="⚠️" >}}
+The security of the FP3 bootloader can be considered as **broken**
+{{< /callout >}}
+
+The bootloader accepts images signed by the public available Android [testkey](https://github.com/LineageOS/android_external_avb/raw/refs/heads/lineage-20.0/test/data/testkey_rsa4096_pub.bin). This has been verified by the AXP.OS Team with the help of the community (many many thanks for all your patience during the progress Tim 😉).
+
+That means: an attacker can replace the whole system and you won't get even a warning about that on boot (no, not even that [yellow warning](https://source.android.com/static/docs/security/images/boot_yellow1.png) screen!). To achieve this an attacker can load a malicious update e.g. using EDL (therefor requires physical access).
+
+Once AXP.OS has been flashed **ADB** sideloading (so not using EDL) such a package would fail though - as long as you haven't replaced the [recovery](https://axpos.org/docs/guides/installation/recoveries/#official-axpos-recovery) by e.g. TWRP. Same applies to OTA updates as these will be verified using the AXP.OS key only.
+
+_Note: It has not been tested if you can sideload a testkey signed update via ADB/OTA on stock FP OS._
+
+## FP4
 
 *   Do **NOT** attempt to lock the bootloader if `fastboot flashing get_unlock_ability` returns zero or else it will brick. EDL access is not available on this device and you will have to send it in for service. \[upstream\][\[forum thread\]](https://forum.fairphone.com/t/trapped-in-fastboot-mode-with-locked-bootloader-and-corrupted-custom-rom/80985)
 
-#### d850/d851/d852/d855/f400/ls990/vs985/G3
+## d850/d851/d852/d855/f400/ls990/vs985/G3
 
 *   Wi-Fi tethering may not work. \[???\]\[help wanted\]
 *   Bluetooth likely won't start due to missing MAC address. \[hwaddrs selinux? /misc corrupt?\]\[help wanted\]
 *   Device will often fail on reboot and become unresponsive, requiring the battery to be pulled. \[hardware\]
 
-#### h830/h850/rs988/G5/G6/V20
+## h830/h850/rs988/G5/G6/V20
 
 *   20.0 does not support encryption due to limitations. \[upstream\]
 *   Bluetooth maybe won't start due to missing MAC address. \[hwaddrs selinux? /misc corrupt?\]\[help wanted\]
@@ -153,16 +169,16 @@ This page documents known problems, along with workarounds if available, for the
 *   (unconfirmed) GPS doesn't work. \[???\]
 *   (unconfirmed) Torch doesn't work. \[???\]
 
-#### davinci
+## davinci
 
 *   Wi-Fi does not work under 20.0. \[???\]\[help wanted\]
 *   FM radio causes reboot on headphone plug/unplug, app can be disabled as workaround. \[???\]\[help wanted\]
 
-#### enchilada/fajita
+## enchilada/fajita
 
 *   On select devices Wi-Fi may be very broken. \[hardware?\][\[upstream tracking\]](https://gitlab.com/LineageOS/issues/android/-/issues/4667)
 
-#### guacamole\*/hotdog\*
+## guacamole\*/hotdog\*
 
 *   (reported) Occasional bouts of rapid battery drain. \[???\]
 *   (reported) Having fingerprints registered can cause the sensor to trigger at random causing the screen to flicker green. \[???\]
@@ -172,104 +188,104 @@ This page documents known problems, along with workarounds if available, for the
 *   While it was possible in [earlier firmware releases](https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/) they (OnePlus/OPPO) half-removed the ability to re-lock the bootloader. That means: you can still flash a custom AVB key but it will not get respected anymore. The mentioned steps in that linked blog post have all been tested by me and none of them are either working or sufficient. AXP.OS comes with the latest firmware and so cannot be locked anymore.
 
 
-#### lemonade\*
+## lemonade\*
 
 *   (reported) Automatic brightness may not be available. \[???\]
 
-#### flox
+## flox
 
 *   Device powers off after sleeping for an unknown time. \[???\]
 
-#### grouper
+## grouper
 
 *   Camera is non-functional. \[upstream kernel\]
 *   Device is extremely slow. \[hardware?\]
 *   Relocking bootloader with an AOSP/Lineage/DivestOS recovery flashed will result in a \*permanent hard brick\* unless you have acquired your NvFlash recovery token! \[bootloader\][\[guide\]](https://web.archive.org/web/20171225183216/http://www.androidroot.mobi/pages/guides/tegra3-guide-nvflash-jellybean/)
 
-#### hammerhead
+## hammerhead
 
 *   15.1: Wi-Fi tethering doesn't work. \[???\]\[help wanted\]
 *   16.0: Camera, Bluetooth, and Wi-Fi tethering doesn't work. \[???\]
 
-#### herolte/hero2lte/S7
+## herolte/hero2lte/S7
 
 *   (reported) bootloops. \[???\][\[report\]](https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/62)\[help wanted\]
 
-#### i9300/i9305/S3
+## i9300/i9305/S3
 
 *   Web browsers and other complex apps fail to open at all or may open and then later crash. \[kernel? memory?\]\[help wanted\]
 *   USB MTP is likely not functioning. \[SELinux?\]\[help wanted\]
 *   NFC is likely not functioning. \[SELinux?\]\[help wanted\]
 *   (reported) SIM card detection issues. Likely fixed in 2021-06 build. \[SELinux\][\[report\]](https://github.com/divestos/divestos/issues/1)\[help wanted\]
 
-#### lavender and maybe jasmine\_sprout/platina/twolip/wayne/whyred
+## lavender and maybe jasmine\_sprout/platina/twolip/wayne/whyred
 
 *   Do NOT use `fastboot update` on lavender or jasmine\_sprout, it has been reported to brick.
 *   Recovery doesn't update on system update due to missing install-recovery.sh. \[upstream\]\[help wanted\]
 
-#### kccat6/lentislte
+## kccat6/lentislte
 
 *   Sideload doesn't work in recovery, use TWRP instead. \[help wanted\][\[tracking\]](https://github.com/Divested-Mobile/DivestOS-Build/issues/190)
 
-#### klte and maybe hlte
+## klte and maybe hlte
 
 * SD cards might fail to mount or format. \[vold + selinux?\]
 * USB ADB only works when MTP mode isn't set. \[FunctionFS corruption?\]
 * Fingerprint sensor does not work [deblobber?!]
 
-#### m8/m8d
+## m8/m8d
 
 *   Recovery doesn't boot, use TWRP instead. \[???\]\[upstream\]
 *   FM radio doesn't work. \[???\]\[upstream\]
 *   IR blaster doesn't work. \[???\]\[upstream\]
 
-#### maguro/toro/toroplus
+## maguro/toro/toroplus
 
 *   Not encrypted by default. \[OMAP SMC limitation\]
 *   Camera unavailable until reboot occasionally. \[ducati cma issues?\]
 
-#### mako
+## mako
 
 *   /system needs to be resized to fit 17.1 or higher. \[too small partition\]
 *   Will fail to boot on first boot. Force off once after 3 minutes. Likely fixed in 2022-01 builds. \[modem subsystem service startup failure with forceencrypt\]
 
-#### mata
+## mata
 
 *   Images will often fail to install via recovery. \[fstab /vendor/firmware\_mnt\]\[help wanted\]
 *   Speaker phone volume cannot be changed from maximum.
 
-#### harpia/merlin/osprey/surnia
+## harpia/merlin/osprey/surnia
 
 *   Recovery doesn't boot, use TWRP instead. \[defconfig?\]\[help wanted\]
 
-#### nex/n900
+## nex/n900
 
 *   Camera is non-functional. \[upstream blobs?\]
 *   Encryption is not supported. \[upstream device tree?\]
 *   GPS is non-functional. \[deblobber\]
 
-#### cheeseburger/dumpling
+## cheeseburger/dumpling
 
 *   20.0 won't automatically update the recovery. \[selinux?\][\[tracking\]](https://gitlab.com/divested-mobile/divestos-build/-/issues/24)\[help wanted\]
 
-#### taimen/walleye
+## taimen/walleye
 
 *   (reported) APN persistence issues. \[???\]
 *   (reported) SIM detection issues. \[???\]\[upstream\]
 
-#### pioneer
+## pioneer
 
 *   19.1 and 20.0 stopped booting after the September update. \[???\]\[help wanted\]
 
-#### pro1x
+## pro1x
 
 *   (reported) Fingerprint reader doesn't work. \[???\]
 
-#### star\*lte
+## star\*lte
 
 *   Uses the stock /vendor partition, making many of the deblobber benefits unavailable. \[upstream\]
 
-#### vayu
+## vayu
 
 *   Wi-Fi does not work under 20.0. \[???\]\[help wanted\]
 
