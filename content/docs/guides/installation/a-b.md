@@ -24,10 +24,13 @@ If you are unsure about what firmware you have it never hurts to flash it twice.
 
 When you are not sure or it is the very first time flashing AXP.OS:
 
+1. flash the official AXP.OS [recovery image](/docs/guides/installation/recoveries/#official-axpos-recovery)
 1. boot into recovery (e.g. by `adb reboot recovery`)
-1. flash AXP.OS (e.g. with `adb sideload AXP.OS.zip`) --> do **not** boot yet though!
+1. flash AXP.OS:
+    - `Apply update -> Apply from ADB`
+    - `adb sideload AXP.OS.zip`) --> do **not** boot yet though!
 1. reboot into **recovery** again
-1. start sideload and flash AXP.OS again (`adb sideload AXP.OS.zip`)
+1. start sideload and flash AXP.OS again (_see step 3_)
 1. boot into system / AXP.OS
 
 ## Update AXP.OS
