@@ -86,12 +86,20 @@ Information to financially support the below projects/people is also listed wher
 
 ## Device testers
 
-- [@SerYo](https://code.binbash.rocks/SerYo) - klte, oriole
+A significant difference to some other operating systems is that AXP.OS always involves the community to a great extent when setting up a new device. New devices/flavors only receive the status _Stable_ once they have undergone a strict [QA test](/docs/developer/copysnippets/test_community/#axpos-quality-control-checklist). This applies to new devices/flavors, but also every time before the monthly OTA update is released. Devices without support from the community will be removed from the release cycle according to the [removal guidelines](/docs/knowledge/requirements/#removals).
+
+For this reason, a very special and big thank you goes to the community that makes all this possible:
+
+- [@SerYo](https://code.binbash.rocks/SerYo) - klte, oriole, sargo, sunfish
 - [@rocky-184](https://code.binbash.rocks/rocky-184) - enchilada
 - [@mr4zu](https://code.binbash.rocks/mr4zu) - sunfish
 - [@kilou78](https://code.binbash.rocks/kilou78) - klte
+- [@duven87](https://code.binbash.rocks/duven87) - klte
+- [@CueHD](https://code.binbash.rocks/CueHD) - klte
 - [@Confined5290](https://code.binbash.rocks/Confined5290) - sargo
-- [@jschroeter-user](https://code.binbash.rocks/jschroeter-user) - klte
+- [@jschroeter-user](https://code.binbash.rocks/jschroeter-user) - klte, sunfish
+- [@tial](https://code.binbash.rocks/tial) - FP3
+- [@keylimeypie](https://code.binbash.rocks/keylimeypie) - enchilada
 
 ## Translations
 
