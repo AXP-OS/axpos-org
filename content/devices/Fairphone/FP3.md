@@ -7,7 +7,7 @@ firmware: "included"
 relockable: "yes"
 verifiedboot: "yes"
 flavors: "Slim"
-state: "!! ALPHA !!"
+state: "stable"
 supportlevel: community
 debugbootpath: /mnt/vendor/persist
 factoryzip: "no"
@@ -17,7 +17,7 @@ kilink: fp3
 custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/TBD"
-firstrelease: "not-released-yet, see [#32](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/32)"
+firstrelease: "2025-04-06"
 
 type: docs
 layout: device
