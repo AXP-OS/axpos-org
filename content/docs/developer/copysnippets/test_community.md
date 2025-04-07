@@ -22,17 +22,19 @@ Check it out here:
 ## AXP.OS Quality Control Checklist
 
 ```
+_Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL` is per the IETF standard defined in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)._
+
 ## Device
 
-- codename: 
-- flavor: Slim | Pro
+- codename: <! FILL-IN !>
+- flavor: <! FILL-IN !>
 
 ### AXP.OS - Core features
 
-_Major tests which HAVE TO succeed for any flavor_
+_Major tests which MUST succeed for any flavor_
 
-- [ ] **current ASB patch - System** (`Android Settings -> Info/About Phone -> Android Version` must be current)
-- [ ] **current ASB patch - Kernel** (`Android Settings -> Info/About Phone -> Android Version -> Kernel version -> build date` must be current. Kernel version must have `-pXXX` inside the version string)
+- [ ] **current ASB patch - System** (`Android Settings -> Info/About Phone -> Android Version (touch it to open)` must be current)
+- [ ] **current ASB patch - Kernel** (`Android Settings -> Info/About Phone -> Android Version (touch it to open) -> Kernel version -> build date` must be current. Kernel version must have `-pXXX` inside the version string)
 - [ ] paste a **screenshot** of the Android version screen (must show `AXP.OS version, Android security update, Kernel version`)
 - [ ] **SELinux enforced** (`Android Settings -> Privacy -> Trust`)
 - [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`)
@@ -47,7 +49,7 @@ _Major tests which HAVE TO succeed for any flavor_
 
 #### AXP.OS - Pro tests
 
-_Required only when the flavor you are testing is: Pro_
+_Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 
 - [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`) and expected version
 - [ ] **MicroG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and expected version
@@ -59,7 +61,7 @@ _Required only when the flavor you are testing is: Pro_
 
 #### AXP.OS - Slim tests
 
-_Required only when the flavor you are testing is: Slim_
+_Secondary tests which MUST succeed when the flavor you are testing is: Slim_
 
 - [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Settings -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG`)
 - [ ] **MicroG install test** (microG is NOT included within Slim builds but its usage has been prepared):
@@ -68,6 +70,8 @@ _Required only when the flavor you are testing is: Slim_
     - [ ]`microG Settings -> Selftest -> ensure all checkboxes are ticked`
 
 ### AXP.OS - Core functionality
+
+_Tests which SHOULD succeed for any flavor_
 
 _These tests are for critical parts of the system_
 
@@ -96,6 +100,8 @@ _These tests are for critical parts of the system_
 
 ### Additional tests
 
+_Tests which MAY succeed for any flavor_
+
 _These tests are either not too critical or are primarily intended for overall system stability_
 
 - [ ] **Flashlight (if applicable)**: Test the flashlight (torch) function.
@@ -114,3 +120,5 @@ _These tests are either not too critical or are primarily intended for overall s
 - [ ] **Battery Stats and Usage**: Review battery stats and usage patterns.
 - [ ] **Language and Region Settings**: Ensure language and region settings are applied correctly.
 ```
+
+Base for the above checklist: [LineageOS Device Requirements](https://github.com/LineageOS/charter/blob/main/device-support-requirements.md)
