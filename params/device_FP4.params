@@ -1,0 +1,22 @@
+#!/bin/bash
+###############################################################################
+# device specs for creating a new page
+###############################################################################
+export HUGO_VENDOR="Fairphone"
+export HUGO_NAME="Fairphone 4"
+export HUGO_CODENAME="FP4"
+export HUGO_ANDROID="13"
+export HUGO_ENCRYPTION="FBEv2"
+export HUGO_FIRMWARE="included"
+export HUGO_RELOCKABLE="yes"
+export HUGO_VERIFIEDBOOT="yes"
+export HUGO_FLAVORS="Slim"
+export HUGO_STATE="!! ALPHA !!"
+export HUGO_SUPPORTLEVEL="community"
+export HUGO_DEBUGBOOTPATH="/metadata"
+export HUGO_FACTORYZIP="no"
+export HUGO_ISAB="yes"
+export HUGO_ISPIXEL="no"
+export HUGO_KILINK="fp4"
+export HUGO_XDALINK="https://xdaforums.com/TBD"
+export HUGO_FIRSTRELEASE="not released yet, see [#40](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/40)"
