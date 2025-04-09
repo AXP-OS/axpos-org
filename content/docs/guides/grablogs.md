@@ -13,10 +13,11 @@ For debugging you need to have adb up and running. If you have trouble with that
 
 #### specific issue (e.g. app crashes etc)
 
-1. `adb shell` (or just open your favorite terminal app + become root via `su`)
-1. `logcat -c -b all` (this will print nothing - it will just clear the log buffer)
+1. type: `adb shell` (or just open your favorite terminal app + become root via `su`)
+1. type: `logcat -c -b all` (this will print nothing - it will just clear the log buffer)
 1. now reproduce the issue. when the issue occurs immediately do this afterwards
-   - `logcat -b all -d -D > /sdcard/Download/logcat.txt`
+   - type: `logcat -b all -d -D > /sdcard/Download/logcat.txt`
+   - type: `exit`
 1. grab the log:
    - `adb pull /sdcard/Download/logcat.txt`
 1. upload the log, see topic [Share logs](#share-logs)
@@ -24,10 +25,11 @@ For debugging you need to have adb up and running. If you have trouble with that
 
 #### unspecific / general issue
 
-1. `adb shell` (or just open your favorite terminal app + become root via `su`)
-1. `logcat -b all -d -D > /sdcard/Download/logcat.txt`
+1. type: `adb shell` (or just open your favorite terminal app + become root via `su`)
+1. type: `logcat -b all -d -D > /sdcard/Download/logcat.txt`
+1. type: `exit`
 1. grab the log:
-   - `adb pull /sdcard/Download/logcat.txt`
+   - type: `adb pull /sdcard/Download/logcat.txt`
 1. upload the log, see topic [Share logs](#share-logs)
 1. always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, ...)
 
@@ -45,18 +47,20 @@ This sets the buffer in your terminal to the max possible which is needed due to
 
 #### specific issue (e.g. app crashes etc)
 
-1. `adb shell` (or just open your favorite terminal app + become root via `su`)
-1. `logcat -c -b all` (this will print nothing - it will just clear the log buffer)
+1. type: `adb shell` (or just open your favorite terminal app + become root via `su`)
+1. type: `logcat -c -b all` (this will print nothing - it will just clear the log buffer)
 1. now reproduce the issue. when the issue occurres immediately do this:
-   - `logcat -b all -d -D`
+   - type: `logcat -b all -d -D`
+   - type: `exit`
 1. grab the log by copying the whole console output (yea u might need to scroll a lot up...)
 1. upload the log, see topic [Share logs](#share-logs)
 1. always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, ...)
 
 #### unspecific / general issue
 
-1. `adb shell` (or just open your favorite terminal app + become root via `su`)
-1. `logcat -b all -d -D`
+1. type: `adb shell` (or just open your favorite terminal app + become root via `su`)
+1. type: `logcat -b all -d -D`
+1. type: `exit`
 1. grab the log by copying the whole console output (yea u might need to scroll a lot up...)
 1. upload the log, see topic [Share logs](#share-logs)
 1. always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, ...)
@@ -142,7 +146,7 @@ When sharing logs or longer texts it is recommended a so-called "paste service".
 Here are some examples (use your fav search engine to find more):
 
 * https://privatebin.at/
-* https://paste.binbash.rocks:8999/ | https://paste.axpos.org:8999/
+* https://paste.binbash.rocks:8999/ (running on AXP.OS servers)
 * https://hastebin.com/
 * https://controlc.com/
 * https://privatebin.net/
