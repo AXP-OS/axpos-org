@@ -2,14 +2,16 @@
 title: "Test: community"
 type: docs
 toc: true
-#aliases:
+aliases:
+    - /qa
+    - /test
 ---
 ## AXP.OS test build info
 
 ```
 A test build has been released :tada: !
 Check it out here:
-- [download](https://leech.binbash.rocks:8008/axp<XXXX>/<XXXX>/tests/)
+- [download](https://leech.binbash.rocks:8008/axp-unstable/)
 
 ## YOUR feedback is required:
 
@@ -17,6 +19,8 @@ Check it out here:
 2. add a new comment with that snippet as content
 3. save it
 4. go through the list and tick each item you have tested
+
+when having any questions pls just ask in the [Matrix Bring-Up room](https://axpos.org/docs/overview/#support)
 ```
 
 ## AXP.OS Quality Control Checklist
