@@ -2,6 +2,7 @@
 title: Updating
 type: docs
 prev: documentation
+weight: 300
 aliases:
     - /Upgrade
     - /Update

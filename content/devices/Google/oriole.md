@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-oriole-axp-os-20-0.4718167/"
 firstrelease: "2025-02-08"
+vendor: "Google"
 
 type: docs
 layout: device

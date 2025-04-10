@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-fajita-axp-os-20.4631539/"
 firstrelease: "2023-11-13"
+vendor: "OnePlus"
 
 type: docs
 layout: device

@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-lynx-axp-os-20-0.4673845/"
 firstrelease: "2024-06-20"
+vendor: "Google"
 
 type: docs
 layout: device

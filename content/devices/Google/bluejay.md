@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-bluejay-axp-os-20-0.4663844/"
 firstrelease: "2024-03-26"
+vendor: "Google"
 
 type: docs
 layout: device

@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-hotdog-axp-os-20-0.4625525/"
 firstrelease: "2023-07-23"
+vendor: "OnePlus"
 
 type: docs
 layout: device

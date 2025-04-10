@@ -1,5 +1,5 @@
 ---
-title: "Setup"
+title: "AXP.OS"
 type: docs
 toc: true
 aliases:
@@ -11,7 +11,7 @@ aliases:
 
 1. see [First-time](https://github.com/sfX-android/android_vendor_extendrom/wiki/FAQ#magisk-app-not-installed) setup
 1. and [additional-setup](https://github.com/sfX-android/android_vendor_extendrom/wiki/FAQ#magisk-requires-additional-setup-on-start) message
-1. follow [this advice](/docs/guides/bootloaderlock/#magisk) (if you locked your bootloader)
+1. follow [this advice](/docs/guides/installation/bootloaderlock/#magisk) (if you locked your bootloader)
 1. when using apps detecting root (e.g. banking apps) follow this [guide](/hide-root)
 
 ### Exclude apps from updating

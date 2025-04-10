@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-enchilada-axp-os-20-0.4711844/"
 firstrelease: "2025-01-23"
+vendor: "OnePlus"
 
 type: docs
 layout: device

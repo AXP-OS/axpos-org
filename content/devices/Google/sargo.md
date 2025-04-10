@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-sargo-axp-os-20-0.4722274/"
 firstrelease: "2025-03-01"
+vendor: "Google"
 
 type: docs
 layout: device

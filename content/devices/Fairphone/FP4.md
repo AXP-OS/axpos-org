@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/TBD"
 firstrelease: "not released yet, see [#40](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/40)"
+vendor: "Fairphone"
 
 type: docs
 layout: device

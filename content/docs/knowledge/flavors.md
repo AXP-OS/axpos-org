@@ -36,8 +36,8 @@ Note: The differences between the AXP.OS _Pro_ and _Slim_ flavor is described he
 |can only spoof the Google signature|**X**|**X**¹|
 |blocked SafetyNet [Droidguard](https://github.com/microg/GmsCore/issues/1971)|**X**|²|
 |gated with [version code and target SDK](https://github.com/Divested-Mobile/DivestOS-Build/blob/master/Patches/LineageOS-20.0/android_frameworks_base/0036-Unprivileged_microG_Handling.patch#L175-L176) checks|**X**|²|
-|Spoofing permission on FakeStore / PlayStore app must be [explicitly granted](/docs/guides/setup/#fake-store--native-play-store)||**X**|
-|Spoofing permission on microG app must be [explicitly granted](/docs/guides/setup/#microg)||**X**|
+|Spoofing permission on FakeStore / PlayStore app must be [explicitly granted](/docs/guides/setup/aos/#fake-store--native-play-store)||**X**|
+|Spoofing permission on microG app must be [explicitly granted](/docs/guides/setup/aos/#microg)||**X**|
 
 - ¹) _The **user** decides per permission setting if other signatures are allowed_
 - ²) _Can be implemented, if there is a demand / [request](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new) for this._

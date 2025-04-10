@@ -58,7 +58,7 @@ The _Pro_ one is still the main flavor and so default on new devices but users [
 |Advanced _Usability Support_ by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES)<br/>_(Magisk, MicrogGmsCore, GsfProxy, Phonesky, [NeoLauncher](https://github.com/NeoApplications/Neo-Launcher))_|**X**||
 |On **device*** testing before release<br/>_(*for devices marked as "[verified by the AXP Team](/docs/knowledge/supportlevels/#by-the-axp-team)")_|**X**||
 
-- ¹ while not supported (and not possible on bootloader-locked devices) you can flash MicroG as in LineageOS.<br/>AXP.OS [Phonesky](https://github.com/AXP-OS/packages_apps_phonesky/releases) can be installed manually (via a custom recovery: place it in `/system/priv-app/Phonesky/`).<br/>Regardless if using the MicroG FakeStore or AXP.OS Phonesky you need to follow [the setup guide](/docs/guides/setup/#optional-activate-google-support)) as well.
+- ¹ while not supported (and not possible on bootloader-locked devices) you can flash MicroG as in LineageOS.<br/>AXP.OS [Phonesky](https://github.com/AXP-OS/packages_apps_phonesky/releases) can be installed manually (via a custom recovery: place it in `/system/priv-app/Phonesky/`).<br/>Regardless if using the MicroG FakeStore or AXP.OS Phonesky you need to follow [the setup guide](/docs/guides/setup/aos/#optional-activate-google-support)) as well.
 - ² some kernels have the wireguard patches already included - the Slim flavor will not remove them while you need root to _activate_ it
 
 ## Simplified OS comparison

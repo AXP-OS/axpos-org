@@ -18,6 +18,7 @@ custominstall: "{{ getenv "HUGO_CI_GUIDE" }}"
 custominstall_path: "{{ getenv "HUGO_CI_GUIDE_PATH" }}"
 xdalink: "{{ getenv "HUGO_XDALINK" }}"
 firstrelease: "{{ getenv "HUGO_FIRSTRELEASE" }}"
+vendor: "{{ getenv "HUGO_VENDOR" }}"
 
 type: docs
 layout: device

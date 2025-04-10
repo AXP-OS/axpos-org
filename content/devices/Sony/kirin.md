@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: ""
 firstrelease: "_[IN-PROGRESS](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/34)_"
+vendor: "Sony"
 
 type: docs
 layout: device

@@ -1,10 +1,12 @@
 ---
-title: "Post Install"
+title: "Suggestions"
 type: docs
 toc: true
 aliases:
     - /Post-Install
     - /post-install
+    - /postinstall
+    - /suggestions
 ---
 
 > [!IMPORTANT]

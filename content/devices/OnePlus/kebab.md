@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: ""
 firstrelease: "[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/26)"
+vendor: "OnePlus"
 
 type: docs
 layout: device

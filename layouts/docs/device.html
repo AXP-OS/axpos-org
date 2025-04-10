@@ -28,9 +28,10 @@
             {{ $custominstall_path := .Param "custominstall_path" }}
             {{ $xdalink := .Param "xdalink" }}
             {{ $firstrelease := .Param "firstrelease" }}
+            {{ $vendor := .Param "vendor" }}
 
             {{ partial "overview" (dict "docbaseurl" $docbaseurl "devicename" $devicename "codename" $codename "flavors" $flavors "debugbootpath" $debugbootpath "isab" $isab "supportlevel" $supportlevel "relock" $relock "encryption" $encryption "verifiedboot" $verifiedboot "state" $state "firmware" $firmware "android" $android "firstrelease" $firstrelease) }}
-	    {{ partial "guide" (dict "docbaseurl" $docbaseurl "devicename" $devicename "codename" $codename "flavors" $flavors "debugbootpath" $debugbootpath "isab" $isab "supportlevel" $supportlevel "kilink" $kilink "relock" $relock "ispixel" $ispixel "custominstall" $custominstall "custominstall_path" $custominstall_path "firmware" $firmware "xdalink" $xdalink) }}
+	    {{ partial "guide" (dict "docbaseurl" $docbaseurl "devicename" $devicename "codename" $codename "flavors" $flavors "debugbootpath" $debugbootpath "isab" $isab "supportlevel" $supportlevel "kilink" $kilink "relock" $relock "ispixel" $ispixel "custominstall" $custominstall "custominstall_path" $custominstall_path "firmware" $firmware "xdalink" $xdalink "vendor" $vendor) }}
             {{ partial "download" (dict "docbaseurl" $docbaseurl "devicename" $devicename "codename" $codename "flavors" $flavors "debugbootpath" $debugbootpath "isab" $isab "supportlevel" $supportlevel "relock" $relock "factory" $factory) }}
 
         </div>

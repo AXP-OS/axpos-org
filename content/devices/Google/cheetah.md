@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-cheetah-axp-os-20-0.4668457/"
 firstrelease: "2024-05-27"
+vendor: "Google"
 
 type: docs
 layout: device

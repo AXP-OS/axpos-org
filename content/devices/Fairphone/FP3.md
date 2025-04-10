@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/TBD"
 firstrelease: "2025-04-06"
+vendor: "Fairphone"
 
 type: docs
 layout: device

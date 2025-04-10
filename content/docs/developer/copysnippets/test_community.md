@@ -42,7 +42,7 @@ _Major tests which MUST succeed for any flavor_
 - [ ] paste a **screenshot** of the Android version screen (must show `AXP.OS version, Android security update, Kernel version`)
 - [ ] **SELinux enforced** (`Android Settings -> Privacy -> Trust`)
 - [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`)
-- [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/#optional-activate-google-support))
+- [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
 - [ ] **F-Droid** included and expected version
 - [ ] **OpenEUICC** app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device))
 - [ ] **AuroraStore** App included and expected version
@@ -70,7 +70,7 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Slim_
 - [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Settings -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG`)
 - [ ] **MicroG install test** (microG is NOT included within Slim builds but its usage has been prepared):
     - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation)
-    - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/#optional-activate-google-support))
+    - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
     - [ ]`microG Settings -> Selftest -> ensure all checkboxes are ticked`
 
 ### AXP.OS - Core functionality

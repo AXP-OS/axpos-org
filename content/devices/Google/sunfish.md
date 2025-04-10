@@ -18,6 +18,7 @@ custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-sunfish-axp-os-20.4651368/"
 firstrelease: "2024-01-16"
+vendor: "Google"
 
 type: docs
 layout: device
