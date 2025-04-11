@@ -68,7 +68,7 @@ This check has some drawbacks when enabling it:
 
 We continuesly will look into solving/improving the above and hopefully get them all solved one day.
 
-{{% details title=Developer hint: App crash of the Companion App" closed="true" %}}
+{{% details title="Developer hint: App crash of the Companion App" closed="true" %}}
 ```
 E AndroidRuntime: java.lang.RuntimeException: Unable to bind to service com.android.vending.licensing.LicensingService@ca218e4 with Intent { act=com.android.vending.licensing.ILicensingService pkg=com.android.vending }: java.lang.SecurityException: Permission Denial: opening provider org.microg.gms.settings.SettingsProvider from ProcessRecord{621a62a 3113:com.android.vending/u0a94} (pid=3113, uid=10094) requires com.google.android.gms.permission.READ_SETTINGS or com.google.android.gms.permission.WRITE_SETTINGS
 ```
