@@ -78,7 +78,7 @@ caused by: [this](https://github.com/microg/GmsCore/commit/9f4ac5951e534f646d4de
 ### Enabling installation interception
 
 1. Enable [Developer Options](https://developer.android.com/studio/debug/dev-options#enable)
-1. scroll down near to the bottom and enable `Intercept App installation check`
+1. scroll down near to the bottom and enable `Intercept App installation check`<br/>![app_installsource_intercept](/img/app_installsource_intercept.png)
 1. scroll down and enable `Allow signature spoofing` (which is part of the next step but while you are here, do it now)
 1. fully setup MicroG: go through the [whole guide](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support)
 1. if the MicroG Self-Check has no empty boxes: re-install any problematic app
