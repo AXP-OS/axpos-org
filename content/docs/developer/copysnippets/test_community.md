@@ -10,8 +10,12 @@ aliases:
 
 ```
 A test build has been released :tada: !
+
 Check it out here:
 - [download](https://leech.binbash.rocks:8008/axp-unstable/)
+
+Installation guide:
+- [here](https://axpos.org/devices/xxxx/yyyy/)
 
 ## YOUR feedback is required:
 
