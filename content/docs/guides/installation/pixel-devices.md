@@ -31,7 +31,7 @@ This is also why a factory image will **not** be generated _regularly_ and so ar
 
 ## Update AXP.OS
 
-See [Updating AXP.OS](/docs/updating/)
+See [Updating AXP.OS](/docs/guides/updating/)
 
 ## Final note
 
