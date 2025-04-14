@@ -9,7 +9,7 @@ verifiedboot: "yes"
 flavors: "Slim"
 state: "!! ALPHA !!"
 supportlevel: community
-debugbootpath: /metadata
+debugbootpath: /mnt/vendor/persist
 factoryzip: "no"
 isab: "yes"
 ispixel: "no"
