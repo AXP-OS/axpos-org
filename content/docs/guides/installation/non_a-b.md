@@ -23,6 +23,7 @@ When you are not sure or it is the very first time flashing AXP.OS:
 1. flash latest device firmware as described in the device's install section
 1. boot into recovery (e.g. by `adb reboot recovery`)
 1. flash AXP.OS (e.g. with `adb sideload AXP.OS.zip`)
+    - _note: some devices report something similar to: `(~94%) adb: failed to read command: No error`, which can be safely ignored_
 1. boot into system / AXP.OS
 
 ## New to AXP.OS but latest vendor firmware
