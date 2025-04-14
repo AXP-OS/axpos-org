@@ -35,7 +35,7 @@ When you are not sure or it is the very first time flashing AXP.OS:
 
 ## Update AXP.OS
 
-See [Updating AXP.OS](/docs/updating/)
+See [Updating AXP.OS](/docs/guides/updating/)
 
 ## Final note
 
