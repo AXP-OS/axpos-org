@@ -2,7 +2,11 @@
 title: Manual
 type: docs
 toc: true
-#aliases:
+aliases:
+    - /Adbupdate
+    - /Adb-update
+    - /Update-manually
+    - /Manual-update
 ---
 > [!WARNING]
 > The following methods are meant as a fallback only. It is recommended to use the [Over the Air](/Over-the-air) update method whenever possible.
