@@ -33,7 +33,7 @@ When you are 100% sure that you're on the latest supported firmware and never fl
 
 ## Update AXP.OS
 
-See [Updating AXP.OS](/docs/updating/)
+See [Updating AXP.OS](/Updating)
 
 ## Final note
 
