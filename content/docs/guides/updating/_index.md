@@ -6,6 +6,7 @@ weight: 300
 aliases:
     - /Upgrade
     - /Update
+    - /Updating
 ---
 
 Choose your preferred method for updating on the left.
