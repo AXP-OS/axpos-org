@@ -4,6 +4,9 @@ type: docs
 toc: true
 aliases:
     - /Over-the-air
+    - /Update-ota
+    - /Update-automatically
+    - /OTA
 ---
 > [!TIP]
 > This is the recommended way for installing AXP.OS updates
