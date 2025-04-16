@@ -4,6 +4,8 @@ type: docs
 weight: 1
 aliases:
     - /documentation
+    - /Support
+    - /support
 ---
 ## Most wanted
 
