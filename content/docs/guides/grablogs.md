@@ -141,12 +141,38 @@ adb pull /tmp/dmesg.txt
 
 ## Share logs
 
-When sharing logs or longer texts it is recommended a so-called "paste service". This is useful to keep a forum / chat readable for everyone and it dramatically helps a developer to read the log without saving tons of log files on their phones/PC's.
+When sharing logs or longer texts it is recommended using a so-called "paste service". This is useful to keep a forum / chat / issue readable for everyone and it dramatically helps a developer to read the log without saving tons of log files on their phones/PC's.
+
+{{< callout type="error" >}}
+Logs can contain sensitive information (like phone numbers, location etc)! Keep that in mind and if you are not sure choose to set a password. In the case of Android logs this is almost always the case so it is recommended not sharing these in public.
+
+If you are unsure, follow the _"Sensitive log files"_ topic.
+
+In general:
+- Do not add several logs into 1 paste. **Always use a separate paste for each log!**
+- Do not add any _additional_ filters to the above commands. While you _think_ that these might be useful, it often enough hides the most relevant information or context.
+{{< /callout >}}
+
+### Sensitive log files
+
+While there are several paste services which can encrypt your data the following is the recommended process for AXP.OS:
+
+1. Open https://paste.binbash.rocks:8999/ _(running on AXP.OS servers)_
+1. Set `Expires` = `1 year` _(min. 3 months, keep in mind that you need to provide a new log if selecting a too short time period)_
+1. Do **not(!)** select "Burn after reading"
+1. Set a strong password in the `Password` field _(and record it for later)_
+1. Paste the log into the `Editor` frame
+1. Click on `Create` at the top right
+1. Click `Copy link` to save your unique link
+1. Share that unique link from the previous step where the log was requested _(e.g. in your [issue](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues) or in the [Matrix room](/Support))_
+1. Share the password **in private** only _(send the developer a DM via [Matrix](/Support), do not use the public rooms for this)_
+
+### Non-sensitive log files
 
 Here are some examples (use your fav search engine to find more):
 
+* https://paste.binbash.rocks:8999/ _(running on AXP.OS servers)_
 * https://privatebin.at/
-* https://paste.binbash.rocks:8999/ (running on AXP.OS servers)
 * https://hastebin.com/
 * https://controlc.com/
 * https://privatebin.net/
@@ -154,7 +180,7 @@ Here are some examples (use your fav search engine to find more):
 * https://gist.github.com/ (no size limit! req. login)
 * https://gitlab.com/dashboard/snippets (no size limit! req. login)
 
-There you will always have an option **how long** you want to store that paste:
+Always set `Expires` = `1 year` _(min. 3 months, keep in mind that you need to provide a new log if selecting a too short time period)_
 
 Please ensure you choose **at least several months** (better 1 year) because developers have a real life, too and so its uncertain when they might find time to look into it.
 
