@@ -4,6 +4,9 @@ type: docs
 toc: true
 aliases:
     - /Browser
+    - /browser
+    - /AOSmium
+    - /aosmium
 ---
 ## About
 
@@ -44,7 +47,7 @@ _some more examples, details and credits for the above: [smallusefultips.com](ht
 - Security focused (using [Vanadium's](https://github.com/GrapheneOS/Vanadium) patches)
 - Minimizing anti-features
 - While there are some privacy patches applied becoming a "privacy" browser is out of scope
-- See the [README](https://code.binbash.rocks/AXP.OS/app_aosmium) for technical details and all credits
+- See the [README](https://codeberg.org/AXP-OS/app_aosmium) for technical details and all credits
 
 ### Recommended settings
 
