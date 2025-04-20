@@ -25,13 +25,13 @@ In other words the Android Webview is a web browser engine that can be embedded 
 
 Some popular examples using Android's Webview:
 
-- Facebook (news, videos, links, ...)
-- Amazon (product descriptions, reviews, ...)
+- Facebook _(news, videos, links, ...)_
+- Amazon _(product descriptions, reviews, ...)_
 - MicroG -> Sign in page
-- ebay (item listings, product descriptions, ...)
-- slack (chat messages, files, ...)
-- CNN (news articles, videos, ...)
-- Spotify (artist profiles, album descriptions, ...)
+- ebay _(item listings, product descriptions, ...)_
+- Slack _(chat messages, files, ...)_
+- CNN _(news articles, videos, ...)_
+- Spotify _(artist profiles, album descriptions, ...)_
 
 and many many more!
 
