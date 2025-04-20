@@ -17,6 +17,26 @@ The builds there are properly signed so you can safely use them without trouble 
 
 _Note: At the moment it is unclear if or when there will be an F-Droid version for the webview or the browser._
 
+### Webview?!
+
+The Android WebView component allows developers to display web content within their mobile applications.
+
+In other words the Android Webview is a web browser engine that can be embedded within an app which is not just convenient for developers but also they do not need to handle security patches for it.
+
+Some popular examples using Android's Webview:
+
+- Facebook (news, videos, links, ...)
+- Amazon (product descriptions, reviews, ...)
+- MicroG -> Sign in page
+- ebay (item listings, product descriptions, ...)
+- slack (chat messages, files, ...)
+- CNN (news articles, videos, ...)
+- Spotify (artist profiles, album descriptions, ...)
+
+and many many more!
+
+_some more examples, details and credits for the above: [smallusefultips.com](https://smallusefultips.com/which-apps-run-on-the-webview-component)_
+
 ### Features
 
 - [Chromium](https://www.chromium.org/Home/)-based
