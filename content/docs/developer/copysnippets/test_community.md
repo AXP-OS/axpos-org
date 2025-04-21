@@ -65,7 +65,7 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 - [ ] **WireGuard VPN Kernel module** (Install [Wireguard](https://download.wireguard.com/android-client/) or [WG Tunnel](https://f-droid.org/packages/com.zaneschepke.wireguardautotunnel/). `Wireguard App -> grant root -> enable kernel support in settings`. `WG Tunnel -> Settings -> Use Kernel module -> grant root`)
 - [ ] Home **Launcher Neo Launcher** included and expected version
 - [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Settings -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`)
-- [ ] **boot debug** log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](/devices). Add the output in a comment)
+- [ ] **boot debug** log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](https://axpos.org/devices). Add the output in a comment)
 
 #### AXP.OS - Slim tests
 
