@@ -22,8 +22,9 @@ If you are unsure about what firmware you have it never hurts to flash it twice.
 
 ## New to AXP.OS
 
-When you are not sure or it is the very first time flashing AXP.OS:
+_Note: Only if you are **100%** sure that you are using **compatible** firmware that matches the AXP.OS build you can skip **step 5 and 6**. Mismatching firmware can lead into a non-booting system or weird behavior within Android later._
 
+1. create a FULL [backup](/Backup-and-Restore) of all your data, pictures, etc and and save them somewhere **other** than on the phone (all data needs to be **wiped**)
 1. flash the official AXP.OS [recovery image](/docs/guides/installation/recoveries/#official-axpos-recovery)
 1. boot into recovery (e.g. by `adb reboot recovery`)
 1. flash AXP.OS:
@@ -31,7 +32,10 @@ When you are not sure or it is the very first time flashing AXP.OS:
     - `adb sideload AXP.OS.zip` --> do **not** boot yet though!
     - _note: some devices report something similar to: `(~94%) adb: failed to read command: No error`, which can be safely ignored_
 1. reboot into **recovery** again
-1. start sideload and flash AXP.OS again (_see step 3_)
+1. start sideload and flash AXP.OS again (_see step 4_)
+1. ensure you factory reset (all your data will be erased!):
+    - choose `Factory reset`
+    - choose `Format data/factory reset`
 1. boot into system / AXP.OS
 
 ## Update AXP.OS
