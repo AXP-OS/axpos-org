@@ -6,7 +6,7 @@ encryption: "ICE"
 firmware: "included"
 relockable: "yes"
 verifiedboot: "yes"
-flavors: "Slim"
+flavors: "Pro, Slim"
 state: "stable"
 supportlevel: community
 debugbootpath: /metadata
