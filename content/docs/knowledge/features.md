@@ -39,7 +39,7 @@ The _Pro_ one is still the main flavor and so default on new devices but users [
 |SELinux enforced|**X**|**X**|
 |Data encryption enforced|**X**|**X**|
 |Signed (by [AXP.OS keys](/Signatures))|**X**|**X**|
-|Increased key size + hash (8192 / sha512) for signing keys wherever possible<br/>_(incl. adjustments in recovery and OTA Updater)_|**X**|**X**|
+|Increased key size + hash (8192 / sha512) for AVB, APK signing and dm-verity<br/>_(incl. adjustments in recovery and OTA Updater to support higher hash algo)_|**X**|**X**|
 |Advanced boot debug log ([EXTENDROM_BOOT_DEBUG](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_BOOT_DEBUG))|**X**|**X**|
 |Advanced Signature spoofing support by [EXTENDROM_SIGNATURE_SPOOFING](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_SIGNATURE_SPOOFING)<br/>(**must be explicitly enabled**)|**X**|**X**|
 |Using the [AOSmium](/Browser) System WebView by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES)|**X**|**X**|
@@ -47,6 +47,7 @@ The _Pro_ one is still the main flavor and so default on new devices but users [
 |extended list of F-Droid repositories ([1](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/molly.xml),[2](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/nailyk.xml),[3](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/threema.xml),[4](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/futo_org.xml))<br/>(**must be explicitly enabled**)|**X**|**X**|
 |[eSIM](https://github.com/AXP-OS/packages_apps_OpenEUICC) support (A10 and later) for devices supporting euicc<br/>(**must be explicitly enabled**)|**X**|**X**|
 |Internal DNS content blocker ([blocklist](https://github.com/hagezi/dns-blocklists?tab=readme-ov-file#ledger-multi-pro---extended-protection-recommended-))|**X**|**X**|
+|Disable [call recording restrictions](/r) (by [EXTENDROM](https://github.com/sfX-android/android_vendor_extendrom))<br/>(**must be explicitly enabled**)|**X**|**X**|
 |Re-locking the bootloader on supported devices|**X**|**X**|
 |Reproducible builds - see the [details](/Reproducible-builds)|**X**|**X**|
 |[MicroG](https://microg.org/) included<br/>(**requires to explicitly enable signature spoofing**)|**X**|¹|
@@ -75,7 +76,7 @@ The _Main(!) focus_ column is a bit vague or better said subjective as all OS cl
 |-|-|-|-|
 |[LineageOS](http://www.lineageos.org/)|Usability|wide range of supported devices, _very high_ usability|no focus on privacy + security, only latest 3 major releases supported|
 |[CalyxOS](https://calyxos.org/)|Usability, Privacy|wide range of supported devices, _high_ usability|no focus on security|
-|[GrapheneOS](http://grapheneos.org/)|Security, Privacy|best in class focus on security, _good_ usability|Google Pixel devices only, usually does not support older Android versions|
+|[GrapheneOS](http://grapheneos.org/)|Security|best in class focus on security, _good_ usability|Google Pixel devices only, usually does not support older Android versions|
 |[/e/ OS](https://e.foundation/e-os/)|Usability, Privacy|wide range of supported devices, _very high_ usability|no focus on security, does not support devices with older Android versions, late ASB patches|
 |[AXP.OS - Pro](https://axpos.org/)|Usability, Security, Privacy|best balance between Usability, Security, Privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported|
 |[AXP.OS - Slim](https://axpos.org/)|Security, Privacy|Security, Privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported, reduced usability compared to the Pro flavor|
