@@ -29,7 +29,7 @@ AXP.OS allows you to disable restrictions on call recording, which may or may no
 The user alone is responsible for checking this with local law and assumes sole responsibility if enabling this option is a criminal offense in their country.
 {{< /callout >}}
 
-A purely exemplary and not legally valid list of possible local legislation can be viewed [here](https://github.com/LineageOS/android_packages_apps_Dialer/blob/lineage-22.0/java/com/android/dialer/callrecord/res/xml/call_record_states.xml). If you are unsure or a legally binding statement, ask a local lawyer!
+A purely exemplary and not legally valid list of possible local legislation can be viewed [here](https://github.com/LineageOS/android_packages_apps_Dialer/blob/lineage-22.0/java/com/android/dialer/callrecord/res/xml/call_record_states.xml). If you are unsure or for a legally binding statement, ask a local lawyer!
 
 ## Enabling call recording
 
