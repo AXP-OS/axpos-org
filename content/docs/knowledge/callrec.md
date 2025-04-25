@@ -31,14 +31,18 @@ The user alone is responsible for checking this with local law and assumes sole 
 
 A purely exemplary and not legally valid list of possible local legislation can be viewed [here](https://github.com/LineageOS/android_packages_apps_Dialer/blob/lineage-22.0/java/com/android/dialer/callrecord/res/xml/call_record_states.xml). If you are unsure or for a legally binding statement, ask a local lawyer!
 
-## Enabling call recording
+## Enable call recording
 
 1. Enable [Developer options](https://developer.android.com/studio/debug/dev-options#enable) _(you do **not** need following "Enable USB debugging on your device" or any later topics)_
 1. Navigate to the Developer options (`Android Settings -> System -> Developer options`)
 1. Scroll all the way down to `Call recording support` and activate the toggle for `Disable call recording restrictions`
 1. During a call touch the record button
-1. Recordings will be stored at: `/sdcard/Download/`
+1. Recordings will be stored directly after a call as _AMR*_ files in `Recordings` (`/sdcard/Recordings/`)
+
+*Example apps supporting AMR playback:
+- [VLC](https://f-droid.org/de/packages/org.videolan.vlc/)
+- or search for others [on F-Droid](https://search.f-droid.org/?q=amr)
  
-## Disabling call recording
+## Disable call recording
 
 1. just swap the toggle again
