@@ -41,29 +41,36 @@ _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`
 
 _Major tests which MUST succeed for any flavor_
 
-- [ ] **current ASB patch - System** (`Android Settings -> Info/About Phone -> Android Version (touch it to open)` must be current)
+- [ ] **current ASB patch - System** (`Android Settings -> Info/About Phone -> Android Version (touch it to open)` must be [on expected version](https://axpos.org/Changelog))
 - [ ] **current ASB patch - Kernel** (`Android Settings -> Info/About Phone -> Android Version (touch it to open) -> Kernel version -> build date` must be current. Kernel version must have `-pXXX` inside the version string)
 - [ ] paste a **screenshot** of the Android version screen (must show `AXP.OS version, Android security update, Kernel version`)
 - [ ] **SELinux enforced** (`Android Settings -> Privacy -> Trust`)
 - [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`)
 - [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
-- [ ] **F-Droid** included and expected version
+- [ ] **F-Droid** included and [on expected version](https://axpos.org/Changelog)
 - [ ] **OpenEUICC** app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device))
-- [ ] **AuroraStore** App included and expected version
-- [ ] **AOSmium WebView** installed (`Developer Options -> WebView implementation`) and expected version
+- [ ] **AuroraStore** App included and [on expected version](https://axpos.org/Changelog)
+- [ ] **AOSmium WebView** installed (`Developer Options -> WebView implementation` -> verify it is selected)
+- **AOSmium WebView** quick test: `AuroraStore -> search & install "Webview test"` ([link](https://play.google.com/store/search?q=webview+test&c=apps))
+    - [ ] Open Webview test app & check `Webview Info` (hamburger menu), it should display the version in the [AXP.OS Changelog](https://axpos.org/Changelog)
+    - [ ] click on the Globe icon or open the menu and choose `Webview` _(if no input popup appears click the globe icon at the top)_
+    - [ ] enter any url and test if it opens
 - [ ] **OTA update** (`Android Settings -> Updater -> 3dots -> Preferences -> Server Choice -> "UNSTABLE"`)
 - [ ] **Developer options**: `OEM unlock` option is **NOT** shown in developer options
+- **Call recording option**: follow the [guide](https://axpos.org/r) to find & enable it
+    - [ ] it must be possible to set & unset the toggle
+    - [ ] if possible: test the call recording
 - [ ] **locking the bootloader**: on supported devices (see the [device page](https://axpos.org/devices))
 
 #### AXP.OS - Pro tests
 
 _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 
-- [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`) and expected version
-- [ ] **MicroG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and expected version
-- [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and expected version
+- [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`) and [on expected version](https://axpos.org/Changelog)
+- [ ] **MicroG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and [on expected version](https://axpos.org/Changelog)
+- [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and [on expected version](https://axpos.org/Changelog)
 - [ ] **WireGuard VPN Kernel module** (Install [Wireguard](https://download.wireguard.com/android-client/) or [WG Tunnel](https://f-droid.org/packages/com.zaneschepke.wireguardautotunnel/). `Wireguard App -> grant root -> enable kernel support in settings`. `WG Tunnel -> Settings -> Use Kernel module -> grant root`)
-- [ ] Home **Launcher Neo Launcher** included and expected version
+- [ ] Home **Launcher Neo Launcher** included and [on expected version](https://axpos.org/Changelog)
 - [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Settings -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`)
 - [ ] **boot debug** log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](https://axpos.org/devices). Add the output in a comment)
 
