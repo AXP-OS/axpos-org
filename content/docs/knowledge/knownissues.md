@@ -268,11 +268,6 @@ _Note: It has not been tested if you can sideload a testkey signed update via AD
 
 *   20.0 won't automatically update the recovery. \[selinux?\][\[tracking\]](https://gitlab.com/divested-mobile/divestos-build/-/issues/24)\[help wanted\]
 
-## taimen/walleye
-
-*   (reported) APN persistence issues. \[???\]
-*   (reported) SIM detection issues. \[???\]\[upstream\]
-
 ## pioneer
 
 *   19.1 and 20.0 stopped booting after the September update. \[???\]\[help wanted\]
@@ -281,9 +276,18 @@ _Note: It has not been tested if you can sideload a testkey signed update via AD
 
 *   (reported) Fingerprint reader doesn't work. \[???\]
 
+## sargo
+
+- charge control is not supported ([ref1](https://github.com/AXP-OS/android_device_google_bonito/commit/443a410a5b4099dee766abe2bdda8b9c17c492af), [ref2](https://github.com/AXP-OS/android_device_google_bonito/commit/d9bd9565b6f514e9df5b35df6b0dd464d18ad36f))
+
 ## star\*lte
 
 *   Uses the stock /vendor partition, making many of the deblobber benefits unavailable. \[upstream\]
+
+## taimen/walleye
+
+*   (reported) APN persistence issues. \[???\]
+*   (reported) SIM detection issues. \[???\]\[upstream\]
 
 ## vayu
 
