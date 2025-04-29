@@ -13,7 +13,7 @@ debugbootpath: /metadata
 factoryzip: "yes"
 isab: "yes"
 ispixel: "yes"
-kilink: 
+kilink: sargo
 custominstall: ""
 custominstall_path: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-sargo-axp-os-20-0.4722274/"
