@@ -17,6 +17,6 @@ export HUGO_DEBUGBOOTPATH="/metadata"
 export HUGO_FACTORYZIP="yes"
 export HUGO_ISAB="yes"
 export HUGO_ISPIXEL="yes"
-export HUGO_KILINK=
+export HUGO_KILINK="sargo"
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a13-official-microg-hardened-sargo-axp-os-20-0.4722274/"
 export HUGO_FIRSTRELEASE="2025-03-01"
