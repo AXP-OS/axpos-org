@@ -34,8 +34,6 @@ This page documents known problems, along with workarounds if available, for the
 *   Other WebView providers such as Bromite are not currently supported. They were briefly supported in the past but caused boot issues on 15.1 for unknown reasons.
 *   Remote desktop host apps like AnyDesk and TeamViewer are not supported. They rely on special system permissions enabled by vendors signing helper apps on their behalf.
 *   Removing system apps via ADB is NOT supported and will break things.
-*   SELinux is always enforcing and cannot be set permissive or disabled.
-*   Signature spoofing is NOT supported.
 *   Torrents will not be offered for downloads/updates. They don't work well on mobile and they leak IP addresses of users.
 
 ## Notes
@@ -52,7 +50,7 @@ This page documents known problems, along with workarounds if available, for the
 *   'Storage Manager' is non-functional in some cases.
 *   The ADB toggle in developer options has absolutely zero effect on whether or not you can use ADB in recovery.
 *   The default password for Android encryption is `defaultpassword`.
-*   The DivestOS recovery is automatically installed on supported devices each successful boot. If you externally change it, you must not boot the system to use it.
+*   The AXP.OS recovery is automatically installed on supported devices each successful boot. If you externally change it, you must not boot the system to use it.
 *   The 'enable native code debugging'/ptrace\_scope toggle does nothing on devices without stacked YAMA, ie. kernels before 3.10.
 *   The Updater may not show very recent updates due to the server's 2 hour cache.
 *   The Updater will show the currently installed update, this is expected.
