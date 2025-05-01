@@ -4,6 +4,8 @@ type: docs
 toc: true
 aliases:
     - /Grab-Logs
+    - /Logs
+    - /Log
 ---
 ## Application / System logs
 
