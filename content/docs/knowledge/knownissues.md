@@ -230,6 +230,7 @@ _Note: It has not been tested if you can sideload a testkey signed update via AD
 * SD cards might fail to mount or format. \[vold + selinux?\]
 * USB ADB only works when MTP mode isn't set. \[FunctionFS corruption?\]
 * Fingerprint sensor does not work [deblobber?!]
+* wireguard kernel module unsupported because kernel = v3.4
 
 ## m8/m8d
 
