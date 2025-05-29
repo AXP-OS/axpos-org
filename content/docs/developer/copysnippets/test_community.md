@@ -137,3 +137,9 @@ _These tests are either not too critical or are primarily intended for overall s
 ```
 
 Base for the above checklist: [LineageOS Device Requirements](https://github.com/LineageOS/charter/blob/main/device-support-requirements.md)
+
+### Howto use the QA checklist
+
+{{< youtube BS8kweB2s58 >}}
+
+
