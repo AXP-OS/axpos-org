@@ -7,7 +7,7 @@ firmware: "included"
 relockable: "yes"
 verifiedboot: "yes"
 flavors: "Slim"
-state: "Stable"
+state: "stable"
 supportlevel: community
 debugbootpath: /metadata
 factoryzip: "no"
