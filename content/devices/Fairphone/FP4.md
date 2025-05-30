@@ -7,7 +7,7 @@ firmware: "included"
 relockable: "yes"
 verifiedboot: "yes"
 flavors: "Slim"
-state: "!! ALPHA !!"
+state: "Stable"
 supportlevel: community
 debugbootpath: /metadata
 factoryzip: "no"
@@ -16,8 +16,8 @@ ispixel: "no"
 kilink: fp4
 custominstall: ""
 custominstall_path: ""
-xdalink: "https://xdaforums.com/TBD"
-firstrelease: "not released yet, see [#40](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/40)"
+xdalink: "https://xdaforums.com/t/rom-a-13-official-hardened-fp4-axp-os-20-0.4741001/"
+firstrelease: "2025-05-30"
 vendor: "Fairphone"
 
 type: docs
