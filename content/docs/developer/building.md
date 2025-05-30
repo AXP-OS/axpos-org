@@ -6,10 +6,44 @@ aliases:
     - /Build
     - /build
 ---
-> [!CAUTION]
-> This guide is marked as outdated and requires a re-work
 
-AXP.OS is build the "traditional" way, no docker, no other container based performance killers.... but to make life easier everything is fully automated. While it is possible to build the traditional way without automation it is not supported or covered here. Instead you should setup the automation as described because several very important tasks are available within the automated process only (e.g patching etc)!
+> [!CAUTION]
+> This guide is currently being revised
+
+AXP.OS is build the "traditional" way, i.e. without docker and fully automated. Building AXP.OS without automation is **not(!) supported**. 
+
+## Automation scheme
+
+
+```
+
+               ┌────────────────────────────────────┐
+               │     🚦 Semaphore (UI + Control)    │──────.          . . . . . . . . . . . . . . . .
+               │     🛠️ Ansible (same system)       │      '───────▶ .       🗄️ Database           .
+               │    . . . . . . . . . . . . . . .   │                 .   (remote or on Semaphore)  .
+               │    🏗️ Buildserver (can be local)   │                 . . . . . . . . . . . . . . . . 
+               └──────────────┬─────────────────────┘
+                              │
+                              ▼
+               . . . . . . . . . . . . . .  . . . . .
+               .         🏗️ Buildserver             .
+               .  (remote or on Semaphore system)   .
+               . . . . . . . . . . . . . .  . . . . .
+                              │
+                              ▼
+               . . . . . . . . . . . . . .  . . . . .
+               .      📦 Download + OTA Server      .
+               .           (fully optional)         .
+               . . . . . . . . . . . . . .  . . . . .
+
+Legend:
+─────────  = required  
+. . . . .  = optional, can be a separate server or completely skipped
+
+- Semaphore+Ansible require each other (single system).
+- Buildserver and Database are optionally on a different server.
+- Semaphore supports MariaDB, Postgres or a simple filebased DB (BoltDB).
+```
 
 ## Requirements
 
@@ -17,12 +51,12 @@ AXP.OS is build the "traditional" way, no docker, no other container based perfo
 
 The control node holds the automation software:
 
-- **Ansible** 2.9 or later - see [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+- **Ansible** 2.12 or later - see [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
     - |+ `ansible-galaxy collection install community.general`
 - **Semaphore** UI - see [here](https://docs.ansible-semaphore.com/administration-guide/installation)
 
-Recommended specs (standalone, i.e. when using a separate build system):
-- 8 CPU cores
+Recommended specs (standalone, i.e. when using a **separate** build system):
+- 4 CPU cores
 - 2 GB RAM
 - 20 GB free disk space
 - can run in LXC, docker, full VM, or even on your laptop/PC
