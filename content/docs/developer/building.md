@@ -16,25 +16,24 @@ AXP.OS is build the "traditional" way, i.e. without docker and fully automated. 
 
 
 ```
-
-               ┌────────────────────────────────────┐
-               │     🚦 Semaphore (UI + Control)    │──────.          . . . . . . . . . . . . . . . .
-               │     🛠️ Ansible (same system)       │      '───────▶ .       🗄️ Database           .
-               │    . . . . . . . . . . . . . . .   │                 .   (remote or on Semaphore)  .
-               │    🏗️ Buildserver (can be local)   │                 . . . . . . . . . . . . . . . . 
-               └──────────────┬─────────────────────┘
-                              │
-                              ▼
-               . . . . . . . . . . . . . .  . . . . .
-               .         🏗️ Buildserver             .
-               .  (remote or on Semaphore system)   .
-               . . . . . . . . . . . . . .  . . . . .
-                              │
-                              ▼
-               . . . . . . . . . . . . . .  . . . . .
-               .      📦 Download + OTA Server      .
-               .           (fully optional)         .
-               . . . . . . . . . . . . . .  . . . . .
+   ┌────────────────────────────────────┐
+   │     🚦 Semaphore (UI + Control)    │───.     . . . . . . . . . . . . . . . .
+   │     🛠️ Ansible (same system)       │   '──▶ .       🗄️ Database           .
+   │    . . . . . . . . . . . . . . .   │         .   (remote or on Semaphore)  .
+   │    🏗️ Buildserver (can be local)   │         . . . . . . . . . . . . . . . . 
+   └──────────────┬─────────────────────┘
+                  │
+                  ▼
+   . . . . . . . . . . . . . .  . . . . .
+   .         🏗️ Buildserver             .
+   .  (remote or on Semaphore system)   .
+   . . . . . . . . . . . . . .  . . . . .
+                  │
+                  ▼
+   . . . . . . . . . . . . . .  . . . . .
+   .      📦 Download + OTA Server      .
+   .           (fully optional)         .
+   . . . . . . . . . . . . . .  . . . . .
 
 Legend:
 ─────────  = required  
