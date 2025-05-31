@@ -71,16 +71,26 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 - [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and [on expected version](https://axpos.org/Changelog)
 - [ ] **WireGuard VPN Kernel module** (Install [Wireguard](https://download.wireguard.com/android-client/) or [WG Tunnel](https://f-droid.org/packages/com.zaneschepke.wireguardautotunnel/). `Wireguard App -> grant root -> enable kernel support in settings`. `WG Tunnel -> Settings -> Use Kernel module -> grant root`)
 - [ ] Home **Launcher Neo Launcher** included and [on expected version](https://axpos.org/Changelog)
-- [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Settings -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`)
+- **F-Droid**: extended list of **F-Droid repositories**
+    - step1: `long press F-Droid icon -> App info -> Clear Data`
+    - step2: `F-Droid App -> Settings -> Repositories` and check:
+        - [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
+        - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`
+        - [ ] enable all disabled repos: no error should occur
 - [ ] **boot debug** log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](https://axpos.org/devices). Add the output in a comment)
 
 #### AXP.OS - Slim tests
 
 _Secondary tests which MUST succeed when the flavor you are testing is: Slim_
 
-- [ ] **F-Droid**: extended list of **F-Droid repositories** (`F-Droid App -> Settings -> Repositories -> find Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG`)
-- [ ] **MicroG install test** (microG is NOT included within Slim builds but its usage has been prepared):
-    - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation)
+- **F-Droid**: extended list of **F-Droid repositories**
+    - step1: `long press F-Droid icon -> App info -> Clear Data`
+    - step2: `F-Droid App -> Settings -> Repositories` and check:
+        - [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
+        - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG`
+        - [ ] enable all disabled repos: no error should occur
+- **MicroG install test** (microG is NOT included within Slim builds but its usage has been prepared):
+    - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation) + and its Companion App (enable `MicroG` F-Droid repo)
     - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
     - [ ]`microG Settings -> Selftest -> ensure all checkboxes are ticked`
 
