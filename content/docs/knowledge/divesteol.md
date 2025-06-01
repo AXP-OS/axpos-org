@@ -114,5 +114,5 @@ The **ASB patching** process has been adapted and [implemented](https://github.c
 
 ### [5] Divest-like flavor
 
-The (so-called) **Slim** flavor was requested by several users which should not contain root or Google Play and provide a Divest-like experience. The issue tracker has been updated to ask users which variant the request is made for (defaults to the _Pro_ flavor). So if you came here as a Divest user and want such build feel free to [open a FR](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new?template=.github%2fISSUE_TEMPLATE%2fsupport-new-device-request.yaml) and select the SLIM flavor there. Read more about these AOS flavors [here](/Flavors).
+The (so-called) **Slim** flavor was requested by several users which should not contain root or Google Play and provide a Divest-like experience. The issue tracker has been updated to ask users which variant the request is made for (defaults to the _Pro_ flavor). So if you came here as a Divest user and want such build feel free to [open a FR](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new?template=.github%2fISSUE_TEMPLATE%2f01_support-new-device-request.yaml) and select the SLIM flavor there. Read more about these AOS flavors [here](/Flavors).
 
