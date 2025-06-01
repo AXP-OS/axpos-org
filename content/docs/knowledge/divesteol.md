@@ -8,7 +8,7 @@ aliases:
 
 Since the hard "over and out" cut ([source](https://web.archive.org/web/20241227223444/https://divestos.org/pages/news#end)) of Divest OS it was unclear if and how AXP.OS will continue.
 
-State: `2025-02-27`
+State: `2025-06-01`
 
 ## Tasks
 
@@ -24,19 +24,19 @@ Main challenges which need to be solved (not ordered):
 
 ### not critical
 
-- [ ] Hypatia (not directly AXP.OS related) [3]
+- [x] Hypatia (not directly AXP.OS related) [3]
     - [x] creating a forked hypatia app
-    - [ ] automating signature db updates (90% done)
-    - [ ] F-Droid release (undecided)
+    - [x] automating signature db updates
+    - [x] F-Droid release
 
 ## Progress details
 
-### [1] CVE kernel patcher
+#### [1] CVE kernel patcher
 
 The **kernel patching** is essential for an ongoing enhanced security. This part has been checked quickly and it seems to be solvable. Automation is the key though 
 and it already has been [started to work](https://github.com/sfX-android/automation_scripts/tree/ansible/roles/kernel_patcher) on that topic. From what is known currently it *should* be possible to achieve continuing this part and even automate all or whole parts at least. As the process has just been started with it is unclear what challenges are behind the next corner though. **Even though the process of patching itself IS release critical the January build will not contain any new Kernel patches to not delay releases even more.** While the process is still ongoing we are close :)
 
-#### UPDATE: 2025-02-20
+### UPDATE: 2025-02-20
 
 I guess (i.e. hope) that I can finish soon the work on the CVE patcher. its code [had to be adapted](https://codeberg.org/AXP-OS/cve_checker/compare/8472020ac4f2b677fdd356d7af5b6318689c0834...main) and also the build automation routines had to be changed at several places. 
 
@@ -83,7 +83,7 @@ Kernel patches have been applied successfully up to **2025-02-19** on a first te
 
 **TL;DR: we will get CVE kernel patches with the February builds but in a (slightly) reduced manner.**
 
-#### UPDATE: 2025-02-21
+### UPDATE: 2025-02-21
 
 so.. there was still not just fine tuning left it seems. anyways but now the previously used workarounds which ensured proper patch handling have been moved to the cve patcher directly, i.e. it will write the correct patch lines including:
 - fallback to patch cmd
@@ -98,21 +98,30 @@ I started to deprecate the use of [git submodules](https://github.com/AXP-OS/bui
 
 The automation had to be adapted again as well to reflect the changes above.
 
-
-
-### [2] ASB patching process
+#### [2] ASB patching process
 
 The **ASB patching** process has been adapted and [implemented](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common/tasks/main.yml#L38-L41) via Ansible.
 
-### [3] Hypatia
+#### [3] Hypatia
 
  **Hypatia** has been [forked](https://code.binbash.rocks/AXP.OS/packages_apps_LoveLaceAV) already, a server has been setup, ci/cd building of the apk works and half of the dozens of signature sources have been [automated](https://github.com/sfX-android/automation_scripts/tree/ansible/roles/hypatiadb) to fetch and convert for hypatia. Atm it is unclear how the project will be named and when it will been released officially though. In any case it is planned to make it available via F-Droid. There is also an attempt to maintain it [here](https://github.com/MaintainTeam/Hypatia/issues/1).
 
-### [4] Webview replacement
+#### [4] Webview replacement
 
 **Webview** has been forked and is [available](Browser) already.
 
-### [5] Divest-like flavor
+#### [5] Divest-like flavor
 
 The (so-called) **Slim** flavor was requested by several users which should not contain root or Google Play and provide a Divest-like experience. The issue tracker has been updated to ask users which variant the request is made for (defaults to the _Pro_ flavor). So if you came here as a Divest user and want such build feel free to [open a FR](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new?template=.github%2fISSUE_TEMPLATE%2f01_support-new-device-request.yaml) and select the SLIM flavor there. Read more about these AOS flavors [here](/Flavors).
 
+### UPDATE: 2025-06-01
+
+#### [3] Hypatia
+
+The CI/CD process has been finalized and even an [F-Droid repo](/devices/changelogs/2025/#f-droid) is available now (atm LoveLaceAV is in the `Cutting Edge` one only). While the process of rebranding Hypatia to `LoveLaceAV` is not fully completed the rest of the app can be considered as a working BETA.
+
+Forking Hypatia instead of using the [other Hypatia fork](https://github.com/MaintainTeam/Hypatia) was mainly made to choose the LoveLaceAV databases by default. A PR is planned to integrate the LoveLaceAV signatures into that other fork, too though.
+
+The current approach is staying in sync with https://github.com/MaintainTeam/Hypatia while keeping our database as primary. At the moment it is not planned adding any other features than what comes from upstream into LoveLaceAV. This might change somewhen but not in the near future.
+
+Main features work while there are still some minor issues to solve (self-test files won't work atm, some more minor sig sources could be added).
