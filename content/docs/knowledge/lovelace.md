@@ -9,7 +9,7 @@ aliases:
     - /lav
     - /LAV
 ---
-![image](https://codeberg.org/AXP-OS/packages_apps_LoveLaceAV/raw/branch/merge/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png)
+![image](/img/LoveLaceAV_web.png)
 
 ## About
 
