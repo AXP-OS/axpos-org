@@ -10,7 +10,7 @@ aliases:
 ---
 ## About
 
-![image](https://github.com/user-attachments/assets/89bfb426-ed34-49dd-9733-8aa3eb54e5ca)
+![image](/img/AOSmium_web.png)
 
 AXP.OS comes with its own **WebView** implementation and **browser** named [AOSmium](https://codeberg.org/AXP-OS/app_aosmium) and build by the AXP.OS project.
 
