@@ -47,6 +47,17 @@ AXP.OS builds starting from May 2025 onwards deliver both repositories as part o
 1. open F-Droid and in `Settings` -> `Repositories` check if the AXP.OS **Stable** repo is there and _enabled_
 1. **optional:** activate the _"Cutting Edge"_ repository
 
+## Apps
+
+Both repositories contain the same apps while the _Cutting Edge_ one gets updates first (see above).
+The apps inside the F-Droid repo are:
+
+- [AOSmium](/Browser) Browser
+- [AOSmium](/Browser) Webview
+- [LoveLaceAV](/lovelace)
+
+More to come, see: [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/98) and [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/107) 
+
 ## Credits
 
 - [F-Droid](https://fdroid.org)
