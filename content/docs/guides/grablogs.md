@@ -159,7 +159,7 @@ In general:
 
 While there are several paste services which can encrypt your data the following is the recommended process for AXP.OS:
 
-1. Open https://paste.binbash.rocks:8999/ _(running on AXP.OS servers)_
+1. Open https://paste.axpos.org/ _(running on AXP.OS servers)_
 1. Set `Expires` = `1 year` _(min. 3 months, keep in mind that you need to provide a new log if selecting a too short time period)_
 1. Do **not(!)** select "Burn after reading"
 1. Set a strong password in the `Password` field _(and record it for later)_
@@ -173,7 +173,7 @@ While there are several paste services which can encrypt your data the following
 
 Here are some examples (use your fav search engine to find more):
 
-* https://paste.binbash.rocks:8999/ _(running on AXP.OS servers)_
+* https://paste.axpos.org/ _(running on AXP.OS servers)_
 * https://privatebin.at/
 * https://hastebin.com/
 * https://controlc.com/
