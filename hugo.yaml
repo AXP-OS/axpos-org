@@ -53,7 +53,7 @@ params:
 
     flexsearch:
       # index page by: content | summary | heading | title
-      index: summary
+      index: content
       # full | forward | reverse | strict
       # https://github.com/nextapps-de/flexsearch/#tokenizer-prefix-search
       tokenize: forward
