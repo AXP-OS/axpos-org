@@ -50,7 +50,7 @@ AXP.OS includes extendrom by default so this would conflict with any manual incl
 1. extract the latest vendor OTA (e.g. by [ROME](https://code.binbash.rocks/mAid/android_rome)) for ZIPs or [SALT](https://github.com/steadfasterX/salt) for KDZ's. **Example sources** where you can find those are:
    - _NOTE1: ensure you select a trusted source, I cannot guarantee that the following are trusted though!_
    - _NOTE2: ensure you choose the latest "global" one (i.e. never provider specific ones) for the supported Android version (which is reflected by the device tree branch name)_
-   - OnePlus: e.g. on [XDA](https://www.google.com/search?q=site%3Axdaforums.com+OTA+oneplus+%3CREPLACE-WITH-DEVICE-NAME%3E)
+   - OnePlus: e.g. [here](https://www.google.com/search?q=site%3Acommunity.oneplus.com+OxygenOS+%3CREPLACE-WITH-DEVICE-NAME%3E) or [here](https://www.google.com/search?q=site%3Axdaforums.com+OTA+oneplus+%3CREPLACE-WITH-DEVICE-NAME%3E)
    - Google Pixel: [here](https://developers.google.com/android/ota)
    - LG: e.g. [here](https://lgrom.com/) or [here](https://lg-firmwares.com/)
    - Samsung: e.g. [here](https://sfirmware.com/) or [here](https://samfrew.com/)
