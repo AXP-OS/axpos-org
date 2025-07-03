@@ -157,7 +157,7 @@ AXP.OS supports **Ubuntu (22.04 LTS)** only while [others](https://web.archive.o
 sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove
 sudo ln -s /usr/include/asm-generic /usr/include/asm
 
-sudo apt install libssl-dev libncurses5 aapt autoconf automake bc bison build-essential ccache curl expat flex g++ gawk gcc gcc-multilib git git-lfs g++-multilib gnupg gperf lib32ncurses-dev lib32z1-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses5-dev libncurses-dev libsdl1.2-dev libtool libx11-dev libxml2 libxml2-utils lzop maven openjdk-8-jdk patch pkg-config pngcrush python-all-dev schedtool squashfs-tools subversion texinfo tmux unzip x11proto-core-dev xsltproc zip zlib1g-dev imagemagick repo firejail optipng jpegoptim openssl wget python3-colorama python3-pip python3-pyperclip bsdmainutils dos2unix tmux
+sudo apt install libssl-dev libncurses5 aapt autoconf automake bc bison build-essential ccache curl expat flex g++ gawk gcc gcc-multilib git git-lfs g++-multilib gnupg gperf lib32ncurses-dev lib32z1-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses5-dev libncurses-dev libsdl1.2-dev libtool libx11-dev libxml2 libxml2-utils lzop maven openjdk-8-jdk patch pkg-config pngcrush python-all-dev schedtool squashfs-tools subversion texinfo tmux unzip x11proto-core-dev xsltproc zip zlib1g-dev imagemagick repo firejail optipng jpegoptim openssl wget python3-colorama python3-pip python3-pyperclip bsdmainutils dos2unix tmux android-sdk-libsparse-utils
 ```
 
 it is not required nore recommended to build as root user:
