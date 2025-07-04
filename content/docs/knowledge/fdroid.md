@@ -42,8 +42,8 @@ AXP.OS builds starting from May 2025 onwards deliver both repositories as part o
 **Reset F-Droid:**
 1. long press the F-Droid icon
 1. choose `App info`
-1. choose `Storage & Cache`
-1. choose `Clear Storage` (_Cache_ is not enough)
+1. choose `Storage and cache`
+1. choose `Clear storage` (_Clear cache_ is not enough!)
 1. open F-Droid and in `Settings` -> `Repositories` check if the AXP.OS **Stable** repo is there and _enabled_
 1. **optional:** activate the _"Cutting Edge"_ repository
 
@@ -55,8 +55,11 @@ The apps inside the F-Droid repo are:
 - [AOSmium](/Browser) Browser
 - [AOSmium](/Browser) Webview
 - [LoveLaceAV](/lovelace)
+- [PhoneSky](https://github.com/AXP-OS/packages_apps_phonesky/)
+- [OpenEUICC](https://github.com/AXP-OS/packages_apps_OpenEUICC)
+- [EasyEUICC](https://github.com/AXP-OS/packages_apps_OpenEUICC)
 
-More to come, see: [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/98) and [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/107) 
+More to come, see: [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/107) 
 
 ## Credits
 
