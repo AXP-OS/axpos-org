@@ -72,7 +72,7 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 - [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and [on expected version](https://axpos.org/Changelog)
 - [ ] Home **Launcher Neo Launcher** included and [on expected version](https://axpos.org/Changelog)
 - **F-Droid**: extended list of **F-Droid repositories**
-    - step1: `long press F-Droid icon -> App info -> Clear Data`
+    - step1: `long press F-Droid icon -> App info -> Storage and cache -> Clear storage`
     - step2: `F-Droid App -> Settings -> Repositories` and check:
         - [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
         - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`
@@ -88,7 +88,7 @@ _Secondary tests which SHOULD succeed when the flavor you are testing is: Pro_
 _Secondary tests which MUST succeed when the flavor you are testing is: Slim_
 
 - **F-Droid**: extended list of **F-Droid repositories**
-    - step1: `long press F-Droid icon -> App info -> Clear Data`
+    - step1: `long press F-Droid icon -> App info -> Storage and cache -> Clear storage`
     - step2: `F-Droid App -> Settings -> Repositories` and check:
         - [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
         - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG`
