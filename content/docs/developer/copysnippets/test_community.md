@@ -99,7 +99,9 @@ _Secondary tests which SHOULD succeed when the flavor you are testing is: Slim_
 - **MicroG install test** (microG is NOT included within Slim builds but its usage has been prepared):
     - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation) + and its Companion App (enable `MicroG` F-Droid repo)
     - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
-    - [ ]`microG Settings -> Selftest -> ensure all checkboxes are ticked`
+    - `microG Settings -> Selftest:`
+        - [ ] Signature spoofing support (tick it once, it must be enabled after that)
+        - [ ] Topic _Installed packages_ should have all items enabled
 
 ### AXP.OS - Core functionality
 
