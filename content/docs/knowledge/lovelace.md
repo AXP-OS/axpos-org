@@ -73,7 +73,7 @@ Feel free to use the MaintainTeam-Hypatia app and add the LoveLaceAV databases t
     - Hashes: 
         - `> 10 million`* (regular database)
         - `> 51 million`* (with extended database enabled)
-    - Malicious domains detection (on-screen scanner): `> 500k`*
+    - Malicious domains detection (on-screen scanner): `> 800k`*
     - Update interval: `daily at 7:00 AM and 08:00 PM (UTC)`
 
 - MaintainTeam-Hypatia:
