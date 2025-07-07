@@ -54,6 +54,7 @@ Feel free to use the MaintainTeam-Hypatia app and add the LoveLaceAV databases t
 
 ## Features
 
+- Privacy-friendly, no calling home (network required only for database download and only to the specified server)
 - Near zero battery impact: you'll never notice any impact on battery at all
 - Extremely fast: it can scan small files (1MB) in <20ms, and even large files (40MB) in 1000ms.
 - Memory efficient: with the default databases enabled it uses under 120MB.
@@ -80,7 +81,9 @@ Feel free to use the MaintainTeam-Hypatia app and add the LoveLaceAV databases t
 	- Signing key:`5298C0C0C3E73288`
 	- Database (button `Github Mirror`): https://github.com/MaintainTeam/HypatiaDatabases/
     - Mirror Database (can be added manually): https://codeberg.org/MaintainTeam/HypatiaDatabases/
-    - Hashes: `> 5 million`*
+    - Hashes:
+        - `> 5 million`* (regular database)
+        - _(no extended database available atm)*_
     - Malicious domains detection (on-screen scanner): `0`*
     - Update interval: `every 2 days at 1:00 AM (UTC)`
 
