@@ -70,8 +70,10 @@ Feel free to use the MaintainTeam-Hypatia app and add the LoveLaceAV databases t
 - Default database:
 	- Signing key: `14C17E7F99EABF3F`
 	- Database: https://lav.axpos.org/db
-    - Hashes: `> 7 million`*
-    - Blocked domains (link scanner): `> 500k`*
+    - Hashes: 
+        - `> 10 million`* (regular database)
+        - `> 51 million`* (with extended database enabled)
+    - Malicious domains detection (on-screen scanner): `> 500k`*
     - Update interval: `daily at 7:00 AM and 08:00 PM (UTC)`
 
 - MaintainTeam-Hypatia:
@@ -79,7 +81,7 @@ Feel free to use the MaintainTeam-Hypatia app and add the LoveLaceAV databases t
 	- Database (button `Github Mirror`): https://github.com/MaintainTeam/HypatiaDatabases/
     - Mirror Database (can be added manually): https://codeberg.org/MaintainTeam/HypatiaDatabases/
     - Hashes: `> 5 million`*
-    - Blocked domains (link scanner): `0`*
+    - Malicious domains detection (on-screen scanner): `0`*
     - Update interval: `every 2 days at 1:00 AM (UTC)`
 
 > [!TIP]
