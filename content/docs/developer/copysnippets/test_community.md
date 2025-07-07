@@ -75,7 +75,7 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
     - step1: `long press F-Droid icon -> App info -> Storage and cache -> Clear storage`
     - step2: `F-Droid App -> Settings -> Repositories` and check:
         - [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
-        - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid`
+        - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, IronFox (since July25)`
         - [ ] enable all disabled repos: no error should occur
 - [ ] **boot debug** log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](https://axpos.org/devices). Add the output in a comment)
 
@@ -91,7 +91,7 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Slim_
     - step1: `long press F-Droid icon -> App info -> Storage and cache -> Clear storage`
     - step2: `F-Droid App -> Settings -> Repositories` and check:
         - [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
-        - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG`
+        - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG, IronFox (since July25)`
         - [ ] enable all disabled repos: no error should occur
 
 _Secondary tests which SHOULD succeed when the flavor you are testing is: Slim_
