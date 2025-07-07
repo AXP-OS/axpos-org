@@ -92,12 +92,15 @@ Feel free to use the MaintainTeam-Hypatia app and add the LoveLaceAV databases t
 - LoveLaceAV: [https://lav.axpos.org/db](https://lav.axpos.org/db)
 - MaintainTeam-Hypatia: [https://maintainteam.codeberg.page/HypatiaDatabases](https://maintainteam.codeberg.page/HypatiaDatabases)
 
-## Download
+## Download & Sources
 
 While it is possible to download LoveLaceAV directly it is strongly recommended using the public **AXP.OS F-Droid repo**.
 
 - Direct download: [here](https://codeberg.org/AXP-OS/packages_apps_LoveLaceAV/releases), [mirror](https://github.com/AXP-OS/packages_apps_LoveLaceAV/releases)
 - F-Droid repo: [here](/F-Droid)
+- Source code:
+    - [LoveLaceAV - main](https://code.binbash.rocks/AXP.OS/packages_apps_LoveLaceAV) _(requires to login first!)_, [LoveLace AV - mirror](https://codeberg.org/AXP-OS/packages_apps_LoveLaceAV) _(no login required)_
+    - [LoveLaceAV database tool](https://code.binbash.rocks/AXP.OS/tools_lovelaceav_convertdb) _(requires to login first!)_, [LoveLaceAV database tool - mirror](https://codeberg.org/AXP-OS/tools_lovelaceav_convertdb) _(no login required)_
 
 ## Credits
 
