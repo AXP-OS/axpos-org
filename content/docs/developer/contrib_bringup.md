@@ -22,17 +22,17 @@ Go through the list of device requests, there is no enforced priority but usuall
 #### Low hanging fruits
 
 Pre-filtered which shows just those which are 90% sure to be added:
-[Issue tracker](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=open&labels=26%2C47%2C-43%2C-44%2C-41%2C-34&sort=oldest) _(top->down: oldest->newest)_
+- [Issue tracker](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=open&labels=26%2C47%2C-43%2C-44%2C-41%2C-34&sort=oldest) _(top->down: oldest->newest)_
 
 #### Good enough
 
 Pre-filtered (official) LineageOS ones which are 80% sure to be added:
-[Issue tracker](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=open&labels=-34%2C-41%2C-43%2C-44%2C26%2C45&sort=oldest) _(top->down: oldest->newest)_
+- [Issue tracker](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=open&labels=-34%2C-41%2C-43%2C-44%2C26%2C45&sort=oldest) _(top->down: oldest->newest)_
 
 #### Problematic ones
 
 Pre-filtered unofficial LineageOS ones which are 40% sure to be added:
-[Issue tracker](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=open&labels=-34%2C-41%2C-43%2C-44%2C26%2C46&sort=oldest) _(top->down: oldest->newest)_
+- [Issue tracker](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=open&labels=-34%2C-41%2C-43%2C-44%2C26%2C46&sort=oldest) _(top->down: oldest->newest)_
 
 ## Firmware / Bootloader
 
