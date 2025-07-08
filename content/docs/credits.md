@@ -82,6 +82,8 @@ Information to financially support the below projects/people is also listed wher
 
 ## Misc
 
+- [Ansible](https://www.ansible.com/) - main automation platform used by various crucial parts of the AXP.OS project
+- [Semaphore](https://semaphoreui.com/) - Crucial important automation UI used by the AXP.OS project - Donate: [Github Sponsors](https://github.com/sponsors/semaphoreui)
 - [@KartikBapna](https://xdaforums.com/m/kartikbapna.9871197/) - Checklist template for basic OS tests
 - [@hagezi](https://github.com/hagezi) - DNS [blocklist](/Features)
 
