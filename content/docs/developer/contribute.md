@@ -39,9 +39,11 @@ You might read specific Android related news, choose your favorite feed and ask 
 
 If you want to dig even deeper:
 
-- Device bringup contributions: see [here](/Contrib-Device)
+- Speed-up new device requests: see [here](/Contrib-Device)
 - Start building AXP.OS: see [here](/Build)
+    - get in [contact](/Support) where to go next then
 - Start porting a new device to AXP.OS: see [here](/port-guide)
+    - get in [contact](/Support) where to go next then
 
 ## Donate
 
