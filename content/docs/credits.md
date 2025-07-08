@@ -77,7 +77,7 @@ Information to financially support the below projects/people is also listed wher
 - [@mkbestas]() - ASB backports
 - [@haggertk]() - ASB backports
 - [@flamefire89]() - ASB backports - Donate: [GitHub Sponsors](https://github.com/sponsors/flamefire)
-- [@steadfasterX](https://github.com/sfX-android) - extendrom, AOSmium, CI/CD, automation, hosting, build, administration + maintenance, tons of patches, ........ and SO much more :)
+- [@steadfasterX](https://github.com/sfX-android) - extendrom, AOSmium, LoveLaceAV, CI/CD, automation, hosting, building, administration, maintenance, tons of patches and endless more :) - Donate: [Monero](monero://8AqEajqgQyydvbFGJwCsjnVqaFREpVqdmVJjJWgmVLpsgmiYoLZ2JX41yS4c696HA9LGg8A1AREd7UPX6Lb1oQJTT1tZCPe), [Bitcoin](bitcoin://1JPPrke29w2wEUjhrS3kDCpmvgL8B7z7C)
 
 ## Misc
 
@@ -90,7 +90,7 @@ A significant difference to some other operating systems is that AXP.OS always i
 
 For this reason, a very special and big thank you goes to the community that makes all this possible:
 
-- [@SerYo](https://code.binbash.rocks/SerYo) - klte, oriole, sargo, sunfish
+- [@SerYo](https://code.binbash.rocks/SerYo) - klte, oriole, sargo, sunfish, enchilada
 - [@rocky-184](https://code.binbash.rocks/rocky-184) - enchilada
 - [@mr4zu](https://code.binbash.rocks/mr4zu) - sunfish
 - [@kilou78](https://code.binbash.rocks/kilou78) - klte
@@ -100,6 +100,10 @@ For this reason, a very special and big thank you goes to the community that mak
 - [@jschroeter-user](https://code.binbash.rocks/jschroeter-user) - klte, sunfish
 - [@tial](https://code.binbash.rocks/tial) - FP3
 - [@keylimeypie](https://code.binbash.rocks/keylimeypie) - enchilada
+- [@snupeli](https://code.binbash.rocks/snupeli) - FP4
+- [@kujawek](https://code.binbash.rocks/kujawek) - FP4
+- [@BerTranD](https://code.binbash.rocks/BerTranD) - sargo
+- [@cam](https://code.binbash.rocks/cam) - sargo
 
 ## Translations
 
