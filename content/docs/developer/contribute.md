@@ -31,14 +31,17 @@ Spread the word ;) The project needs people like you, developers and anyone inte
 
 Talk about AXP.OS and its apps (e.g. LoveLaceAV, AOSmium etc) e.g. at forums like https://discuss.privacyguides.net, https://xdaforums.com or any other place which fits AXP.OS' usecases.
 
-#### Article creation
+#### Article / Video creation
 
-You might read specific Android related news, choose your favorite feed and ask them to checkout AXP.OS for an article ;)
+You might read specific Android related news, choose your favorite feed and ask them to checkout AXP.OS for an article or video review ;)
 
 ## Developers
 
-If you want to dig deeper there are even more you can do:
+If you want to dig even deeper:
+
 - Device bringup contributions: see [here](/Contrib-Device)
+- Start building AXP.OS: see [here](/Build)
+- Start porting a new device to AXP.OS: see [here](/port-guide)
 
 ## Donate
 
