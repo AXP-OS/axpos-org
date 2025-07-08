@@ -32,12 +32,14 @@ aliases:
     - **sfX Automation**
     - _if you requested a new device/flavor:_ **AXP.OS - Device Bringup**
     - _if you want to test new unstable builds:_ **AXP.OS - Release Tests**
+    - _if you want to contribute as a developer:_ **AXP.OS - DevTalk**
 
 If your client does **not** support Matrix spaces you can join the following rooms manually:
 - General Support: [#axp.os-support:binbash.rocks](https://matrix.to/#/#axp.os-support:binbash.rocks)
 - New build announcements: [#build-announcements:binbash.rocks](https://matrix.to/#/#telegram_sfX_CI:binbash.rocks)
 - New device/flavor bringup: [#axp.os-bringup:binbash.rocks](https://matrix.to/#/#axp.os-bringup:binbash.rocks)
 - Unstable/beta versions: [#axp.os-beta:binbash.rocks](https://matrix.to/#/#axp.os-beta:binbash.rocks)
+- Developer only talk: [#axp.os-devtalk:binbash.rocks](https://matrix.to/#/#axp.os-devtalk:binbash.rocks)
 
 _Note: Joining the Matrix **space** (see above) instead is highly recommended as it ensures you do not miss new/changed rooms._
 
