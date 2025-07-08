@@ -7,6 +7,10 @@ aliases:
     - /Tests
     - /Testing
     - /testing
+    - /Buildtest
+    - /Buildtests
+    - /buildtest
+    - /buildtests
 ---
 
 ## The process
