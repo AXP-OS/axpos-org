@@ -22,14 +22,17 @@ _Please note: Even if this does not happen often, it may turn out during this pr
 ---
 
 - [ ] setup [AXP.OS manifest](https://github.com/AXP-OS/manifest)
-- [ ] setup [vendor/firmware](https://code.binbash.rocks:8443/AXP.OS/vendor_firmware)
+- [ ] setup [vendor/firmware](https://code.binbash.rocks/AXP.OS/vendor_firmware)
 - [ ] setup [automation repo](https://github.com/sfX-android/automation_scripts/tree/ansible/roles/axp)
 - [ ] setup semaphore
 - [ ] check/enable [verity](https://github.com/AXP-OS/build/blob/a4536167f37731618f83045b9996cf9b4552520b/Scripts/Common/Enable_Verity.sh#L293) or [AVB](https://github.com/AXP-OS/build/blob/a4536167f37731618f83045b9996cf9b4552520b/Scripts/Common/Enable_Verity.sh#L98) 
 - [ ] build
-- [ ] add/update device guide in [the AXP.OS documentation](https://code.binbash.rocks/AXP.OS/axpos-org)
+- add/update device guide on [the AXP.OS website](https://code.binbash.rocks/AXP.OS/axpos-org)
+    - [ ] add [params](https://code.binbash.rocks/AXP.OS/axpos-org/src/branch/hugo/params)
+    - [ ] add [bootloader id](https://code.binbash.rocks/AXP.OS/axpos-org/src/branch/hugo/content/devices)
+    - [ ] upload [signing keys](https://github.com/sfX-android/update_verifier)
 - [ ] provide a public UNSTABLE version
-- [ ] test of all AXP.OS [core features](https://axpos.org/Features)
+- [ ] validating test results of all AXP.OS [core features](https://axpos.org/Features)
 - [ ] release to STABLE channel
 - [ ] announce on XDA
 ```
