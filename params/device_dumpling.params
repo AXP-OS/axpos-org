@@ -32,9 +32,9 @@ export HUGO_ISAB="yes"
 
 export HUGO_ISPIXEL="no"
 
-# known issues topic title, e.g: "#cheeseburgerdumpling" in case of:
+# known issues topic title, e.g: "cheeseburgerdumpling" (no hash!) in case of:
 # https://axpos.org/docs/knowledge/knownissues/#cheeseburgerdumpling
-export HUGO_KILINK="#cheeseburgerdumpling"
+export HUGO_KILINK="cheeseburgerdumpling"
 
 export HUGO_XDALINK="N/A"
 export HUGO_FIRSTRELEASE="[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/112)"
