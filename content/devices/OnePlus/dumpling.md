@@ -13,7 +13,7 @@ debugbootpath: /mnt/vendor/persist
 factoryzip: "no"
 isab: "yes"
 ispixel: "no"
-kilink: #cheeseburgerdumpling
+kilink: cheeseburgerdumpling
 custominstall: ""
 custominstall_path: ""
 xdalink: "N/A"
