@@ -215,7 +215,7 @@ $[BUILD-USER]> gpg --expert --full-gen-key
 # note: if you set a password on the key several automation parts will NOT work unless you automate the key unlock before starting a build
 ```
 
-add it to your accounts (yes for _all_ sites):
+add both, SSH and GPG keys, to your accounts (and.. yes repeat that for _all_ sites):
 - https://code.binbash.rocks
 - and: https://github.com
 - and: https://codeberg.org (not used yet, which will change anytime soon though, so better be prepared)
