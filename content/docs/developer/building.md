@@ -151,13 +151,22 @@ systemctl enable --now semaphore
 
 ### Buildserver
 
-AXP.OS supports **Ubuntu (22.04 LTS)** only while [others](https://web.archive.org/web/20241227223444/https://divestos.org/pages/build#deps) **might** work, too.
+AXP.OS supports Ubuntu **22.04 LTS** only while [others](https://web.archive.org/web/20241227223444/https://divestos.org/pages/build#deps) **might** work, too.
 
 ```
 sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove
 sudo ln -s /usr/include/asm-generic /usr/include/asm
 
 sudo apt install libssl-dev libncurses5 aapt autoconf automake bc bison build-essential ccache curl expat flex g++ gawk gcc gcc-multilib git git-lfs g++-multilib gnupg gperf lib32ncurses-dev lib32z1-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses5-dev libncurses-dev libsdl1.2-dev libtool libx11-dev libxml2 libxml2-utils lzop maven openjdk-8-jdk patch pkg-config pngcrush python-all-dev schedtool squashfs-tools subversion texinfo tmux unzip x11proto-core-dev xsltproc zip zlib1g-dev imagemagick repo firejail optipng jpegoptim openssl wget python3-colorama python3-pip python3-pyperclip bsdmainutils dos2unix tmux android-sdk-libsparse-utils
+```
+
+Ubuntu **24.04 LTS** is currently in testing, use at your own risk:
+
+```
+sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove
+sudo ln -s /usr/include/asm-generic /usr/include/asm
+
+sudo apt install aapt android-sdk-libsparse-utils autoconf automake bc bison bsdmainutils build-essential ccache curl dos2unix expat firejail flex g++ g++-multilib gawk gcc gcc-multilib git git-lfs gnupg gperf imagemagick jpegoptim lib32ncurses-dev lib32z1-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses-dev libncurses5-dev libncurses6 libsdl1.2-dev libssl-dev libtool libx11-dev libxml2 libxml2-utils lzop maven openjdk-8-jdk openssl optipng patch pkg-config pngcrush python3-all-dev python3-colorama python3-pip python3-pygerrit2 python3-pyperclip repo schedtool squashfs-tools subversion texinfo tmux unzip wget x11proto-core-dev xsltproc zip zlib1g-dev
 ```
 
 it is not required nore recommended to build as root user:
@@ -167,12 +176,15 @@ sudo useradd -m <BUILD-USER>
 
 Install Google's repo tool:
 ```
+sudo su - <BUILD-USER>
+
+$[BUILD-USER]> mkdir -p ~/.local/bin
 $[BUILD-USER]> curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.local/bin/repo
 ```
 
-repo tool dependency:
+repo tool dependency (Ubuntu 20.04 only):
 ```
-pip install pygerrit2
+$[BUILD-USER]> pip install pygerrit2
 ```
 
 ensure locale is as expected:
@@ -182,9 +194,10 @@ sudo dpkg-reconfigure locales
 
 you can already start downloading the android sources to speed up your first build:
 ```
-$[BUILD-USER]> mkdir -p /usr/src/aos/Build/LineageOS-20.0
-$[BUILD-USER]> cd /usr/src/aos/Build/LineageOS-20.0
+$[BUILD-USER]> mkdir -p /usr/src/android/axp/Build/LineageOS-20.0
+$[BUILD-USER]> cd /usr/src/android/axp/Build/LineageOS-20.0
 $[BUILD-USER]> repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
+$[BUILD-USER]> repo sync -c --no-clone-bundle --jobs-network=6
 ```
 
 create a ssh key:
@@ -192,9 +205,20 @@ create a ssh key:
 $[BUILD-USER]> ssh-keygen -a 500 -t ed25519 -C "some comment"
 ```
 
-add it to your accounts (yes for _both_ sites):
+create a gpg key (optional but recommended):
+```
+$[BUILD-USER]> gpg --expert --full-gen-key
+# Select: ECC (sign and encrypt)
+# Select: Curve 25519
+# Select: expire date of your choice
+# Answer requested information
+# note: if you set a password on the key several automation parts will NOT work unless you automate the key unlock before starting a build
+```
+
+add it to your accounts (yes for _all_ sites):
 - https://code.binbash.rocks
 - and: https://github.com
+- and: https://codeberg.org (not used yet, which will change anytime soon though, so better be prepared)
 
 #### When building for Android 9 or 10 only
 
@@ -204,6 +228,17 @@ add the deprecated version 2 of python as a virtual environment (do not change a
 sudo apt-get install python2 virtualenv python2-pip-whl python2-setuptools-whl
 mkdir -p ~/.venv/python2
 virtualenv --python=$(which python2) ~/.venv/python2
+```
+
+for Ubuntu 24.04 do this instead :warning: WIP :warning: :
+```
+apt install checkinstall libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
+tar -xvf Python-2.7.18.tgz
+cd Python-2.7.18
+./configure --enable-optimizations
+make
+make install
 ```
 
 ## Setup Semaphore
@@ -267,7 +302,7 @@ all:
     axp_release_recovery: False
 
     # Buildserver paths    
-    android_build_path: "/usr/src/aosp"   # root path of where you wanna place android sources
+    android_build_path: "/usr/src/android"   # root path of where you wanna place android sources
     zipdir_mntp: "{{ android_build_path }}/zips/{{ target_model }}" # target directory for the final OS zips
     BUILDHOME: "/home/<BUILD-USER>" # the home path of the buildserver user
     SRCPATH: "{{ DOSPATH }}/Build/LineageOS-{{ los_version }}"
