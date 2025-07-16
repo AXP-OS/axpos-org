@@ -1,0 +1,40 @@
+#!/bin/bash
+###############################################################################
+# device specs for creating a new page
+###############################################################################
+export HUGO_VENDOR="OnePlus"
+export HUGO_NAME="OnePlus 7 Pro"
+export HUGO_CODENAME="guacamole"
+export HUGO_ANDROID="13"
+
+# see device fstab or if not defined the common one
+# ICE, FBEv1, FBEv2
+export HUGO_ENCRYPTION="FBEv2"
+
+# see vendor_firmware
+export HUGO_FIRMWARE="included"
+
+export HUGO_RELOCKABLE="no"
+export HUGO_VERIFIEDBOOT="yes"
+
+# Slim, Pro
+export HUGO_FLAVORS="Pro"
+
+# !! ALPHA !!, BETA, stable
+export HUGO_STATE="!! ALPHA !!"
+
+export HUGO_SUPPORTLEVEL="community"
+export HUGO_DEBUGBOOTPATH="/metadata"
+export HUGO_FACTORYZIP="no"
+
+# A/B device or not?
+export HUGO_ISAB="yes"
+
+export HUGO_ISPIXEL="no"
+
+# known issues topic title, e.g: "cheeseburgerdumpling" (no hash!) in case of:
+# https://axpos.org/docs/knowledge/knownissues/#cheeseburgerdumpling
+export HUGO_KILINK="guacamolehotdog"
+
+export HUGO_XDALINK="N/A"
+export HUGO_FIRSTRELEASE="[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/58)"
