@@ -164,6 +164,10 @@ sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f inst
 sudo ln -s /usr/include/asm-generic /usr/include/asm
 
 sudo apt install aapt android-sdk-libsparse-utils autoconf automake bc bison bsdmainutils build-essential ccache curl dos2unix expat firejail flex g++ g++-multilib gawk gcc gcc-multilib git git-lfs gnupg gperf imagemagick jpegoptim lib32ncurses-dev lib32z1-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses-dev libncurses5-dev libncurses6 libsdl1.2-dev libssl-dev libtool libx11-dev libxml2 libxml2-utils lzop maven openjdk-8-jdk openssl optipng patch pkg-config pngcrush python-is-python3 python3-all-dev python3-colorama python3-pip python3-pygerrit2 python3-pyperclip repo schedtool squashfs-tools subversion texinfo tmux unzip wget x11proto-core-dev xsltproc zip zlib1g-dev
+
+wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.3-2ubuntu0.1_amd64.deb
+wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
+dpkg -i lib*.deb
 ```
 
 it is not required nore recommended to build as root user:
