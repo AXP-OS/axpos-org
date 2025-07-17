@@ -167,7 +167,7 @@ sudo apt install aapt android-sdk-libsparse-utils autoconf automake bc bison bsd
 
 wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.3-2ubuntu0.1_amd64.deb
 wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
-dpkg -i lib*.deb
+sudo dpkg -i lib*.deb
 ```
 
 it is not required nore recommended to build as root user:
