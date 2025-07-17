@@ -185,6 +185,9 @@ _Note: It has not been tested if you can sideload a testkey signed update via AD
 *   Second SIM non-functional. \[disabled, some variants lack the necessary firmware\]
 *   While it was possible in [earlier firmware releases](https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/) they (OnePlus/OPPO) half-removed the ability to re-lock the bootloader. That means: you can still flash a custom AVB key but it will not get respected anymore. The mentioned steps in that linked blog post have all been tested by me and none of them are either working or sufficient. AXP.OS comes with the latest firmware and so cannot be locked anymore.
 
+## instantnoodlep
+
+* While it was possible in [earlier firmware releases](https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/) they (OnePlus/OPPO) half-removed the ability to re-lock the bootloader. That means: you can still flash a custom AVB key but it will not get respected anymore. The mentioned steps in that linked blog post have all been tested by me and none of them are either working or sufficient. AXP.OS comes with the latest firmware and so cannot be locked anymore.
 
 ## lemonade\*
 
