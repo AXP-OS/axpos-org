@@ -62,7 +62,7 @@ If that happens there are 2 options you can try to make them work, read about th
 
 yes/no but here are some great lists containing FOSS alternative apps:
 
-- [divestos.org/pages/recommended_apps](https://web.archive.org/web/20241231061953/https://divestos.org/pages/recommended_apps) (discontinued since Dec 2024, but still a very valuable list)
+- [divestos.org/pages/recommended_apps](https://divestos-archive.codeberg.page/page/recommended_apps.html) (discontinued since Dec 2024, but still a very valuable list)
 - https://github.com/tycrek/degoogle (discontinued since Aug 2024, but still a huge list)
 - https://github.com/pluja/awesome-privacy
 
@@ -72,28 +72,29 @@ If you using Google play it might want updating the Google play services. Please
 
 ### Is there a list where the source code is hosted?
 
-_**We are in progress of moving our sources away from Github.**_<br/>
-The main goal is to have all needed on our self-hosted Gitea instance and mirror everything to e.g. (but not limited to) Codeberg.org.
+{{< callout emoji="💡" type="info" >}}
+AXP.OS is in the progress of moving away from Github.<br/>
+The main goal is to have all needed on the projects self-hosted Gitea instance and mirror everything to e.g. (but not limited to) Codeberg.org.
+{{< /callout >}}
 
-**AXP.OS sources** are available here _(mirrored from https://code.binbash.rocks/AXP.OS)_:
-- https://codeberg.org/AXP-OS<br />_(note: transition from https://github.com/AXP-OS still in progress, access missing repos there)_
+|Hoster|URL|Public**|Purpose|Repos|
+|-|-|:-:|-|-:|
+|Self-Hosted|[https://code.binbash.rocks/AXP.OS](https://code.binbash.rocks/AXP.OS)|❌|main, CI/CD, APK build, internals, sensitive parts of build|~44*|
+|Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|reproducible builds, manifests, public parts of build|~208*|
+|Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|mirror of code.binbash.rocks public available repos, APK releases|~28*|
+|Codeberg|[https://codeberg.org/AXP-OS_limited](https://codeberg.org/AXP-OS_limited)|❌|mirror of code.binbash.rocks non-public available repos, APK releases|~18*|
 
-At the moment **releases** can be found here: https://codeberg.org/AXP-OS_releases (will be moved to the main org soon)
+- *) _state: July 2025_
+- **) _see next topic_
 
-The repositories mentioned above are **mirrors** of the project's own Gitea instance, which is available here: https://code.binbash.rocks/AXP.OS _(free registration required)_.
+### Why do some repositories require a (free) registration?
 
-For **reproducible builds**, the project currently uses Github + Codeberg, but it is planned to move them to just Codeberg or another hoster soon:
-- [Github](https://github.com/AXP-OS)
-- https://codeberg.org/AXP-OS_limited _(free registration required)_
-
-### Why do some repositories require a registration?
-
-1. Solely because they could contain problematic parts
+1. Solely because they could contain problematic/sensitive parts
 1. If an official mirror(s) requires a registration it is for [reproducible builds](/Reproducible-builds) **only**
-1. You can build AXP.OS **without** these repositories by just using the normal [AXP.OS manifest](https://github.com/AXP-OS/manifest/) and will not miss a thing
+1. You can build AXP.OS **without** these repositories by just using the normal [AXP.OS manifest](https://github.com/AXP-OS/manifest/) and add vendor blobs and firmware on your own
 1. Splitting the problematic parts from the rest of the sources also makes it easier keeping the main project/builds alive in case of trouble
 
-## Imported
+## DivestOS-based FAQ
 
 The document starting from here is a markdown replacement of the original made by: [Divested Computing Group](https://web.archive.org/web/20241231213231/https://divestos.org/pages/faq), so all credits goes to them.
 
