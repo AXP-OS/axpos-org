@@ -353,6 +353,23 @@ Dirty or clean build (overrides `clean_out` from your `Environment`)
 
 ## Debugging
 
+### Repo sync
+
+Google is pretty strict when you try to re-sync multiple times but you can avoid getting rate limited by following: [fix-quota-barriers](https://source.android.com/docs/setup/download/troubleshoot-sync#fix-quota-barriers)
+
+After following the instructions you also need to ensure adding `/a` to the manifest(s), e.g.:
+
+```
+vim .repo/manifests/default.xml
+
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com/a"    <--! /a REQUIRES AUTHENTICATION COOKIE -->
+           review="android-review.googlesource.com"
+           revision="refs/tags/android-15.0.0_r5" />
+```
+
+As this is usually not happening after the initial sync completed once there is no automated way for this implemented.
+
 ### Ansible
 
 check your Ansible log (https://github.com/sfX-android/automation_scripts/blob/ansible/ansible.cfg -> `log_path`)
