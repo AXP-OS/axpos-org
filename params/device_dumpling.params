@@ -28,7 +28,7 @@ export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
 export HUGO_FACTORYZIP="no"
 
 # A/B device or not?
-export HUGO_ISAB="yes"
+export HUGO_ISAB="no"
 
 export HUGO_ISPIXEL="no"
 
