@@ -11,7 +11,7 @@ state: "!! ALPHA !!"
 supportlevel: community
 debugbootpath: /mnt/vendor/persist
 factoryzip: "no"
-isab: "yes"
+isab: "no"
 ispixel: "no"
 kilink: cheeseburgerdumpling
 custominstall: ""
