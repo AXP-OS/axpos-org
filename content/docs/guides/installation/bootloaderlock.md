@@ -106,10 +106,11 @@ backup all your data. I am serious -> EVERYTHING. Your userdata partition will b
 
 ## OEM unlock option
 
-> [!IMPORTANT]
-> :bell: _Note: the following was possible in builds made before 2024-12-16. The toggle has been removed because people still used it regardless of any warnings._ :bell:
->
-> _Even though it is possible to bypass that removal (as AXP.OS comes rooted by default) it is (still) strongly recommended **not touching** it. Really **keep your hands off**._
+{{< callout emoji="⚠️" type="error" >}}
+_Note: the following was possible in builds made before 2024-12-16. The toggle has been removed because people still used it regardless of any warnings._
+
+_Even though it is possible to bypass that removal in AXP.OS Pro (as this requires root) it is (really) strongly recommended **not touching** it. I am serious: **keep your hands off**._
+{{< /callout >}}
 
 ***
 
