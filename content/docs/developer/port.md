@@ -51,7 +51,7 @@ AXP.OS includes extendrom by default so this would conflict with any manual incl
    - _NOTE1: ensure you select a trusted source, I cannot guarantee that the following are trusted though!_
    - _NOTE2: ensure you choose the latest "global" one (i.e. never provider specific ones) for the supported Android version (which is reflected by the device tree branch name)_
    - OnePlus: e.g. [here](https://www.google.com/search?q=site%3Acommunity.oneplus.com+OxygenOS+%3CREPLACE-WITH-DEVICE-NAME%3E) or [here](https://www.google.com/search?q=site%3Axdaforums.com+OTA+oneplus+%3CREPLACE-WITH-DEVICE-NAME%3E)
-   - Google Pixel: [here](https://developers.google.com/android/ota)
+   - Google Pixel: [Factory](https://developers.google.com/android/images) / [OTA](https://developers.google.com/android/ota)
    - LG: e.g. [here](https://lgrom.com/) or [here](https://lg-firmwares.com/)
    - Samsung: e.g. [here](https://sfirmware.com/) or [here](https://samfrew.com/)
    - use www.google.com to find more/better ones!
@@ -144,11 +144,14 @@ check: `../axp/Scripts/LineageOS-<VERSION>/CVE_Patchers/android_kernel_<vendor>_
 
 Adjust the main device variables file: `roles/axp/<device-codename>/vars/main.yml`. For sure you want to change these:
 
-- `target_model_full`
+- `target_model_vendor`
+- `target_model_name`
 - `target_kernel_dir` (must match the [manifest](https://github.com/AXP-OS/manifest))
-- `dtree_cl` (must match the [manifest](https://github.com/AXP-OS/manifest))
-- `cdtree_cl` (must match the [manifest](https://github.com/AXP-OS/manifest))
-- `kernel_cl` (must match the [manifest](https://github.com/AXP-OS/manifest))
+- `extendrom_debug_path_default` (must match your fstab and an mountable partition, so ext2/3/4 whatever)
+- `skip_wireguard: True` if the kernel (ensure you check the right branch!) already includes Wireguard patches
+- check all others like `target_model_common_tree` and such so it matches the device properly
+
+note: `axp_bootloader_id_XXX` must be empty (i.e. an empty string, e.g. `axp_bootloader_id_slim: ''`), it will be set later as this is taken from the AXP.OS signing key.
 
 ### OPTIONAL: axp / common
 
