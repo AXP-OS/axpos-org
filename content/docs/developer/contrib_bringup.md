@@ -45,12 +45,12 @@ A pre-check is required if Divest had supported including firmware in the past a
 
 If there is a folder with the requested codename, check the file `0SOURCE`. It "maybe" lists the latest STOCK-OS version but that is not always the case.
 
-If **not**, continue with the **_AXP.OS manifest_** topic.
+If **not**, continue with the **_AXP.OS manifest_** topic otherwise go on.
 
-#### Android version still vendor-supported?
+#### Fairphone / SHIFTphone
 
 AXP.OS does not ship the latest Android version but usually the firmware provided by the vendor is for the latest Android version only.
-There are some exceptions like Fairphone and SHIFT though which still supporting older Android versions and so AXP.OS.
+There are some exceptions like Fairphone and SHIFT though which still supporting older Android versions and so AXP.OS releases based on those.
 
 For these devices (currently **Fairphone** only) AXP.OS automatically downloads and includes the latest available firmware if properly set up.
 Here examples for the [Fairphone 3](https://code.binbash.rocks/AXP.OS/vendor_firmware/src/branch/axp-a13/FP3/0SOURCE) and [Fairphone 4](https://code.binbash.rocks/AXP.OS/vendor_firmware/src/branch/axp-a13/FP4/0SOURCE).
@@ -59,27 +59,117 @@ Basically the `0SOURCE` file gets sourced by the `update.sh` script which must m
 
 Create a PR at https://code.binbash.rocks/AXP.OS/vendor_firmware for the file `<codename>/0SOURCE` in the following format:
 ```
-# URL: <Download link>
-# Release notes: <release notes link>
+##########################################################################
+# <Fairphone | SHIFTphone> device
+#
+# will be sourced by the AXP.OS build process.
+# FACTORYID and FACTORYIDHASH are case sensitive values
+# and can be extracted from the actual download URL.
+##########################################################################
+#
+# SOURCE: <BASE-DOWNLOAD-URL>
+#
+# LATEST: <DIRECT-DOWNLOAD-URL>
+# MD5|SHA256|SHA512: <hash_IF-THERE-IS-NONE-CREATE-A-SHA512>
+#
+##########################################################################
 
-export VENDOR_SECPATCH_DATE="<REPLACE-WITH-THAT-FROM-RELEASE-NOTES>"
-FACTORYID="<ID>"
-FACTORYIDHASH="<HASH>"
+FACTORYID="<REPLACE-FROM-DL-URL>"
+FACTORYIDHASH="<REPLACE-FROM-DL-URL>"
+
+# see download url
 FACTORYFULLNAME="${FACTORYID}-gms-${FACTORYIDHASH}-user-fastbootimage"
+
+# see release notes
+export VENDOR_SECPATCH_DATE="<REPLACE-WITH-THAT-FROM-STRINGS-OUTPUT>"
 ```
 
-#### Android version not vendor-supported?
+{{% details title="Click to show an example for the Fairphone 3" closed="true" %}}
+```
+##########################################################################
+# Fairphone device
+#
+# will be sourced by the AXP.OS build process.
+# FACTORYID and FACTORYIDHASH are case sensitive values
+# and can be extracted from the actual download URL.
+##########################################################################
+#
+# SOURCE: https://support.fairphone.com/hc/en-us/articles/18896094650513-Install-Fairphone-OS-manually#01HB8ZZ1BMMQNSNMFT3YXDBXA0
+#
+# LATEST: https://fairphone-android-builds.ams3.digitaloceanspaces.com/FP3/A13/FP3-6.A.031.7-gms-f31c7748-user-fastbootimage.zip
+# SHA256: c061082822fa812a0e1485a60771069b1d0b7fabc107aecb3bc2ba63418b428b
+#
+##########################################################################
 
-You need to find the latest and _Android-version-matching_ STOCK-OS ZIP from a [trusted source](/docs/developer/port/#extract-and-push-vendorfirmware).
+FACTORYID="FP3-6.A.035.2"
+FACTORYIDHASH="691ff58c"
+
+# see download url
+FACTORYFULLNAME="${FACTORYID}-gms-${FACTORYIDHASH}-user-fastbootimage"
+
+# see release notes
+export VENDOR_SECPATCH_DATE="2025-06-03"
+```
+{{% /details %}}
+
+#### Generic
+
+All other devices (except Fairphone & SHIFTphone) will likely provide firmware for the latest Android version only.
+
+You need to find the latest and _Android-version-matching_ STOCK-OS ZIP from a [trusted source](/docs/developer/port/#extract-and-push-vendorfirmware). That means it must match the _AXP.OS_ Android version.
 
 Create a PR at https://code.binbash.rocks/AXP.OS/vendor_firmware for the file `<codename>/0SOURCE` in the following format:
 ```
-# URL: <Download link to STOCK-OS ZIP>
-# SHA: <If there is no hash sum: download the STOCK-OS ZIP and generate a sha512 one>
-export VENDOR_SECPATCH_DATE="<REPLACE-WITH-ro.vendor.build.security_patch>"
+##########################################################################
+# <VENDOR-NAME> device
+#
+# will be sourced by the AXP.OS build process.
+# FACTORYID and FACTORYIDHASH are case sensitive values
+# and can be extracted from the actual download URL.
+##########################################################################
+#
+# SOURCE: <BASE-DOWNLOAD-URL>
+#
+# LATEST: <DIRECT-DOWNLOAD-URL>
+# MD5|SHA256|SHA512: <hash_IF-THERE-IS-NONE-CREATE-A-SHA512>
+#
+##########################################################################
+
+FACTORYID="<REPLACE-FROM-DL-URL>"
+FACTORYIDHASH="<REPLACE-FROM-DL-URL>"
+
+# extract vendor.img, boot.img or system.img, then:
+# $> strings <IMAGE> | grep -EA1 "build.vendor.security_patch|vendor.build.version.security_patch"
+export VENDOR_SECPATCH_DATE="<REPLACE-WITH-THAT-FROM-STRINGS-OUTPUT>"
 ```
 
-Usually you can identify `ro.vendor.build.security_patch` by extracting the vendor image from that STOCK-OS ZIP, mounting it and find the default or vendor prop containing that property.
+{{% details title="Click to show an example" closed="true" %}}
+```
+##########################################################################
+# Google device
+#
+# will be sourced by the AXP.OS build process.
+# FACTORYID and FACTORYIDHASH are case sensitive values
+# and can be extracted from the actual download URL.
+##########################################################################
+#
+# SOURCE: https://developers.google.com/android/images#panther
+#
+# LATEST: https://dl.google.com/dl/android/aosp/panther-tq3a.230901.001-factory-21bf556f.zip
+# SHA256: 21bf556f0d65fc1e383a5d0614084c9dce685219537e6909d0bbcffe0ef331ea
+#
+##########################################################################
+
+FACTORYID="tq3a.230901.001"
+FACTORYIDHASH="21bf556f"
+
+# extract vendor.img, boot.img or system.img, then:
+# $> strings <IMAGE> | grep -EA1 "build.vendor.security_patch|vendor.build.version.security_patch"
+export VENDOR_SECPATCH_DATE="2023-09-01"
+```
+{{% /details %}}
+ 
+Besides the quick "strings + grep" method you can also identify `vendor.build.security_patch` by extracting the vendor image from the STOCK-OS ZIP, mounting it and find the default or vendor prop containing that property.
 
 If you are a trusted & verified developer:
 {{% details title="Click to reveal" closed="true" %}}
@@ -88,6 +178,14 @@ If you are a trusted & verified developer:
 - modify `0SOURCE` accordingly (see above)
 - push all required files (see `<codename>/AndroidBoardVendor.mk`)
 {{% /details %}}
+
+#### Add sha1sums
+
+Affects: `<codename>/AndroidBoardVendor.mk`
+
+All new (i.e. starting from 2025-07 onwards) device additions must contain a sha1sum within the call method.
+
+An example can be found [here](https://code.binbash.rocks/AXP.OS/vendor_firmware/commit/821db7df2e943926f32ea57668c0d4fa0277039e) _(noticed the for loop in the comment? it helps to generate the hash sums accordingly)_.
 
 ## AXP.OS manifest
 
