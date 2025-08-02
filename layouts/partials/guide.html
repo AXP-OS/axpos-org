@@ -35,12 +35,12 @@ Please read this first: <a href="{{ printf "%s" .docbaseurl }}/Flavors" target="
 <h3>Install / Upgrade</h3>
 
 {{- if eq .custominstall "yes" -}}
-    {{ $guide := printf "content/devices/custom_%s.guide" .codename }}
+    {{ $guide := printf "content/devices/install_%s.guide" .codename }}
     {{ if fileExists $guide }}
         {{ $markdown := readFile $guide | markdownify }}
         {{ $markdown }}
     {{- else -}}
-    <p>Install guide missing! Please contact <a href="{{ printf "%s" .docbaseurl }}#support" target="_blank">support</a>.</p>
+<p><i>Device specific guide expected but missing! Please contact <a href="{{ printf "%s" .docbaseurl }}#support" target="_blank">support</a>!</i></p>
     {{- end -}}
 {{- end -}}
 
@@ -60,6 +60,15 @@ Please read this first: <a href="{{ printf "%s" .docbaseurl }}/Flavors" target="
 
 {{- if eq .relock "yes" -}}
 <p>Supported: <strong>yes</strong></p>
+{{- if eq .customlock "yes" -}}
+    {{ $guide := printf "content/devices/lock_%s.guide" .codename }}
+    {{ if fileExists $guide }}
+        {{ $markdown := readFile $guide | markdownify }}
+        {{ $markdown }}
+    {{- else -}}
+<p><i>Device specific guide expected but missing! Please contact <a href="{{ printf "%s" .docbaseurl }}#support" target="_blank">support</a>!</i></p>
+    {{- end -}}
+{{- end -}}
 <p>Follow <a href="{{ printf "%s" .docbaseurl }}/Bootloader-Lock" target="_blank">Bootloader-Lock</a> to lock your device.</p>
 
 <h4>Fingerprint information</h4>

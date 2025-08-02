@@ -4,6 +4,8 @@ type: docs
 toc: true
 aliases:
     - /Bootloader-Lock
+    - /Relock
+    - /Re-lock
 ---
 Yes you read correctly: some devices can lock their bootloader again _(check your device's overview table "Relockable")_! 
 
@@ -75,6 +77,14 @@ Do you have answered at least 1 of the above with YES ? Then do **NOT** lock you
 if you can live with the above - **GO GO GO** :)
 
 # Lock your bootloader!
+
+{{< callout type="error" emoji="⚠️" >}}
+Before attempting to relock the bootloader on your device, ensure that it allows to _unlock_ again by executing the following command:
+
+`fastboot flashing get_unlock_ability`
+
+This _must_ return `1`, if it does return `0` do not proceed as you risk a hard-brick!
+{{< /callout >}}
 
 ## Downloads
 

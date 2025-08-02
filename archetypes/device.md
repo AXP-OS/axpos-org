@@ -16,6 +16,7 @@ ispixel: "{{ getenv "HUGO_ISPIXEL" }}"
 kilink: {{ getenv "HUGO_KILINK" }}
 custominstall: "{{ getenv "HUGO_CI_GUIDE" }}"
 custominstall_path: "{{ getenv "HUGO_CI_GUIDE_PATH" }}"
+customlock: "{{ getenv "HUGO_CUSTOMLOCK" }}"
 xdalink: "{{ getenv "HUGO_XDALINK" }}"
 firstrelease: "{{ getenv "HUGO_FIRSTRELEASE" }}"
 vendor: "{{ getenv "HUGO_VENDOR" }}"
@@ -23,4 +24,5 @@ vendor: "{{ getenv "HUGO_VENDOR" }}"
 type: docs
 layout: device
 prev: devices/{{ getenv "HUGO_VENDOR" }}
+toc: true
 ---
