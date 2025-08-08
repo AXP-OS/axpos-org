@@ -13,10 +13,10 @@ If you are applying for a currently unsupported device or [AXP.OS flavor](/Flavo
 
 - oldest supported: Android **9**
 - newest supported: Android **13**
-- in progress: Android **14**
+- in progress: Android **15** (see [#94](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/94))
 
 At the moment **Android 9** is the oldest supported version and **Android 13** the newest supported version, regardless of the device age.<br/>
-If your device does not fit between these versions but matches all other requirements feel free to request anyways. Just expect a way longer [bring-up time](#processing-requests) then. 
+If your device does not fit between these versions but matches all other requirements feel free to request anyways. Just expect a way longer [bring-up time](#processing-requests) then.
 
 Note: This might also take more of _your_ time when it comes to debugging issues during the process.
 
@@ -30,15 +30,22 @@ The request form must be properly filled with all required information and the u
 
 ### LineageOS
 
-There must be an *official* or **properly working** *unofficial* LineageOS build for that device. 
+There must be either:
+1. an *official* LineageOS (non-[GSI](https://developer.android.com/topic/generic-system-image) build) build or 
+1. a **properly working** *unofficial* LineageOS (non-[GSI](https://developer.android.com/topic/generic-system-image)) build
+
+for that device available.
 
 Other custom OS variants (e.g. AOSCP, etc.) cannot be used as a basis and will be rejected.
 
-Specific for _Unofficial_ LineageOS builds (requests get rejected if **any** of these does not apply):
+#### Unofficial
 
-1. must provide a proper _(local) manifest_ or **link to all(!) sources used**
+Specific for _Unofficial_ LineageOS builds _(requests will be rejected if **any** of these does not apply)_:
+
+1. must provide a proper _(local) manifest_ or **link to all(!) sources used** _(requester **must** add this information to the request)_
 1. must not be heavily customized
 1. must not have critical bugs or missing features
+1. must not be a [GSI](https://developer.android.com/topic/generic-system-image) build
 
 ### Build & Test
 
