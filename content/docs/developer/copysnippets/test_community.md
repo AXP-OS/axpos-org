@@ -97,16 +97,16 @@ Keep in mind that devices not receiving test results by the community get [remov
 | enchilada | _Slim_  | 🛠️ | ⏸️ | ⏸️ |@rocky-184 | [WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250702-SLIM-enchilada.zip) |
 | FP3            | _Slim_  |🛠️ | ⏸️ | ⏸️ | @tial |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250704-SLIM-FP3.zip)|
 | FP4            | _Slim_  |🛠️ | ⏸️ | ⏸️ | @snupeli @kujawek |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250703-SLIM-FP4.zip)|
-| klte            | _Pro_   |🛠️| ⏸️ | ⏸️ | @jschroeter-user @duven87 @SerYo |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-18.1-20250705-dos-klte.zip)|
+| klte            | _Pro_   |🛠️| ⏸️ | ⏸️ | @jschroeter-user @SerYo |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-18.1-20250705-dos-klte.zip)|
 | klte            | _Slim_  |🛠️ | ⏸️ | ⏸️ | @kilou78 @CueHD |[WIP](https://leech.binbash.rocks:8008/axp-slim/klte/AXP.OS-18.1-20250705-SLIM-klte.zip)|
 | oriole        | _Slim_  |🛠️ |⏸️ | ⏸️ | @SerYo |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250530-SLIM-oriole.zip)|
 | sargo        | _Pro_   |🛠️ | ⏸️ | ⏸️ | @BerTranD |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250702-dos-sargo.zip)|
 | sargo        | _Slim_  |🛠️| ⏸️ | ⏸️ | @Confined5290 @cam | [WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250702-SLIM-sargo.zip) |
 | sunfish     | _Slim_  |🛠️ | ⏸️ | ⏸️ | @SerYo |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250702-SLIM-sunfish.zip)|
 
-### marked for removal
+### 🆘 marked for removal 🆘
 
-None 🎉
+- None 🎉
 
 ### community tester
 
