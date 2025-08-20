@@ -3,7 +3,7 @@ title: MajorRelease
 type: docs
 toc: true
 aliases:
-    - /Major
+    - /MRU
     - /MajorRelease
     - /MajorUpdate
     - /MajorReleaseUpdate
