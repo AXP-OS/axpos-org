@@ -148,22 +148,13 @@ systemctl enable --now semaphore
 
 ### Buildserver
 
-AXP.OS supports Ubuntu **22.04 LTS** only while [others](https://web.archive.org/web/20241227223444/https://divestos.org/pages/build#deps) **might** work, too.
+AXP.OS supports Ubuntu **24.04 LTS** only while [others](https://web.archive.org/web/20241227223444/https://divestos.org/pages/build#deps) **might** work, too.
 
 ```
 sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove
 sudo ln -s /usr/include/asm-generic /usr/include/asm
 
-sudo apt install libssl-dev libncurses5 aapt autoconf automake bc bison build-essential ccache curl expat flex g++ gawk gcc gcc-multilib git git-lfs g++-multilib gnupg gperf jq lib32ncurses-dev lib32z1-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses5-dev libncurses-dev libsdl1.2-dev libtool libx11-dev libxml2 libxml2-utils lzop maven openjdk-8-jdk patch pkg-config pngcrush python-all-dev schedtool squashfs-tools subversion texinfo tmux unzip x11proto-core-dev xsltproc zip zlib1g-dev imagemagick repo firejail optipng jpegoptim openssl wget python3-colorama python3-pip python3-pyperclip bsdmainutils dos2unix tmux android-sdk-libsparse-utils
-```
-
-Ubuntu **24.04 LTS** is currently in testing, use at your own risk:
-
-```
-sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove
-sudo ln -s /usr/include/asm-generic /usr/include/asm
-
-sudo apt install aapt android-sdk-libsparse-utils autoconf automake bc bison bsdmainutils build-essential ccache curl dos2unix expat firejail flex g++ g++-multilib gawk gcc gcc-multilib git git-lfs gnupg gperf imagemagick jpegoptim jq lib32ncurses-dev lib32z1-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses-dev libncurses5-dev libncurses6 libsdl1.2-dev libssl-dev libtool libx11-dev libxml2 libxml2-utils lzop maven openjdk-8-jdk openssl optipng patch pkg-config pngcrush python-is-python3 python3-all-dev python3-colorama python3-pip python3-pygerrit2 python3-pyperclip repo schedtool squashfs-tools subversion texinfo tmux unzip wget x11proto-core-dev xsltproc zip zlib1g-dev
+sudo apt install aapt android-sdk-libsparse-utils autoconf automake bc bison bsdmainutils build-essential ccache curl dos2unix expat firejail flex fuse2fs g++ g++-multilib gawk gcc gcc-multilib git git-lfs gnupg gperf imagemagick jpegoptim jq lib32ncurses-dev lib32z1-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses-dev libncurses5-dev libncurses6 libsdl1.2-dev libssl-dev libtool libx11-dev libxml2 libxml2-utils lzop maven openjdk-8-jdk openssl optipng patch pkg-config pngcrush python-is-python3 python3-all-dev python3-colorama python3-pip python3-pygerrit2 python3-pyperclip repo schedtool squashfs-tools subversion texinfo tmux unzip wget x11proto-core-dev xsltproc zip zlib1g-dev
 
 wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.3-2ubuntu0.1_amd64.deb
 wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
