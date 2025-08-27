@@ -4,7 +4,8 @@
   <thead>
     <tr>
       <th>Flavor<br>(<a href="/Flavors" target="_blank">what's this?</a>)</th>
-      <th>OS Zip</th>
+      <th>OS zip</th>
+      <th>Recovery image</th>
       {{- if eq .factory "yes" -}}<th>FACTORY zip</th>{{ end }}
       {{- if eq .relock "yes" -}}<th>AVB key<br>(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</th>{{ end }}
       <th>Release key<br>(<a href="/docs/knowledge/signatures/#build-signatures" target="_blank">what's this?</a>)</th>
@@ -17,6 +18,11 @@
       <td><i>Pro</i></td>
       <td>
 	<a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/" target="_blank">
+	  <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+	</a>
+      </td>
+      <td>
+	<a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/recovery/" target="_blank">
 	  <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
 	</a>
       </td>
@@ -48,6 +54,11 @@
 	  <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
 	</a>
       </td>
+      <td>
+	<a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/recovery/" target="_blank">
+	  <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+	</a>
+      </td>
       {{- if eq .factory "yes" -}}
       <td>
 	<a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/factory/" target="_blank">
@@ -67,6 +78,11 @@
      <td><i/>Slim</i></td>
      <td>
         <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/" target="_blank">
+         <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+        </a>
+     </td>
+     <td>
+        <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/recovery/" target="_blank">
          <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
         </a>
      </td>
@@ -94,6 +110,11 @@
      <td></td>
      <td>
         <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/" target="_blank">
+         <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
+        </a>
+     </td>
+     <td>
+        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/recovery/" target="_blank">
          <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
         </a>
      </td>
