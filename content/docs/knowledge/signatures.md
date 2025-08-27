@@ -4,6 +4,7 @@ type: docs
 toc: true
 aliases:
     - /Signatures
+    - /Verify
 ---
 ## General
 
@@ -125,6 +126,8 @@ aHG7a9L9NCl/wNlpsNql7Mo87x74ekws9ibHOXfBRIuk9P/TZ8e30PyC8nDQyYTrixoJEIT7wwtUm//E
 
 ## Build signatures
 
+## OTA & AVB
+
 Build keys (i.e. OTA release-key + AVB key where available) for all AXP.OS devices can be found here:
 - [Pro flavor](https://github.com/sfX-android/update_verifier/tree/main/AXP.OS)
 - [Slim flavor](https://github.com/sfX-android/update_verifier/tree/main/AXP.OS-slim)
@@ -141,3 +144,27 @@ If you are forced to use a _custom_ recovery:
 1. verify the signature manually: with the [update_verifier](https://github.com/sfX-android/update_verifier/)
 1. alternative: verify the sha512 hash of the zip with the one from the Automation channel (not of the download website)
 
+### SHA
+
+All builds have a corresponding hash file (sha512.sum) which should be used to verify a downloaded zip.
+
+```bash
+sha512sum -c AXP.OS*sha512sum
+#or for recovery:
+sha256sum -c AXP.OS*sha256sum
+```
+
+### GPG
+
+Besides the above OTA signatures (see _OTA & AVB_ topic) of the OS zips all OS sha512sum files are signed with the AXP.OS GPG key (since 2025-08).
+This can be used as an alternative or additional way to verify builds have not been tampered with by this server or in transit.
+
+- Download: [axpos_signing.key](/axpos_signing.key)
+
+```bash
+#FE4B2FA2B225F0AB903AF4136740E645718A8E47
+
+gpg --import axpos_signing.key
+gpg --verify AXP.OS*sha512sum
+sha512sum -c AXP.OS*sha512sum
+```
