@@ -1,11 +1,11 @@
 #!/bin/bash
 ###############################################################################
-# device specs for creating a new page
+# device specs for sunfish
 ###############################################################################
 export HUGO_VENDOR="Google"
 export HUGO_NAME="Google Pixel 4a"
 export HUGO_CODENAME="sunfish"
-export HUGO_ANDROID="13"
+export HUGO_ANDROID="15"
 export HUGO_ENCRYPTION="FBEv1"
 export HUGO_FIRMWARE="included"
 export HUGO_RELOCKABLE="yes"
@@ -17,6 +17,8 @@ export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
 export HUGO_FACTORYZIP="yes"
 export HUGO_ISAB="yes"
 export HUGO_ISPIXEL="yes"
-export HUGO_KILINK=
+export HUGO_KILINK=""
+export HUGO_CI_GUIDE=""
+export HUGO_CI_GUIDE_PATH=""
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a13-official-microg-hardened-sunfish-axp-os-20.4651368/"
 export HUGO_FIRSTRELEASE="2024-01-16"
