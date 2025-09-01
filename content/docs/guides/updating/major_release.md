@@ -13,24 +13,30 @@ aliases:
 {{< callout type="info" >}}
 This describes the manual process for updating AXP.OS to a new **Major Release** _(see [regular updates](/Over-the-air) otherwise)_. <br/>
 
-The updater app does not support automatic upgrades from one Major Release of AXP.OS to another and will block installation to any update for a different version.
+The updater app does **not** support automatic upgrades from one Major Release of AXP.OS to another and will block installation to any update for a different version.
 
 The process involves factory resetting your device so you should never start without a full [Backup](/docs/guides/backuprestore)!
 
-In-place upgrades (i.e. keeping all your apps and settings) is **not** supported.
+In-place upgrades (i.e. keeping all your apps and settings) are **not** supported.
 {{< /callout >}}
 
 ## Via recovery (recommended)
+
+{{< callout type="info" >}}
+_ensure you do not miss unlocking your bootloader first (if currently locked)_
+{{< /callout >}}
 
 Doing a Major Release Upgrade is like flashing AXP.OS the first time. That means this process will factory reset your device and you need to re-install or restore your apps from your backup.
 
 Simply follow the regular installation guide of [your device](https://axpos.org/devices) with one exception:
 
-- ensure you have an unlocked bootloader first
-- when downloading the recovery, choose the recovery image of the **target major release** _(i.e. for AXP.OS-**22.2**-XXXXX.img if you plan upgrading to A15)_
-- follow the rest of the process
-
 {{< callout type="info" >}}
+When downloading the recovery, choose the recovery image of the **target major release** _(i.e. for AXP.OS-**22.2**-XXXXX.img if you plan upgrading to **A15**)_
+{{< /callout >}}
+
+For the rest just follow the regular guide.
+
+{{< callout type="warning" >}}
 _Note for **A/B devices**: do **NOT** reboot to recovery and flash it twice. If the update cause boot issues it will switch to the other slot and so you keep a working/booting system this way._
 {{< /callout >}}
 
@@ -42,6 +48,10 @@ This method skips any signature validations and will fully overwrite an existing
 It is highly recommended to check if the checksum hash is valid before flashing such a fastboot or factory zip and compare it not just with the one from the download site but also from the [automation channel](/docs/overview).
 
 _Note for **A/B devices**: do **NOT** reboot to recovery and flash it twice. If the update cause boot issues it will switch to the other slot and so you keep a working/booting system this way._
+{{< /callout >}}
+
+{{< callout type="info" >}}
+_ensure you do not miss unlocking your bootloader first (if currently locked)_
 {{< /callout >}}
 
 ### fastboot.zip
