@@ -217,20 +217,22 @@ add both, SSH and GPG keys, to your accounts (and.. yes repeat that for _all_ si
 add the deprecated version 2 of python as a virtual environment (do not change any paths here as they are used within the automation process):
 
 ```
-sudo apt-get install python2 virtualenv python2-pip-whl python2-setuptools-whl
-mkdir -p ~/.venv/python2
-virtualenv --python=$(which python2) ~/.venv/python2
-```
+# tested on Ubuntu 24.04
 
-for Ubuntu 24.04 do this instead :warning: WIP :warning: :
-```
-apt install checkinstall libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
-tar -xvf Python-2.7.18.tgz
-cd Python-2.7.18
-./configure --enable-optimizations
-make
-make install
+$[BUILD-USER]> sudo apt-get install build-essential checkinstall libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev
+$[BUILD-USER]> wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
+$[BUILD-USER]> tar -xvf Python-2.7.18.tgz
+$[BUILD-USER]> cd Python-2.7.18
+$[BUILD-USER]> ./configure --enable-optimizations
+$[BUILD-USER]> make
+$[BUILD-USER]> curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+$[BUILD-USER]> Python-2.7.18/python get-pip.py
+$[BUILD-USER]> pip2 install virtualenv
+$[BUILD-USER]> Python-2.7.18/python -m virtualenv ~/.venv/python2/
+$[BUILD-USER]> source ~/.venv/python2/bin/activate
+$[BUILD-USER]> python --version
+# should print v2.7.18
+$[BUILD-USER]> deactivate
 ```
 
 ## Setup Semaphore
