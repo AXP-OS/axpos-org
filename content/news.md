@@ -10,7 +10,7 @@ aliases:
 Some major news related to the project can be found here. Do not expect updates here often, check the [changelog](/Changelog) and the Matrix [Support room](/docs/overview/#support) for more updates.
 {{< /callout >}}
 
-# 2025-09-03
+## 2025-09-03
 
 ### If Google simply decides to take the other route
 
@@ -82,7 +82,7 @@ Until now custom [OS][cusos] like DivestOS ([R.I.P](/Divest_EOL)), AXP.OS and ot
 
 #### OSV.dev to the rescue?
 
-While doing some research I stumbled over the [osv.dev][osvdev] project provided by Google themself which provides full details about all CVE's, their meaning and all that even before they are published at e.g. [nvd.nist.gov][nist] or [cve.org][cveorg] ?!
+While doing some research I stumbled over the [osv.dev][osvdev] project provided by [Google themself](https://github.com/google/osv.dev/) which provides full details about all CVE's, their meaning and all that even before they are published at e.g. [nvd.nist.gov][nist] or [cve.org][cveorg] ?!
 
 **Example with CVE-2025-0089**
 - https://nvd.nist.gov/vuln/detail/CVE-2025-48558 -> _marked as reserved (atm of writing this)_
@@ -119,6 +119,7 @@ some further readings:
 - https://www.androidauthority.com/google-android-development-aosp-3538503/
 - https://osv.dev/list?page=3&ecosystem=Android
 - https://android-review.googlesource.com
+- https://github.com/google/osv.dev/
 
 [aospchanges]: https://source.android.com/docs/whatsnew/site-updates?year=2025#aosp-changes
 [aospcycle]: https://source.android.com/docs/setup/contribute/release-lifecycle
