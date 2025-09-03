@@ -12,26 +12,29 @@ menu:
     - name: About
       pageRef: /about
       weight: 1
+    - name: About
+      pageRef: /about
+      weight: 2
     - name: Devices
       pageRef: /devices
-      weight: 2
+      weight: 3
     - name: Changelog
       pageRef: /Changelog
-      weight: 3
+      weight: 4
     - name: "Documentation"
       pageRef: /documentation
-      weight: 4
-    - name: "Sources"
       weight: 5
+    - name: "Sources"
+      weight: 6
       url: "/docs/knowledge/faq/#is-there-a-list-where-the-source-code-is-hosted"
     - name: Support
       pageRef: /docs/overview/#support
-      weight: 6
+      weight: 7
     - name: FAQ
       pageRef: /FAQ
-      weight: 7
-    - name: Search
       weight: 8
+    - name: Search
+      weight: 9
       params:
         type: search
 params:
