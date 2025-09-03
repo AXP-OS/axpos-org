@@ -12,8 +12,8 @@ menu:
     - name: About
       pageRef: /about
       weight: 1
-    - name: About
-      pageRef: /about
+    - name: News
+      pageRef: /news
       weight: 2
     - name: Devices
       pageRef: /devices
