@@ -264,20 +264,7 @@ Please see the [bug reporting](/pages/bug_reporting) page.
 
 AXP.OS takes some more extreme care with location compared to most other systems and doesn't work how most people expect.
 
-*   GPS is the only provider of location.
-*   GPS should lock within 2 minutes when outdoors and within 10 minutes indoors. Maximum GPS TTFF is 12.5 minutes due to their orbit and transmission rate.
-*   Tablets or other devices without GPS support have no mechanism to obtain location.
-*   Network (cell tower, Wi-Fi, Bluetooth beacon) based location providers such as Google Play Services, Qualcomm IZat, and microG/UnifiedNlp are not supported.
-*   Enabling the location provider in microG/UnifiedNlp will not help in most cases as it does not have permission to be a system location provider. It can however provide location to some apps that also utilize the proprietary Play Services library for location handling.
-*   The primary reason for not supporting network location providers is that they effectively divulge your location to third-parties (eg. Google/Qualcomm/Apple/Mozilla) every time they are used. The alternative offline databases are too small to be realistically effective.
-*   On Tensor devices both PSDS and SUPL can be used to speedup GPS TTFF. It is recommended to disable SUPL on these devices.
-*   On newer Qualcomm devices (ones that'd typically use xtra-daemon) SUPL is the only mechanism to obtain the almanac to speedup GPS TTFF. PSDS is not supported. It is not recommended to disable SUPL on these devices as it will cause very long lock times.
-*   On older Qualcomm devices (ones that'd typically use libloc) PSDS may work in addition to SUPL to speedup GPS TTFF. It is recommended to disable SUPL on these devices.
-*   On 20.0 and higher you can disable PSDS and SUPL in Settings > Location > Use assisted GPS. This setting will still allow them during emergency calls.
-*   On 17.1 and higher you can disable SUPL in Settings > Location > Force disable SUPL. This setting will not allow it even during emergency calls.
-*   On pre 17.1 you can disable SUPL by removing the `supl` APN type from your chosen APN preset.
-*   AXP.OS furthermore disables use of SUPL MSA as well as LPP and LPPe.
-*   There is a more technical explanation of [this here](/misc/gnss.txt).
+Please see the ["Location" page](/Location) for further details.
 
 #### What is the benefit of a security focused memory allocator?
 
