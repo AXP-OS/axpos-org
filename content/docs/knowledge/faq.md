@@ -127,7 +127,7 @@ And for the best experience:
 
 #### What phone do you recommend?
 
-Any Pixel 6 or newer, with the Pro variants preferred as they have 12GB of RAM. The 6a/7a/8a are excellent values on sale and will receive support from Google until July 2027, May 2028, and May 2031 respectively. Otherwise please see the [list of "golden" devices](/pages/devices?golden=true). Please note the 6a only has 6GB of RAM and you will experience apps swapping in and out with it.
+Any Pixel 6 or newer, with the Pro variants preferred as they have 12GB of RAM. The 6a/7a/8a are excellent values on sale and will receive support from Google until July 2027, May 2028, and May 2031 respectively. Please note the 6a only has 6GB of RAM and you will experience apps swapping in and out with it though.
 
 #### What tablet do you recommend?
 
