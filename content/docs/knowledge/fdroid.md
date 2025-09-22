@@ -30,14 +30,20 @@ AXP.OS builds starting from May 2025 onwards deliver both repositories as part o
 > [!TIP]
 > _It is not necessary to use AXP.OS to add and use these repositories! You can add them manually to get AXP.OS managed applications._
 
-### Add them manually
+## Adding the AXP.OS repos
+
+Only required if you are **not** using AXP.OS _(AXP.OS builds since May 2025 have them included already)_.
 
 1. _Stable:_
     - open [https://apps.axpos.org/repo/](https://apps.axpos.org/repo/) and scan the code from your phone
 1. _Cutting Edge:_
     - open [https://cutting-apps.axpos.org/repo/](https://cutting-apps.axpos.org/repo/) and scan the code from your phone
 
-### If you use AXP.OS and updated from a release before May 2025
+### Reset F-Droid on AXP.OS
+
+If you are using AXP.OS and do **not** see the above repositories you have upgraded from an early release and a reset is required. The same step is required if a new repository has been added/removed (always check the [changelog](/Changelog)).
+
+_**The following will reset any F-Droid setting and resets all repositories to the AXP.OS default. Afterwards you should have all AXP.OS repos available.**_
 
 **Reset F-Droid:**
 1. long press the F-Droid icon
@@ -52,12 +58,13 @@ AXP.OS builds starting from May 2025 onwards deliver both repositories as part o
 Both repositories contain the same apps while the _Cutting Edge_ one gets updates first (see above).
 The apps inside the F-Droid repo are:
 
-- [AOSmium](/Browser) Browser
-- [AOSmium](/Browser) Webview
+- [AOSmium](/Browser) Browser (32bit + 64bit)
+- [AOSmium](/Browser) Webview (32bit + 64bit)
 - [LoveLaceAV](/lovelace)
 - [PhoneSky](https://github.com/AXP-OS/packages_apps_phonesky/)
 - [OpenEUICC](https://github.com/AXP-OS/packages_apps_OpenEUICC)
 - [EasyEUICC](https://github.com/AXP-OS/packages_apps_OpenEUICC)
+- [NeoLauncher](https://codeberg.org/AXP-OS/packages_apps_neo-launcher)
 
 More to come, see: [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/107) 
 
