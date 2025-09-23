@@ -54,9 +54,27 @@ If you still get this message also check the next topic here: [Possible fixes fo
 
 ### will my Banking / strict app work with AXP.OS?
 
-It depends. Many apps will check for a custom OS and/or root and so might fail to start. 
+It depends. Many apps will check for a custom OS and/or root and so might fail to start / refuse to work.
 
-If that happens there are 2 options you can try to make them work, read about them [here](hide-root)
+Many of these apps will work if following [this guide](hide-root) though  _(but also check the next topics regarding Play integrity which can be a requirement for some apps)_.
+
+### what is Play Integrity / SafetyNet?
+
+In short: it is Google's proprietary method to verify a device is "trustworthy" - which means in other words: a device is trustworthy if Google receives money for it _(OEM's have to walk through a certification process and of course pay to get a "certified" state)_.
+
+_SafetyNet_ is the "old" method _Play Integrity_ the new/current one.
+
+More details can be found here:
+
+- A12 and lower: [Safetynet](https://en.wikipedia.org/wiki/SafetyNet) and [Play integrity/certified](https://developer.android.com/google/play/integrity/overview)
+- A13 and later: [Play Integrity ("improvements")](https://developer.android.com/google/play/integrity/improvements)
+- AVB is one part of that testing process: [Android verified boot](https://source.android.com/docs/security/features/verifiedboot/boot-flow)
+
+### does AXP.OS allow to pass Play Integrity / SafetyNet?
+
+No and this is not supported in any way. Even though Magisk modules exist (which at least give a chance to pass it) users reported it non-working nevertheless. Any PI/SafetyNet bypass stands on shaky ground anyways as its detection can change at any time.
+
+Yes, iode and eOS and likely others implemented bypasses but these bypasses are not included in AXP.OS (yet). This might change in the future but it has no priority atm.
 
 ### can you recommend any apps?
 
