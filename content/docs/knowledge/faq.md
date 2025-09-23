@@ -97,10 +97,10 @@ The main goal is to have all needed on the projects self-hosted Gitea instance a
 
 |Hoster|URL|Public**|Purpose|Repos|
 |-|-|:-:|-|-:|
-|Self-Hosted|[https://code.binbash.rocks/AXP.OS](https://code.binbash.rocks/AXP.OS)|❌|main, CI/CD, APK build, internals, sensitive parts of build|~44*|
+|Self-Hosted|[https://code.binbash.rocks/AXP.OS](https://code.binbash.rocks/AXP.OS)|❌**|main, CI/CD, APK build, internals, sensitive parts of build|~44*|
 |Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|reproducible builds, manifests, public parts of build|~208*|
 |Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|mirror of code.binbash.rocks public available repos, APK releases|~28*|
-|Codeberg|[https://codeberg.org/AXP-OS_limited](https://codeberg.org/AXP-OS_limited)|❌|mirror of code.binbash.rocks non-public available repos, APK releases|~18*|
+|Codeberg|[https://codeberg.org/AXP-OS_limited](https://codeberg.org/AXP-OS_limited)|❌**|mirror of code.binbash.rocks non-public available repos, APK releases|~18*|
 
 - *) _state: July 2025_
 - **) _see next topic_
@@ -111,6 +111,22 @@ The main goal is to have all needed on the projects self-hosted Gitea instance a
 1. If an official mirror(s) requires a registration it is for [reproducible builds](/Reproducible-builds) **only**
 1. You can build AXP.OS **without** these repositories by just using the normal [AXP.OS manifest](https://github.com/AXP-OS/manifest/) and add vendor blobs and firmware on your own
 1. Splitting the problematic parts from the rest of the sources also makes it easier keeping the main project/builds alive in case of trouble
+
+
+## meaning of the AXP.OS build id
+
+You might noticed the build ID already when checking the [Changelog](/Changelog) or when looking at the [automation channel](/docs/overview/#support) when a new release is announced.
+
+The format of the AXP.OS build ID is:
+
+- until August 2025: `YYYY-MM-05.<ID>`
+- since September 2025: `YYYY-MM.<ID>`
+
+It gets set once a build "freeze" starts and uses the current year and month of that start date. The `<ID>` begins with `1` and increases if there is any other build in that same year and month (which rarely happens though).
+
+This build ID is used in several places: Changelog, build release announcments, reproducible buid manifest, testing checklist, and more. When referring to a build ID it is possible to get all relevant information and it ensures that all builds run with the same config, same included app versions etc.
+
+---
 
 ## DivestOS-based FAQ
 
