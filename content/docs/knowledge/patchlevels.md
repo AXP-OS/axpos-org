@@ -44,7 +44,7 @@ Each month Google releases an Android Security Bulletin ("ASB") which contains i
 
 |Patch date|STOCK OS|AXP.OS|
 |-|-|-|
-|`YYYY-MM-01`|Android platform fixes|Android platform fixes|
+|`YYYY-MM-01`|Android platform fixes|Android platform fixes*|
 |`YYYY-MM-05`|SOC manufacturers, <br/>Linux kernel|SOC manufacturers (🏭), <br/>Linux kernel (🐧)|
 
 {{< callout type="info" emoji="🏭" >}}
@@ -59,3 +59,7 @@ Upstream _Linux kernel_ fixes include:
 - [patches](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/kernel_patcher/tasks/incremental.yml) by [kernel.org](https://kernel.org/)
 - Note: not _all_ these patches can be applied on _all_ devices. These exclusions are handled via [Fix_CVE_Patchers.sh](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Fix_CVE_Patchers.sh)
 {{< /callout >}}
+
+*_Important note: due to the recent (starting in July 2025) changes by Google the way how ASB patches get announced and published has a significant impact on the custom OS community and what the monthly ASB contains. Read more about that at the [News](/News) page._
+
+
