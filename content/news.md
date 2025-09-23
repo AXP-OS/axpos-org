@@ -10,6 +10,68 @@ aliases:
 Some major news related to the project can be found here. Do not expect updates here often, check the [changelog](/Changelog) and the Matrix [Support room](/docs/overview/#support) for more updates.
 {{< /callout >}}
 
+## 2025-09-23
+
+### The ASB drama
+
+So it seems ([source](https://www.androidauthority.com/android-risk-based-security-updates-3597466/)) Google will release:
+
+1. **monthly** _"high-risk"_ patches (if there are any)
+1. **quarterly** _"all the rest"_
+
+![hypothetical release cycle](https://www.androidauthority.com/wp-content/uploads/2025/09/Timeline-of-a-hypothetical-hisk-risk-Android-security-vulnerability.png.webp)
+(image source: [androidauthority.com](https://www.androidauthority.com/android-risk-based-security-updates-3597466/))
+
+This results in _massive_ quarterly updates but more worse: those not "high-risk" vulnerabilities have a fix ready and we have to wait for Google's mercy finally releasing them (and pray :pray: no one leaks/exploit them until then). Google decides who gets what and when.
+
+The idea behind holding back patches is that it should (could?) even _protect_ users! How? Well the logic is: "hiding vulnerabilities will make them invisible to the bad guys". Okay, I'm being a little sarcastic here but nevertheless this is the same argument all closed-source disciples have: "security" by hiding information/code.
+
+So, yes I get the point and yes, of course, it's much easier to write an exploit if I know the potentially dangerous vulnerability that it creates, but... is that the idea of Open Source development?
+
+Some people say this quarterly move protects users because hiding vulnerabilities for longer time gives OEM's more time to implement the patches. We all know how well things like that work. What about the bad guys? Actually **they** have now more time, too for **exploiting** our phones. "Great".. Yes, they must first _know_ about these vulnerabilities but keep in mind: they are already fixed, there are (hidden) patches available, there were people who actually _found_ these vulnerabilities, OEM's involved as before but with more time a potential leak can happen.
+
+Unfortunately (many) _humans_ have access to these patches and humans make faults (either tech-based ones or .. well money is a great thing.. if you have it..).
+
+From the _bad guys_ POV it **is** great though: now they have way more time, they do not need to hack around to find vulnerabilities, there is the potential that they can access them months before the patches will be released and even more time if OEM's are still late on that quarterly ones. 
+
+I do **not** believe that this approach is a great idea, for various reasons:
+
+1. OEM's will still provide ASB patches (too) late, some may do it better than others but this quarterly move will not change the world
+1. the hiding approach is a big step backwards in terms of transparency and security (yes, I believe that Open Source should be also open developed)
+1. the whole thing stands and falls with patches not getting leaked (keep in mind there is an industry for selling zero-day exploits), interested parties are often not interested to let others KNOW that they have/use such exploits (so we might never get aware when they are used "in the wild")
+1. it massively disadvantages the open source community and favors paying OEMs
+1. what many people have been saying for years is finally coming "true": a custom OS is not as secure as an official / STOCK one* (at least this is how they will announce it)
+
+So, bottom line: that really sucks.
+
+*_one word regarding security compared to STOCK: of course OEM's had always better cards as they always got patches before they were released in public but the thing which has changed with that new quarterly approach is that the time span from the release of a fix up to its public release can be several months now, instead of just 1. On the other hand: a custom OS can still provide more security than a STOCK one, because security is not just security patches. For example using a hardened malloc like GrapheneOS provides which is also used by AXP.OS can prevent several malicious code executions even when a vulnerability is not yet patched. Besides that AXP.OS and other privacy oriented OS reduce the attack surface more than an OEM usually does. AXP.OS also [massively debloat](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Deblob.sh) and reduce calling-home like **no other OS does in that depth** (since DivestOS is EOL)._
+
+### Real impact
+
+What is the impact on AXP.OS?
+
+1. **Kernel:** no change at all, AXP.OS patches all kernels independently via the [CVE Kernel patcher][cvepatcher] regardless (and additionally) to the ASB
+1. **Android:** we all have to follow Google, so monthly patches may come .. or not
+
+### Alternatives?
+
+What are the alternatives then? Great question: that is why Google does not care at all. The greatest power of a monopolist is that it can ignore what others say and want. In other words: there are alternatives but they either depend on Android or they simply do not cover many devices.
+
+Most interesting examples (in that order):
+1. [postmarketOS](https://postmarketos.org) _(Alpine based, minimum reliance on Android code, devices may suffer missing drivers, security gaps)_
+1. [Sailfish OS](https://sailfishos.org) _(forked/merged from Mer Linux, closed-source UI, needs some Android-driver reuse)_
+1. [Ubuntu Touch](https://www.ubuntu-touch.io) _(dependencies on vendor/Android components via Halium, less full control compared to postmarketOS)_
+
+As you can see the most interesting alternative to Android is (not surprisingly) a Linux based OS. Especially if you do not want to buy a new device or want to switch to Apple's interpretation of _"privacy"_. The most promising variant is [postmarketOS](https://postmarketos.org) as it follows open standards, uses a common and prominent Linux as its base and has the least dependencies on Android while trying to keep close to the mainline Linux kernel (for some devices at least). Sailfish OS has merged with Mer Linux and is not following an open approach for all its components while it is still a better choice than Ubuntu Touch when it comes to getting rid of Google/Android's dependencies.
+
+While browsing through these alternative options you will quickly identify that just a few devices are supported or only older ones, or a lot of basic functionality is simply not working (often enough this includes camera and/or calling/sms).
+
+The reason is that porting a device to a custom Android OS is already hard while porting it to a Linux one has its own challenges on top of that.
+
+I personally do not think that any of these has the potential to _replace_ Android. Main reason is the closed-source practice for many parts of a smartphone and the massive amount of devices out there today and in the future. It is really impossible imho that the community can port all/most of these devices, it is already an issue for porting many to a custom _Android_ based OS for these reasons.
+
+It all begins and ends with the hardware, it must be created and developed with an open source based approach and that includes all hardware parts of it. There are already phones (partly) made like this like the PinePhone, Jolla's phones or Volla as well but none of them has the potential (yet) a current Android device has right now. Maybe / hopefully that changes some day.
+
 ## 2025-09-03
 
 ### If Google simply decides to take the other route
@@ -74,7 +136,7 @@ Don't worry, this will not happen (anytime soon) but all custom [OS][cusos] devs
 
 last but not least.. all this also influences **security patching**.
 
-This change includes the ASB security patches as well, of course. We already saw this in the [August 2025 ASB](https://source.android.com/docs/security/bulletin/2025-08-01) and now with the [September 2025 ASB](https://source.android.com/docs/security/bulletin/2025-09-01) which both do not have any code references (atm of writing this).
+This change includes the ASB security patches as well, of course. We already saw this in the [first-time ever empty July 2025 ASB](https://source.android.com/docs/security/bulletin/2025-07-01), the [August 2025 ASB](https://source.android.com/docs/security/bulletin/2025-08-01) and now with the [September 2025 ASB](https://source.android.com/docs/security/bulletin/2025-09-01) which all do not have any code references (atm of writing this) _(edit: now September got them)_.
 
 In opposite ASB's before that change had code references linked, e.g. [June 2025 ASB](https://source.android.com/docs/security/bulletin/2025-06-01) and any other before that date.
 
@@ -98,7 +160,7 @@ At the moment it is totally unclear if the code we can access right now and the 
 
 Things regarding the whole source code release process might also completely change in the next months until all has settled but we will see.
 
-In any case AXP.OS will provide further updates which will include the regular changes and also include the [CVE kernel patches][kernelcve] like from the beginning. These kernel security patches are fully independent from the Android source code and based on AXP.OS' own patching process.<br/>
+In any case AXP.OS will provide further updates which will include the regular changes and also include the [CVE kernel patches][cvepatcher] like from the beginning. These kernel security patches are fully independent from the Android source code and based on AXP.OS' own patching process.<br/>
 Due to the nature of how AXP.OS kernels getting patched from [upstream](https://kernel.org) and the [CIP project](https://gitlab.com/cip-project/cip-kernel/cip-kernel-sec) CVE fixes are often included long before an Android CVE has been even created.
 
 ## Credits & links
@@ -126,7 +188,8 @@ some further readings:
 [evilwp]: https://en.wikipedia.org/wiki/Don't_be_evil
 [evilgiz]: https://gizmodo.com/google-removes-nearly-all-mentions-of-dont-be-evil-from-1826153393
 [ggreview]: https://android-review.googlesource.com/q/branch:main
-[kernelcve]: https://axpos.org/docs/knowledge/patchlevels/#the-axpos-patch-level
+[patchlevels]: https://axpos.org/docs/knowledge/patchlevels/#the-axpos-patch-level
+[cvepatcher]: https://codeberg.org/AXP-OS/kernel_patches
 [tad]: https://divested.dev/pages/blog#2025-08-27-android-issues
 [sunfishbat]: https://support.google.com/pixelphone/answer/15701861
 [aawhy]: https://www.androidauthority.com/google-android-development-aosp-3538503/
