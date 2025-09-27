@@ -4,7 +4,11 @@ type: docs
 toc: true
 aliases:
     - /qa
+    - /QA
+    - /Test
     - /test
+    - /Checklist
+    - /checklist
 ---
 ## AXP.OS test build info
 
@@ -27,95 +31,6 @@ Installation guide:
 when having any questions pls just ask in the [Matrix Bring-Up room](https://axpos.org/docs/overview/#support)
 ```
 
-## AXP.OS test issue template
-
-```
-2025-MM-05.1: UNSTABLE builds testing process
-```
-
-```
-Hey guys,
-
-according to the [device requirements](https://axpos.org/docs/knowledge/requirements/#build--test), **all new builds** for devices with community-level support must be tested by the community before they are considered _stable_ (and therefore will be moved to the stable update channel).
-
-## Step 1 - Check readiness first!
-
-Check the `Build & test states` table, column `test result`:
-
-If you find the "awaiting test results" icons: 📝👷 **then its your turn**! Do **not** start testing before you see this.
-
-If you see these or got a notification go on with step 2.
-
-⚠️ _Even though there might be test builds already available via the Updater / on the leech server you should wait until you see these icons or get a notification that a build is ready_
-
-## Step 2 - Download the latest build
-
-`Android Settings -> Updater -> 3-dots-menu -> Preferences -> Server Choice -> "UNSTABLE"`
-
-Then touch the update button and you can download & install the latest unstable test build as described in the [update guide](https://axpos.org/docs/guides/updating/automatic/) _(take care when using the **Pro** flavor + Magisk **hide** which is all covered in the linked guide as well)_.
-
-## Step 3 - Test
-
-> [!TIP]
-> _Did you know? There is also a small Video Guide available which describes the next steps: [here](https://axpos.org/docs/developer/copysnippets/test_community/#howto-use-the-qa-checklist)_
-
-Grab the latest [checklist version](https://axpos.org/docs/developer/copysnippets/test_community/#axpos-quality-control-checklist) and **comment on this issue with your result**:
-
-1. copy the linked checklist
-2. paste it as a comment here and adjust the codename & flavor
-3. just save it as it is now
-4. after saving do not edit the comment, just tick the check boxes according to your test result*
-5. attach requested files/screenshots to your comment where necessary
-
-ℹ️ _once you saved the whole checklist (must be saved, so not in edit mode) you can simply toggle the checkboxes by a mouse click. if you want to go through the list without saving before you can also simply add an `x` between the `[ ]` brackets like `- [x] abcabc` which then will also enable the box_
-
-Fill out as much as possible but all topics marked as **MUST succeed** are mandatory.
-
-If you have any questions use the [Matrix Support chat](https://axpos.org/docs/overview/#1-matrix-chat-_recommended_) and post in the `AXP.OS - Release Tests` room.
-
-Keep in mind that devices not receiving test results by the community get [removed](https://axpos.org/docs/knowledge/requirements/#removals) from the supported list.
-
-### special notes
-
-- **bootloader lock** is passed: _when it is already locked and it is still booting after the update_
-- **MicroG on _Slim_** is passed: _when it is still installed and still working (i.e. no uninstall+install required)_
-
-
-## Happy testing and many THANKS for your contribution! 🎉
-
-🆘 : No tester known or available! these builds **will not receive any further updates** if no one participates in testing!
-✅ : finished successfully
-🛠️ : work in progress
-⏸️ : on-hold / paused (usually this means a previous task hasn't finished yet)
-📝👷 : awaiting test results by the community
-
-## Build & test states
-
-| codename | flavor | build ready | test result | released to stable | community tester|build|
-| --- | --- | :---: | :---: | :---: | :---: | --- |
-| enchilada | _Pro_  | 🛠️ | ⏸️ | ⏸️ | @SerYo | [WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250702-SLIM-enchilada.zip) |
-| enchilada | _Slim_  | 🛠️ | ⏸️ | ⏸️ |@rocky-184 | [WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250702-SLIM-enchilada.zip) |
-| FP3            | _Slim_  |🛠️ | ⏸️ | ⏸️ | @tial |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250704-SLIM-FP3.zip)|
-| FP4            | _Slim_  |🛠️ | ⏸️ | ⏸️ | @snupeli @kujawek |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250703-SLIM-FP4.zip)|
-| klte            | _Pro_   |🛠️| ⏸️ | ⏸️ | @jschroeter-user @SerYo |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-18.1-20250705-dos-klte.zip)|
-| klte            | _Slim_  |🛠️ | ⏸️ | ⏸️ | @kilou78 @CueHD |[WIP](https://leech.binbash.rocks:8008/axp-slim/klte/AXP.OS-18.1-20250705-SLIM-klte.zip)|
-| oriole        | _Slim_  |🛠️ |⏸️ | ⏸️ | @SerYo |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250530-SLIM-oriole.zip)|
-| sargo        | _Pro_   |🛠️ | ⏸️ | ⏸️ | @BerTranD |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250702-dos-sargo.zip)|
-| sargo        | _Slim_  |🛠️| ⏸️ | ⏸️ | @Confined5290 @cam | [WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250702-SLIM-sargo.zip) |
-| sunfish     | _Slim_  |🛠️ | ⏸️ | ⏸️ | @SerYo |[WIP](https://leech.binbash.rocks:8008/axp-unstable/AXP.OS-20.0-20250702-SLIM-sunfish.zip)|
-
-### 🆘 marked for removal 🆘
-
-- None 🎉
-
-### community tester
-
-1. let me know if you want to be added/removed from that list
-2. the more testers the better, so even if you see a user already attached to a device and still want to help: pls do so!
-
-```
-
-
 ## AXP.OS Quality Control Checklist
 
 ```
@@ -136,12 +51,12 @@ _Major tests which MUST succeed for any flavor_
 - [ ] **SELinux enforced** (`Android Settings -> Privacy -> Trust`)
 - [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`)
 - [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
-- [ ] **F-Droid** included and [on expected version](https://axpos.org/Changelog)
+- [ ] **F-Droid** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] **OpenEUICC** app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device))
-- [ ] **AuroraStore** App included and [on expected version](https://axpos.org/Changelog)
+- [ ] **AuroraStore** App included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] **AOSmium WebView** installed (`Developer Options -> WebView implementation` -> verify it is selected)
 - **AOSmium WebView** quick test: `AuroraStore -> search & install "Webview test"` ([link](https://play.google.com/store/search?q=webview+test&c=apps))
-    - [ ] Open Webview test app & check `Webview Info` (hamburger menu), it should display the version in the [AXP.OS Changelog](https://axpos.org/Changelog)
+    - [ ] Open Webview test app & check `Webview Info` (hamburger menu), it should display the version in the [AXP.OS Changelog](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
     - [ ] click on the Globe icon or open the menu and choose `Webview` _(if no input popup appears click the globe icon at the top)_
     - [ ] enter any url and test if it opens
 - [ ] **OTA update** (`Android Settings -> Updater -> 3dots -> Preferences -> Server Choice -> "UNSTABLE"`)
@@ -155,10 +70,10 @@ _Major tests which MUST succeed for any flavor_
 
 _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 
-- [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`) and [on expected version](https://axpos.org/Changelog)
-- [ ] **MicroG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and [on expected version](https://axpos.org/Changelog)
-- [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and [on expected version](https://axpos.org/Changelog)
-- [ ] Home **Launcher Neo Launcher** included and [on expected version](https://axpos.org/Changelog)
+- [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] **MicroG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] Home **Launcher Neo Launcher** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - **F-Droid**: extended list of **F-Droid repositories**
     - step1: `long press F-Droid icon -> App info -> Storage and cache -> Clear storage`
     - step2: `F-Droid App -> Settings -> Repositories` and check:
@@ -241,6 +156,11 @@ _These tests are either not too critical or are primarily intended for overall s
 - [ ] **Screen Shot**: Ensure the screenshot function works.
 - [ ] **Battery Stats and Usage**: Review battery stats and usage patterns.
 - [ ] **Language and Region Settings**: Ensure language and region settings are applied correctly.
+
+## Tester hints
+
+`space for comments by the tester, remarks, notable changes and any other report about the result which might be useful`
+
 ```
 
 Base for the above checklist: [LineageOS Device Requirements](https://github.com/LineageOS/charter/blob/main/device-support-requirements.md)
