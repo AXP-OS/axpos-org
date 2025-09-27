@@ -178,12 +178,14 @@ _Note: It has not been tested if you can sideload a testkey signed update via AD
 
 ## guacamole\*/hotdog\*
 
-*   (reported) Occasional bouts of rapid battery drain. \[???\]
-*   (reported) Having fingerprints registered can cause the sensor to trigger at random causing the screen to flicker green. \[???\]
-*   (reported) Automatic brightness may not be available. \[???\]
-*   (reported) Charge history may not be available. \[???\]
-*   Second SIM non-functional. \[disabled, some variants lack the necessary firmware\]
-*   While it was possible in [earlier firmware releases](https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/) they (OnePlus/OPPO) half-removed the ability to re-lock the bootloader. That means: you can still flash a custom AVB key but it will not get respected anymore. The mentioned steps in that linked blog post have all been tested by me and none of them are either working or sufficient. AXP.OS comes with the latest firmware and so cannot be locked anymore.
+* (reported) Occasional bouts of rapid battery drain. \[???\]
+* ([reported](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/58#failed-tests)) fingerprint registering/usage might not work at all \[firmware?\]
+* (reported)  Having fingerprints registered can cause the sensor to trigger at random causing the screen [to wake up](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/58#failed-tests) and/or flicker green \[???\]
+* (reported) Charge history may not be available. \[???\]
+* Second SIM non-functional. \[disabled, some variants lack the necessary firmware\]
+* While it was possible in [earlier firmware releases](https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/) they (OnePlus/OPPO) half-removed the ability to re-lock the bootloader. That means: you can still flash a custom AVB key but it will not get respected anymore. The mentioned steps in that linked blog post have all been tested by me and none of them are either working or sufficient. AXP.OS comes with the latest firmware and so cannot be locked anymore.
+* ([reported](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/58#failed-tests)) Charging rate might be slow \[firmware/deblob\]
+* ([reported](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/58#failed-tests)) USB OTG Support: USB 2 devices on a USB 3 hub might not work
 
 ## instantnoodlep
 
