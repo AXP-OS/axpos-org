@@ -130,7 +130,8 @@ jobs:
           fi
 
       - name: "Deploy into pages branch"
-        uses: https://itsblue.dev/actions/codeberg-pages-deploy@v1
+        #uses: https://itsblue.dev/actions/codeberg-pages-deploy@v1
+        uses: https://code.binbash.rocks/Android/codeberg-pages-deploy@v1
         with:
           token: ${{ secrets.LOCAL_TOKEN_REPO_RW }}
           username: ${{ gitea.actor }}
