@@ -139,9 +139,11 @@ This page documents known problems, along with workarounds if available, for the
 
 {{< callout type="error" emoji="⚠️" >}}
 The security of the FP3 bootloader can be considered as **broken**
+
+The bootloader accepts images signed by the public available Android [testkey](https://github.com/LineageOS/android_external_avb/raw/refs/heads/lineage-20.0/test/data/testkey_rsa4096_pub.bin).
 {{< /callout >}}
 
-The bootloader accepts images signed by the public available Android [testkey](https://github.com/LineageOS/android_external_avb/raw/refs/heads/lineage-20.0/test/data/testkey_rsa4096_pub.bin). This has been verified by the AXP.OS Team with the help of the community (many many thanks for all your patience during the progress Tim 😉).
+This has been verified by the AXP.OS Team with the help of the community (many many thanks for all your patience during the progress Tim 😉).
 
 That means: an attacker can replace the whole system and you won't get even a warning about that on boot (no, not even that [yellow warning](https://source.android.com/static/docs/security/images/boot_yellow1.png) screen!). To achieve this an attacker can load a malicious update e.g. using EDL (therefor requires physical access).
 
@@ -151,7 +153,19 @@ _Note: It has not been tested if you can sideload a testkey signed update via AD
 
 ## FP4
 
-*   Do **NOT** attempt to lock the bootloader if `fastboot flashing get_unlock_ability` returns zero or else it will brick. EDL access is not available on this device and you will have to send it in for service. \[upstream\][\[forum thread\]](https://forum.fairphone.com/t/trapped-in-fastboot-mode-with-locked-bootloader-and-corrupted-custom-rom/80985)
+### FP4 - Bootloader lock
+
+{{< callout type="error" emoji="⚠️" >}}
+The security of the FP4 bootloader can be considered as **broken**
+
+The bootloader accepts images signed by the public available Android [testkey](https://github.com/LineageOS/android_external_avb/raw/refs/heads/lineage-20.0/test/data/testkey_rsa4096_pub.bin).
+{{< /callout >}}
+
+This has been verified by [the GrapheneOS team](https://www.reddit.com/r/GrapheneOS/comments/10b5x4n/comment/j67pbny/). Furthermore read the FP3 topic above, too.
+
+Do **NOT** attempt to lock the bootloader if `fastboot flashing get_unlock_ability` returns zero or else it will brick. EDL access is not available on this device and you will have to send it in for service. \[upstream\][\[forum thread\]](https://forum.fairphone.com/t/trapped-in-fastboot-mode-with-locked-bootloader-and-corrupted-custom-rom/80985)
+
+
 
 ## d850/d851/d852/d855/f400/ls990/vs985/G3
 
