@@ -37,4 +37,4 @@ export HUGO_ISPIXEL="no"
 export HUGO_KILINK="cheeseburgerdumpling"
 
 export HUGO_XDALINK="N/A"
-export HUGO_FIRSTRELEASE="2025-09-28"
+export HUGO_FIRSTRELEASE="2025-08-05"
