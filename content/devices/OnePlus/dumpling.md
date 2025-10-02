@@ -18,7 +18,7 @@ custominstall: ""
 custominstall_path: ""
 customlock: ""
 xdalink: "N/A"
-firstrelease: "2025-09-28"
+firstrelease: "2025-08-05"
 vendor: "OnePlus"
 
 type: docs
