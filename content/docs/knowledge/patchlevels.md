@@ -40,7 +40,7 @@ And security aside, it still has substantial benefits over the stock/final relea
 
 ## The AXP.OS patch level
 
-Each month Google releases an Android Security Bulletin ("ASB") which contains important patches and marked with 2 different patch dates ([details](https://source.android.com/docs/security/bulletin/2025-01-01#Common-questions-and-answers)).
+Each month Google releases an Android Security Bulletin ("ASB") which contains important patches _(check next topic, as their content has heavily changed)_ and marked with 2 different patch dates ([details](https://source.android.com/docs/security/bulletin/2025-01-01#Common-questions-and-answers)).
 
 |Patch date|STOCK OS|AXP.OS|
 |-|-|-|
@@ -60,6 +60,8 @@ Upstream _Linux kernel_ fixes include:
 - Note: not _all_ these patches can be applied on _all_ devices. These exclusions are handled via [Fix_CVE_Patchers.sh](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Fix_CVE_Patchers.sh)
 {{< /callout >}}
 
-*_Important note: due to the recent (starting in July 2025) changes by Google the way how ASB patches get announced and published has a significant impact on the custom OS community and what the monthly ASB contains. Read more about that at the [News](/News) page._
+*_see next topic for an important change_
 
+### New (2025) ASB release cycle
 
+Since July 2025, Google has fundamentally changed the way Android security updates are announced and released. Many patches are now only released quarterly, which has a significant impact on the custom OS community and the importance of the monthly ASB for us. For more information, please visit the [News](/News) page.
