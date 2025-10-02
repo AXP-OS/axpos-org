@@ -4,10 +4,10 @@ codename: cheeseburger
 android: 13
 encryption: "ICE"
 firmware: "included"
-relockable: "yes"
+relockable: "no"
 verifiedboot: "yes"
 flavors: "Pro"
-state: "!! ALPHA !!"
+state: "stable"
 supportlevel: community
 debugbootpath: /mnt/vendor/persist
 factoryzip: "no"
@@ -16,11 +16,13 @@ ispixel: "no"
 kilink: cheeseburgerdumpling
 custominstall: ""
 custominstall_path: ""
+customlock: ""
 xdalink: "N/A"
-firstrelease: "[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/96)"
+firstrelease: "2025-08-05"
 vendor: "OnePlus"
 
 type: docs
 layout: device
 prev: devices/OnePlus
+toc: true
 ---
