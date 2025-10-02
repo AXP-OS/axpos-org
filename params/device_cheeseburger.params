@@ -14,14 +14,14 @@ export HUGO_ENCRYPTION="ICE"
 # see vendor_firmware
 export HUGO_FIRMWARE="included"
 
-export HUGO_RELOCKABLE="yes"
+export HUGO_RELOCKABLE="no" # requires testers for enabling
 export HUGO_VERIFIEDBOOT="yes"
 
 # Slim, Pro
 export HUGO_FLAVORS="Pro"
 
 # !! ALPHA !!, BETA, stable
-export HUGO_STATE="!! ALPHA !!"
+export HUGO_STATE="stable"
 
 export HUGO_SUPPORTLEVEL="community"
 export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
@@ -37,4 +37,5 @@ export HUGO_ISPIXEL="no"
 export HUGO_KILINK="cheeseburgerdumpling"
 
 export HUGO_XDALINK="N/A"
-export HUGO_FIRSTRELEASE="[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/96)"
+export HUGO_FIRSTRELEASE="2025-08-05"
+
