@@ -5,6 +5,8 @@ toc: true
 #aliases:
 ---
 
+## AXP.OS accepted info
+
 ```
 ## current implementation STATE of this device request
 
@@ -37,7 +39,53 @@ _Please note: Even if this does not happen often, it may turn out during this pr
 - [ ] announce on XDA
 ```
 
-#### Troubleshooting notes
+## AXP.OS test build info
+
+### bring-up
+
+```
+A test build has been released :tada: !
+
+Check it out here:
+- [download](https://leech.binbash.rocks:8008/axp-unstable/)
+
+Installation guide:
+- [here](https://axpos.org/devices/xxxx/yyyy/)
+
+## YOUR feedback is required:
+
+1. copy the following snippet: [Quality Control Checklist](https://axpos.org/docs/developer/copysnippets/test_community/#axpos-quality-control-checklist)
+2. add a new comment with that snippet as content
+3. save it
+4. go through the list and tick each item you have tested
+
+when having any questions pls just ask in the [Matrix Bring-Up room](https://axpos.org/docs/overview/#support)
+```
+
+### MR upgrade
+
+```
+A test build has been released :tada: !
+
+Check it out here:
+- [download](https://leech.binbash.rocks:8008/axp-unstable/)
+
+Upgrade guide:
+- [here](https://axpos.org/MRU)
+
+**_note: a factory reset is mandatory so ensure you have a current backup before doing anything else!_**
+
+## YOUR feedback is required:
+
+1. copy the following snippet: [Quality Control Checklist](https://axpos.org/docs/developer/copysnippets/test_community/#axpos-quality-control-checklist)
+2. add a new comment with that snippet as content
+3. save it
+4. go through the list and tick each item you have tested
+
+when having any questions pls just ask in the [Matrix Bring-Up room](https://axpos.org/docs/overview/#support)
+```
+
+## Troubleshooting notes
 
 if kernel defconfig can't be found: add it manually to [getDefconfig](https://github.com/AXP-OS/build/blob/a1508ef817cded844cb984131e0868b2cbc84801/Scripts/Common/Functions.sh#L873)
 
