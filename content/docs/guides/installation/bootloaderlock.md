@@ -88,7 +88,7 @@ This _must_ return `1`, if it does return `0` do not proceed as you risk a hard-
 
 ## Downloads
 
-First of all you need the AVB key for your device: [here](https://github.com/sfX-android/update_verifier)
+First of all you need the AVB key for your device, you can find it in your device's page, browse from [here](https://axpos.org/devices)
 
 ## Backup!
 
