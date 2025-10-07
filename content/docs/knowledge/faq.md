@@ -278,7 +278,7 @@ No, there is no support in AOSP for running on traditional desktop/laptop comput
 
 #### Can you support X device, that does have an official LineageOS port?
 
-If there is enough demand, yes. The list of already requested devices is tracked [here](https://codeberg.org/divested-mobile/AXP.OS-build/src/branch/master/TODO-device_additions).
+New devices and/or flavors can be requested [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose).
 
 #### Can you support X device, that doesn't have an (un)official LineageOS port?
 
@@ -316,18 +316,7 @@ The primary possible benefits of security focused memory allocators are the abil
 
 The following list is largely user contributed, nor do we necessarily endorse or recommend any of the following apps.  
 Also note some apps only prompt the share menu which can't actually directly save to a file, you can use [this app](https://f-droid.org/packages/name.lmj001.savetodevice/) in that case.  
-See the full list [here](/misc/app-backup.txt)!
-
-#### What devices do you test on before release?
-
-*   14.1: athene, thor, toroplus
-*   15.1: bullhead, dragon, flounder
-*   16.0: untested
-*   17.1: clark
-*   18.1: bacon, d852, flox, hammerhead, klte, m8, mako, sailfish
-*   19.1: untested
-*   20.0: bluejay, cheeseburger, fajita, flame, mata, oriole, raven, taimen
-*   Have an unused device? Please consider donating it for better test coverage.
+See an example list [here](https://divestos-archive.codeberg.page/misc/app-backup.txt) _(credits: DivestOS, not updated anymore)_
 
 #### Are OTA updates available?
 
@@ -337,21 +326,13 @@ All devices have OTA updates via the Updater app accessible via Settings.
 
 No, just the latest one.
 
-#### Why does Updater show this tiny update?
-
-That is an incremental OTA, you should prefer them over the full updates when available.
-
-#### What are incremental/delta OTA updates?
-
-They are OTA updates that only contain the files changed from the last update, which makes them much smaller to download.
-
 #### How long do OTA updates take to install?
 
 Devices that use update_engine (they install while in the Updater app) should take 10-20 minutes to install, although may take longer if using other apps, and will pause entirely if the screen is off. Devices that reboot to the recovery to install should be less than 5 minutes, but may be up to 10 minutes on very old devices.
 
 #### What internal databases are updated?
 
-AOSP has many internal databases that are often neglected on older versions, however we [provide updates](https://codeberg.org/divested-mobile/AXP.OS-build/src/branch/master/Scripts/Update_Commons.sh) for them as follows.
+AOSP has many internal databases that are often neglected on older versions, however we [provide updates](https://codeberg.org/AXP-OS/build/src/branch/axp/Scripts/Update_Commons.sh) for them as follows.
 
 *   14.1+: LineageOS contributors cloud from latest LineageOS version. Provides accurate credits viewable in Settings.
 *   14.1+: Timezone Databases from latest available. Provides accurate time/offsets for different regions.
@@ -436,7 +417,7 @@ Depending on the installation source, apps may have some special settings restri
 
 It is not recommend to use an alternative client due to how AXP.OS utilizes its own F-Droid repos for updates. Additionally most alternative clients lack mirror support for downloads, incremental index database downloads, or any metadata localization support. If you do want to use one anyway, you MUST do the following:
 
-*   Add the `AXP.OS Official` repo to receive Mull and Mulch (WebView) updates: [https://AXP.OS.org/fdroid/official](https://AXP.OS.org/fdroid/official/?fingerprint=E4BE8D6ABFA4D9D4FEEF03CDDA7FF62A73FD64B75566F6DD4E5E577550BE8467)
+* Add at least the [AXP.OS Stable repo](/F-Droid) to receive important updates
 
 #### Should I use the 'XG only' network mode option (if available)?
 
