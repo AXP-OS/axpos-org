@@ -1,22 +1,24 @@
 #!/bin/bash
 ###############################################################################
-# device specs for creating a new page
+# device specs for enchilada
 ###############################################################################
 export HUGO_VENDOR="OnePlus"
 export HUGO_NAME="OnePlus 6"
 export HUGO_CODENAME="enchilada"
-export HUGO_ANDROID="13"
+export HUGO_ANDROID="15"
 export HUGO_ENCRYPTION="FBEv1"
 export HUGO_FIRMWARE="included"
 export HUGO_RELOCKABLE="yes"
 export HUGO_VERIFIEDBOOT="yes"
-export HUGO_FLAVORS="Slim, Pro"
-export HUGO_STATE="stable"
+export HUGO_FLAVORS="Pro, Slim"
+export HUGO_STATE="!! ALPHA !!"
 export HUGO_SUPPORTLEVEL="community"
 export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
 export HUGO_FACTORYZIP="no"
 export HUGO_ISAB="yes"
 export HUGO_ISPIXEL="no"
 export HUGO_KILINK="enchiladafajita"
+export HUGO_CI_GUIDE=""
+export HUGO_CI_GUIDE_PATH=""
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a13-official-microg-hardened-enchilada-axp-os-20-0.4711844/"
 export HUGO_FIRSTRELEASE="2025-01-23"
