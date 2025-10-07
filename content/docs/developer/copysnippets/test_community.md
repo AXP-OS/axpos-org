@@ -10,26 +10,6 @@ aliases:
     - /Checklist
     - /checklist
 ---
-## AXP.OS test build info
-
-```
-A test build has been released :tada: !
-
-Check it out here:
-- [download](https://leech.binbash.rocks:8008/axp-unstable/)
-
-Installation guide:
-- [here](https://axpos.org/devices/xxxx/yyyy/)
-
-## YOUR feedback is required:
-
-1. copy the following snippet: [Quality Control Checklist](https://axpos.org/docs/developer/copysnippets/test_community/#axpos-quality-control-checklist)
-2. add a new comment with that snippet as content
-3. save it
-4. go through the list and tick each item you have tested
-
-when having any questions pls just ask in the [Matrix Bring-Up room](https://axpos.org/docs/overview/#support)
-```
 
 ## AXP.OS Quality Control Checklist
 
@@ -52,7 +32,7 @@ _Major tests which MUST succeed for any flavor_
 - [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`)
 - [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
 - [ ] **F-Droid** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
-- [ ] **OpenEUICC** app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device))
+- [ ] **OpenEUICC** app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device)) _(enabling is required only on =< A13. If you are on >= A14 and your device supports eSIMs, you should find the OpenEUICC without any extra steps in the app drawer)_
 - [ ] **AuroraStore** App included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] **AOSmium WebView** installed (`Developer Options -> WebView implementation` -> verify it is selected)
 - **AOSmium WebView** quick test: `AuroraStore -> search & install "Webview test"` ([link](https://play.google.com/store/search?q=webview+test&c=apps))
