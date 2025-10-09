@@ -7,7 +7,7 @@ firmware: "included"
 relockable: "no"
 verifiedboot: "yes"
 flavors: "Pro"
-state: "!! ALPHA !!"
+state: "stable"
 supportlevel: community
 debugbootpath: /metadata
 factoryzip: "no"
@@ -16,11 +16,13 @@ ispixel: "no"
 kilink: guacamolehotdog
 custominstall: ""
 custominstall_path: ""
+customlock: ""
 xdalink: "N/A"
-firstrelease: "[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/58)"
+firstrelease: "2025-10-07"
 vendor: "OnePlus"
 
 type: docs
 layout: device
 prev: devices/OnePlus
+toc: true
 ---
