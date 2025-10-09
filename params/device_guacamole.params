@@ -21,7 +21,7 @@ export HUGO_VERIFIEDBOOT="yes"
 export HUGO_FLAVORS="Pro"
 
 # !! ALPHA !!, BETA, stable
-export HUGO_STATE="!! ALPHA !!"
+export HUGO_STATE="stable"
 
 export HUGO_SUPPORTLEVEL="community"
 export HUGO_DEBUGBOOTPATH="/metadata"
@@ -37,4 +37,4 @@ export HUGO_ISPIXEL="no"
 export HUGO_KILINK="guacamolehotdog"
 
 export HUGO_XDALINK="N/A"
-export HUGO_FIRSTRELEASE="[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/58)"
+export HUGO_FIRSTRELEASE="2025-10-07"
