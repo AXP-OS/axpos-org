@@ -78,11 +78,13 @@ When LineageOS supports a higher Android version for an already supported device
 
 Keep in mind that due to the massive amount of changes needed to bring up a new Major Release it will take a while until all AXP.OS dependencies support the new Major Release.
 
+{{< callout type="important" >}} 
+As soon as a device got migrated to the new Major Release there will be no builds released anymore for its _previous_ Android version.
+{{< /callout >}}
+
 ### AXP team supported devices
 
 Devices with AXP.OS [team - level](/docs/knowledge/supportlevels/#by-the-axp-team) support will get a new Major Release **automatically** (i.e. no request is required).
-
-As soon as a device got migrated to the new Major Release there will be no builds released anymore for its _previous_ Android version.
 
 ### AXP community supported devices
 
