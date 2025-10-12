@@ -1,5 +1,5 @@
 ---
-title: "OnePlus 7"
+title: "OnePlus 7T"
 codename: hotdogb
 android: 13
 encryption: "FBEv2"
@@ -16,6 +16,7 @@ ispixel: "no"
 kilink: guacamolehotdog
 custominstall: ""
 custominstall_path: ""
+customlock: ""
 xdalink: ""
 firstrelease: "_[STALLED](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/10)_"
 vendor: "OnePlus"
@@ -23,4 +24,5 @@ vendor: "OnePlus"
 type: docs
 layout: device
 prev: devices/OnePlus
+toc: true
 ---
