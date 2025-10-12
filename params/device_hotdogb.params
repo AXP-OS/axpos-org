@@ -3,7 +3,7 @@
 # device specs for creating a new page
 ###############################################################################
 export HUGO_VENDOR="OnePlus"
-export HUGO_NAME="OnePlus 7"
+export HUGO_NAME="OnePlus 7T"
 export HUGO_CODENAME="hotdogb"
 export HUGO_ANDROID="13"
 export HUGO_ENCRYPTION="FBEv2"
