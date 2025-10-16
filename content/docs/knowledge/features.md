@@ -31,9 +31,12 @@ The _Pro_ one is still the main flavor and so default on new devices but users [
 |-|:-:|:-:|
 |Using Graphene's [hardened malloc](https://github.com/GrapheneOS/hardened_malloc) ([comparison](https://github.com/struct/isoalloc/blob/master/SECURITY_COMPARISON.MD))|**X**|**X**|
 |OTA (Over The Air) updates|**X**|**X**|
-|Including [ASB patches](https://source.android.com/docs/security/bulletin) (see [AXP.OS patch level](/docs/knowledge/patchlevels) for details)|**X**|**X**|
+|Including [ASB patches](https://source.android.com/docs/security/bulletin) (see [AXP.OS patch level](/Patchlevel) for details)|**X**|**X**|
 |Hardened and focusing on [security and privacy](/docs/knowledge/techdetails/#the-changes)|**X**|**X**|
 |Hardened [Browser & WebView](Browser) by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES) |**X**|**X**|
+|Extra hardened Kernel for Pixel devices _([GrapheneOS](https://github.com/GrapheneOS-Archive/kernel_manifest-pixel) based, plus [CVE patches](/Patchlevel), since A15)_|**X**|**X**|
+|[Hardened](/docs/knowledge/techdetails/#automated-mass-changes-to-android_kernel_) Kernel for any device|**X**|**X**|
+|[CVE patched](/Patchlevel) Kernel for any device|**X**|**X**|
 |Extra _Privacy_ by extensive [deblobbing](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Deblob.sh) and privacy-focused settings ([config](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common/templates/axp.vars.j2))|**X**||
 |Super _Privacy_ by even **more extensive** [deblobbing](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Deblob.sh) and privacy-focused settings ([config](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common/templates/axpslim.vars.j2))<br/>(while reducing usability)||**X**|
 |SELinux enforced|**X**|**X**|
