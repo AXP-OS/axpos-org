@@ -51,7 +51,7 @@ _Major tests which MUST succeed for any flavor_
 _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 
 - [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
-- [ ] **MicroG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] **microG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] Home **Launcher Neo Launcher** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - **F-Droid**: extended list of **F-Droid repositories**
@@ -74,13 +74,13 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Slim_
     - step1: `long press F-Droid icon -> App info -> Storage and cache -> Clear storage`
     - step2: `F-Droid App -> Settings -> Repositories` and check:
         - [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
-        - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, MicroG, IronFox (since July25)`
+        - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, microG, IronFox (since July25)`
         - [ ] enable all disabled repos: no error should occur
 
 _Secondary tests which SHOULD succeed when the flavor you are testing is: Slim_
 
-- **MicroG install test** (microG is NOT included within Slim builds but its usage has been prepared):
-    - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation) + and its Companion App (enable `MicroG` F-Droid repo)
+- **microG install test** (microG is NOT included within Slim builds but its usage has been prepared):
+    - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation) + and its Companion App (enable `microG` F-Droid repo)
     - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
     - `microG Settings -> Selftest:`
         - [ ] Signature spoofing support (tick it once, it must be enabled after that)

@@ -53,8 +53,8 @@ The _Pro_ one is still the main flavor and so default on new devices but users [
 |Disable [call recording restrictions](/r) (by [EXTENDROM](https://github.com/sfX-android/android_vendor_extendrom))<br/>(**must be explicitly enabled**)|**X**|**X**|
 |Re-locking the bootloader on supported devices|**X**|**X**|
 |Reproducible builds - see the [details](/Reproducible-builds)|**X**|**X**|
-|[MicroG](https://microg.org/) included<br/>(**requires to explicitly enable signature spoofing**)|**X**|¹|
-|Current and MicroG compatible [Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases) included<br/>(**must be explicitly enabled**)|**X**|¹|
+|[microG](https://microg.org/) included<br/>(**requires to explicitly enable signature spoofing**)|**X**|¹|
+|Current and microG compatible [Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases) included<br/>(**must be explicitly enabled**)|**X**|¹|
 |WireGuard VPN [Kernel module](https://www.wireguard.com/compilation)|**X**|²|
 |Pre-rooted (Magisk) by [EXTENDROM_PREROOT_BOOT](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PREROOT_BOOT) - Bootloader re-lock compatible<br/>(**must be explicitly enabled and activated first**)|**X**||
 |Basic (i.e. w/o SafetyNet) support for [Widevine DRM](https://developers.google.com/widevine/drm/overview)|**X**||
@@ -62,7 +62,7 @@ The _Pro_ one is still the main flavor and so default on new devices but users [
 |Advanced _Usability Support_ by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES)<br/>_(Magisk, MicrogGmsCore, GsfProxy, Phonesky, [NeoLauncher](https://github.com/NeoApplications/Neo-Launcher))_|**X**||
 |On **device*** testing before release<br/>_(*for devices marked as "[verified by the AXP Team](/docs/knowledge/supportlevels/#by-the-axp-team)")_|**X**||
 
-- ¹ while not supported (and not possible on bootloader-locked devices) you can flash MicroG as in LineageOS.<br/>AXP.OS [Phonesky](https://github.com/AXP-OS/packages_apps_phonesky/releases) can be installed manually (via a custom recovery: place it in `/system/priv-app/Phonesky/`).<br/>Regardless if using the MicroG FakeStore or AXP.OS Phonesky you need to follow [the setup guide](/docs/guides/setup/aos/#optional-activate-google-support)) as well.
+- ¹ while not supported (and not possible on bootloader-locked devices) you can flash microG as in LineageOS.<br/>AXP.OS [Phonesky](https://github.com/AXP-OS/packages_apps_phonesky/releases) can be installed manually (via a custom recovery: place it in `/system/priv-app/Phonesky/`).<br/>Regardless if using the microG FakeStore or AXP.OS Phonesky you need to follow [the setup guide](/docs/guides/setup/aos/#optional-activate-google-support)) as well.
 - ² some kernels have the wireguard patches already included - the Slim flavor will not remove them while you need root to _activate_ it
 
 ## Simplified OS comparison
@@ -90,7 +90,7 @@ Privacy examples:
 - deblobbing of proprietary parts
 
 Usability examples:
-- allow or even include custom extensions (e.g. MicroG)
+- allow or even include custom extensions (e.g. microG)
 - pre-configurations
 - including certain Apps
 - support installing Apps from F-Droid

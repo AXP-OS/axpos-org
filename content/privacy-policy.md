@@ -146,18 +146,18 @@ About [CrowdSec](https://www.crowdsec.net/about)
     * `Long press App icon -> App info -> Permissions` remove: `Network`
 *   Privacy Policy: [Neo Launcher](https://neolauncher.github.io/privacy_policy.html)
 
-### MicroG
+### microG
 
 *   Who: Google
 *   Network Connections [@Google](https://github.com/microg/GmsCore/wiki/Google-Network-Connections)
-*   MicroG's [Implementation](https://github.com/microg/GmsCore/wiki/Implementation-Status)
+*   microG's [Implementation](https://github.com/microg/GmsCore/wiki/Implementation-Status)
 *   How to disable:
     * `Long press App icon -> App info -> Disable`
     * `Developer options -> Signature Spoofing -> Disable` (note: this disables PhoneSky as well)
     * and/or remove the `Network` permission
     * and/or remove the `Signature Spoofing` permission
 *   Privacy Policy: [Google](https://policies.google.com/privacy)
-*   Privacy Policy MicroG: N/A
+*   Privacy Policy microG: N/A
 
 ### PhoneSky
 
@@ -165,7 +165,7 @@ About [CrowdSec](https://www.crowdsec.net/about)
 *   How often: on regular intervals, any app which depends on it (e.g. license checks)
 *   How to disable:
     * `Long press App icon -> App info -> Disable`
-    * `Developer options -> Signature Spoofing -> Disable` (note: this disables MicroG as well)
+    * `Developer options -> Signature Spoofing -> Disable` (note: this disables microG as well)
     * and/or remove the `Network` permission
     * and/or remove the `Signature Spoofing` permission
 *   Privacy Policy: [Google](https://policies.google.com/privacy)

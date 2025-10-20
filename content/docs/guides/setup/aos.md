@@ -88,7 +88,7 @@ For the rest checkout: [Recommended Apps](/docs/knowledge/faq/#can-you-recommend
 
 The _Pro_ flavor of AXP.OS comes with [microG](https://microg.org/) included, as well with the Google Play store (internal name "Phonesky") but **both are not activated by default** (this exactly wanted that way, leaving the choice to the user).
 
-If you are using the _Slim_ flavor you can install MicroG on your own though. Just keep in mind that you **can NOT lock the bootloader** in this case!
+If you are using the _Slim_ flavor you can install microG on your own though. Just keep in mind that you **can NOT lock the bootloader** in this case!
 
 For both flavors you need to follow some simple steps in order to *activate* it in AXP.OS.
 

@@ -30,7 +30,7 @@ Some popular examples using Android's Webview:
 
 - Facebook _(news, videos, links, ...)_
 - Amazon _(product descriptions, reviews, ...)_
-- MicroG -> Sign in page
+- microG -> Sign in page
 - ebay _(item listings, product descriptions, ...)_
 - Slack _(chat messages, files, ...)_
 - CNN _(news articles, videos, ...)_
