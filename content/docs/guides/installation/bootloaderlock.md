@@ -33,8 +33,6 @@ Still locking the bootloader on such devices:
 
 In any case you are _strongly_ advised to use a **secure PIN/password** to prevent access to your data.
 
-You wonder why there are **no** Low-Level recovery tools available for Google Pixel devices? This might be one of the reasons - even though they have such tools internally for sure.
-
 ## Going further
 
 All AXP.OS builds **force encrypt** your userdata partition so as long as:
@@ -196,7 +194,7 @@ While it is possible to disable OEM unlock in Android settings it is not recomme
 1. use a low-level recovery tool* to flash a STOCK image (_be sure to use the same Android version though to make things easier for the next steps and avoid barriers like ARB etc_)
 1. if there is no low-level recovery tool: buy a new phone
 
-*) _some devices (e.g. OnePlus, LG, ..) have a so called _EDL/QDL mode_ which can unbrick a device no matter what. actually these are almost impossible to hard-brick. Google Pixels on the other site do **not** have such a mode and so will be for sure gone forever if that happens._
+*) _some devices (e.g. OnePlus, LG, ..) have a so called _EDL/QDL mode_ which can unbrick a device no matter what. actually these are almost impossible to hard-brick. Many Google Pixels on the other site do **not** have such an easy to access mode and so will be for sure gone forever if that happens._
 
 _Examples for those tools:_
 
@@ -206,4 +204,4 @@ _Examples for those tools:_
 - Oneplus MSM tool (e.g. for: [fajita](https://xdaforums.com/t/op6t-latest-10-3-8-collection-of-unbrick-tools.3914746/) or [hotdog](https://xdaforums.com/t/op7tpro-oos-hd01aa-hd01ba-unbrick-tool-to-restore-your-device-to-oxygenos.4002909/))
 - LG QFIL tool (e.g. for: [H815](https://xdaforums.com/t/guide-proper-h815-unbrick-through-qfil-files-included.3709212/))
 - Samsung [Heimdall tool](https://github.com/Benjamin-Dobell/Heimdall) (included in [mAid Linux](https://maid.binbash.rocks/))
-- Google Pixels: N/A
+- Google Pixels: [gs201/gs301](https://github.com/JoshuaDoes/tensor-usbdl)
