@@ -143,6 +143,6 @@ jobs:
 
   mirror:
     needs: build
-    uses: ./.gitea/workflows/mirror.yaml
+    uses: ./.gitea/workflows/mirror-codeberg.yaml
     runs-on: docker-node-latest
     secrets: inherit
