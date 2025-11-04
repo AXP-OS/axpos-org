@@ -40,7 +40,7 @@ jobs:
         source_username: "${{ vars.LOCAL_ORG_NAME }}"
         source_token: ${{ secrets.LOCAL_TOKEN_RO }}
         dest_protocol: ssh
-        dest_username: "${{ vars.MIRROR_ORG_NAME }}"
+        dest_username: "AXP-OS"
         dest_host: ${{ vars.MIRROR_LIMITED_ORG_DOMAIN }}
         dest_private_key: ${{ secrets.MIRROR_LIMITED_SSH_PRIVKEY }}
         mirror_repos: ${{ github.event.repository.name }}
@@ -51,7 +51,7 @@ jobs:
         DEFBR=$(git branch --show-current)
         echo "current on: >$DEFBR<"
         RESP=$(curl -siX 'PATCH' \
-              "https://${{ vars.MIRROR_LIMITED_ORG_DOMAIN }}/api/v1/repos/${{ vars.MIRROR_ORG_NAME }}/${{ github.event.repository.name }}" \
+              "https://${{ vars.MIRROR_LIMITED_ORG_DOMAIN }}/api/v1/repos/AXP-OS/${{ github.event.repository.name }}" \
               -H "Authorization: token ${{ secrets.MIRROR_LIMITED_TOKEN_RW }}" \
               -H 'accept: application/json' \
               -H 'Content-Type: application/json' \
@@ -69,5 +69,5 @@ jobs:
       with:
         source_repo: "https://tok:${{ secrets.LOCAL_TOKEN_RO }}@${{ vars.LOCAL_ORG_DOMAIN }}:${{ vars.LOCAL_ORG_PORT }}/${{ vars.LOCAL_ORG_NAME }}/${{ github.event.repository.name }}"
         source_branch: "${{ github.event.ref }}"
-        destination_repo: "https://tok:${{ secrets.MIRROR_LIMITED_TOKEN_RW }}@${{ vars.MIRROR_LIMITED_ORG_DOMAIN }}/${{ vars.MIRROR_ORG_NAME }}/${{ github.event.repository.name }}"
+        destination_repo: "https://tok:${{ secrets.MIRROR_LIMITED_TOKEN_RW }}@${{ vars.MIRROR_LIMITED_ORG_DOMAIN }}/AXP-OS/${{ github.event.repository.name }}"
         destination_branch: "${{ github.event.ref }}"
