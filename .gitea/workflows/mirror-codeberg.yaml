@@ -41,7 +41,7 @@ jobs:
         source_token: ${{ secrets.LOCAL_TOKEN_RO }}
         dest_protocol: ssh
         dest_username: "${{ vars.MIRROR_ORG_NAME }}"
-        dest_host: ${{ vars.MIRROR_ORG_DOMAIN }}    # yes, not "LIMITED"!
+        dest_host: ${{ vars.MIRROR_LIMITED_ORG_DOMAIN }}
         dest_private_key: ${{ secrets.MIRROR_LIMITED_SSH_PRIVKEY }}
         mirror_repos: ${{ github.event.repository.name }}
 
