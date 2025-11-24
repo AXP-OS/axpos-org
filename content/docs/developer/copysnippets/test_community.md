@@ -64,7 +64,7 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 
 _Secondary tests which SHOULD succeed when the flavor you are testing is: Pro_
 
-- [ ] **WireGuard VPN Kernel module** (Install [Wireguard](https://download.wireguard.com/android-client/) or [WG Tunnel](https://f-droid.org/packages/com.zaneschepke.wireguardautotunnel/). `Wireguard App -> grant root -> enable kernel support in settings`. `WG Tunnel -> Settings -> Use Kernel module -> grant root`)
+- [ ] **WireGuard VPN Kernel module** (Install [Wireguard](https://download.wireguard.com/android-client/) or [WG Tunnel](https://f-droid.org/packages/com.zaneschepke.wireguardautotunnel/). `Wireguard App -> grant root -> enable kernel support in settings`. `WG Tunnel -> Settings > App Mode > Kernel -> grant root`)
 
 #### AXP.OS - Slim tests
 
