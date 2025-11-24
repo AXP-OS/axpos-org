@@ -97,12 +97,14 @@ The main goal is to have all needed on the projects self-hosted Gitea instance a
 
 |Hoster|URL|Public**|Purpose|Repos|
 |-|-|:-:|-|-:|
-|Self-Hosted|[https://code.binbash.rocks/AXP.OS](https://code.binbash.rocks/AXP.OS)|❌**|main, CI/CD, APK build, internals, sensitive parts of build|~44*|
-|Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|reproducible builds, manifests, public parts of build|~208*|
-|Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|mirror of code.binbash.rocks public available repos, APK releases|~28*|
-|Codeberg|[https://codeberg.org/AXP-OS_limited](https://codeberg.org/AXP-OS_limited)|❌**|mirror of code.binbash.rocks non-public available repos, APK releases|~18*|
+|disroot|[https://git.disroot.org/AXP.OS](https://git.disroot.org/AXP.OS)|✅|mirror of code.binbash.rocks public available repos, APK releases, reproducible builds|~191*|
+|Self-Hosted|[https://code.binbash.rocks/AXP.OS](https://code.binbash.rocks/AXP.OS)|❌**|main, CI/CD, APK build, internals, sensitive parts of build|~211*|
+|Codeberg|[https://codeberg.org/AXP-OS_limited](https://codeberg.org/AXP-OS_limited)|❌**|mirror of code.binbash.rocks non-public available repos, APK releases|~23*|
+|**_DEPRECATED:_**|||||
+|Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|DEPRECATED: proprietary, acquired by Microsoft. was used for reproducible builds, manifests, public parts of build|~208*|
+|Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|DEPRECATED: repo/size limits, see [#1123](https://codeberg.org/Codeberg-e.V./requests/issues/1123#issuecomment-8422650) was used as mirror of code.binbash.rocks public available repos, APK releases|100|
 
-- *) _state: July 2025_
+- *) _state: November 2025_
 - **) _see next topic_
 
 ### Why do some repositories require a (free) registration?
