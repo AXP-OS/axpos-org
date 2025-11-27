@@ -128,6 +128,22 @@ It gets set once a build "freeze" starts and uses the current year and month of 
 
 This build ID is used in several places: Changelog, build release announcments, reproducible buid manifest, testing checklist, and more. When referring to a build ID it is possible to get all relevant information and it ensures that all builds run with the same config, same included app versions etc.
 
+## AOSmium Browser / WebView
+
+### WebAssembly error
+
+By default and as a [security pre-caution](https://www.jit.io/blog/6-security-risks-to-consider-with-webassembly) AOSmium blocks JIT ("Just In Time" compilation) which can cause error messages like:
+
+> "Please update to a modern browser with WASM support"
+
+Resolution:
+
+1. `3-dot menu -> Settings -> Website settings -> Content ->` touch `Javascript JIT`
+2. choose `add exception`
+3. type in the domain / website which does not work (e.g. `paste.axpos.org`)
+4. do **not** enable the toggle for JavaScript JIT at the top - unless you want to *allow* JIT for *any* website (not recommended)
+
+
 ---
 
 ## DivestOS-based FAQ
