@@ -5,7 +5,7 @@ android: 13
 encryption: "FBEv2"
 firmware: "manual"
 relockable: "no"
-verifiedboot: "yes"
+verifiedboot: "v2.0"
 flavors: "Pro"
 state: "!! ALPHA !!"
 supportlevel: community
@@ -16,6 +16,7 @@ ispixel: "no"
 kilink: 
 custominstall: ""
 custominstall_path: ""
+customlock: ""
 xdalink: ""
 firstrelease: "_[IN-PROGRESS](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/13)_"
 vendor: "Sony"
@@ -23,4 +24,5 @@ vendor: "Sony"
 type: docs
 layout: device
 prev: devices/Sony
+toc: true
 ---

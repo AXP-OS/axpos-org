@@ -5,7 +5,7 @@ android: 13
 encryption: "FBEv2"
 firmware: "included"
 relockable: "no"
-verifiedboot: "yes"
+verifiedboot: "v2.0"
 flavors: "Pro"
 state: "!! ALPHA !!"
 supportlevel: community
@@ -16,6 +16,7 @@ ispixel: "no"
 kilink: instantnoodlep
 custominstall: ""
 custominstall_path: ""
+customlock: ""
 xdalink: "N/A"
 firstrelease: "[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/73)"
 vendor: "OnePlus"
@@ -23,4 +24,5 @@ vendor: "OnePlus"
 type: docs
 layout: device
 prev: devices/OnePlus
+toc: true
 ---

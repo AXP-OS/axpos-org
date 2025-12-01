@@ -5,7 +5,7 @@ android: 13
 encryption: "FBEv1"
 firmware: "included"
 relockable: "yes"
-verifiedboot: "yes"
+verifiedboot: "v2.0"
 flavors: "Pro"
 state: "stable"
 supportlevel: team
@@ -16,6 +16,7 @@ ispixel: "no"
 kilink: enchiladafajita
 custominstall: ""
 custominstall_path: ""
+customlock: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-fajita-axp-os-20.4631539/"
 firstrelease: "2023-11-13"
 vendor: "OnePlus"
@@ -23,4 +24,5 @@ vendor: "OnePlus"
 type: docs
 layout: device
 prev: devices/OnePlus
+toc: true
 ---

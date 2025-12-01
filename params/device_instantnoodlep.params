@@ -15,7 +15,7 @@ export HUGO_ENCRYPTION="FBEv2"
 export HUGO_FIRMWARE="included"
 
 export HUGO_RELOCKABLE="no"
-export HUGO_VERIFIEDBOOT="yes"
+export HUGO_VERIFIEDBOOT="v2.0"
 
 # Slim, Pro
 export HUGO_FLAVORS="Pro"

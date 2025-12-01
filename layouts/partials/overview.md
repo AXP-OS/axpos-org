@@ -1,4 +1,5 @@
-<h3>Overview</h3>
+## Overview
+
 <table>
   <tr>
     <th></th>
@@ -30,11 +31,11 @@
   </tr>
   <tr>
     <th style="text-align: left;"><strong>Relockable:</strong></th>
-    <td style="background-color: {{ if eq .relock "yes" }}#33cc33{{ else }}#ff9933{{ end }}">{{ .relock }}</td>
+    <td style="background-color: {{ if hasPrefix .relock "yes" }}#33cc33{{ else }}#ff9933{{ end }}">{{ .relock }}</td>
   </tr>
   <tr>
-    <th style="text-align: left;"><strong>VerifiedBoot:</strong></th>
-    <td style="background-color: {{ if eq .verifiedboot "yes" }}#33cc33{{ else }}#ff9933{{ end }}">{{ .verifiedboot }}</td>
+    <th style="text-align: left;"><strong>VerifiedBoot (<a href="/AVB">AVB</a>):</strong></th>
+    <td style="background-color: {{ if hasPrefix .verifiedboot "v2" }}#33cc33{{ else if hasPrefix .verifiedboot "v1" }}#66ffcc{{ else }}#ff9933{{ end }}">{{ .verifiedboot }}</td>
   </tr>
   <tr>
     <th style="text-align: left;"><strong>Verified & tested by:</strong></th>

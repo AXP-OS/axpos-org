@@ -7,7 +7,7 @@
       <th>OS zip</th>
       <th>Recovery image</th>
       {{- if eq .factory "yes" -}}<th>FACTORY zip</th>{{ end }}
-      {{- if eq .relock "yes" -}}<th>AVB key<br>(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</th>{{ end }}
+      {{- if hasPrefix .relock "yes" -}}{{- if hasPrefix .verifiedboot "v2" -}}<th>AVB key<br>(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</th>{{ end }}{{ end }}
       <th>Release key<br>(<a href="/docs/knowledge/signatures/#build-signatures" target="_blank">what's this?</a>)</th>
     </tr>
   </thead>
@@ -33,13 +33,13 @@
 	</a>
       </td>
       {{ end }}
-      {{- if eq .relock "yes" -}}
+      {{- if hasPrefix .relock "yes" -}}{{- if hasPrefix .verifiedboot "v2" -}}
       <td>
 	<a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_avb_pkmd.bin" target="_blank">
 	  <div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
 	</a>
       </td>
-      {{ end }}
+      {{ end }}{{ end }}
       <td>
 	<a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_pubkey" target="_blank"i>
 	  <div style="text-align: center;">{{ (printf "{{< icon name=\"otakey\" attributes=\"height=1.6em\" >}}" | markdownify) }}</div><center><i>(right click, save-as)</i></center>
@@ -93,17 +93,17 @@
         </a>
      </td>
      {{ end }}
-     {{- if eq .relock "yes" -}}
+     {{- if hasPrefix .relock "yes" -}}{{- if hasPrefix .verifiedboot "v2" -}}
      <td>
         <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_avb_pkmd.bin" target="_blank">
          <div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
         </a>
      </td>
-     {{ end }}
+     {{ end }}{{ end }}
      <td>
         <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_pubkey" target="_blank">
-         <div style="text-align: center;">{{ (printf "{{< icon name=\"otakey\" attributes=\"height=1.6em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-        </a><i>(right click, save-as)</i>
+         <div style="text-align: center;">{{ (printf "{{< icon name=\"otakey\" attributes=\"height=1.6em\" >}}" | markdownify) }}</div><center><i>(right click, save-as)</i></center>
+        </a>
      </td>
    </tr>
    <tr>
@@ -128,7 +128,7 @@
     {{ else }}
     <td></td>
     {{ end }}
-    {{ if eq .relock "yes" }}<td></td>{{ end }}
+    {{ if eq .relock "yes" }}{{- if hasPrefix .verifiedboot "v2" -}}<td></td>{{ end }}{{ end }}
    </tr>
    {{ end }}
  </tbody>

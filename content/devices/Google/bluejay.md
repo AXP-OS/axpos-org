@@ -5,7 +5,7 @@ android: 13
 encryption: "FBEv2"
 firmware: "included"
 relockable: "yes"
-verifiedboot: "yes"
+verifiedboot: "v2.0"
 flavors: "Pro"
 state: "stable"
 supportlevel: team
@@ -16,6 +16,7 @@ ispixel: "yes"
 kilink: 
 custominstall: ""
 custominstall_path: ""
+customlock: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-bluejay-axp-os-20-0.4663844/"
 firstrelease: "2024-03-26"
 vendor: "Google"
@@ -23,4 +24,5 @@ vendor: "Google"
 type: docs
 layout: device
 prev: devices/Google
+toc: true
 ---

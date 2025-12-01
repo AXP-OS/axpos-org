@@ -5,7 +5,7 @@ android: 13
 encryption: "FBEv1"
 firmware: "included"
 relockable: "yes"
-verifiedboot: "yes"
+verifiedboot: "v2.0"
 flavors: "Slim"
 state: "stable"
 supportlevel: community
@@ -16,6 +16,7 @@ ispixel: "no"
 kilink: fp3
 custominstall: ""
 custominstall_path: ""
+customlock: ""
 xdalink: "https://xdaforums.com/TBD"
 firstrelease: "2025-04-06"
 vendor: "Fairphone"
@@ -23,4 +24,5 @@ vendor: "Fairphone"
 type: docs
 layout: device
 prev: devices/Fairphone
+toc: true
 ---

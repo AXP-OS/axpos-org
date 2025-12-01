@@ -84,16 +84,38 @@ Before attempting to relock the bootloader on your device, ensure that it allows
 This _must_ return `1`, if it does return `0` do not proceed as you risk a hard-brick!
 {{< /callout >}}
 
-## Downloads
-
-First of all you need the AVB key for your device, you can find it in your device's page, browse from [here](https://axpos.org/devices)
-
 ## Backup!
 
 backup all your data. I am serious -> EVERYTHING. Your userdata partition will be **FORMATTED** during the lock process and there is no way around. so use e.g. NeoBackup or any other you trust. It will not hurt also having a TWRP backup - just for the case..
 
-## boot recovery
+## Android Verified Boot
 
+Identify your AVB version, which can be either v1.x or v2.x. You can find this information at the table at the [device page](https://axpos.org/devices).
+You can find out more about AVB and the differences between these versions [here](/AVB).
+
+Depending on if your device supports AVB v1 or v2 the guide is slightly different:
+
+### AVB v1
+
+1. boot recovery
+1. flash AXP.OS
+1. reboot to the bootloader / fastboot
+1. type: `fastboot oem lock`  or: `fastboot flashing lock`
+1. approve locking the bootloader on the phone's screen
+1. `< take a deeeeeeep breath >`
+1. on some devices recovery will load and format userdata automatically
+1. if not: choose factory reset -> format(!) data (there is no way around)
+1. boot Android -> you will likely see a new bootloader message warning that you have a custom OS installed - but it will load
+   1. if you see an ID string like "`ID: aabbcc112ddd...`" verify it against the one in the installation guide
+1. congrats! you now running on a locked bootloader + AXP.OS
+1. start the Magisk app (requires internet), accept the install request and open the magisk app afterwards and let it reboot when asked
+1. enjoooooy :)
+
+### AVB v2
+
+First of all you need the **AVB key** for your device, you can find it in your device's page, browse from [here](https://axpos.org/devices).
+
+1. boot recovery
 1. flash AXP.OS
 1. reboot to the bootloader / fastboot
 1. _note: if you ever flashed a **factory** image (pixel device) you can skip the following 2 steps_

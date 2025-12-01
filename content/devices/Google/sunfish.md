@@ -1,11 +1,11 @@
 ---
 title: "Google Pixel 4a"
 codename: sunfish
-android: 13
+android: 15
 encryption: "FBEv1"
 firmware: "included"
 relockable: "yes"
-verifiedboot: "yes"
+verifiedboot: "v2.0"
 flavors: "Pro, Slim"
 state: "stable"
 supportlevel: team
@@ -16,6 +16,7 @@ ispixel: "yes"
 kilink: 
 custominstall: ""
 custominstall_path: ""
+customlock: ""
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-sunfish-axp-os-20.4651368/"
 firstrelease: "2024-01-16"
 vendor: "Google"
@@ -23,4 +24,5 @@ vendor: "Google"
 type: docs
 layout: device
 prev: devices/Google
+toc: true
 ---

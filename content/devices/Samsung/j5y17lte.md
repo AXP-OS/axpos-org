@@ -16,6 +16,7 @@ ispixel: "no"
 kilink: 
 custominstall: "yes"
 custominstall_path: "content/devices/custom_j5y17lte.guide"
+customlock: ""
 xdalink: "https://xdaforums.com/t/rom-a10-official-microg-hardened-j5y17lte-axp-os-17-1.4644557/"
 firstrelease: "2024-06-20"
 vendor: "Samsung"
@@ -23,4 +24,5 @@ vendor: "Samsung"
 type: docs
 layout: device
 prev: devices/Samsung
+toc: true
 ---
