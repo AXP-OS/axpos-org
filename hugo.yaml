@@ -43,6 +43,9 @@ params:
     # light | dark | system
     default: dark
     displayToggle: true
+  
+  page:
+    width: wide
 
   footer:
     enable: true
@@ -65,6 +68,7 @@ params:
   dateFormat: "2006-01-02"
 
   navbar:
+    width: wide
     displayTitle: true
     displayLogo: true
     logo:
