@@ -14,8 +14,8 @@ export HUGO_ENCRYPTION="ICE"
 # see vendor_firmware
 export HUGO_FIRMWARE="included"
 
-export HUGO_RELOCKABLE="no" # reported to not work, requires testers for enabling
-export HUGO_VERIFIEDBOOT="yes"
+export HUGO_RELOCKABLE="yes (since 2025-12.1)"
+export HUGO_VERIFIEDBOOT="v1.0"
 
 # Slim, Pro
 export HUGO_FLAVORS="Pro"
@@ -37,4 +37,4 @@ export HUGO_ISPIXEL="no"
 export HUGO_KILINK="cheeseburgerdumpling"
 
 export HUGO_XDALINK="N/A"
-export HUGO_FIRSTRELEASE="2025-08-05"
+export HUGO_FIRSTRELEASE="2025-08-05 (A13)"
