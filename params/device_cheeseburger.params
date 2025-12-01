@@ -15,7 +15,7 @@ export HUGO_ENCRYPTION="ICE"
 export HUGO_FIRMWARE="included"
 
 export HUGO_RELOCKABLE="no" # requires testers for enabling
-export HUGO_VERIFIEDBOOT="v2.0"
+export HUGO_VERIFIEDBOOT="v1.0"
 
 # Slim, Pro
 export HUGO_FLAVORS="Pro"
