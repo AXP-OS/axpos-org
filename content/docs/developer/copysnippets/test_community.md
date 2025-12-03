@@ -18,8 +18,8 @@ _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`
 
 ## Device
 
-- codename: <! FILL-IN !>
-- flavor: <! FILL-IN !>
+- codename: FILL_IN_THE_CODENAME
+- flavor: FILL_IN_THE_FLAVOR
 
 ### AXP.OS - Core features
 
@@ -29,7 +29,7 @@ _Major tests which MUST succeed for any flavor_
 - [ ] **current ASB patch - Kernel** (`Android Settings -> Info/About Phone -> Android Version (touch it to open) -> Kernel version -> build date` must be current. Kernel version must have `-pXXX` inside the version string)
 - [ ] paste a **screenshot** of the Android version screen (`Android Settings -> Info/About Phone -> Android Version (touch it to open)`. `AXP.OS version, Android security update, Kernel version`, all must be visible)
 - [ ] **SELinux enforced** (`Android Settings -> Privacy -> Trust`)
-- [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`)
+- [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`) _SKIP if your device has [autoencryption disabled (click to find out)](https://github.com/search?q=repo%3AsfX-android%2Fautomation_scripts+%22axp_auto_encrypt%3A+False%22+NOT+path%3A%22roles%2Faxp%2Fcommon%22&type=code)_
 - [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
 - [ ] **F-Droid** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] **OpenEUICC** app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device)) _(enabling is required only on =< A13. If you are on >= A14 and your device supports eSIMs, you should find the OpenEUICC without any extra steps in the app drawer)_
@@ -39,12 +39,26 @@ _Major tests which MUST succeed for any flavor_
     - [ ] Open Webview test app & check `Webview Info` (hamburger menu), it should display the version in the [AXP.OS Changelog](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
     - [ ] click on the Globe icon or open the menu and choose `Webview` _(if no input popup appears click the globe icon at the top)_
     - [ ] enter any url and test if it opens
-- [ ] **OTA update** (`Android Settings -> Updater -> 3dots -> Preferences -> Server Choice -> "UNSTABLE"`)
+- [ ] **OTA update** (`Android Settings -> Updater -> 3dots -> Preferences -> Server Choice -> "UNSTABLE"`):
+    - [ ] shows up the next/current version
+    - Testing the OTA update process _(requires Internet)_:
+        - [ ] flashing from the previous version to the latest unstable was successful _(why: this test checks if the OTA process is not broken in the previous stable)_
+        - [ ] re-flash the latest unstable from that same latest unstable again was successful _(why: this test checks if the OTA process is not broken in the latest unstable)_
 - [ ] **Developer options**: `OEM unlock` option is **NOT** shown in developer options
 - **Call recording option**: follow the [guide](https://axpos.org/r) to find & enable it
     - [ ] it must be possible to set & unset the toggle
     - [ ] if possible: test the call recording
-- [ ] **locking the bootloader**: on supported devices (see the [device page](https://axpos.org/devices))
+- **locking the bootloader**: on supported devices (see the [device page](https://axpos.org/devices))
+    - [ ] re-lock the device or ensure it still boots when in locked state
+    - [ ] verify the bootloader ID (string on startup) matches with your device [device](https://axpos.org/devices)
+    <br/>_HINT: LEAVE UNCHECKED only if the ID does NOT match!_
+    <br/>***If your device does not show any ID at all: SET(!) the check mark!***
+- **Verified Boot**: check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
+    - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
+    - [ ] enter: `grep dm- /proc/mounts`
+        - [ ] add the output to the bottom of this checklist
+    - [ ] enter: `getprop | grep verity`
+        - [ ] add the output to the bottom of this checklist
 
 #### AXP.OS - Pro tests
 
@@ -60,7 +74,15 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
         - [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
         - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, IronFox (since July25)`
         - [ ] enable all disabled repos: no error should occur
-- [ ] **boot debug** log added (`adb shell su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` [DEVICE-BOOT-DEBUG-PATH] is defined in the [install guide](https://axpos.org/devices). Add the output in a comment)
+- **boot debug** log existence:
+    - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
+    - [ ] enter: `su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` (you can find the definition of `[DEVICE-BOOT-DEBUG-PATH]` in the [install guide](https://axpos.org/devices)
+    - [ ] add the output to the bottom of this checklist
+- **Verified Boot**: addtional check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
+    - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
+    - [ ] enter: `su -c dmctl list devices -v`
+    - [ ] add the output to the bottom of this checklist
+
 
 _Secondary tests which SHOULD succeed when the flavor you are testing is: Pro_
 
@@ -137,9 +159,8 @@ _These tests are either not too critical or are primarily intended for overall s
 - [ ] **Battery Stats and Usage**: Review battery stats and usage patterns.
 - [ ] **Language and Region Settings**: Ensure language and region settings are applied correctly.
 
-## Tester hints
-
-`space for comments by the tester, remarks, notable changes and any other report about the result which might be useful`
+## Tester feedback / command outputs
+`paste any requested output of the above checklist here. This is also the space for comments by the tester, remarks, notable changes and any other report about the result which might be useful.`
 
 ```
 
