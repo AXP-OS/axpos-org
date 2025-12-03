@@ -93,20 +93,23 @@ A significant difference to some other operating systems is that AXP.OS always i
 
 For this reason, a very special and big thank you goes to the community that makes all this possible:
 
-- [@SerYo](https://code.binbash.rocks/SerYo) - klte, oriole, sargo, sunfish, enchilada
+- [@SerYo](https://code.binbash.rocks/SerYo) - klte, oriole, sunfish, enchilada, dumpling, cheeseburger
 - [@rocky-184](https://code.binbash.rocks/rocky-184) - enchilada
-- [@mr4zu](https://code.binbash.rocks/mr4zu) - sunfish
-- [@kilou78](https://code.binbash.rocks/kilou78) - klte
-- [@duven87](https://code.binbash.rocks/duven87) - klte
+- [@mr4zu](https://code.binbash.rocks/mr4zu) - sunfish _(inactive)_
+- [@kilou78](https://code.binbash.rocks/kilou78) - klte _(inactive)_
+- [@duven87](https://code.binbash.rocks/duven87) - klte _(inactive)_
 - [@CueHD](https://code.binbash.rocks/CueHD) - klte
 - [@Confined5290](https://code.binbash.rocks/Confined5290) - sargo
-- [@jschroeter-user](https://code.binbash.rocks/jschroeter-user) - klte, sunfish
+- [@jschroeter-user](https://code.binbash.rocks/jschroeter-user) - klte
 - [@tial](https://code.binbash.rocks/tial) - FP3
 - [@keylimeypie](https://code.binbash.rocks/keylimeypie) - enchilada
-- [@snupeli](https://code.binbash.rocks/snupeli) - FP4
-- [@kujawek](https://code.binbash.rocks/kujawek) - FP4
+- [@snupeli](https://code.binbash.rocks/snupeli) - FP4 _(inactive)_
+- [@kujawek](https://code.binbash.rocks/kujawek) - FP4 _(inactive)_
 - [@BerTranD](https://code.binbash.rocks/BerTranD) - sargo
 - [@cam](https://code.binbash.rocks/cam) - sargo
+- [@knoffman](https://code.binbash.rocks/knoffman) - FP3
+- [@bobdole](https://code.binbash.rocks/bobdole) - guacamole
+- [@0verdose](https://code.binbash.rocks/0verdose) - FP4
 
 ## Translations
 
