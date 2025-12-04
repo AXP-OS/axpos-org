@@ -51,11 +51,11 @@ _Major tests which MUST succeed for any flavor_
 - **locking the bootloader**: on supported devices (see the [device page](https://axpos.org/devices))
     - [ ] re-lock the device or ensure it still boots when in locked state
     - [ ] verify the bootloader ID (string on startup) matches with your device [device](https://axpos.org/devices)
-    <br/>_HINT: LEAVE UNCHECKED only if the ID does NOT match!_
-    <br/>***If your device does not show any ID at all: SET(!) the check mark!***
+    _HINT: LEAVE UNCHECKED only if the ID does NOT match!_
+    ***If your device does not show any ID at all: SET(!) the check mark!***
 - **Verified Boot**: check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
     - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
-    - [ ] enter: `grep dm- /proc/mounts`
+    - [ ] enter: `grep dm- /proc/mounts | grep -v apex`
         - [ ] add the output to the bottom of this checklist
     - [ ] enter: `getprop | grep verity`
         - [ ] add the output to the bottom of this checklist
@@ -81,8 +81,9 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 - **Verified Boot**: addtional check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
     - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
     - [ ] enter: `su -c dmctl list devices -v`
-    - [ ] add the output to the bottom of this checklist
-
+        - [ ] add the output to the bottom of this checklist
+    - [ ] enter: `su -c cat /proc/cmdline`
+        - [ ] add the output to the bottom of this checklist
 
 _Secondary tests which SHOULD succeed when the flavor you are testing is: Pro_
 
@@ -160,7 +161,39 @@ _These tests are either not too critical or are primarily intended for overall s
 - [ ] **Language and Region Settings**: Ensure language and region settings are applied correctly.
 
 ## Tester feedback / command outputs
-`paste any requested output of the above checklist here. This is also the space for comments by the tester, remarks, notable changes and any other report about the result which might be useful.`
+
+### free form
+
+_This is a space for comments by the tester, remarks, notable changes and any other report about the result which might be useful:_
+
+...
+
+### command results
+
+##### Pro/Slim: `grep dm- /proc/mounts | grep -v apex`
+
+_paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
+
+...
+
+##### Pro/Slim: `getprop | grep verity`
+
+_paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
+
+...
+
+##### Pro: `su -c dmctl list devices -v`
+
+_paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
+
+...
+
+##### Pro: `su -c cat /proc/cmdline`
+
+_paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
+
+...
+
 
 ```
 
@@ -170,4 +203,4 @@ Base for the above checklist: [LineageOS Device Requirements](https://github.com
 
 {{< youtube BS8kweB2s58 >}}
 
-##
+
