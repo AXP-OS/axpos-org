@@ -4,7 +4,7 @@ codename: dumpling
 android: 13
 encryption: "ICE"
 firmware: "included"
-relockable: "yes (since 2025-12.1)"
+relockable: "yes (since 2025-12-03)"
 verifiedboot: "v1.0"
 flavors: "Pro"
 state: "stable"
