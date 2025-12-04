@@ -15,7 +15,7 @@ export HUGO_ENCRYPTION="ICE"
 export HUGO_FIRMWARE="included"
 
 export HUGO_RELOCKABLE="yes (since 2025-12-03)"
-export HUGO_VERIFIEDBOOT="v1.0"
+export HUGO_VERIFIEDBOOT="v1.0 without dm-verity"
 
 # Slim, Pro
 export HUGO_FLAVORS="Pro"

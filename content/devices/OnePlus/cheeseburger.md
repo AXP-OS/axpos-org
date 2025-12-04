@@ -5,7 +5,7 @@ android: 13
 encryption: "ICE"
 firmware: "included"
 relockable: "no"
-verifiedboot: "v1.0"
+verifiedboot: "v1.0 without dm-verity"
 flavors: "Pro"
 state: "stable"
 supportlevel: community

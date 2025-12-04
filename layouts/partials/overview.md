@@ -35,7 +35,7 @@
   </tr>
   <tr>
     <th style="text-align: left;"><strong>VerifiedBoot (<a href="/AVB">AVB</a>):</strong></th>
-    <td style="background-color: {{ if hasPrefix .verifiedboot "v2" }}#33cc33{{ else if hasPrefix .verifiedboot "v1" }}#66ffcc{{ else }}#ff9933{{ end }}">{{ .verifiedboot }}</td>
+    <td style="background-color: {{ if hasPrefix .verifiedboot "v2" }}#33cc33{{ else if hasPrefix .verifiedboot "v1" }}#ebf500{{ else }}#f23000{{ end }}">{{ .verifiedboot }}</td>
   </tr>
   <tr>
     <th style="text-align: left;"><strong>Verified & tested by:</strong></th>
