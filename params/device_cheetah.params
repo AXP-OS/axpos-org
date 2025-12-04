@@ -5,7 +5,7 @@
 export HUGO_VENDOR="Google"
 export HUGO_NAME="Google Pixel 7 Pro"
 export HUGO_CODENAME="cheetah"
-export HUGO_ANDROID="15"
+export HUGO_ANDROID="13"
 export HUGO_ENCRYPTION="FBEv2"
 export HUGO_FIRMWARE="included"
 export HUGO_RELOCKABLE="yes"

@@ -5,7 +5,7 @@
 export HUGO_VENDOR="OnePlus"
 export HUGO_NAME="OnePlus 7T Pro"
 export HUGO_CODENAME="hotdog"
-export HUGO_ANDROID="15"
+export HUGO_ANDROID="13"
 export HUGO_ENCRYPTION="FBEv2"
 export HUGO_FIRMWARE="included"
 export HUGO_RELOCKABLE="no"

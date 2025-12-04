@@ -5,7 +5,7 @@
 export HUGO_VENDOR="Google"
 export HUGO_NAME="Google Pixel 6"
 export HUGO_CODENAME="oriole"
-export HUGO_ANDROID="15"
+export HUGO_ANDROID="13"
 export HUGO_ENCRYPTION="FBEv1"
 export HUGO_FIRMWARE="included"
 export HUGO_RELOCKABLE="yes"
