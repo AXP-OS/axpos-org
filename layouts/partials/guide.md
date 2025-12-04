@@ -57,7 +57,7 @@ Follow [Setup]({{ printf "%s" .docbaseurl }}/Setup)
 
 ### Re-locking the bootloader
 
-{{ if eq .relock "yes" }}
+{{ if hasPrefix .relock "yes" }}
 Supported: **yes**
 
 {{ if eq .customlock "yes" }}
@@ -69,7 +69,7 @@ Supported: **yes**
     {{ end }}
 {{ end }}
 
-Follow [Bootloader-Lock]({{ printf "%s" .docbaseurl }}/Bootloader-Lock).
+Follow [Bootloader-Lock]({{ printf "%s" .docbaseurl }}/Bootloader-Lock)
 
 #### Fingerprint information
 
