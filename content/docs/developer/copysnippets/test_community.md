@@ -182,6 +182,12 @@ _paste the result here, then mark the whole text block and click the symbol `< >
 
 ...
 
+##### Pro: `su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug`
+
+_paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
+
+...
+
 ##### Pro: `su -c dmctl list devices -v`
 
 _paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
