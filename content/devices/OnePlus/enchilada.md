@@ -1,7 +1,7 @@
 ---
 title: "OnePlus 6"
 codename: enchilada
-android: 15
+android: 13
 encryption: "FBEv1"
 firmware: "included"
 relockable: "yes"

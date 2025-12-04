@@ -1,7 +1,7 @@
 ---
 title: "Google Pixel 7 Pro"
 codename: cheetah
-android: 15
+android: 13
 encryption: "FBEv2"
 firmware: "included"
 relockable: "yes"

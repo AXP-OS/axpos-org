@@ -1,7 +1,7 @@
 ---
 title: "OnePlus 7T Pro"
 codename: hotdog
-android: 15
+android: 13
 encryption: "FBEv2"
 firmware: "included"
 relockable: "no"

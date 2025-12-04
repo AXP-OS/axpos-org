@@ -1,7 +1,7 @@
 ---
 title: "Google Pixel 6"
 codename: oriole
-android: 15
+android: 13
 encryption: "FBEv1"
 firmware: "included"
 relockable: "yes"
