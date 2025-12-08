@@ -144,16 +144,6 @@ If you are forced to use a _custom_ recovery:
 1. verify the signature manually: with the [update_verifier](https://github.com/sfX-android/update_verifier/)
 1. alternative: verify the sha512 hash of the zip with the one from the Automation channel (not of the download website)
 
-### SHA
-
-All builds have a corresponding hash file (sha512.sum) which should be used to verify a downloaded zip.
-
-```bash
-sha512sum -c AXP.OS*sha512sum
-#or for recovery:
-sha256sum -c AXP.OS*sha256sum
-```
-
 ### GPG
 
 Besides the above OTA signatures (see _OTA & AVB_ topic) of the OS zips all OS sha512sum files are signed with the AXP.OS GPG key (since 2025-08).
@@ -162,11 +152,87 @@ This can be used as an alternative or additional way to verify builds have not b
 #### Download
 - [axpos_signing.key](/axpos_signing.key) ([mirror1](https://codeberg.org/AXP-OS/axpos-org/src/branch/hugo/static/axpos_signing.key), [mirror2](https://leech.binbash.rocks:8008/axp/axpos_signing.key), [mirror3](https://keyserver.ubuntu.com/pks/lookup?search=FE4B2FA2B225F0AB903AF4136740E645718A8E47&fingerprint=on&op=index), [mirror4](https://keys.openpgp.org/search?q=FE4B2FA2B225F0AB903AF4136740E645718A8E47), [mirror5](https://github.com/AXP-OS/axpos-org/blob/hugo/static/axpos_signing.key))
 
+`ID: FE4B2FA2B225F0AB903AF4136740E645718A8E47`
 
+> [!CAUTION]
+> Ensure you place the _signing key_, the _OS zip_ and the _sha512sum_ file all in the **same** directory
+
+#### How to verify GPG signed files on _Linux or Mac OS_
+
+1. Open a terminal
+2. switch to the folder where you downloaded the signing key and the OS zip
+3. enter:
 ```bash
-#FE4B2FA2B225F0AB903AF4136740E645718A8E47
-
-gpg --import axpos_signing.key
+gpg --import axpos_signing.key # need to be done only ONCE ever, skip next time
 gpg --verify AXP.OS*sha512sum
+```
+4. verify the output of the second command:
+   - the key ID must match (see _Download_ above)
+   - it must show `Good signature` (_also see [Examples](/docs/knowledge/signatures/#example-verifychecksum-output)_)
+
+#### How to verify GPG signed files on _Windows_
+
+1. Download [GPG4WIN](https://www.gpg4win.org/)
+2. Check its [integrity](https://wiki.gnupg.org/Gpg4win/CheckIntegrity)
+3. Install it and if asked which UI you prefer, _Kleopatra_ should fit for the most.
+4. Open the folder where you downloaded the signing key and the OS zip in the file explorer
+5. right click on a free area there and choose `open terminal / command prompt here`
+6. enter:
+```bash
+gpg --import axpos_signing.key # need to be done only ONCE ever, skip next time
+gpg --verify AXP.OS*sha512sum
+```
+7. verify the output of the second command:
+   - the key ID must match (see _Download_ above)
+   - it must show `Good signature` (_also see [Examples](/docs/knowledge/signatures/#example-verifychecksum-output)_)
+
+### SHA
+
+All builds have a corresponding hash file (sha512.sum) which should be used to verify a downloaded zip.
+Before starting, ensure you have verified the SHA512 hash file as shown above in the _GPG_ topic!
+
+#### How to verify a SHA512 hash on _Linux or Mac OS_
+
+1. Open a terminal
+2. switch to the folder where you downloaded the SHA file and the OS zip
+3. enter:
+```bash
 sha512sum -c AXP.OS*sha512sum
+# or SHA256, for example for legacy signed files:
+sha256sum -c AXP.OS*sha256sum
+```
+4. The following should be displayed: `AXP.OS-xxxxx.zip: OK` (_also see [Examples](/docs/knowledge/signatures/#example-verifychecksum-output)_)
+
+#### How to verify a SHA512 hash on _Windows_
+
+1. Open the folder where you downloaded the signing key and the OS zip in the file explorer
+2. right click on a free area there and choose `open terminal / command prompt here`
+3. enter:
+```bash
+certutil -hashfile "AXP.OS-xxxxx.zip" SHA512
+# alternatively if you have Windows PowerShell installed, you can also do:
+Get-FileHash -Path AXP.OS-xxxxx.zip -Algorithm SHA512
+```
+4. open the text file `AXP.OS-xxxxx.zip.sha512sum`
+5. compare the long string with the one displayed in 3)
+
+#### Example verify/checksum output
+
+GPG verify:
+```bash
+gpg --verify AXP.OS-20.0-20251116-dos-bluejay.zip.sha512sum
+
+gpg: Signature made Sun Nov 16 11:24:01 2025 UTC
+gpg:                using EDDSA key FE4B2FA2B225F0AB903AF4136740E645718A8E47
+#                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+gpg: Good signature from "AXP.OS <aosbot@axpos.org>" [ultimate]
+#    ^^^^^^^^^^^^^^
+gpg:                 aka "droidme <sfx-bot@binbash.rocks>" [ultimate]
+```
+
+SHA512 verify:
+```bash
+sha512sum -c AXP.OS-20.0-20251116-dos-bluejay.zip.sha512sum
+AXP.OS-20.0-20251116-dos-bluejay.zip: OK
+#                                     ^^
 ```
