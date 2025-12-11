@@ -55,7 +55,7 @@ _Major tests which MUST succeed for any flavor_
     ***If your device does not show any ID at all: SET(!) the check mark!***
 - **Verified Boot**: check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
     - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
-    - [ ] enter: `grep dm- /proc/mounts | grep -v apex`
+    - [ ] enter: `grep dm- /proc/mounts | grep -vE "apex|mirror"`
         - [ ] add the output to the bottom of this checklist
     - [ ] enter: `getprop | grep verity`
         - [ ] add the output to the bottom of this checklist
@@ -170,27 +170,27 @@ _This is a space for comments by the tester, remarks, notable changes and any ot
 
 ### command results
 
-##### Pro/Slim: `grep dm- /proc/mounts | grep -v apex`
+##### Pro/Slim: `grep dm- /proc/mounts | grep -vE "apex|mirror"`
 
-_paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `< >` ("Add code") in the format menu above_
 
 ...
 
 ##### Pro/Slim: `getprop | grep verity`
 
-_paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `< >` ("Add code") in the format menu above_
 
 ...
 
 ##### Pro: `su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug`
 
-_paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `< >` ("Add code") in the format menu above_
 
 ...
 
 ##### Pro: `su -c dmctl list devices -v`
 
-_paste the result here, then mark the whole text block and click the symbol `< >` ("Add code") in the format menu above_
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `< >` ("Add code") in the format menu above_
 
 ...
 
