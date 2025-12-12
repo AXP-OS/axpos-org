@@ -46,7 +46,7 @@ _Major tests which MUST succeed for any flavor_
         - [ ] re-flash the latest unstable from that same latest unstable again was successful _(why: this test checks if the OTA process is not broken in the latest unstable)_
 - [ ] **Developer options**: `OEM unlock` option is **NOT** shown in developer options
 - **Call recording option**: follow the [guide](https://axpos.org/r) to find & enable it
-    - [ ] it must be possible to set & unset the toggle
+    - [ ] it must be possible to set & unset the toggle (`enable it -> move out of developer screen -> and open it again`: _is the toggle still enabled? if so, then you can toggle it off again and tick the box: ✅_ )
     - [ ] if possible: test the call recording
 - **locking the bootloader**: on supported devices (see the [device page](https://axpos.org/devices))
     - [ ] re-lock the device or ensure it still boots when in locked state
@@ -55,7 +55,7 @@ _Major tests which MUST succeed for any flavor_
     ***If your device does not show any ID at all: SET(!) the check mark!***
 - **Verified Boot**: check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
     - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
-    - [ ] enter: `grep dm- /proc/mounts | grep -vE "apex|mirror"`
+    - [ ] enter: `grep dm- /proc/mounts | grep -E "\s/(system|system_ext|product|vendor|odm)\s"`
         - [ ] add the output to the bottom of this checklist
     - [ ] enter: `getprop | grep verity`
         - [ ] add the output to the bottom of this checklist
@@ -102,12 +102,14 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Slim_
 
 _Secondary tests which SHOULD succeed when the flavor you are testing is: Slim_
 
-- **microG install test** (microG is NOT included within Slim builds but its usage has been prepared):
+- **microG full install test** (microG is NOT included within Slim builds but its usage has been prepared):
     - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation) + and its Companion App (enable `microG` F-Droid repo)
     - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
     - `microG Settings -> Selftest:`
-        - [ ] Signature spoofing support (tick it once, it must be enabled after that)
+        - [ ] Signature spoofing support _(tick it once, it must be enabled after that)_
         - [ ] Topic _Installed packages_ should have all items enabled
+- **microG minimal test** _(no install required)_. For those _NOT_ wanting to install microG:
+    - [ ] check if signature spoofing support is available (`enable it -> move out of developer screen -> and open it again`: _is the toggle still enabled? if so, then you can toggle it off again and tick the box: ✅_ )
 
 ### AXP.OS - Core functionality
 
@@ -170,7 +172,7 @@ _This is a space for comments by the tester, remarks, notable changes and any ot
 
 ### command results
 
-##### Pro/Slim: `grep dm- /proc/mounts | grep -vE "apex|mirror"`
+##### Pro/Slim: `grep dm- /proc/mounts | grep -E "\s/(system|system_ext|product|vendor|odm)\s"`
 
 _paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `< >` ("Add code") in the format menu above_
 
