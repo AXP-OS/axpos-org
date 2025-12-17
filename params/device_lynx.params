@@ -2,21 +2,27 @@
 ###############################################################################
 # device specs for creating a new page
 ###############################################################################
-export HUGO_VENDOR="Google"
-export HUGO_NAME="Google Pixel 7a"
+
+# COMMON Block
+export HUGO_CI_GUIDE=""
+export HUGO_CI_GUIDE_PATH=""
 export HUGO_CODENAME="lynx"
-export HUGO_ANDROID="13"
-export HUGO_ENCRYPTION="FBEv2"
-export HUGO_FIRMWARE="included"
-export HUGO_RELOCKABLE="yes"
-export HUGO_VERIFIEDBOOT="v2.0"
-export HUGO_FLAVORS="Pro"
-export HUGO_STATE="stable"
-export HUGO_SUPPORTLEVEL="team"
 export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
 export HUGO_FACTORYZIP="yes"
+export HUGO_FIRMWARE="included"
 export HUGO_ISAB="yes"
 export HUGO_ISPIXEL="yes"
-export HUGO_KILINK=
+export HUGO_KILINK=""
+export HUGO_NAME="Google Pixel 7a"
+export HUGO_VENDOR="Google"
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a13-official-microg-hardened-lynx-axp-os-20-0.4673845/"
-export HUGO_FIRSTRELEASE="2024-06-20"
+
+# PRO Block
+export HUGO_PRO_ANDROID="13"
+export HUGO_PRO_ENCRYPTION="FBEv2"
+export HUGO_PRO_FIRSTRELEASE="2024-06-20"
+export HUGO_PRO_RELOCKABLE="yes"
+export HUGO_PRO_STATE="stable"
+export HUGO_PRO_SUPPORTLEVEL="team"
+export HUGO_PRO_VERIFIEDBOOT="v2.0"
+export HUGO_PRO_FLAVOR=True

@@ -57,7 +57,7 @@ Follow [Setup]({{ printf "%s" .docbaseurl }}/Setup)
 
 ### Re-locking the bootloader
 
-{{ if hasPrefix .relock "yes" }}
+{{ if or (eq .relock_pro "yes") (eq .relock_slim "yes") }}
 Supported: **yes**
 
 {{ if eq .customlock "yes" }}
@@ -81,7 +81,7 @@ This fingerprint is unique per device and flavor.
 
 **If you see a different ID, immediately request [support]({{ printf "%s" .docbaseurl }}#support).**
 
-{{ if in .flavors "Pro" }}
+{{ if .flavor_pro }}
 ##### Pro build
 
     {{ $filename := printf "content/devices/fp_%s_pro" .codename }}
@@ -92,7 +92,7 @@ No fingerprint information available. Contact support.
     {{ end }}
 {{ end }}
 
-{{ if in .flavors "Slim" }}
+{{ if .flavor_slim }}
 ##### Slim build
 
     {{ $filename := printf "content/devices/fp_%s_slim" .codename }}

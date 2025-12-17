@@ -1,28 +1,41 @@
 ---
 title: "OnePlus 6"
+
+# COMMON (shared)
 codename: enchilada
-android: 13
-encryption: "FBEv1"
-firmware: "included"
-relockable: "yes"
-verifiedboot: "v2.0"
-flavors: "Pro, Slim"
-state: "!! ALPHA !!"
-supportlevel: community
 debugbootpath: /mnt/vendor/persist
-factoryzip: "no"
-isab: "yes"
-ispixel: "no"
+factoryzip: no
+firmware: included
+isab: yes
+ispixel: no
 kilink: enchiladafajita
-custominstall: ""
-custominstall_path: ""
-customlock: ""
+name: OnePlus 6
+vendor: OnePlus
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-enchilada-axp-os-20-0.4711844/"
-firstrelease: "2025-01-23"
-vendor: "OnePlus"
+custominstall: 
+custominstall_path: 
+
+# PRO
+android_pro: 13
+encryption_pro: FBEv1
+firstrelease_pro: "2025-01-05"
+flavors_pro: True
+relockable_pro: yes
+state_pro: "stable"
+supportlevel_pro: community
+verifiedboot_pro: v2.0
+
+# SLIM
+android_slim: 13
+encryption_slim: FBEv1
+firstrelease_slim: "2025-03-05"
+flavors_slim: True
+relockable_slim: yes
+state_slim: "stable"
+supportlevel_slim: community
+verifiedboot_slim: v2.0
 
 type: docs
 layout: device
-prev: devices/OnePlus
 toc: true
 ---

@@ -2,23 +2,37 @@
 ###############################################################################
 # device specs for creating a new page
 ###############################################################################
-export HUGO_VENDOR="Samsung"
-export HUGO_NAME="Samsung S5"
+
+# COMMON Block
+export HUGO_CI_GUIDE="yes"
+export HUGO_CI_GUIDE_PATH="content/devices/custom_klte.guide"
 export HUGO_CODENAME="klte"
-export HUGO_ANDROID="11"
-export HUGO_ENCRYPTION="FBEv1"
-export HUGO_FIRMWARE="manual"
-export HUGO_RELOCKABLE="no"
-export HUGO_VERIFIEDBOOT="no"
-export HUGO_FLAVORS="Pro, Slim"
-export HUGO_STATE="stable"
-export HUGO_SUPPORTLEVEL="community"
 export HUGO_DEBUGBOOTPATH="/cache"
 export HUGO_FACTORYZIP="no"
+export HUGO_FIRMWARE="manual"
 export HUGO_ISAB="no"
 export HUGO_ISPIXEL="no"
 export HUGO_KILINK="klte-and-maybe-hlte"
-export HUGO_CI_GUIDE="yes"
-export HUGO_CI_GUIDE_PATH="content/devices/custom_${HUGO_CODENAME}.guide"
+export HUGO_NAME="Samsung S5"
+export HUGO_VENDOR="Samsung"
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a11-official-microg-hardened-klte-axp-os-18-1.4703947/"
-export HUGO_FIRSTRELEASE="2024-11-20"
+
+# PRO Block
+export HUGO_PRO_ANDROID="11"
+export HUGO_PRO_ENCRYPTION="FBEv1"
+export HUGO_PRO_FIRSTRELEASE="2024-11-20"
+export HUGO_PRO_RELOCKABLE="no"
+export HUGO_PRO_STATE="stable"
+export HUGO_PRO_SUPPORTLEVEL="community"
+export HUGO_PRO_VERIFIEDBOOT="no"
+export HUGO_PRO_FLAVOR=True
+
+# SLIM Block
+export HUGO_SLIM_ANDROID="11"
+export HUGO_SLIM_ENCRYPTION="FBEv1"
+export HUGO_SLIM_FIRSTRELEASE="2025-02-04"
+export HUGO_SLIM_RELOCKABLE="no"
+export HUGO_SLIM_STATE="stable"
+export HUGO_SLIM_SUPPORTLEVEL="community"
+export HUGO_SLIM_VERIFIEDBOOT="no"
+export HUGO_SLIM_FLAVOR=True

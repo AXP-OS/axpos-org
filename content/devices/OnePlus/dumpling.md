@@ -1,28 +1,41 @@
 ---
 title: "OnePlus 5T"
+
+# COMMON (shared)
 codename: dumpling
-android: 13
-encryption: "ICE"
-firmware: "included"
-relockable: "yes (since 2025-12-03)"
-verifiedboot: "v1.0 without dm-verity"
-flavors: "Pro"
-state: "stable"
-supportlevel: community
 debugbootpath: /mnt/vendor/persist
-factoryzip: "no"
-isab: "no"
-ispixel: "no"
+factoryzip: no
+firmware: included
+isab: no
+ispixel: no
 kilink: cheeseburgerdumpling
-custominstall: ""
-custominstall_path: ""
-customlock: ""
+name: OnePlus 5T
+vendor: OnePlus
 xdalink: "N/A"
-firstrelease: "2025-08-05 (A13)"
-vendor: "OnePlus"
+custominstall: 
+custominstall_path: 
+
+# PRO
+android_pro: 13
+encryption_pro: ICE
+firstrelease_pro: "2025-08-05 (A13)"
+flavors_pro: True
+relockable_pro: yes (since 2025-12-03)
+state_pro: "stable"
+supportlevel_pro: community
+verifiedboot_pro: no (v1.0)<br/><i>dropped in A11</i>
+
+# SLIM
+android_slim: 
+encryption_slim: 
+firstrelease_slim: ""
+flavors_slim: 
+relockable_slim: 
+state_slim: ""
+supportlevel_slim: 
+verifiedboot_slim: 
 
 type: docs
 layout: device
-prev: devices/OnePlus
 toc: true
 ---

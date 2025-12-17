@@ -1,28 +1,41 @@
 ---
 title: "{{ getenv "HUGO_NAME" }}"
+
+# COMMON (shared)
 codename: {{ getenv "HUGO_CODENAME" }}
-android: {{ getenv "HUGO_ANDROID" }}
-encryption: "{{ getenv "HUGO_ENCRYPTION" }}"
-firmware: "{{ getenv "HUGO_FIRMWARE" }}"
-relockable: "{{ getenv "HUGO_RELOCKABLE" }}"
-verifiedboot: "{{ getenv "HUGO_VERIFIEDBOOT" }}"
-flavors: "{{ getenv "HUGO_FLAVORS" }}"
-state: "{{ getenv "HUGO_STATE" }}"
-supportlevel: {{ getenv "HUGO_SUPPORTLEVEL" }}
 debugbootpath: {{ getenv "HUGO_DEBUGBOOTPATH" }}
-factoryzip: "{{ getenv "HUGO_FACTORYZIP" }}"
-isab: "{{ getenv "HUGO_ISAB" }}"
-ispixel: "{{ getenv "HUGO_ISPIXEL" }}"
+factoryzip: {{ getenv "HUGO_FACTORYZIP" }}
+firmware: {{ getenv "HUGO_FIRMWARE" }}
+isab: {{ getenv "HUGO_ISAB" }}
+ispixel: {{ getenv "HUGO_ISPIXEL" }}
 kilink: {{ getenv "HUGO_KILINK" }}
-custominstall: "{{ getenv "HUGO_CI_GUIDE" }}"
-custominstall_path: "{{ getenv "HUGO_CI_GUIDE_PATH" }}"
-customlock: "{{ getenv "HUGO_CUSTOMLOCK" }}"
+name: {{ getenv "HUGO_NAME" }}
+vendor: {{ getenv "HUGO_VENDOR" }}
 xdalink: "{{ getenv "HUGO_XDALINK" }}"
-firstrelease: "{{ getenv "HUGO_FIRSTRELEASE" }}"
-vendor: "{{ getenv "HUGO_VENDOR" }}"
+custominstall: {{ getenv "HUGO_CI_GUIDE" }}
+custominstall_path: {{ getenv "HUGO_CI_GUIDE_PATH" }}
+
+# PRO
+android_pro: {{ getenv "HUGO_PRO_ANDROID" }}
+encryption_pro: {{ getenv "HUGO_PRO_ENCRYPTION" }}
+firstrelease_pro: "{{ getenv "HUGO_PRO_FIRSTRELEASE" }}"
+flavors_pro: {{ getenv "HUGO_PRO_FLAVOR" }}
+relockable_pro: {{ getenv "HUGO_PRO_RELOCKABLE" }}
+state_pro: "{{ getenv "HUGO_PRO_STATE" }}"
+supportlevel_pro: {{ getenv "HUGO_PRO_SUPPORTLEVEL" }}
+verifiedboot_pro: {{ getenv "HUGO_PRO_VERIFIEDBOOT" }}
+
+# SLIM
+android_slim: {{ getenv "HUGO_SLIM_ANDROID" }}
+encryption_slim: {{ getenv "HUGO_SLIM_ENCRYPTION" }}
+firstrelease_slim: "{{ getenv "HUGO_SLIM_FIRSTRELEASE" }}"
+flavors_slim: {{ getenv "HUGO_SLIM_FLAVOR" }}
+relockable_slim: {{ getenv "HUGO_SLIM_RELOCKABLE" }}
+state_slim: "{{ getenv "HUGO_SLIM_STATE" }}"
+supportlevel_slim: {{ getenv "HUGO_SLIM_SUPPORTLEVEL" }}
+verifiedboot_slim: {{ getenv "HUGO_SLIM_VERIFIEDBOOT" }}
 
 type: docs
 layout: device
-prev: devices/{{ getenv "HUGO_VENDOR" }}
 toc: true
 ---

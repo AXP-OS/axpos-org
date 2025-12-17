@@ -2,23 +2,27 @@
 ###############################################################################
 # device specs for oriole
 ###############################################################################
-export HUGO_VENDOR="Google"
-export HUGO_NAME="Google Pixel 6"
+
+# COMMON Block
+export HUGO_CI_GUIDE=""
+export HUGO_CI_GUIDE_PATH=""
 export HUGO_CODENAME="oriole"
-export HUGO_ANDROID="13"
-export HUGO_ENCRYPTION="FBEv1"
-export HUGO_FIRMWARE="included"
-export HUGO_RELOCKABLE="yes"
-export HUGO_VERIFIEDBOOT="v2.0"
-export HUGO_FLAVORS="Slim"
-export HUGO_STATE="stable"
-export HUGO_SUPPORTLEVEL="community"
 export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
 export HUGO_FACTORYZIP="yes"
+export HUGO_FIRMWARE="included"
 export HUGO_ISAB="yes"
 export HUGO_ISPIXEL="yes"
 export HUGO_KILINK=""
-export HUGO_CI_GUIDE=""
-export HUGO_CI_GUIDE_PATH=""
+export HUGO_NAME="Google Pixel 6"
+export HUGO_VENDOR="Google"
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a13-official-microg-hardened-oriole-axp-os-20-0.4718167/"
-export HUGO_FIRSTRELEASE="2025-02-08"
+
+# SLIM Block
+export HUGO_SLIM_ANDROID="13"
+export HUGO_SLIM_FLAVOR=True
+export HUGO_SLIM_ENCRYPTION="FBEv1"
+export HUGO_SLIM_FIRSTRELEASE="2025-02-08"
+export HUGO_SLIM_RELOCKABLE="yes"
+export HUGO_SLIM_STATE="stable"
+export HUGO_SLIM_SUPPORTLEVEL="community"
+export HUGO_SLIM_VERIFIEDBOOT="v2.0"

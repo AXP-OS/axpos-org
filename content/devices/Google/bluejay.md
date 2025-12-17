@@ -1,28 +1,41 @@
 ---
 title: "Google Pixel 6a"
+
+# COMMON (shared)
 codename: bluejay
-android: 13
-encryption: "FBEv2"
-firmware: "included"
-relockable: "yes"
-verifiedboot: "v2.0"
-flavors: "Pro"
-state: "stable"
-supportlevel: team
 debugbootpath: /mnt/vendor/persist
-factoryzip: "yes"
-isab: "yes"
-ispixel: "yes"
+factoryzip: yes
+firmware: included
+isab: yes
+ispixel: yes
 kilink: 
-custominstall: ""
-custominstall_path: ""
-customlock: ""
+name: Google Pixel 6a
+vendor: Google
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-bluejay-axp-os-20-0.4663844/"
-firstrelease: "2024-03-26"
-vendor: "Google"
+custominstall: 
+custominstall_path: 
+
+# PRO
+android_pro: 13
+encryption_pro: FBEv2
+firstrelease_pro: "2024-03-26"
+flavors_pro: True
+relockable_pro: yes
+state_pro: "stable"
+supportlevel_pro: team
+verifiedboot_pro: v2.0
+
+# SLIM
+android_slim: 
+encryption_slim: 
+firstrelease_slim: ""
+flavors_slim: 
+relockable_slim: 
+state_slim: ""
+supportlevel_slim: 
+verifiedboot_slim: 
 
 type: docs
 layout: device
-prev: devices/Google
 toc: true
 ---

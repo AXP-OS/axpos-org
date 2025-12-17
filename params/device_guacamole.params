@@ -2,39 +2,28 @@
 ###############################################################################
 # device specs for creating a new page
 ###############################################################################
-export HUGO_VENDOR="OnePlus"
-export HUGO_NAME="OnePlus 7 Pro"
+
+# COMMON Block
+export HUGO_CI_GUIDE=""
+export HUGO_CI_GUIDE_PATH=""
 export HUGO_CODENAME="guacamole"
-export HUGO_ANDROID="13"
-
-# see device fstab or if not defined the common one
-# ICE, FBEv1, FBEv2
-export HUGO_ENCRYPTION="FBEv2"
-
-# see vendor_firmware
-export HUGO_FIRMWARE="included"
-
-export HUGO_RELOCKABLE="no"
-export HUGO_VERIFIEDBOOT="v2.0"
-
-# Slim, Pro
-export HUGO_FLAVORS="Pro"
-
-# !! ALPHA !!, BETA, stable
-export HUGO_STATE="stable"
-
-export HUGO_SUPPORTLEVEL="community"
 export HUGO_DEBUGBOOTPATH="/metadata"
 export HUGO_FACTORYZIP="no"
-
-# A/B device or not?
+export HUGO_FIRMWARE="included"
 export HUGO_ISAB="yes"
-
 export HUGO_ISPIXEL="no"
-
-# known issues topic title, e.g: "cheeseburgerdumpling" (no hash!) in case of:
-# https://axpos.org/docs/knowledge/knownissues/#cheeseburgerdumpling
 export HUGO_KILINK="guacamolehotdog"
-
+export HUGO_NAME="OnePlus 7 Pro"
+export HUGO_VENDOR="OnePlus"
 export HUGO_XDALINK="N/A"
-export HUGO_FIRSTRELEASE="2025-10-07"
+
+# PRO Block
+export HUGO_PRO_ANDROID="13"
+export HUGO_PRO_ENCRYPTION="FBEv2"
+export HUGO_PRO_FIRSTRELEASE="2025-10-07"
+export HUGO_PRO_RELOCKABLE="no"
+export HUGO_PRO_STATE="stable"
+export HUGO_PRO_SUPPORTLEVEL="community"
+export HUGO_PRO_VERIFIEDBOOT="v2.0"
+export HUGO_PRO_FLAVOR=True
+

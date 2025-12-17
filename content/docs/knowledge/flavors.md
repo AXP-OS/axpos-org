@@ -8,6 +8,8 @@ aliases:
 ---
 "_Flavors_" are different variants of AXP.OS which came up with the [EOL of Divest](/Divest_EOL) which AXP.OS was based on up to the end of 2024.
 
+_If you miss a flavor you can request it [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose)!_
+
 ### AXP.OS - Pro vs. Slim
 
 The differences are described here: [Features](/Features)

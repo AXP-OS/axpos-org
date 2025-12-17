@@ -1,28 +1,41 @@
 ---
 title: "Google Pixel 3a"
+
+# COMMON (shared)
 codename: sargo
-android: 13
-encryption: "ICE"
-firmware: "included"
-relockable: "yes"
-verifiedboot: "v2.0"
-flavors: "Pro, Slim"
-state: "stable"
-supportlevel: community
 debugbootpath: /metadata
-factoryzip: "yes"
-isab: "yes"
-ispixel: "yes"
+factoryzip: yes
+firmware: included
+isab: yes
+ispixel: yes
 kilink: sargo
-custominstall: ""
-custominstall_path: ""
-customlock: ""
+name: Google Pixel 3a
+vendor: Google
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-sargo-axp-os-20-0.4722274/"
-firstrelease: "2025-03-01"
-vendor: "Google"
+custominstall: 
+custominstall_path: 
+
+# PRO
+android_pro: 13
+encryption_pro: ICE
+firstrelease_pro: "2025-03-01"
+flavors_pro: True
+relockable_pro: yes
+state_pro: "stable"
+supportlevel_pro: community
+verifiedboot_pro: v2.0
+
+# SLIM
+android_slim: 13
+encryption_slim: ICE
+firstrelease_slim: "2025-03-03"
+flavors_slim: True
+relockable_slim: yes
+state_slim: "stable"
+supportlevel_slim: community
+verifiedboot_slim: v2.0
 
 type: docs
 layout: device
-prev: devices/Google
 toc: true
 ---

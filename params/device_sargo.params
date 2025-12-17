@@ -2,21 +2,38 @@
 ###############################################################################
 # device specs for creating a new page
 ###############################################################################
-export HUGO_VENDOR="Google"
-export HUGO_NAME="Google Pixel 3a"
+
+# COMMON Block
+export HUGO_CI_GUIDE=""
+export HUGO_CI_GUIDE_PATH=""
 export HUGO_CODENAME="sargo"
-export HUGO_ANDROID="13"
-export HUGO_ENCRYPTION="ICE"
-export HUGO_FIRMWARE="included"
-export HUGO_RELOCKABLE="yes"
-export HUGO_VERIFIEDBOOT="v2.0"
-export HUGO_FLAVORS="Pro, Slim"
-export HUGO_STATE="stable"
-export HUGO_SUPPORTLEVEL="community"
 export HUGO_DEBUGBOOTPATH="/metadata"
 export HUGO_FACTORYZIP="yes"
+export HUGO_FIRMWARE="included"
 export HUGO_ISAB="yes"
 export HUGO_ISPIXEL="yes"
 export HUGO_KILINK="sargo"
+export HUGO_NAME="Google Pixel 3a"
+export HUGO_VENDOR="Google"
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a13-official-microg-hardened-sargo-axp-os-20-0.4722274/"
-export HUGO_FIRSTRELEASE="2025-03-01"
+
+# PRO Block
+export HUGO_PRO_ANDROID="13"
+export HUGO_PRO_ENCRYPTION="ICE"
+export HUGO_PRO_FIRSTRELEASE="2025-03-01"
+export HUGO_PRO_RELOCKABLE="yes"
+export HUGO_PRO_STATE="stable"
+export HUGO_PRO_SUPPORTLEVEL="community"
+export HUGO_PRO_VERIFIEDBOOT="v2.0"
+export HUGO_PRO_FLAVOR=True
+
+# SLIM Block
+export HUGO_SLIM_ANDROID="13"
+export HUGO_SLIM_ENCRYPTION="ICE"
+export HUGO_SLIM_FIRSTRELEASE="2025-03-03"
+export HUGO_SLIM_RELOCKABLE="yes"
+export HUGO_SLIM_STATE="stable"
+export HUGO_SLIM_SUPPORTLEVEL="community"
+export HUGO_SLIM_VERIFIEDBOOT="v2.0"
+export HUGO_SLIM_FLAVOR=True
+

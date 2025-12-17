@@ -6,63 +6,83 @@
       <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
         {{ partial "breadcrumb.html" . }}
         <div class="content">
-            <h1>{{ .Title }}</h1>
-            {{ $docbaseurl := "" }}
+          <h1>{{ .Title }}</h1>
+          {{ $docbaseurl := "" }}
+          {{ $devicename := .Param "title" }}
+          {{ $codename := .Param "codename" }}
+          {{ $name := .Param "name" }}
+          {{ $xdalink := .Param "xdalink" }}
+          {{ $vendor := .Param "vendor" }}
+          {{ $custominstall := .Param "custominstall" }}
+          {{ $custominstall_path := .Param "custominstall_path" }}
+          {{ $firmware := .Param "firmware" }}
+          {{ $debugbootpath := .Param "debugbootpath" }}
+          {{ $isab := .Param "isab" }}
+          {{ $factoryzip := .Param "factoryzip" }}
+          {{ $kilink := .Param "kilink" }}
+          {{ $ispixel := .Param "ispixel" }}
 
-            {{ $devicename := .Param "title" }}
-            {{ $android := .Param "android" }}
-            {{ $codename := .Param "codename" }}
-            {{ $encryption := .Param "encryption" }}
-            {{ $firmware := .Param "firmware" }}
-            {{ $relock := .Param "relockable" }}
-            {{ $verifiedboot := .Param "verifiedboot" }}
-            {{ $flavors := .Param "flavors" }}
-            {{ $state := .Param "state" }}
-            {{ $supportlevel := .Param "supportlevel" }}
-            {{ $debugbootpath := .Param "debugbootpath" }}
-            {{ $isab := .Param "isab" }}
-            {{ $factory := .Param "factoryzip" }}
-            {{ $kilink := .Param "kilink" }}
-            {{ $ispixel := .Param "ispixel" }}
-            {{ $custominstall := .Param "custominstall" }}
-            {{ $custominstall_path := .Param "custominstall_path" }}
-            {{ $customlock := .Param "customlock" }}
-            {{ $xdalink := .Param "xdalink" }}
-            {{ $firstrelease := .Param "firstrelease" }}
-            {{ $vendor := .Param "vendor" }}
+          {{ $android_pro := .Param "android_pro" }}
+          {{ $customlock_pro := .Param "customlock_pro" }}
+          {{ $encryption_pro := .Param "encryption_pro" }}
+          {{ $firstrelease_pro := .Param "firstrelease_pro" }}
+          {{ $relockable_pro := .Param "relockable_pro" }}
+          {{ $verifiedboot_pro := .Param "verifiedboot_pro" }}
+          {{ $flavors_pro := .Param "flavors_pro" }}
+          {{ $state_pro := .Param "state_pro" }}
+          {{ $supportlevel_pro := .Param "supportlevel_pro" }}
 
-            {{ $params := dict
-                "docbaseurl" $docbaseurl
-                "devicename" $devicename
-                "codename" $codename
-                "flavors" $flavors
-                "debugbootpath" $debugbootpath
-                "isab" $isab
-                "supportlevel" $supportlevel
-                "relock" $relock
-                "factory" $factory
-                "kilink" $kilink
-                "ispixel" $ispixel
-                "custominstall" $custominstall
-                "custominstall_path" $custominstall_path
-                "firmware" $firmware
-                "xdalink" $xdalink
-                "vendor" $vendor
-                "customlock" $customlock
-                "encryption" $encryption
-                "verifiedboot" $verifiedboot
-                "state" $state
-                "android" $android
-                "firstrelease" $firstrelease
-            }}
+          {{ $android_slim := .Param "android_slim" }}
+          {{ $customlock_slim := .Param "customlock_slim" }}
+          {{ $encryption_slim := .Param "encryption_slim" }}
+          {{ $firstrelease_slim := .Param "firstrelease_slim" }}
+          {{ $relockable_slim := .Param "relockable_slim" }}
+          {{ $verifiedboot_slim := .Param "verifiedboot_slim" }}
+          {{ $flavors_slim := .Param "flavors_slim" }}
+          {{ $state_slim := .Param "state_slim" }}
+          {{ $supportlevel_slim := .Param "supportlevel_slim" }}
 
-            {{ $overview := partial "overview.md" $params }}            
-            {{ $guide := partial "guide.md" $params }}
-            {{ $download := partial "download.html" $params }}
-            
-            {{ $overview | markdownify }}
-            {{ $guide | markdownify }}
-            {{ $download }}
+          {{ $params := dict
+              "android_pro" $android_pro
+              "android_slim" $android_slim
+              "codename" $codename
+              "devicename" $devicename
+              "vendor" $vendor
+              "docbaseurl" $docbaseurl
+              "xdalink" $xdalink
+              "custominstall" $custominstall
+              "custominstall_path" $custominstall_path
+              "customlock_pro" $customlock_pro
+              "customlock_slim" $customlock_slim
+              "debugbootpath" $debugbootpath
+              "encryption_pro" $encryption_pro
+              "encryption_slim" $encryption_slim
+              "factory" $factoryzip
+              "firstrelease_pro" $firstrelease_pro
+              "firstrelease_slim" $firstrelease_slim
+              "firmware" $firmware
+              "flavor_pro" $flavors_pro
+              "flavor_slim" $flavors_slim
+              "isab" $isab
+              "ispixel" $ispixel
+              "kilink" $kilink
+              "relock_pro" $relockable_pro
+              "relock_slim" $relockable_slim
+              "state_pro" $state_pro
+              "state_slim" $state_slim
+              "supportlevel_pro" $supportlevel_pro
+              "supportlevel_slim" $supportlevel_slim
+              "verifiedboot_pro" $verifiedboot_pro
+              "verifiedboot_slim" $verifiedboot_slim
+          }}
+
+          {{ $overview := partial "overview.md" $params }}
+          {{ $guide := partial "guide.md" $params }}
+          {{ $download := partial "download.html" $params }}
+
+          {{ $overview | markdownify }}
+          {{ $guide | markdownify }}
+          {{ $download }}
 
         </div>
         {{ partial "components/last-updated.html" . }}

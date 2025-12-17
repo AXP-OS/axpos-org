@@ -7,15 +7,15 @@
       <th>OS zip</th>
       <th>Recovery image</th>
       {{- if eq .factory "yes" -}}<th>FACTORY zip</th>{{ end }}
-      {{- if hasPrefix .relock "yes" -}}{{- if hasPrefix .verifiedboot "v2" -}}<th>AVB key<br>(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</th>{{ end }}{{ end }}
+      {{ if or (eq .relock_pro "yes") (eq .relock_slim "yes") }}{{- if or (hasPrefix .verifiedboot_pro "v2") (hasPrefix .verifiedboot_slim "v2") -}}<th>AVB key<br>(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</th>{{ end }}{{ end }}
       <th>Release key<br>(<a href="/docs/knowledge/signatures/#build-signatures" target="_blank">what's this?</a>)</th>
     </tr>
   </thead>
   <tbody>
 
-    {{- if in .flavors "Pro" -}}
+    {{ if .flavor_pro }}
     <tr>
-      <td><i>Pro</i></td>
+      <td><i>Pro 🥩</i></td>
       <td>
 	<a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/" target="_blank">
 	  <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
@@ -33,7 +33,7 @@
 	</a>
       </td>
       {{ end }}
-      {{- if hasPrefix .relock "yes" -}}{{- if hasPrefix .verifiedboot "v2" -}}
+      {{ if eq .relock_pro "yes" }}{{- if hasPrefix .verifiedboot_pro "v2" -}}
       <td>
 	<a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_avb_pkmd.bin" target="_blank">
 	  <div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
@@ -69,13 +69,13 @@
       {{ else }}
       <td></td>
       {{ end }}
-      {{ if eq .relock "yes" }}<td></td>{{ end }}
+      {{ if eq .relock_pro "yes" }}{{- if hasPrefix .verifiedboot_pro "v2" -}}<td></td>{{ end }}{{ end }}
      </tr>
     {{ end }}
 
-    {{- if in .flavors "Slim" -}}
+{{ if .flavor_slim }}
     <tr>
-     <td><i/>Slim</i></td>
+     <td><i/>Slim 🥦</i></td>
      <td>
         <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/" target="_blank">
          <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
@@ -93,7 +93,7 @@
         </a>
      </td>
      {{ end }}
-     {{- if hasPrefix .relock "yes" -}}{{- if hasPrefix .verifiedboot "v2" -}}
+     {{ if eq .relock_slim "yes" }}{{- if hasPrefix .verifiedboot_slim "v2" -}}
      <td>
         <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_avb_pkmd.bin" target="_blank">
          <div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
@@ -128,7 +128,7 @@
     {{ else }}
     <td></td>
     {{ end }}
-    {{ if eq .relock "yes" }}{{- if hasPrefix .verifiedboot "v2" -}}<td></td>{{ end }}{{ end }}
+    {{ if eq .relock_slim "yes" }}{{- if hasPrefix .verifiedboot_slim "v2" -}}<td></td>{{ end }}{{ end }}
    </tr>
    {{ end }}
  </tbody>

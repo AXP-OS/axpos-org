@@ -1,28 +1,41 @@
 ---
 title: "OnePlus 6T"
+
+# COMMON (shared)
 codename: fajita
-android: 13
-encryption: "FBEv1"
-firmware: "included"
-relockable: "yes"
-verifiedboot: "v2.0"
-flavors: "Pro"
-state: "stable"
-supportlevel: team
 debugbootpath: /mnt/vendor/persist
-factoryzip: "no"
-isab: "yes"
-ispixel: "no"
+factoryzip: no
+firmware: included
+isab: yes
+ispixel: no
 kilink: enchiladafajita
-custominstall: ""
-custominstall_path: ""
-customlock: ""
+name: OnePlus 6T
+vendor: OnePlus
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-fajita-axp-os-20.4631539/"
-firstrelease: "2023-11-13"
-vendor: "OnePlus"
+custominstall: 
+custominstall_path: 
+
+# PRO
+android_pro: 13
+encryption_pro: FBEv1
+firstrelease_pro: "2023-11-13"
+flavors_pro: True
+relockable_pro: yes
+state_pro: "stable"
+supportlevel_pro: team
+verifiedboot_pro: v2.0
+
+# SLIM
+android_slim: 
+encryption_slim: 
+firstrelease_slim: ""
+flavors_slim: 
+relockable_slim: 
+state_slim: ""
+supportlevel_slim: 
+verifiedboot_slim: 
 
 type: docs
 layout: device
-prev: devices/OnePlus
 toc: true
 ---

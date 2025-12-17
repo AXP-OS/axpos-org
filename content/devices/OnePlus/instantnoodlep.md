@@ -1,28 +1,41 @@
 ---
 title: "OnePlus 8 Pro"
+
+# COMMON (shared)
 codename: instantnoodlep
-android: 13
-encryption: "FBEv2"
-firmware: "included"
-relockable: "no"
-verifiedboot: "v2.0"
-flavors: "Pro"
-state: "!! ALPHA !!"
-supportlevel: community
 debugbootpath: /metadata
-factoryzip: "no"
-isab: "yes"
-ispixel: "no"
+factoryzip: no
+firmware: included
+isab: yes
+ispixel: no
 kilink: instantnoodlep
-custominstall: ""
-custominstall_path: ""
-customlock: ""
+name: OnePlus 8 Pro
+vendor: OnePlus
 xdalink: "N/A"
-firstrelease: "[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/73)"
-vendor: "OnePlus"
+custominstall: 
+custominstall_path: 
+
+# PRO
+android_pro: 13
+encryption_pro: FBEv2
+firstrelease_pro: "[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/73)"
+flavors_pro: True
+relockable_pro: no
+state_pro: "!! ALPHA !!"
+supportlevel_pro: community
+verifiedboot_pro: v2.0
+
+# SLIM
+android_slim: 
+encryption_slim: 
+firstrelease_slim: ""
+flavors_slim: 
+relockable_slim: 
+state_slim: ""
+supportlevel_slim: 
+verifiedboot_slim: 
 
 type: docs
 layout: device
-prev: devices/OnePlus
 toc: true
 ---

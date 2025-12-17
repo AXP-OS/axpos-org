@@ -2,39 +2,27 @@
 ###############################################################################
 # device specs for creating a new page
 ###############################################################################
-export HUGO_VENDOR="OnePlus"
-export HUGO_NAME="OnePlus 5T"
+
+# COMMON Block
+export HUGO_CI_GUIDE=""
+export HUGO_CI_GUIDE_PATH=""
 export HUGO_CODENAME="dumpling"
-export HUGO_ANDROID="13"
-
-# see device fstab or if not defined the common one
-# ICE, FBEv1, FBEv2
-export HUGO_ENCRYPTION="ICE"
-
-# see vendor_firmware
-export HUGO_FIRMWARE="included"
-
-export HUGO_RELOCKABLE="yes (since 2025-12-03)"
-export HUGO_VERIFIEDBOOT="v1.0 without dm-verity"
-
-# Slim, Pro
-export HUGO_FLAVORS="Pro"
-
-# !! ALPHA !!, BETA, stable
-export HUGO_STATE="stable"
-
-export HUGO_SUPPORTLEVEL="community"
 export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
 export HUGO_FACTORYZIP="no"
-
-# A/B device or not?
+export HUGO_FIRMWARE="included"
 export HUGO_ISAB="no"
-
 export HUGO_ISPIXEL="no"
-
-# known issues topic title, e.g: "cheeseburgerdumpling" (no hash!) in case of:
-# https://axpos.org/docs/knowledge/knownissues/#cheeseburgerdumpling
 export HUGO_KILINK="cheeseburgerdumpling"
-
+export HUGO_NAME="OnePlus 5T"
+export HUGO_VENDOR="OnePlus"
 export HUGO_XDALINK="N/A"
-export HUGO_FIRSTRELEASE="2025-08-05 (A13)"
+
+# PRO Block
+export HUGO_PRO_ANDROID="13"
+export HUGO_PRO_ENCRYPTION="ICE"
+export HUGO_PRO_FIRSTRELEASE="2025-08-05 (A13)"
+export HUGO_PRO_RELOCKABLE="yes (since 2025-12-03)"
+export HUGO_PRO_STATE="stable"
+export HUGO_PRO_SUPPORTLEVEL="community"
+export HUGO_PRO_VERIFIEDBOOT="no (v1.0)<br/><i>dropped in A11</i>"
+export HUGO_PRO_FLAVOR=True

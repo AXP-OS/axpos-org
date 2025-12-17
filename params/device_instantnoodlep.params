@@ -2,39 +2,27 @@
 ###############################################################################
 # device specs for creating a new page
 ###############################################################################
-export HUGO_VENDOR="OnePlus"
-export HUGO_NAME="OnePlus 8 Pro"
+
+# COMMON Block
+export HUGO_CI_GUIDE=""
+export HUGO_CI_GUIDE_PATH=""
 export HUGO_CODENAME="instantnoodlep"
-export HUGO_ANDROID="13"
-
-# see device fstab or if not defined the common one
-# ICE, FBEv1, FBEv2
-export HUGO_ENCRYPTION="FBEv2"
-
-# see vendor_firmware
-export HUGO_FIRMWARE="included"
-
-export HUGO_RELOCKABLE="no"
-export HUGO_VERIFIEDBOOT="v2.0"
-
-# Slim, Pro
-export HUGO_FLAVORS="Pro"
-
-# !! ALPHA !!, BETA, stable
-export HUGO_STATE="!! ALPHA !!"
-
-export HUGO_SUPPORTLEVEL="community"
 export HUGO_DEBUGBOOTPATH="/metadata"
 export HUGO_FACTORYZIP="no"
-
-# A/B device or not?
+export HUGO_FIRMWARE="included"
 export HUGO_ISAB="yes"
-
 export HUGO_ISPIXEL="no"
-
-# known issues topic title, e.g: "cheeseburgerdumpling" (no hash!) in case of:
-# https://axpos.org/docs/knowledge/knownissues/#cheeseburgerdumpling
 export HUGO_KILINK="instantnoodlep"
-
+export HUGO_NAME="OnePlus 8 Pro"
+export HUGO_VENDOR="OnePlus"
 export HUGO_XDALINK="N/A"
-export HUGO_FIRSTRELEASE="[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/73)"
+
+# PRO Block
+export HUGO_PRO_ANDROID="13"
+export HUGO_PRO_ENCRYPTION="FBEv2"
+export HUGO_PRO_FIRSTRELEASE="[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/73)"
+export HUGO_PRO_RELOCKABLE="no"
+export HUGO_PRO_STATE="!! ALPHA !!"
+export HUGO_PRO_SUPPORTLEVEL="community"
+export HUGO_PRO_VERIFIEDBOOT="v2.0"
+export HUGO_PRO_FLAVOR=True
