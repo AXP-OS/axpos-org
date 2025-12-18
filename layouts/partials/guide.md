@@ -55,10 +55,8 @@ https://wiki.lineageos.org/devices/{{ .codename }}/fw_update/) and match the And
 
 Follow [Setup]({{ printf "%s" .docbaseurl }}/Setup)
 
+{{ if or (hasPrefix .relock_pro "yes") (hasPrefix .relock_slim "yes") }}
 ### Re-locking the bootloader
-
-{{ if or (eq .relock_pro "yes") (eq .relock_slim "yes") }}
-Supported: **yes**
 
 {{ if eq .customlock "yes" }}
     {{ $guide := printf "content/devices/lock_%s.guide" .codename }}
@@ -104,7 +102,6 @@ No fingerprint information available. Contact support.
 {{ end }}
 
 {{ else }}
-Supported: **no**
 {{ end }}
 
 ### XDA thread
