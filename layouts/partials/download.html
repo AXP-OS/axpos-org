@@ -1,135 +1,143 @@
 <h3>Download</h3>
 
+All downloads have a <a href="/docs/knowledge/signatures/#gpg" target="_blank">GPG</a> signed <a href="/docs/knowledge/signatures/#sha" target="_blank">sha512sum</a> file which should be used to verify the download & file integrity.<br/>
+Details how to make use out of it can be found <a href="/docs/knowledge/signatures/#build-signatures" target="_blank">here</a>.
+
+<p/>
+💡 <i>The hashsum of new builds are also send in the <a href="/docs/overview/#1-matrix-chat-recommended" target="_blank">sfX Automation</a> channel. This gives you a second and independent option for comparison if the download server is compromised.</i>
+
 <table>
   <thead>
     <tr>
-      <th>Flavor<br>(<a href="/Flavors" target="_blank">what's this?</a>)</th>
+      <th>Flavor<br><i style="font-size: small">(<a href="/Flavors" target="_blank">what's this?</a>)</i></th>
       <th>OS zip</th>
       <th>Recovery image</th>
       {{- if eq .factory "yes" -}}<th>FACTORY zip</th>{{ end }}
-      {{ if or (eq .relock_pro "yes") (eq .relock_slim "yes") }}{{- if or (hasPrefix .verifiedboot_pro "v2") (hasPrefix .verifiedboot_slim "v2") -}}<th>AVB key<br>(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</th>{{ end }}{{ end }}
-      <th>Release key<br>(<a href="/docs/knowledge/signatures/#build-signatures" target="_blank">what's this?</a>)</th>
+      {{ if or (eq .relock_pro "yes") (eq .relock_slim "yes") }}{{- if or (hasPrefix .verifiedboot_pro "v2") (hasPrefix .verifiedboot_slim "v2") -}}<th>AVB key<br><i style="font-size: small">(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</i></th>{{ end }}{{ end }}
+      <th>Release key<br><i style="font-size: small">(<a href="/docs/knowledge/signatures/#build-signatures" target="_blank">what's this?</a>)</i></th>
     </tr>
   </thead>
   <tbody>
 
-    {{ if .flavor_pro }}
+{{ if .flavor_pro }}
     <tr>
+
       <td><i>Pro 🥩</i></td>
+
       <td>
-	<a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/" target="_blank">
-	  <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-	</a>
+        <a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
       </td>
+
       <td>
-	<a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/recovery/" target="_blank">
-	  <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-	</a>
+        <a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/recovery/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
       </td>
-      {{- if eq .factory "yes" -}}
+
+  {{- if eq .factory "yes" -}}
       <td>
-	<a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/factory/" target="_blank">
-	  <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-	</a>
+        <a href="https://leech.binbash.rocks:8008/axp/{{ .codename }}/factory/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"factory\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
       </td>
-      {{ end }}
-      {{ if eq .relock_pro "yes" }}{{- if hasPrefix .verifiedboot_pro "v2" -}}
+  {{ end }}
+
+  {{- if and (eq .relock_pro "yes") (hasPrefix .verifiedboot_pro "v2") -}}
       <td>
-	<a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_avb_pkmd.bin" target="_blank">
-	  <div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-	</a>
+        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_avb_pkmd.bin" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
       </td>
-      {{ end }}{{ end }}
+  {{ end }}
+
       <td>
-	<a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_pubkey" target="_blank"i>
-	  <div style="text-align: center;">{{ (printf "{{< icon name=\"otakey\" attributes=\"height=1.6em\" >}}" | markdownify) }}</div><center><i>(right click, save-as)</i></center>
-	</a>
+        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_pubkey" target="_blank"i><div style="text-align: center;">{{ (printf "{{< icon name=\"otakey\" attributes=\"height=1.6em\" >}}" | markdownify) }}</div><center><i style="font-size: small">(right click, save-as)</i></center></a>
       </td>
+
     </tr>
 
     <tr>
+
       <td></td>
+
       <td>
-	<a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/" target="_blank">
-	  <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-	</a>
+        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
       </td>
+
       <td>
-	<a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/recovery/" target="_blank">
-	  <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-	</a>
+        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/recovery/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
       </td>
-      {{- if eq .factory "yes" -}}
+
+  {{- if eq .factory "yes" -}}
       <td>
-	<a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/factory/" target="_blank">
-	  <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-        </a>
+        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/{{ .codename }}/factory/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
+      </td>
+  {{ end }}
+
+  {{- if and (eq .relock_pro "yes") (hasPrefix .verifiedboot_pro "v2") -}}
+      <td>
+        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_avb_pkmd.bin.sha512sum" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"hashtag\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i style="font-size: small">(right click, save-as)</a><br/>click<a href="/docs/knowledge/signatures/#sha" target="_blank"> here </a>for info</i></center>
       </td>
       <td></td>
-      {{ else }}
+  {{ else }}
       <td></td>
-      {{ end }}
-      {{ if eq .relock_pro "yes" }}{{- if hasPrefix .verifiedboot_pro "v2" -}}<td></td>{{ end }}{{ end }}
-     </tr>
-    {{ end }}
+  {{ end }}
+
+    </tr>
+{{ end }}
 
 {{ if .flavor_slim }}
     <tr>
-     <td><i/>Slim 🥦</i></td>
-     <td>
-        <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/" target="_blank">
-         <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-        </a>
-     </td>
-     <td>
-        <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/recovery/" target="_blank">
-         <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-        </a>
-     </td>
-    {{- if eq .factory "yes" -}}
-     <td>
-        <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/factory/" target="_blank">
-         <div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-        </a>
-     </td>
-     {{ end }}
-     {{ if eq .relock_slim "yes" }}{{- if hasPrefix .verifiedboot_slim "v2" -}}
-     <td>
-        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_avb_pkmd.bin" target="_blank">
-         <div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-        </a>
-     </td>
-     {{ end }}{{ end }}
-     <td>
-        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_pubkey" target="_blank">
-         <div style="text-align: center;">{{ (printf "{{< icon name=\"otakey\" attributes=\"height=1.6em\" >}}" | markdownify) }}</div><center><i>(right click, save-as)</i></center>
-        </a>
-     </td>
-   </tr>
-   <tr>
-     <td></td>
-     <td>
-        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/" target="_blank">
-         <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-        </a>
-     </td>
-     <td>
-        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/recovery/" target="_blank">
-         <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-        </a>
-     </td>
-     {{- if eq .factory "yes" -}}
-     <td>
-        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/factory/" target="_blank">
-         <div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center>
-        </a>
-     </td>
-     <td></td>
-    {{ else }}
-    <td></td>
-    {{ end }}
-    {{ if eq .relock_slim "yes" }}{{- if hasPrefix .verifiedboot_slim "v2" -}}<td></td>{{ end }}{{ end }}
-   </tr>
-   {{ end }}
+
+      <td><i/>Slim 🥦</i></td>
+      <td>
+        <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
+      </td>
+
+      <td>
+        <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/recovery/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"download-circle\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
+      </td>
+
+  {{- if eq .factory "yes" -}}
+      <td>
+        <a href="https://leech.binbash.rocks:8008/axp-slim/{{ .codename }}/factory/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"factory\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
+      </td>
+  {{ end }}
+
+  {{- if and (eq .relock_slim "yes") (hasPrefix .verifiedboot_slim "v2") -}}
+      <td>
+        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_avb_pkmd.bin" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
+      </td>
+  {{ end }}
+
+      <td>
+        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_pubkey" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"otakey\" attributes=\"height=1.6em\" >}}" | markdownify) }}</div><center><i style="font-size: small">(right click, save-as)</i></center></a>
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td></td>
+      <td>
+        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
+      </td>
+
+      <td>
+        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/recovery/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
+      </td>
+
+  {{- if eq .factory "yes" -}}
+      <td>
+        <a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/{{ .codename }}/factory/" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"tor\" attributes=\"height=1.5em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
+      </td>
+  {{ end }}
+
+  {{- if and (eq .relock_slim "yes") (hasPrefix .verifiedboot_slim "v2") -}}
+      <td>
+        <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_avb_pkmd.bin.sha512sum" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"hashtag\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i style="font-size: small">(right click, save-as)</a><br/>click<a href="/docs/knowledge/signatures/#sha" target="_blank"> here </a>for info</i></center>
+      </td>
+      <td></td>
+  {{ else }}
+      <td></td>
+  {{ end }}
+
+  </tr>
+  
+{{ end }}
  </tbody>
 </table>

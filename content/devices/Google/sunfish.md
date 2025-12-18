@@ -28,7 +28,7 @@ verifiedboot_pro: v2.0
 # SLIM
 android_slim: 13
 encryption_slim: "FBEv1"
-firstrelease_slim: "TBD"
+firstrelease_slim: "2025-02-05"
 flavors_slim: True
 relockable_slim: "yes"
 state_slim: "stable"
