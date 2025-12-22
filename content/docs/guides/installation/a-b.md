@@ -22,7 +22,7 @@ If you are unsure about what firmware you have it never hurts to flash it twice.
 
 ## New to AXP.OS
 
-_Note: Only if you are **100%** sure that you are using **compatible** firmware that matches the AXP.OS build you can skip **step 5 and 6**. Mismatching firmware can lead into a non-booting system or weird behavior within Android later._
+_Note: Only if you are **100%** sure that you are using **compatible** firmware that matches the AXP.OS build you can skip **step 6 and 7**. Note: mismatching firmware can lead into a non-booting system or weird behavior within Android later._
 
 1. create a FULL [backup](/Backup-and-Restore) of all your data, pictures, etc and and save them somewhere **other** than on the phone (all data needs to be **wiped**)
 2. flash the official AXP.OS [recovery image](/docs/guides/installation/recoveries/#official-axpos-recovery) - _dated on the same day or older than the target OS zip_
