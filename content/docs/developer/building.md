@@ -184,9 +184,10 @@ ensure locale is as expected:
 sudo dpkg-reconfigure locales
 ```
 
-you can already start downloading the android sources to speed up your first build:
+now you can already start downloading the android sources to speed up your first build. The following is an example for A13, adapt the LineageOS version if needed:
 ```
-$[BUILD-USER]> mkdir -p /usr/src/android/axp/Build/LineageOS-20.0
+$[BUILD-USER]> sudo mkdir -p /usr/src/android/axp/Build/LineageOS-20.0
+$[BUILD-USER]> sudo chown -R $[BUILD-USER] /usr/src/android
 $[BUILD-USER]> cd /usr/src/android/axp/Build/LineageOS-20.0
 $[BUILD-USER]> repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
 $[BUILD-USER]> repo sync -c --no-clone-bundle --jobs-network=6
