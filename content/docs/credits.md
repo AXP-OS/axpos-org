@@ -86,6 +86,7 @@ Information to financially support the below projects/people is also listed wher
 - [Semaphore](https://semaphoreui.com/) - Crucial important automation UI used by the AXP.OS project - Donate: [Github Sponsors](https://github.com/sponsors/semaphoreui)
 - [@KartikBapna](https://xdaforums.com/m/kartikbapna.9871197/) - Checklist template for basic OS tests
 - [@hagezi](https://github.com/hagezi) - DNS [blocklist](/Features)
+- [Wil Stewart](https://unsplash.com/photos/close-photography-of-burning-wood-rYWz3Q88P8g) - AXP.OS home screen wallpaper
 
 ## Device testers
 
