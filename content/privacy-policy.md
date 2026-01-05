@@ -34,7 +34,14 @@ TOR alias:<br/>`http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.
 ---
 
 - **Main purpose:** OTA (Over The Air) Update Service
-    * See [Updater](#updater)
+    - See [Updater](#updater)
+    - Protected by [CrowdSec](#crowdsec)
+
+##### `captiveportal.axpos.org/generate_204` (http/https)
+---
+
+- **Main purpose:** Online connectivity / Captive Portal test
+    - See [Connectivity Checks](#connectivity-checks)
     - Protected by [CrowdSec](#crowdsec)
 
 ### Not self-hosting
@@ -75,13 +82,13 @@ About [CrowdSec](https://www.crowdsec.net/about)
 *   What is received: Static User Agent, IP Address
 *   How often: On every Wi-Fi and cell connection
 *   Why it is received: Used to determine if there is a working connection and if there is a captive portal
-*   When it will be deleted: All requests to generate\_204 are never logged
-*   What else will it be used for: Nothing else
-*   How to disable: Toggle in settings app (noted below) or `$ adb shell settings put global captive_portal_mode 0;`
+*   When it will be deleted _(if `AXP.OS` is selected)_: All requests to `generate_204` are never logged
+*   What else will it be used for _(if `AXP.OS` is selected)_: Nothing else
+*   How to disable: Toggle in settings app (noted below) or `adb shell settings put global captive_portal_mode 0;`
 *   Settings can be accessed via:
     *   14.1/15.1: Settings > Network > Data usage > Disable Captive Portal
     *   16.0/17.1: Settings > Network & Internet > Advanced > Captive portal mode
-    *   18.1/19.1/20.0: Settings > Network & Internet > Advanced > Internet connectivity check
+    *   18.1/19.1/20.0/22.2: Settings > Network & Internet > Advanced > Internet connectivity check
 
 ### Updater
 
