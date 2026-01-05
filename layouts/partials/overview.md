@@ -14,7 +14,7 @@
         font-size: 2em;
         transform: translate(50%, 20%); /* horizontal %, vertical % */
         pointer-events: none;
-      ">🥩</span>
+      ">⚙️</span>
     </div>
   </td>
 {{ end }}
@@ -29,7 +29,7 @@
         font-size: 2em;
         transform: translate(60%, 20%); /* horizontal %, vertical % */
         pointer-events: none;
-      ">🥦</span>
+      ">🛡️</span>
     </div>
   </td>
 {{ end }}

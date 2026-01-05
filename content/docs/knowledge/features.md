@@ -7,27 +7,11 @@ aliases:
 ---
 ## About
 
-AXP.OS is a more private and more secure aftermarket mobile operating system based on AOSP & LineageOS.
-<br />
-<br />
 {{< globalvar key="about_info" format="true" >}}
-
-The _Pro_ [flavor](/Flavors) of AXP.OS comes pre-rooted which is a major difference between many (if not all) other custom OS and requires to read the documentation properly and acting wisely (i.e. not installing APKs from random sources, open every link in mails you get, etc). While the OS comes pre-rooted it is not _active_ at all and requires to _actively install_ the Magisk companion app + run the requirements installer once to make it usable first. That means if you do not need root you can simply skip that step and there will be no `su` binary available at all.
-
-The _Slim_ [flavor](/Flavors) on the other side, does **not** come pre-rooted, which has some drawbacks regarding usability, and is not as intensively tested as the _Pro_ one.
-
-**If you are not sure which one to choose, ask in the support channel.**
-
-### Divest Notice
-
-_Up to `Dec 2024` AXP.OS was based on [DivestOS](https://web.archive.org/web/20241227223444/https://divestos.org/), see the EOL notice for Divest and its impact on AXP.OS [here](/Divest_EOL)._
-
-Due to this AXP.OS started in 2025 offering different [flavors](/Flavors).<br/>
-The _Pro_ one is still the main flavor and so default on new devices but users [can request](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose) a _slim_ variant which gives a "Divest-like" experience.
 
 ## Flavor comparison
 
-|Feature|Pro|Slim|
+|Feature|Pro ⚙️|Slim 🛡️|
 |-|:-:|:-:|
 |Using Graphene's [hardened malloc](https://github.com/GrapheneOS/hardened_malloc) ([comparison](https://github.com/struct/isoalloc/blob/master/SECURITY_COMPARISON.MD))|**X**|**X**|
 |OTA (Over The Air) updates|**X**|**X**|
@@ -65,7 +49,55 @@ The _Pro_ one is still the main flavor and so default on new devices but users [
 - ¹ while not supported (and not possible on bootloader-locked devices) you can flash microG as in LineageOS.<br/>AXP.OS [Phonesky](https://github.com/AXP-OS/packages_apps_phonesky/releases) can be installed manually (via a custom recovery: place it in `/system/priv-app/Phonesky/`).<br/>Regardless if using the microG FakeStore or AXP.OS Phonesky you need to follow [the setup guide](/docs/guides/setup/aos/#optional-activate-google-support)) as well.
 - ² some kernels have the wireguard patches already included - the Slim flavor will not remove them while you need root to _activate_ it
 
-## Simplified OS comparison
+### Which flavor to choose?
+
+Freedom of choice also brings with it a sometimes overwhelming flood of information. The table above may not be helpful for everyone. Here are some rough decision-making aids:
+
+|Feature|Flavor|
+|:-|:-:|
+|Purchasing apps (incl. _In-App_) via Google Play required?|Pro ⚙️|
+|Root/Magisk required?|Pro ⚙️|
+|Debugging required (really _own_ your device)?|Pro ⚙️|
+|Full(!) backup of any(!) app needed?|Pro ⚙️|
+|Installing Google Play apps required (no purchase)?|Pro ⚙️ / Slim 🛡️|
+|Installing FOSS apps by F-Droid|Pro ⚙️ / Slim 🛡️|
+|Security is more important than usability?|Slim 🛡️|
+|Privacy is more important than usability?|Slim 🛡️|
+|_... still uncertain?_|Slim 🛡️|
+
+#### Pro flavor
+
+The _Pro_ [flavor](/Flavors) of AXP.OS comes pre-rooted which is a major difference between many (if not all) other custom OS and requires to read the documentation properly and acting wisely _(i.e. not installing APKs from random sources, open every link in mails you get, installing OS and app updates quickly, etc)_. Also main parts are directly integrated into the OS, i.e. you do not need to care about installing "compatibility layers" like microG and can even use the official Google Play store _(btw, another unique feature of AXP.OS Pro that no other OS offers)_.
+
+While the OS comes pre-rooted root is not _active_ at all and requires to _actively enable_ it _(downloading Magisk companion app, starting app, choose to activate Magisk, reboot)_ to make it _usable_ first. That means if you do not need root you can simply skip that step and there will be no root _(even no `su` binary)_ available at all. No app can access/detect root then. If the user decides **not** to activate root, there is still a chance it can become problematic:
+
+1. you get infected by malware and/or getting hacked _(see above on how to reduce risks)_
+1. if you **then** _also_ get tricked into _activating_ root:
+   - _**with** user interaction:_ lets say the malwares shows a button which then silently downloads magisk, it also must silently install(!) magisk which is nothing an user app can do by default _(installing apps is a dangerous permission no user app gets by default)_. but lets say it can also _install_ Magisk, it still requires you to _open_ Magisk and choose to _enable_ root AND to _reboot_. Here latest you should be aware of something is unusual if an app prompts you there. So ok lets say a more advanced attack could also act as an overlay over other apps _(this is also a dangerous permission no user app can get by default)_ and trick you by clicking even _that_ button well then.. it still requires to _get_ root permissions which means Magisk will prompt you allowing/denying root for that specific malware app. If all that went through then yes, an app has all full access to the device. A more likely attack would be that you get tricked to install a custom Magisk app which comes pre-configured to skip all these manual activation steps. So, the "installing apps" permission request is your best _(and only!)_ protection then.<br/>_**TL;DR: If your device is infected AND you grant this permission ("allow to install apps") without thinking, there is nothing to stop the malware/attacker from doing what it wants.**_
+   - _**without** user interaction_ the malware/attacker must perform all the mentioned manual activation steps behind your back. This requires _unpatched_ exploit(s) _(see [AXP.OS patch level](/Patchlevel))_ which is what AXP.OS tries to reduce with several actions, while there is no guarantee at all. Of course this requires the user to install any update quickly as well.
+
+The _Pro_ flavor symbol ⚙️ should reflect that it comes pre-configured and includes engineering tools like being pre-rooted. Besides this all _major_ security and privacy mechanism and pre-cautions are mostly similiar _(see above feature comparison)_ between Pro and Slim.
+
+#### Slim flavor
+
+The _Slim_ flavor on the other side, does **not** come pre-rooted and offer you an OS without compromise regarding security and privacy _(compared to Pro)_. Unfortunately this comes with some drawbacks regarding usability.
+
+Examples are: 
+- longer first-time GPS (location) fix
+- using several Google apps require to manually install microG
+- some apps do not work or functionality is not available/reduced due to the more extensive deblobbing
+
+These might sound more problematic than it is in real-life. Usually it does not have such a big impact _(depends on the device and Android version)_ and as shown in the _"Which flavor to choose"_ table above, Slim is still the recommended choice if you are uncertain where to start. It is highly recommended to fully test all your apps & requirements before using it as a daily driver though so you could switch to _Pro_ if it fits better for your needs.
+
+The _Slim_ flavor symbol 🛡️ should reflect that it comes with all possible pre-cautions in terms of security and privacy.
+
+### Divest Notice
+
+_Up to `Dec 2024` AXP.OS was based on [DivestOS](https://web.archive.org/web/20241227223444/https://divestos.org/), see the EOL notice for Divest and its impact on AXP.OS [here](/Divest_EOL)._
+
+For this reason, AXP.OS started at the beginning of 2025 with different [flavors](/Flavors), where Slim represents a Divest-like experience _(Slim uses 99% of the DivestOS setup and configuration)_.
+
+## Simplified(!) OS comparison
 
 The following is just a **simplified** comparison between some popular custom OS and is meant to give a short **overview** only (there are dozens of detailed comparisons available elsewhere).
 
@@ -73,16 +105,18 @@ Examples of more detailed comparisons (_even though without AXP.OS_) can be foun
 - [here](https://eylenburg.github.io/android_comparison.htm) or
 - [here](https://eylenburg.github.io/old/android_comparison_2024old.htm) (_hint:  AXP.OS was based on Divest until Dec 2024_)
 
-The _Main(!) focus_ column is a bit vague or better said subjective as all OS claim to be all of these 3: user-friendly, secure and privacy-friendly.<br/>Just some doing it more **intensive** than others.
+The _Main(!) focus_ column is a bit vague or better said subjective as all OS claim to be all of these 3: _user-friendly, secure and privacy-friendly_.
+
+Yes, _Privacy_ always requires having a _secure_ device, too! Thats why OS in the following table having _Privacy_ as their main focus doing this more intensively than others. See _Privacy Examples_ to get an idea.
 
 |OS|Main(!) focus|Pro|Contra|
 |-|-|-|-|
-|[LineageOS](http://www.lineageos.org/)|Usability|wide range of supported devices, _very high_ usability|no focus on privacy + security, only latest 3 major releases supported|
-|[CalyxOS](https://calyxos.org/)|Usability, Privacy|wide range of supported devices, _high_ usability|no focus on security|
+|[LineageOS](http://www.lineageos.org/)|Usability|wide range of supported devices, _very high_ usability|no focus on privacy + security, only latest 2-3 major releases supported|
+|[CalyxOS](https://calyxos.org/)|Usability, Privacy|_high_ usability, customizable|no focus on security, does not support older Android versions, recently [paused](https://calyxos.org/news/2025/08/01/a-letter-to-our-community/) development, mostly Pixel devices focussed|
 |[GrapheneOS](http://grapheneos.org/)|Security|best in class focus on security, _good_ usability|Google Pixel devices only, usually does not support older Android versions|
 |[/e/ OS](https://e.foundation/e-os/)|Usability, Privacy|wide range of supported devices, _very high_ usability|no focus on security, does not support devices with older Android versions, late ASB patches|
-|[AXP.OS - Pro](https://axpos.org/)|Usability, Security, Privacy|best balance between Usability, Security, Privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported|
-|[AXP.OS - Slim](https://axpos.org/)|Security, Privacy|Security, Privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported, reduced usability compared to the Pro flavor|
+|AXP.OS - Pro ⚙️|Usability, Privacy|_best_ balance between modding, usability, security and privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported, reduced security compared to the _Slim_ flavor|
+|AXP.OS - Slim 🛡️|Security, Privacy|provides _good_ usability while focussing strictly on security and privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported, reduced usability compared to the _Pro_ flavor|
 
 Privacy examples:
 - reducing/disabling Call-Home functions

@@ -95,10 +95,19 @@ params:
   # {{ printf "%s" .docbaseurl }} within a partial
   globalvars:
     about_info: |
-      The main goal of this project is to strive for a balance between a<br/><br/>
-      <b>privacy and</b><br/><b>security-oriented</b><br/>yet <b>usable</b><br/><br/>Operating System - and last but not least ... even for <i>advanced*</i> users.
+      AXP.OS is a more private and secure mobile operating system that is based on AOSP & LineageOS and has emerged from the well-known but discontinued operating system <i>DivestOS</i>.<br/>
+      <br/>
+      In particular AXP.OS aims to support devices that would otherwise no longer receive any (Android/Kernel) updates and are therefore easily vulnerable. All this is based on a best-effort principle, also because outdated devices no longer receive updates for proprietary firmware and are therefore insecure by definition.<br/>
+      AXP.OS at least <i>tries</i> to close all <a href="/Patchlevel" target="_blank">the gaps that are possible</a>.<br/>
+      <br/>
+      In addition to this main goal, this project attempts to strike a balance between a<br/>
+      <br/>
+      <b>privacy and</b><br/><b>security-oriented</b><br/>yet <b>usable</b><br/><br/>operating system - not least for <i>advanced*</i> users.
       <br/><br/>
-      <i>*i.e. including full control over your own device - if desired</i>
+      <i>*i.e. including full control over your own device - if explicitly desired.<br/>
+      For this reason, there are so-called [flavors](/Flavors), namely “Slim” and “Pro”, from which users can choose based on their personal requirements.</i>
+      <br/><br/>
+      <b>For more details checkout the<br/><a href="/docs/knowledge/features/#flavor-comparison" target="_blank">Features page</a></b>
     downloadServerBaseUrl: "https://leech.binbash.rocks:8008"
 
 markup:

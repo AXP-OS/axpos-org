@@ -22,7 +22,7 @@ Note: The differences between the AXP.OS _Pro_ and _Slim_ flavor is described he
 
 #### MicroG implementation
 {{% details title="Click to reveal" closed="true" %}}
-|Statement|DivestOS|AXP.OS-Slim|
+|Statement|DivestOS|AXP.OS Slim 🛡️|
 |-|:-:|:-:|
 |not a privileged system app or system app|**X**|**X**|
 |not pre-installed|**X**|**X**|

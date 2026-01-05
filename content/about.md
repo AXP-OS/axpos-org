@@ -18,12 +18,12 @@ toc: true
 ## The OS
 
 No, this is not a _ROM_, a term often used for hacky adjustments of existing OS builds.<br/>
-AXP.OS is a fully-fledged operating system in its own right, i.e. an **O**perating **S**ystem.
+AXP.OS is a fully-fledged _operating system_ in its own right, i.e. an **O**perating **S**ystem.
 
 - based on*: [LineageOS](https://github.com/LineageOS/) which itself is based on [AOSP](https://source.android.com/)
 - using massively patches from: [GrapheneOS](https://github.com/GrapheneOS)
 - using several patches from: [CalyxOS](https://gitlab.com/CalyxOS/)
-- using several patches from: DivestOS by [Divested Computing Group](https://github.com/Divested-Mobile/DivestOS-Build)
+- using massively patches from: DivestOS by [Divested Computing Group](https://github.com/Divested-Mobile/DivestOS-Build)
 - on top of this: massive [enhancements and additions](https://axpos.org/Features) by the AXP.OS project
 - details about the above can be found at the [Technical Details](https://axpos.org/Technical-Details) page
 
@@ -40,6 +40,25 @@ In order to keep this page readable all credits can be found [here](/credits).
 {{% steps %}}
 
 ### Now
+
+### 2026-01
+- celebrating 1 year of continuing the full DivestOS approach / Slim flavor 🎉
+- 1 year of [AOSmium]({{< docbaseurl >}}/Browser) 
+- increased supported device count to 17 _(based on: Android 10, 11, 13, 15)_
+- a lot of automation added, running in the background, keeping mirrors active, building APK's and more
+- completed bringup automation for new devices _(should decrease bringup time)_
+- challenges solved related to the new ASB patch handling
+- completing Android 15 support
+- EOL for Android 9 + 10 _ASB_ patching _(ASB backporting to these versions is becoming increasingly impossible)_, kernel updates are **not** affected 
+- growing community & contributions _(testers)_ :) and that is really cool!
+
+### 2025-09
+- Some [news]({{< docbaseurl >}}/news/#2025-09-23) about Google's ASB patch handling
+- Due to this AXP.OS changes its build id to a new ASB independent format
+- CalyxOS [paused](https://calyxos.org/news/2025/08/01/a-letter-to-our-community/) all development due to Google's changes and internal challenges
+
+### 2025-04
+- Google decided to change its ASB patch handling [ASB patch handling](https://source.android.com/docs/whatsnew/site-updates?year=2025#aosp-changes)
 
 ### 2025-02
 - new website using [HUGO](https://gohugo.io/) running [hextra](https://github.com/imfing/hextra) theme
