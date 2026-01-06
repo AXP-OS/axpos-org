@@ -47,29 +47,44 @@ Legend:
 
 The control node holds the automation software:
 
-- **Ansible** 2.12 or later - see [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+- **Ansible** 2.18 or later - see [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
     - |+ `ansible-galaxy collection install community.general`
-- **Semaphore** UI 2.14 or later - see [here](https://docs.ansible-semaphore.com/administration-guide/installation)
+- **Semaphore** UI 2.16 or later - see [here](https://docs.ansible-semaphore.com/administration-guide/installation)
 
 Recommended specs (standalone, i.e. when using a **separate(!)** Buildserver):
 - 4 CPU cores
 - 2 GB RAM
 - 20 GB free disk space
 - can run in LXC, docker, full VM, or even on your laptop/PC
-- OS: a recent Alma Linux (e.g. v9 or later), Ubuntu 24.04, Debian 12 or later are recommended
+- OS: a recent Alma Linux (v10 or later), Ubuntu (24.04 or later), Debian (13 or later)<br/>_recommended: latest Ubuntu LTS release_
 
 Ansible + Semaphore must run on the **same** machine while your Buildserver can be the same system **or** a complete different one. Ansible will connect by SSH to the build system or keeps everything local - depending on your config.
 
-The following is a quick introduction on how you can setup your system **after** [installing semaphore](https://docs.ansible-semaphore.com/administration-guide/installation) on a recent **Alma Linux v9**.
+The following is a guide how you can setup your _Control node_ using **Ubuntu 24.04** and _Maria DB_ on the same system:
 
 #### Installation
 
-Install semaphore (see above).
-
-Install and setup MariaDB:
+1. Install required packages:
 ```
-dnf install mariadb-server ansible-core
+apt install mariadb-server ansible-core ansible python3-venv
+```
+2. Prepare semaphore:
+```
+useradd -d /opt/semaphore -r -m -s /bin/false semaphore
 
+mkdir /etc/semaphore
+chown semaphore:semaphore /etc/semaphore
+chmod 750 /etc/semaphore
+```
+3. Create a python virtual environment:
+```
+su - semaphore
+cd /opt/semaphore
+python3 -m venv .venv
+```
+4. Follow the semaphore installation: [guide](https://docs.ansible-semaphore.com/administration-guide/installation) _(semaphore binary is expected to be in `/usr/bin`)_
+5. Setup MariaDB:
+```
 systemctl enable --now mariadb
 mysql_secure_installation
 # (optional but recommended)
@@ -83,36 +98,28 @@ MariaDB [(none)]> CREATE user 'semaphore'@'localhost' identified by 'XXXXXXXXXXX
 MariaDB [(none)]> GRANT ALL PRIVILEGES ON semaphoredb.* TO 'semaphore'@'localhost';
 ```
 
-if you have an existing database and not set the default character set this will convert it accordingly:
+if you have an existing database and not set the default character this would convert it accordingly:
 
 ```
 SELECT CONCAT('ALTER TABLE ', table_name, ' CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;') FROM information_schema.tables WHERE table_schema = 'semaphore';
 ```
 
-Setup semaphore:
-```
-useradd -d /opt/semaphore -r -m -s /bin/false semaphore
-
-mkdir /etc/semaphore
-cd /etc/semaphore
-chown semaphore:semaphore /etc/semaphore
-chmod 750 /etc/semaphore
-```
 #### Configuration
 
 Semaphore can be configured in different ways:
 
 - interactive setup: `cd /etc/semaphore; semaphore setup`
-- or via web configurator: https://semaphoreui.com/install/binary/2_14/config
-- see: https://docs.semaphoreui.com for details and other options
+- or via web configurator: https://semaphoreui.com/install/binary --> `Server config`
+- see:[ https://docs.semaphoreui.com](https://semaphoreui.com/docs/administration-guide/configuration) for details and other options
 
-If you want to setup a systemd service (recommended), follow [this](https://docs.semaphoreui.com/administration-guide/installation_manually/#extended-systemd-service) or for a quick one:
+
+If you want to setup a systemd service _(recommended)_, you can use the following one:<br/>_(official [documentation](https://docs.semaphoreui.com/administration-guide/installation_manually/#extended-systemd-service))_
 
 ```
 echo > /etc/systemd/system/semaphore.service < _EOF
 [Unit]
-Description=Ansible Semaphore
-Documentation=https://docs.ansible-semaphore.com/
+Description=Semaphore UI
+Documentation=https://semaphoreui.com/docs
 Wants=network-online.target
 After=network-online.target mariadb.service
 Requires=mariadb.service
@@ -120,35 +127,77 @@ ConditionPathExists=/usr/bin/semaphore
 ConditionPathExists=/etc/semaphore/config.json
 
 [Service]
-User=semaphore
-Group=semaphore
-ExecStart=/usr/bin/semaphore service --config /etc/semaphore/config.json
-ExecReload=/bin/kill -HUP $MAINPID
+Type=simple
+SyslogIdentifier=semaphore
 Restart=always
-RestartSec=20s
-# to auto-upgrade python modules at service startup
-ExecStartPre=/bin/bash -c 'python3 -m pip install --upgrade --user -r /etc/semaphore/python-requirements.txt'
-# so the executables are found
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:~/.local/bin"
+RestartSec=60
+ExecReload=/bin/kill -HUP $MAINPID
+User=semaphore
+
 # to fix "python module not found" issues, the following WorkingDirectory must point to the same
 # directory as ` tmp_path`  variable in your semaphore config.json
-# if using non-default ansible.cfg params, it also should contain your `.ansible.cfg` (yes, `dot`ansible.cfg)
+# if using non-default ansible.cfg params (i.e. overrides of the AXP.OS ones), it also should contain your `.ansible.cfg` (yes, `dot`ansible.cfg)
 WorkingDirectory=/opt/semaphore
-# besides the WorkingDirectory we need to tell systemd where to find your pip installed libs:
-# to find out the user's as $User exec: python -c "import site; print(site.USER_SITE)"
-Environment="PYTHONPATH=/home/pors/.local/lib/python3.9/site-packages"
+
+# auto install/upgrade python modules
+ExecStartPre=wget "https://raw.githubusercontent.com/sfX-android/automation_scripts/refs/heads/ansible/plays/python-requirements.txt" -O /tmp/pr.dl
+ExecStartPre=/usr/bin/mv -v /tmp/pr.dl /etc/semaphore/python-requirements.txt
+ExecStartPre=/bin/bash -c 'source /opt/semaphore/.venv/bin/activate \
+                && python3 -m pip install --upgrade -r /etc/semaphore/python-requirements.txt'
+
+# auto install/upgrade ansible collections
+ExecStartPre=wget "https://raw.githubusercontent.com/sfX-android/automation_scripts/refs/heads/ansible/plays/collections/requirements.yml" -O /tmp/r.dl
+ExecStartPre=/usr/bin/mv -v /tmp/r.dl /etc/semaphore/requirements.yml
+ExecStartPre=/bin/bash -c 'source /opt/semaphore/.venv/bin/activate \
+                && ansible-galaxy collection install --upgrade -r /etc/semaphore/requirements.yml \
+                && ansible-galaxy role install --force -r /etc/semaphore/requirements.yml'
+
+# eventually start semaphore
+ExecStart=/bin/bash -c 'source /opt/semaphore/.venv/bin/activate \
+                && /usr/bin/semaphore server --config /etc/semaphore/config.json'
+
+# OPTIONAL (only if you are using splunk or require different callbacks or other specific overrides)
+# see: https://semaphoreui.com/docs/administration-guide/configuration/env-vars
+# pass environment vars to semaphore:
+#Environment="ANSIBLE_CALLBACKS_ENABLED=splunkpors"
+#Environment="ANSIBLE_CALLBACK_WHITELIST=splunkpors"
+#Environment="SEMAPHORE_FORWARDED_ENV_VARS=[\"ANSIBLE_CALLBACK_WHITELIST\", \"ANSIBLE_CALLBACKS_ENABLED\"]"
 
 [Install]
 WantedBy=multi-user.target
+
 _EOF
 
 systemctl enable --now semaphore
+```
 
+If you do **not** want to use the automated process via systemd you need to download the requirements manually:<br/>_(i.e. **SKIP** this if you use the provided systemd service above)_
+```
+su - semaphore
+wget https://raw.githubusercontent.com/sfX-android/automation_scripts/refs/heads/ansible/plays/python-requirements.txt -O /etc/semaphore/python-requirements.txt
+wget "https://raw.githubusercontent.com/sfX-android/automation_scripts/refs/heads/ansible/plays/collections/requirements.yml" -O /etc/semaphore/requirements.yml
+
+source /opt/semaphore/.venv/bin/activate
+python3 -m pip install --upgrade -r /etc/semaphore/python-requirements.txt
+ansible-galaxy collection install --upgrade -r /etc/semaphore/requirements.yml
+ansible-galaxy role install --force -r /etc/semaphore/requirements.yml
+
+# if you follow this approach ensure you execute these from time to time again to get updates
 ```
 
 ### Buildserver
 
-AXP.OS supports Ubuntu **24.04 LTS** only while [others](https://web.archive.org/web/20241227223444/https://divestos.org/pages/build#deps) **might** work, too.
+AXP.OS supports Ubuntu **24.04 LTS** only while [others](https://web.archive.org/web/20241227223444/https://divestos.org/pages/build#deps) **might** work, too but you are on your own then.
+
+Recommended specs (standalone, i.e. when using a **separate(!)** Buildserver):
+- 16 CPU cores _(ofc building with e.g 2 cores works but would take a long time)_
+- 64 GB RAM
+  - _if you have less than that, you might need a SWAP file_
+  - _the amount of RAM and/or SWAP depends on the Android version you build for! E.g. A9 just requires 8 GB and A15 at least 48 GB to build without workarounds_
+- at least 200 GB free disk space (on `/usr/src`).
+  - _the amount depends though. as a rule of thumb: ~200GB per Android version you want to build for_
+- can run in LXC, docker, full VM, or even on your laptop/PC
+- OS: Ubuntu 24.04
 
 ```
 sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove
@@ -174,11 +223,6 @@ $[BUILD-USER]> mkdir -p ~/.local/bin
 $[BUILD-USER]> curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.local/bin/repo
 ```
 
-repo tool dependency (Ubuntu 20.04 only):
-```
-$[BUILD-USER]> pip install pygerrit2
-```
-
 ensure locale is as expected:
 ```
 sudo dpkg-reconfigure locales
@@ -200,7 +244,7 @@ $[BUILD-USER]> ssh-keygen -a 500 -t ed25519 -C "some comment"
 
 create a gpg key (optional but recommended):
 ```
-$[BUILD-USER]> gpg --expert --full-gen-key
+$[BUILD-USER]> gpg --expert --full-gen-key --pinentry-mode=loopback
 # Select: ECC (sign and encrypt)
 # Select: Curve 25519
 # Select: expire date of your choice
@@ -208,10 +252,16 @@ $[BUILD-USER]> gpg --expert --full-gen-key
 # note: if you set a password on the key several automation parts will NOT work unless you automate the key unlock before starting a build
 ```
 
+`--pinentry-mode=loopback` is required as switching via su/sudo to another user won't give you access to the tty which is required by gpg. if you still get a `permission denied` error you can run the following command as root user + sudo instead:
+```
+root#> sudo -u $[BUILD-USER] gpg --expert --full-gen-key
+```
+
+
 add both, SSH and GPG keys, to your accounts (and.. yes repeat that for _all_ sites):
 - https://code.binbash.rocks
 - and: https://github.com
-- and: https://codeberg.org (not used yet, which will change anytime soon though, so better be prepared)
+- and: https://git.disroot.org
 
 #### When building for Android 9 or 10 only
 
@@ -238,112 +288,23 @@ $[BUILD-USER]> deactivate
 
 ## Setup Semaphore
 
+1. Download [this JSON project](/semaphore_project.json) example
+2. Click top left menu and `Restore Project`
+3. Select the downloaded JSON file and set a project name, e.g. `AXP.OS` and let it import
+4. you might see a message that some keys are empty, that is expected as they are private keys
+5. Menu: `Key Store`
+   - adapt `buildserver` to your setup
+   - ignore `vault_pw` as this is nothing you need
+6. Menu: `Inventory`
+   - adapt `buildserver` to your setup
+   - ignore `downloadserver` as you won't upload any builds
+   - in the `all -> vars` section adapt all variables according to your setup
 
-_TODO: upload semaphore backup.json for a 1 second setup!_
+## Build AXP.OS 
 
-
-1. create a new project
-1. **Key Store**:
-   - name: `NoKey`
-   - Type: `None`
-1. **Repositories**:
-   - name: `sfX-automation`
-   - URL: `https://github.com/sfX-android/automation_scripts.git`
-   - branch: `ansible`
-   - Access Key: `NoKey`
-1. **Environment**:
-   - name: `AXP-<model>-<Android-Version>`
-   - Extra Variables, depending on what you want to build: 
-```
-{
-  "ROM_FLAVOR": "axp",
-  "target_model": "hotdog",
-  "android_shortversion": "a13"
-}
-```
-5. **Inventory**
-   - name: `default`
-   - type: `Static YAML` <br/>
-     use `localhost` here if you build on the same machine where Ansbile + Semaphore are running.
-     otherwise Ansible will try to connect to this machine to actually start building. 
-     So if you use a different system ensure you can reach that one from your Automation server.
-     
-     This is how it should look like when using the same system as build server where Ansible+Semaphore are running:
-```
----
-# hint: do not change the group name as it is used in Ansible later
-buildserver:
-  hosts:
-    builder:
-     ansible_host: localhost
-     #ansible_host: X.X.X.X
-     #ansible_host: myserver.fqdn.local
-
-# hint: do not change the group name as it is used in Ansible later
-downloadserver:
-  hosts:
-   leechserver:
-    ansible_port: 22
-
-all:
-  vars:
-    just_git_push: False
-    commit_push: False
-    telegram_notifications: False
-    use_secrets_yaml: False
-    max_processes: 18         # max cpu count for building/checking out sources
-    # max_processes_sync: 8   # max cpu count for repo sync cmds (be careful as u can get rate limited easily!)
-    keep_build_logs: False
-    axp_release_recovery: False
-
-    # Buildserver paths    
-    android_build_path: "/usr/src/android"   # root path of where you wanna place android sources
-    zipdir_mntp: "{{ android_build_path }}/zips/{{ target_model }}" # target directory for the final OS zips
-    BUILDHOME: "/home/<BUILD-USER>" # the home path of the buildserver user
-    SRCPATH: "{{ DOSPATH }}/Build/LineageOS-{{ los_version }}"
-    keys_base_path: "{{ BUILDHOME }}/keys" # signing keys goes here
-    repo_bin: "{{ BUILDHOME }}/.local/bin/repo" # full path to your repo binary
-    DOSPATH: "{{ android_build_path }}/axp"  # divest path (keep it like that if unsure)
-    CCACHE_DIR: "{{ android_build_path }}/ccache/{{ android_shortversion }}"   # full path where to place ccache data
-    #SEPARATE_OUT_DIR: "{{ android_build_path }}/out/{{ target_model }}/{{ ROM_FLAVOR }}-{{ android_shortversion }}"
-    
-    # Semaphore paths
-    semaphore_lock_dir: "/opt/semaphore/run" # semaphore run files
-    semaphore_work_dir: "/opt/semaphore" # must match semaphore's config.json
-    gist_home_dir: /opt/semaphore
-    semaphore_home_dir: /opt/semaphore
-    ansible_home_dir: /opt/semaphore
-```
-```
-# note: if semaphore_work_dir and BUILDHOME differ (like in the above example)
-# you have to symlink the .ansible dirs like that:
-#ln -s <semaphore_work_dir>/.ansible <BUILDHOME>/
-#ln -s <semaphore_work_dir>/.ansible_async <BUILDHOME>/
-#ln -s <semaphore_work_dir>/.gitconfig <BUILDHOME>/
-```
-6. **Task Templates**:
-   - name: `AXP - A13 - hotdog`
-   - Playbook Filename: `plays/build.yml`
-   - Inventory: `default`
-   - Repository: `sfX-automation`
-   - Environment: `AXP-<model>-<Android-Version>`
-
-Optional:
-
-Define Survey Variables to interactively change parts of the build process:
-
-#### Task Template - Survey Variables
-
-Dirty or clean build (overrides `clean_out` from your `Environment`)
-- name: `override_clean_out`
-- Title: `Clean build?`
-- Description: `true | false`
-
-
-## Build instructions
-
-1. **Task Templates**
-1. Click **Build**
+1. Menu: `Task Templates`
+2. Start the device task you want
+3. Check/adapt the popup form and let it run ...
 
 ## Debugging
 
@@ -357,12 +318,12 @@ After following the instructions you also need to ensure adding `/a` to the mani
 vim .repo/manifests/default.xml
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com/a"    <--! /a REQUIRES AUTHENTICATION COOKIE -->
+           fetch="https://android.googlesource.com/a"    <--! that /a path REQUIRES AN AUTHENTICATION COOKIE -->
            review="android-review.googlesource.com"
            revision="refs/tags/android-15.0.0_r5" />
 ```
 
-As this is usually not happening after the initial sync completed once there is no automated way for this implemented.
+As this is usually not happening after the initial sync completed once there is no automated process for this implemented.
 
 ### Ansible
 
