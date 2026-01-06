@@ -186,7 +186,7 @@ some further readings:
 [aospchanges]: https://source.android.com/docs/whatsnew/site-updates?year=2025#aosp-changes
 [aospcycle]: https://source.android.com/docs/setup/contribute/release-lifecycle
 [evilwp]: https://en.wikipedia.org/wiki/Don't_be_evil
-[evilgiz]: https://gizmodo.com/google-removes-nearly-all-mentions-of-dont-be-evil-from-1826153393
+[evilgiz]: https://web.archive.org/web/20250903232146/https://gizmodo.com/google-removes-nearly-all-mentions-of-dont-be-evil-from-1826153393
 [ggreview]: https://android-review.googlesource.com/q/branch:main
 [patchlevels]: https://axpos.org/docs/knowledge/patchlevels/#the-axpos-patch-level
 [cvepatcher]: https://codeberg.org/AXP-OS/kernel_patches
