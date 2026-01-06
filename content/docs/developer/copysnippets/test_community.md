@@ -55,7 +55,7 @@ _Major tests which MUST succeed for any flavor_
     ***If your device does not show any ID at all: SET(!) the check mark!***
 - **Verified Boot**: check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
     - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
-    - [ ] enter: `grep dm- /proc/mounts | grep -E "\s/(system|system_ext|product|vendor|odm)\s"`
+    - [ ] enter: `grep dm- /proc/mounts | grep -E " /(system|system_ext|product|vendor|odm) "` _(the spaces at start and end are important!)_
         - [ ] add the output to the bottom of this checklist
     - [ ] enter: `getprop | grep verity`
         - [ ] add the output to the bottom of this checklist
