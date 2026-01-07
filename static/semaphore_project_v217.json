@@ -1,0 +1,3618 @@
+{
+  "environments": [
+    {
+      "env": "{}",
+      "json": "{\"ROM_FLAVOR\":\"axp\",\"target_model\":\"cheetah\",\"android_shortversion\":\"a13\",\"extendrom_package_list\":\"{{ extendrom_package_list_default | regex_replace('Phonesky_AXP-OS','Phonesky_AXP-OS_testing') }} OpenEUICC_AXP-OS\",\"commit_push\":false}",
+      "name": "0_TESTING"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"a52q\",\n  \"android_shortversion\": \"a13\",\n  \"commit_push\": false\n}",
+      "name": "a52q"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"avicii\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "avicii"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"bluejay\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "bluejay"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"cheeseburger\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "cheeseburger"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"cheetah\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "cheetah"
+    },
+    {
+      "env": "{}",
+      "json": "{\"ROM_FLAVOR\":\"axp\",\"target_model\":\"cheetah\",\"android_shortversion\":\"a15\"}",
+      "name": "cheetah-a15"
+    },
+    {
+      "env": "{}",
+      "json": "{\"target_model\":\"dumpling\",\"android_shortversion\":\"a13\",\"ROM_FLAVOR\":\"axp\"}",
+      "name": "dumpling"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"enchilada\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "enchilada"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"enchilada\",\n  \"android_shortversion\": \"a15\"\n}",
+      "name": "enchilada-a15"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"fajita\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "fajita"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"FP3\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "FP3"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"FP4\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "FP4"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"guacamole\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "guacamole"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"hotdog\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "hotdog"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"hotdogb\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "hotdogb"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"hotdog\",\n  \"android_shortversion\": \"a15\"\n}",
+      "name": "hotdog_a15"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"instantnoodlep\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "instantnoodlep"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"j5y17lte\",\n  \"android_shortversion\": \"a10\"\n}",
+      "name": "j5y17lte"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"j5y17lte\",\n  \"android_shortversion\": \"a10\",\n  \"target_kernel_dir\": \"kernel/samsung/exynos7870\",\n  \"repo_sync_args\": \"--force-sync --force-remove-dirty --no-clone-bundle --no-current-branch\",\n  \"unsupported_device_kernel_patch\": true,\n  \"axp_build_recovery_only\": true,\n  \"extendrom_preroot_boot\": false,\n  \"android_build_path\": \"/ssd/aos\",\n  \"DOSPATH\": \"{{ android_build_path }}/axp\",\n  \"SRCPATH\": \"{{ DOSPATH }}/Build/LineageOS-{{ los_version }}\"\n}",
+      "name": "j5y17lte_RECOVERY"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"j5y17lte\",\n  \"android_shortversion\": \"a10\",\n  \"axp_build_recovery_only\": true,\n  \"extendrom_package_list\": \"\",\n  \"extendrom_preroot_boot\": false,\n  \"debug_build\": \"true\",\n  \"skip_dl_cve_checker\": true,\n  \"android_build_path\": \"/ssd/aos\",\n  \"DOSPATH\": \"{{ android_build_path }}/axp\",\n  \"SRCPATH\": \"{{ DOSPATH }}/Build/LineageOS-{{ los_version }}\"\n}",
+      "name": "j5y17lte_RECOVERY_autorun_noNotify"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"kebab\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "kebab"
+    },
+    {
+      "env": "{}",
+      "json": "{\"ROM_FLAVOR\":\"axp\",\"target_model\":\"kirin\",\"android_shortversion\":\"a15\",\"commit_push\":false}",
+      "name": "kirin"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"klte\",\n  \"android_shortversion\": \"a11\"\n}",
+      "name": "klte"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"g4\",\n  \"android_shortversion\": \"a11\"\n}",
+      "name": "lgg4"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"g4\",\n  \"android_shortversion\": \"a11\",\n  \"axp_build_recovery_only\": true,\n  \"extendrom_package_list\": \"\",\n  \"extendrom_preroot_boot\": false,\n  \"debug_build\": \"true\",\n  \"skip_dl_cve_checker\": true\n}",
+      "name": "lgg4_RECOVERY"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"lynx\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "lynx"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"oriole\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "oriole"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"oriole\",\n  \"android_shortversion\": \"a15\"\n}",
+      "name": "oriole-a15"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"sargo\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "sargo"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"sargo\",\n  \"android_shortversion\": \"a15\"\n}",
+      "name": "sargo-a15"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"sunfish\",\n  \"android_shortversion\": \"a13\"\n}",
+      "name": "sunfish"
+    },
+    {
+      "env": "{}",
+      "json": "{\"ROM_FLAVOR\":\"axp\",\"target_model\":\"sunfish\",\"android_shortversion\":\"a15\"}",
+      "name": "sunfish-a15"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"target_model\": \"xz2c\",\n  \"android_shortversion\": \"a13\",\n  \"just_git_push\": false\n}",
+      "name": "xz2c"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"reset_git\": false,\n  \"debug_build\": true,\n  \"postcmd_switch_to_stable\": \"echo \\\"hello world\\\"\",\n  \"ROM_FLAVOR\": \"axp\",\n  \"override_reset_git\": false,\n  \"override_clean_out\": false,\n  \"axp_skip_common_tasks\": \"true\",\n  \"skip_setup_otaverify\": false,\n  \"skip_setup_repos\": false,\n  \"skip_setup_firmware\": false,\n  \"skip_setup_manifest\": false,\n  \"skip_setup_ansible\": false,\n  \"skip_setup_website\": true,\n  \"skip_setup_semaphore\": false\n}",
+      "name": "zzz_common_init_device"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"reset_git\": false,\n  \"debug_build\": true,\n  \"ROM_FLAVOR\": \"axp\",\n  \"override_reset_git\": false,\n  \"override_clean_out\": false,\n  \"axp_skip_common_tasks\": \"true\",\n  \"postcmd_switch_to_stable\": \"echo \\\"hello world\\\"\",\n  \"skip_setup_otaverify\": true,\n  \"skip_setup_repos\": true,\n  \"skip_setup_firmware\": true,\n  \"skip_setup_manifest\": true,\n  \"skip_setup_ansible\": true,\n  \"skip_setup_website\": true,\n  \"skip_mirror_activation\": false,\n  \"skip_setup_semaphore\": true\n}",
+      "name": "zzz_common_init_device_REPOMIRRORONLY"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"reset_git\": false,\n  \"debug_build\": true,\n  \"ROM_FLAVOR\": \"axp\",\n  \"override_reset_git\": false,\n  \"override_clean_out\": false,\n  \"axp_skip_common_tasks\": \"true\",\n  \"postcmd_switch_to_stable\": \"echo \\\"hello world\\\"\",\n  \"skip_setup_otaverify\": true,\n  \"skip_setup_repos\": false,\n  \"skip_setup_firmware\": true,\n  \"skip_setup_manifest\": false,\n  \"skip_setup_ansible\": true,\n  \"skip_setup_website\": true,\n  \"skip_mirror_activation\": false,\n  \"skip_setup_semaphore\": true\n}",
+      "name": "zzz_common_init_device_REPOSONLY"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"reset_git\": false,\n  \"debug_build\": true,\n  \"ROM_FLAVOR\": \"axp\",\n  \"override_reset_git\": false,\n  \"override_clean_out\": false,\n  \"axp_skip_common_tasks\": \"true\",\n  \"postcmd_switch_to_stable\": \"echo \\\"hello world\\\"\",\n  \"skip_setup_otaverify\": true,\n  \"skip_setup_repos\": false,\n  \"skip_setup_firmware\": true,\n  \"skip_setup_manifest\": false,\n  \"skip_setup_ansible\": false,\n  \"skip_setup_website\": true,\n  \"skip_mirror_activation\": false,\n  \"skip_setup_semaphore\": true\n}",
+      "name": "zzz_common_init_device_SELECTEDONLY"
+    },
+    {
+      "env": "{}",
+      "json": "{\"reset_git\":false,\"debug_build\":true,\"ROM_FLAVOR\":\"axp\",\"override_reset_git\":false,\"override_clean_out\":false,\"axp_skip_common_tasks\":\"true\",\"postcmd_switch_to_stable\":\"echo \\\"hello world\\\"\",\"skip_setup_otaverify\":true,\"skip_setup_repos\":true,\"skip_setup_firmware\":true,\"skip_setup_manifest\":true,\"skip_setup_ansible\":true,\"skip_setup_website\":true,\"skip_mirror_activation\":true,\"skip_setup_semaphore\":false}",
+      "name": "zzz_common_init_device_SEMAPHOREONLY"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"reset_git\": false,\n  \"debug_build\": true,\n  \"ROM_FLAVOR\": \"axp\",\n  \"override_reset_git\": false,\n  \"override_clean_out\": false,\n  \"axp_skip_common_tasks\": \"true\",\n  \"postcmd_switch_to_stable\": \"echo \\\"hello world\\\"\",\n  \"skip_setup_otaverify\": true,\n  \"skip_setup_repos\": true,\n  \"skip_setup_firmware\": true,\n  \"skip_setup_manifest\": true,\n  \"skip_setup_ansible\": true,\n  \"skip_setup_website\": false,\n  \"skip_mirror_activation\": true,\n  \"skip_setup_semaphore\": true\n}",
+      "name": "zzz_common_init_device_WEBSITEONLY"
+    },
+    {
+      "env": "{}",
+      "json": "{\n  \"ROM_FLAVOR\": \"axp\",\n  \"skip_build_log_symlink\": true\n}",
+      "name": "zzz_misc_all_trigger_dummy-env"
+    },
+    {
+      "env": "{}",
+      "json": "{\"override_clean_out\":\"false\",\"override_clean_basic\":\"false\",\"override_reset_git\":\"false\",\"override_release_build\":\"false\",\"override_sign_build\":\"false\"}",
+      "name": "zzz_misc_debug_dummy_env"
+    },
+    {
+      "env": "{}",
+      "json": "{\"ROM_FLAVOR\":\"axp\"}",
+      "name": "zzz_misc_freezeday"
+    }
+  ],
+  "integration_aliases": [],
+  "integrations": [],
+  "inventories": [
+    {
+      "inventory": "---\n\n# NEVER CHANGE THE KEY NAME \"buildserver\"!\nbuildserver:\n  hosts:\n    aospbuild:\n      ansible_host: 'FQDN-or-IP'    # REPLACE or enable next line:\n      #ansible_connection: local   # outcomment ansible_host when enabling this\n      ansible_ssh_user: droidme    # REPLACE with your actual build user\n\n# NEVER CHANGE THE KEY NAME \"downloadserver\"!\n# this part is only for providing builds via an own server so can be usually ignored\ndownloadserver:\n  hosts:\n   # NEVER CHANGE THE KEY NAME \"leechserver\"!\n   leechserver:\n     ansible_host: 'FQDN-or-IP'       # REPLACE or enable next line:\n     #ansible_connection: local      # outcomment ansible_host when enabling this\n     ansible_ssh_user: jenkins       # REPLACE with your actual remote user\n\nall:\n  vars:\n    ############# DEBUG - START #############\n    \n    # TEMP!!! ASB patch date override, month+1:\n    #sec_patch_date_last: 202509\n    # TEMP!!! CVE Kernel patch tag override, exactly as it should be:\n    #cve_tag: 202512\n\n    # TEMP !! push missing?!\n    #just_git_push: True\n\n    # TEMP !! Kernel patch tests\n    #build_bootimage_only: true\n    #notify_min: True\n\n    ############# DEBUG - END #############\n    \n    ############# Buildserver paths #############\n\n    # pushing changes for reproducible builds?\n    # default is True so you likely want False here:\n    #commit_push: False\n\n    # how many threads to use for CPU tasks (e.g. build, git unpack etc)\n    # default is set here and likely need to be according to your build system:\n    # https://github.com/sfX-android/automation_scripts/blob/ansible/roles/common/defaults/main.yml\n    #max_processes: 22\n\n    BUILDHOME: \"/home/droidme\" # the home path of the buildserver user (see above: buildserver>hosts>aospbuild>ansible_ssh_user)\n    keys_base_path: \"{{ BUILDHOME }}/KEYS\"   # all signing keys go here\n\n    android_build_path: \"/usr/src/android\"   # root path of where you wanna place android sources\n    DOSPATH: \"{{ android_build_path }}/axp\"  # AXP.OS root path (keep it like that if unsure)\n    SRCPATH: \"{{ DOSPATH }}/Build/LineageOS-{{ los_version }}\" # LineageOS source path, do not touch ;)\n\n    #CCACHE_DIR: \"{{ android_build_path }}/ccache/{{ android_shortversion }}\" # ccache data (required to speed up a next build)\n    CCACHE_DIR: \"/ccache/{{ android_shortversion }}\" # feel free to use a separate mountpoint, heavy read/write operations here\n    CCACHE_COMPRESS: 0  # 0 = do not compress, 1 = compress\n\n    repo_bin: \"{{ BUILDHOME }}/.local/bin/repo\" # full path to your repo binary\n    zipdir_mntp: \"{{ android_build_path }}/zips/{{ target_model }}\" # target directory for the final OS zips\n    server_tmp_dir: \"{{ android_build_path }}/.tmp\" # required mainly for init + fw update tasks\n    \n    # custom https port for reaching git_axpos_org_private_host\n    # 8443 is an internal port so you would likely just outcomment this:\n    git_axpos_org_private_host_port: 8443\n\n    # your own GPG signing key\n    release_gpg_signing_key: \"FE4B2FA2B225F0AB903AF4136740E645718A8E47\"\n    git_commit_args: \"-S\"\n\n    ############# Optional variable overrides #############\n        \n    # maximal ccache size - per Android(!) version (default 10G)\n    # if building for A11 and A15 the disk usage is ccache_max_size * 2\n    # or ccache_max_size * 3  when building for 3 versions etc!!\n    # recommended when building for multiple kernel sources: 100G\n    # recommended when building for 1 device only: 25-50G\n    ccache_max_size: 100G\n    \n    # this should always be set to False as long as your are not using\n    # using your own automation repo and your own vault\n    #use_secrets_yaml: False\n    \n    # when the Semaphore/Ansible server uses a different python version than the buildserver\n    # you might get an error about the python interpreter. the following should match the\n    # python version on the Semaphore/Ansible server AND buildserver\n    ansible_python_interpreter: /usr/bin/python3\n    \n    # Telegram notifications are disabled by default, requires use_secrets_yaml: True\n    # you likely need to change this to \"False\"\n    telegram_notifications: True\n  \n    # home path of the semaphore(!) user running the semaphore service\n    semaphore_home_dir: /opt/scriptserver\n    ansible_home_dir: \"{{ semaphore_home_dir }}\"  # don't touch unless you really know what you are doing!\n\n    # when a new build starts previous log files will be automatically deleted when \"False\"\n    #keep_build_logs: False\n    \n    # if the recovery should be released as a separate image set this to \"True\"\n    axp_release_recovery: True\n\n    # we WANT to release (default is True)\n    # you likely want to outcomment this (so no publish):\n    skip_release_publish: False\n\n    # the release server path permissions:\n    # (only relevant if skip_release_publish: False)\n    release_path_owner: steadfasterx\n    release_path_group: jenkins\n    release_path_perms: 0775\n    \n    # the out/ directory has heavy write operations and you can define\n    # a seperate one to e.g. point to a different disk/storage type\n    #SEPARATE_OUT_DIR: \"{{ android_build_path }}/out/{{ target_model }}/{{ ROM_FLAVOR }}-{{ android_shortversion }}\"\n\n    # base path for the kernel patcher scheduler,\n    # only required if the official kernel_patches repo should NOT be used\n    cve_kernel_base_path: \"{{ android_build_path }}/CVE\"\n                                 \n    # pors env (do not touch)\n    target_env: \"{{ axp_type | d('Pro') }}\"",
+      "name": "axp_build_inventory",
+      "ssh_key": "buildserver",
+      "type": "static-yaml"
+    }
+  ],
+  "keys": [
+    {
+      "name": "buildserver",
+      "owner": "",
+      "type": "ssh"
+    },
+    {
+      "name": "No Key",
+      "owner": "",
+      "type": "none"
+    },
+    {
+      "name": "var.vault_axp_private_repo_token_rw",
+      "owner": "variable",
+      "type": "string"
+    },
+    {
+      "name": "var.vault_lovelace_gpg_pass",
+      "owner": "variable",
+      "type": "string"
+    },
+    {
+      "name": "vault_axp_private_repo_token_rw",
+      "owner": "variable",
+      "type": "string"
+    },
+    {
+      "name": "vault_axp_private_repo_token_rw - r77czdpzo5",
+      "owner": "variable",
+      "type": "string"
+    },
+    {
+      "name": "vault_axp_private_repo_token_rw - k7f5ph8979",
+      "owner": "variable",
+      "type": "string"
+    },
+    {
+      "name": "vault_axp_private_repo_token_rw - 8at9gtgknd",
+      "owner": "variable",
+      "type": "string"
+    },
+    {
+      "name": "vault_axp_private_repo_token_rw - 4d70y99n7p",
+      "owner": "variable",
+      "type": "string"
+    },
+    {
+      "name": "vault_gitea_rw_token",
+      "owner": "variable",
+      "type": "string"
+    },
+    {
+      "name": "vault_pw",
+      "owner": "",
+      "type": "login_password"
+    }
+  ],
+  "meta": {
+    "alert": false,
+    "alert_chat": "",
+    "max_parallel_tasks": 1,
+    "name": "AXP.OS",
+    "type": ""
+  },
+  "repositories": [
+    {
+      "git_branch": "ansible",
+      "git_url": "https://github.com/sfX-android/automation_scripts.git",
+      "name": "sfX-Android  - automation_scripts",
+      "ssh_key": "No Key"
+    }
+  ],
+  "roles": [],
+  "schedules": [],
+  "secret_storages": [],
+  "templates": [
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "autorun": false,
+      "environment": "zzz_misc_freezeday",
+      "inventory": "axp_build_inventory",
+      "name": "-AOS- FREEZEDAY Build-ID",
+      "playbook": "plays/dummy.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "start_version": "2026-01.1",
+      "suppress_success_alerts": false,
+      "survey_vars": [],
+      "task_params": {},
+      "type": "build",
+      "vaults": [],
+      "view": "🎲 MISC"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[]",
+      "autorun": false,
+      "build_template": "-AOS- FREEZEDAY Build-ID",
+      "environment": "zzz_misc_all_trigger_dummy-env",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS - 11 ALL - COM PRO",
+      "playbook": "plays/dummy.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[]",
+      "autorun": false,
+      "build_template": "-AOS- FREEZEDAY Build-ID",
+      "environment": "zzz_misc_all_trigger_dummy-env",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS - 11 ALL - COM SLIM",
+      "playbook": "plays/dummy.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🛡️ SLIM (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[]",
+      "autorun": false,
+      "build_template": "-AOS- FREEZEDAY Build-ID",
+      "environment": "zzz_misc_all_trigger_dummy-env",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS - 13 ALL - COM PRO",
+      "playbook": "plays/dummy.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[]",
+      "autorun": false,
+      "build_template": "-AOS- FREEZEDAY Build-ID",
+      "environment": "zzz_misc_all_trigger_dummy-env",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS - 13 ALL - COM SLIM",
+      "playbook": "plays/dummy.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🛡️ SLIM (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[]",
+      "autorun": false,
+      "build_template": "-AOS- FREEZEDAY Build-ID",
+      "environment": "zzz_misc_all_trigger_dummy-env",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS - a10 ALL - TEAM PRO",
+      "playbook": "plays/dummy.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[]",
+      "autorun": false,
+      "build_template": "-AOS- FREEZEDAY Build-ID",
+      "environment": "zzz_misc_all_trigger_dummy-env",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS - a11 ALL - TEAM PRO",
+      "playbook": "plays/dummy.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[]",
+      "autorun": false,
+      "build_template": "-AOS- FREEZEDAY Build-ID",
+      "environment": "zzz_misc_all_trigger_dummy-env",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS - a13 ALL - TEAM PRO",
+      "playbook": "plays/dummy.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "description": "",
+      "environment": "zzz_common_init_device",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS: INIT/UPGRADE DEVICE (FULL)",
+      "playbook": "plays/axp_init_device.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "e.g.: kirin",
+          "name": "target_model",
+          "required": false,
+          "title": "Target model (leave empty for autodetect ALL)",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "axp-a15",
+          "description": "e.g. axp-a15",
+          "name": "git_repo_local_manifests_branch",
+          "required": false,
+          "title": "AXP.OS target branch",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "lineage-22.2",
+          "description": "e.g. lineage-22.2",
+          "name": "los_version_gitbranch",
+          "required": false,
+          "title": "targeting LOS base branch",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "axp_type",
+          "required": true,
+          "title": "AXP.OS flavor",
+          "type": "enum",
+          "values": [
+            {
+              "name": "Slim",
+              "value": "slim"
+            },
+            {
+              "name": "Pro",
+              "value": "Pro"
+            }
+          ]
+        },
+        {
+          "default_value": "",
+          "description": "get it from Variable Groups -> devicename",
+          "name": "semaphore_aos_template_env_name",
+          "required": true,
+          "title": "\"Variable Group\" name for target device",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {
+        "allow_debug": true,
+        "allow_override_inventory": false
+      },
+      "type": "",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🍼 INIT"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "description": "",
+      "environment": "zzz_common_init_device_REPOMIRRORONLY",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS: INIT/UPGRADE DEVICE (repo mirror only)",
+      "playbook": "plays/axp_init_device.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "e.g.: kirin",
+          "name": "target_model",
+          "required": false,
+          "title": "Target model (leave empty for autodetect ALL)",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "axp-a15",
+          "description": "e.g. axp-a15",
+          "name": "git_repo_local_manifests_branch",
+          "required": false,
+          "title": "AXP.OS target branch",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "lineage-22.2",
+          "description": "e.g. lineage-22.2",
+          "name": "los_version_gitbranch",
+          "required": false,
+          "title": "targeting LOS base branch",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "axp_type",
+          "required": true,
+          "title": "AXP.OS flavor",
+          "type": "enum",
+          "values": [
+            {
+              "name": "Slim",
+              "value": "slim"
+            },
+            {
+              "name": "Pro",
+              "value": "Pro"
+            }
+          ]
+        },
+        {
+          "default_value": "",
+          "description": "get it from Variable Groups -> devicename",
+          "name": "semaphore_aos_template_env_name",
+          "required": true,
+          "title": "\"Variable Group\" name for target device",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {
+        "allow_debug": true,
+        "allow_override_inventory": false
+      },
+      "type": "",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🍼 INIT"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "description": "",
+      "environment": "zzz_common_init_device_REPOSONLY",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS: INIT/UPGRADE DEVICE (repos only)",
+      "playbook": "plays/axp_init_device.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "e.g.: kirin",
+          "name": "target_model",
+          "required": false,
+          "title": "Target model (leave empty for autodetect ALL)",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "axp-a15",
+          "description": "e.g. axp-a15",
+          "name": "git_repo_local_manifests_branch",
+          "required": false,
+          "title": "AXP.OS target branch",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "lineage-22.2",
+          "description": "e.g. lineage-22.2",
+          "name": "los_version_gitbranch",
+          "required": false,
+          "title": "targeting LOS base branch",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "axp_type",
+          "required": true,
+          "title": "AXP.OS flavor",
+          "type": "enum",
+          "values": [
+            {
+              "name": "Slim",
+              "value": "slim"
+            },
+            {
+              "name": "Pro",
+              "value": "Pro"
+            }
+          ]
+        },
+        {
+          "default_value": "",
+          "description": "get it from Variable Groups -> devicename",
+          "name": "semaphore_aos_template_env_name",
+          "required": true,
+          "title": "\"Variable Group\" name for target device",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {
+        "allow_debug": true,
+        "allow_override_inventory": false
+      },
+      "type": "",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🍼 INIT"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "description": "",
+      "environment": "zzz_common_init_device_SEMAPHOREONLY",
+      "inventory": "axp_build_inventory",
+      "name": "0-AOS: INIT/UPGRADE DEVICE (semaphore only)",
+      "playbook": "plays/axp_init_device.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "e.g.: kirin",
+          "name": "target_model",
+          "required": false,
+          "title": "Target model (leave empty for autodetect ALL)",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "axp-a15",
+          "description": "e.g. axp-a15",
+          "name": "git_repo_local_manifests_branch",
+          "required": false,
+          "title": "AXP.OS target branch",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "lineage-22.2",
+          "description": "e.g. lineage-22.2",
+          "name": "los_version_gitbranch",
+          "required": false,
+          "title": "targeting LOS base branch",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "axp_type",
+          "required": true,
+          "title": "AXP.OS flavor",
+          "type": "enum",
+          "values": [
+            {
+              "name": "Slim",
+              "value": "slim"
+            },
+            {
+              "name": "Pro",
+              "value": "Pro"
+            }
+          ]
+        },
+        {
+          "default_value": "",
+          "description": "get it from Variable Groups -> devicename",
+          "name": "semaphore_aos_template_env_name",
+          "required": true,
+          "title": "\"Variable Group\" name for target device",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {
+        "allow_debug": true,
+        "allow_override_inventory": false
+      },
+      "type": "",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🍼 INIT"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM PRO",
+      "description": "",
+      "environment": "dumpling",
+      "inventory": "axp_build_inventory",
+      "name": "AOS A13 Pro: OnePlus 5T (dumpling)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "true | false",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "False",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "true | false",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "False",
+          "description": "vendor_firmware_download_url etc must be set",
+          "name": "update_vendor_firmware",
+          "required": false,
+          "title": "Download & Update firmware (yes|no*)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "False",
+          "description": "device vars must be set properly",
+          "name": "generate_factory_image",
+          "required": false,
+          "title": "Generate a fastboot flashable factory image?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "commit_push",
+          "required": true,
+          "title": "commit_push",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - a13 ALL - TEAM PRO",
+      "description": "",
+      "environment": "hotdog",
+      "inventory": "axp_build_inventory",
+      "name": "AOS A13 Pro: OnePlus 7T Pro (hotdog)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "true | false",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "False",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "true | false",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "False",
+          "description": "vendor_firmware_download_url etc must be set",
+          "name": "update_vendor_firmware",
+          "required": false,
+          "title": "Download & Update firmware (yes|no*)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "False",
+          "description": "device vars must be set properly",
+          "name": "generate_factory_image",
+          "required": false,
+          "title": "Generate a fastboot flashable factory image?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "commit_push",
+          "required": true,
+          "title": "commit_push",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM PRO",
+      "description": "",
+      "environment": "sargo",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: Google Pixel 3a (sargo)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - a13 ALL - TEAM PRO",
+      "description": "",
+      "environment": "sunfish",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: Google Pixel 4a (sunfish)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "commit_push",
+          "required": false,
+          "title": "commit_push",
+          "type": "enum",
+          "values": [
+            {
+              "name": "Yes",
+              "value": "True"
+            },
+            {
+              "name": "No",
+              "value": "False"
+            }
+          ]
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - a13 ALL - TEAM PRO",
+      "description": "",
+      "environment": "bluejay",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: Google Pixel 6a (bluejay)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "commit_push",
+          "required": false,
+          "title": "commit_push",
+          "type": "enum",
+          "values": [
+            {
+              "name": "Yes",
+              "value": "True"
+            },
+            {
+              "name": "No",
+              "value": "False"
+            }
+          ]
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - a13 ALL - TEAM PRO",
+      "description": "",
+      "environment": "cheetah",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: Google Pixel 7 Pro (cheetah)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "True",
+          "description": "",
+          "name": "commit_push",
+          "required": false,
+          "title": "commit_push",
+          "type": "enum",
+          "values": [
+            {
+              "name": "Yes",
+              "value": "True"
+            },
+            {
+              "name": "No",
+              "value": "False"
+            }
+          ]
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - a13 ALL - TEAM PRO",
+      "description": "",
+      "environment": "lynx",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: Google Pixel 7a (lynx)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\",\"-e sub_model=h815\"]",
+      "autorun": false,
+      "build_template": "0-AOS - a11 ALL - TEAM PRO",
+      "description": "",
+      "environment": "lgg4",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: LG G4 (h815)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM PRO",
+      "description": "https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/96",
+      "environment": "cheeseburger",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: OnePlus 5 (cheeseburger)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {
+        "allow_debug": false,
+        "allow_override_inventory": false
+      },
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM PRO",
+      "description": "https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/108",
+      "environment": "enchilada",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: Oneplus 6 (enchilada)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - a13 ALL - TEAM PRO",
+      "description": "",
+      "environment": "fajita",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: Oneplus 6T (fajita)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM PRO",
+      "description": "https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/58",
+      "environment": "guacamole",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: OnePlus 7 pro (guacamole)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "0-AOS - a10 ALL - TEAM PRO",
+      "description": "",
+      "environment": "j5y17lte",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: Samsung J5 (j5y17lte)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-v\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 11 ALL - COM PRO",
+      "description": "",
+      "environment": "klte",
+      "inventory": "axp_build_inventory",
+      "name": "AOS pro: Samsung S5 (klte)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⚙️ PRO (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\",\"-e axp_type=slim\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM SLIM",
+      "description": "https://support.fairphone.com/hc/en-us/articles/18896094650513-Install-Fairphone-OS-manually#01HB8ZZ1BMMQNSNMFT3YXDBXA0",
+      "environment": "FP3",
+      "inventory": "axp_build_inventory",
+      "name": "AOS slim: Fairphone 3 (FP3)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "True",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "download_fairphone_firmware",
+          "required": false,
+          "title": "Download & Update firmware (yes|no*)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🛡️ SLIM (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\",\"-e axp_type=slim\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM SLIM",
+      "description": "https://support.fairphone.com/hc/en-us/articles/18896094650513-Install-Fairphone-OS-manually#01HB8ZZ1BMMQNSNMFT3YXDBXA0",
+      "environment": "FP4",
+      "inventory": "axp_build_inventory",
+      "name": "AOS slim: Fairphone 4 (FP4)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "True",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "download_fairphone_firmware",
+          "required": false,
+          "title": "Download & Update firmware (yes|no*)?",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🛡️ SLIM (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\",\"-e axp_type=slim\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM SLIM",
+      "description": "",
+      "environment": "sargo",
+      "inventory": "axp_build_inventory",
+      "name": "AOS slim: Google Pixel 3a (sargo)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🛡️ SLIM (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\",\"-e axp_type=slim\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM SLIM",
+      "description": "",
+      "environment": "sunfish",
+      "inventory": "axp_build_inventory",
+      "name": "AOS slim: Google Pixel 4a (sunfish)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🛡️ SLIM (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\",\"-e axp_type=slim\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM SLIM",
+      "description": "tbd\n - \n[ https://github.com/sfX-android/automation_scripts ]\n- \nhttps://divestos.org/pages/news",
+      "environment": "oriole",
+      "inventory": "axp_build_inventory",
+      "name": "AOS slim: Google Pixel 6 (oriole)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "vendor/firmware/<device>/0SOURCE must be set",
+          "name": "generate_pixel_factory_image",
+          "required": false,
+          "title": "Generate fastboot factory Image?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🛡️ SLIM (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\",\"-e axp_type=slim\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 13 ALL - COM SLIM",
+      "description": "",
+      "environment": "enchilada",
+      "inventory": "axp_build_inventory",
+      "name": "AOS slim: Oneplus 6 (enchilada)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🛡️ SLIM (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\",\"-e axp_type=slim\"]",
+      "autorun": false,
+      "build_template": "0-AOS - 11 ALL - COM SLIM",
+      "description": "",
+      "environment": "klte",
+      "inventory": "axp_build_inventory",
+      "name": "AOS slim: Samsung S5 (klte)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean ZIPs (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "reset all projects & resync (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify (true* | false)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false*)?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "unstable_build",
+          "required": false,
+          "title": "unstable build (true* | false)?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🛡️ SLIM (COM)"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "environment": "zzz_misc_debug_dummy_env",
+      "inventory": "axp_build_inventory",
+      "name": "Debugging",
+      "playbook": "plays/test.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "start_version": "1.0.0",
+      "suppress_success_alerts": false,
+      "survey_vars": [],
+      "task_params": {
+        "allow_debug": true
+      },
+      "type": "build",
+      "vaults": [
+        {
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🎲 MISC"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\",\"-e sub_model=h815\"]",
+      "autorun": false,
+      "build_template": "AOS pro: LG G4 (h815)",
+      "description": "(source)[https://github.com/sfX-android/automation_scripts]\n",
+      "environment": "lgg4_RECOVERY",
+      "inventory": "axp_build_inventory",
+      "name": "RECOVERY: LG G4 (h815) - A11",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean basic?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "git reset all projects & resync?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "syncs regardless of a git reset",
+          "name": "override_sync",
+          "required": false,
+          "title": "force a (re-)sync",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "https://github.com/axp-os/build",
+          "name": "axp_main_branch",
+          "required": false,
+          "title": "AXP.OS main branch/tag",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false)?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⛑️ REC"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "build_template": "AOS pro: Samsung J5 (j5y17lte)",
+      "description": "",
+      "environment": "j5y17lte_RECOVERY_autorun_noNotify",
+      "inventory": "axp_build_inventory",
+      "name": "RECOVERY: Samsung J5 (j5y17lte) - RECOVERY (autorun)",
+      "playbook": "plays/build.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "override_clean_basic",
+          "required": false,
+          "title": "clean basic?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "override_clean_out",
+          "required": false,
+          "title": "clean build?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "override_reset_git",
+          "required": false,
+          "title": "git reset all projects & resync?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "override_release_build",
+          "required": false,
+          "title": "release the build?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "true / false",
+          "name": "debug_build",
+          "required": false,
+          "title": "private notify?",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "syncs regardless of a git reset",
+          "name": "override_sync",
+          "required": false,
+          "title": "force a (re-)sync",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "https://github.com/axp-os/build",
+          "name": "axp_main_branch",
+          "required": false,
+          "title": "AXP.OS main branch/tag",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "will create a debug eng build",
+          "name": "axp_build_eng",
+          "required": false,
+          "title": "Engineering Build (true | false)?",
+          "type": "",
+          "values": []
+        }
+      ],
+      "task_params": {},
+      "type": "deploy",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "⛑️ REC"
+    },
+    {
+      "allow_override_args_in_task": false,
+      "allow_override_branch_in_task": false,
+      "allow_parallel_tasks": false,
+      "app": "ansible",
+      "arguments": "[\"-vv\"]",
+      "autorun": false,
+      "environment": "zzz_misc_all_trigger_dummy-env",
+      "inventory": "axp_build_inventory",
+      "name": "SET FREEZEDAY Build-ID",
+      "playbook": "plays/axp_freezeday.yml",
+      "repository": "sfX-Android  - automation_scripts",
+      "roles": [],
+      "suppress_success_alerts": false,
+      "survey_vars": [
+        {
+          "default_value": "2026-",
+          "description": "format: YYYY-MM.id",
+          "name": "semaphore_aos_template_startversion",
+          "required": true,
+          "title": "Set build ID",
+          "type": "",
+          "values": []
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "debug_off",
+          "required": false,
+          "title": "debug_off",
+          "type": "enum",
+          "values": [
+            {
+              "name": "yes",
+              "value": "True"
+            },
+            {
+              "name": "no",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "ALL",
+          "description": "repo%branch",
+          "name": "freezeday_app_singlerepo",
+          "required": true,
+          "title": "App (single or ALL)",
+          "type": "enum",
+          "values": [
+            {
+              "name": "ALL",
+              "value": "ALL"
+            },
+            {
+              "name": "LoveLaceAV",
+              "value": "packages_apps_LoveLaceAV%merge"
+            },
+            {
+              "name": "OpenEUICC",
+              "value": "packages_apps_OpenEUICC%main"
+            },
+            {
+              "name": "Neo Launcher",
+              "value": "packages_apps_neo-launcher%axp"
+            },
+            {
+              "name": "PhoneSky",
+              "value": "packages_apps_phonesky%axp"
+            }
+          ]
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "skip_build_apps",
+          "required": false,
+          "title": "skip_build_apps",
+          "type": "enum",
+          "values": [
+            {
+              "name": "Yes",
+              "value": "True"
+            },
+            {
+              "name": "No",
+              "value": "False"
+            }
+          ]
+        },
+        {
+          "default_value": "",
+          "description": "",
+          "name": "skip_build_apps_longrun",
+          "required": false,
+          "title": "skip_build_apps_longrun",
+          "type": "enum",
+          "values": [
+            {
+              "name": "Yes",
+              "value": "True"
+            },
+            {
+              "name": "No",
+              "value": "False"
+            }
+          ]
+        }
+      ],
+      "task_params": {
+        "allow_debug": true
+      },
+      "type": "",
+      "vaults": [
+        {
+          "name": "main",
+          "type": "password",
+          "vault_key": "vault_pw"
+        }
+      ],
+      "view": "🎲 MISC"
+    }
+  ],
+  "views": [
+    {
+      "hidden": false,
+      "position": -1,
+      "sort_reverse": false,
+      "title": "All",
+      "type": "all"
+    },
+    {
+      "hidden": false,
+      "position": 0,
+      "sort_reverse": false,
+      "title": "🎲 MISC",
+      "type": ""
+    },
+    {
+      "hidden": false,
+      "position": 1,
+      "sort_reverse": false,
+      "title": "🍼 INIT",
+      "type": ""
+    },
+    {
+      "hidden": false,
+      "position": 2,
+      "sort_reverse": false,
+      "title": "⚙️ PRO",
+      "type": ""
+    },
+    {
+      "hidden": false,
+      "position": 3,
+      "sort_reverse": false,
+      "title": "⚙️ PRO (COM)",
+      "type": ""
+    },
+    {
+      "hidden": false,
+      "position": 4,
+      "sort_reverse": false,
+      "title": "🛡️ SLIM (COM)",
+      "type": ""
+    },
+    {
+      "hidden": false,
+      "position": 5,
+      "sort_reverse": false,
+      "title": "👷🏻 WIP",
+      "type": ""
+    },
+    {
+      "hidden": false,
+      "position": 6,
+      "sort_reverse": false,
+      "title": "⛑️ REC",
+      "type": ""
+    },
+    {
+      "hidden": false,
+      "position": 7,
+      "sort_reverse": false,
+      "title": "🪦💀 RIP",
+      "type": ""
+    }
+  ]
+}

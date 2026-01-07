@@ -294,7 +294,9 @@ $[BUILD-USER]> deactivate
 
 ## Setup Semaphore
 
-1. Download [this JSON project](/semaphore_project.json) example
+1. Download the JSON project according to your semaphore version:
+   -  [semaphore v2.16](/semaphore_project.json)
+   -  [semaphore v2.17](/semaphore_project_v217.json)
 2. Click top left menu and `Restore Project`
 3. Select the downloaded JSON file and set a project name, e.g. `AXP.OS` and let it import
 4. you might see a message that some keys are empty, that is expected as they are private keys
