@@ -78,7 +78,7 @@ chmod 750 /etc/semaphore
 ```
 3. Create a python virtual environment:
 ```
-su - semaphore
+sudo -u semaphore bash
 cd /opt/semaphore
 python3 -m venv .venv
 ```
@@ -173,7 +173,7 @@ systemctl enable --now semaphore
 
 If you do **not** want to use the automated process via systemd you need to download the requirements manually:<br/>_(i.e. **SKIP** this if you use the provided systemd service above)_
 ```
-su - semaphore
+sudo -u semaphore bash
 wget https://raw.githubusercontent.com/sfX-android/automation_scripts/refs/heads/ansible/plays/python-requirements.txt -O /etc/semaphore/python-requirements.txt
 wget "https://raw.githubusercontent.com/sfX-android/automation_scripts/refs/heads/ansible/plays/collections/requirements.yml" -O /etc/semaphore/requirements.yml
 
