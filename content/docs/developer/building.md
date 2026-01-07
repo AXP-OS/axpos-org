@@ -196,6 +196,12 @@ Recommended specs (standalone, i.e. when using a **separate(!)** Buildserver):
   - _the amount of RAM and/or SWAP depends on the Android version you build for! E.g. A9 just requires 8 GB and A15 at least 48 GB to build without workarounds_
 - at least 200 GB free disk space (on `/usr/src`).
   - _the amount depends though. as a rule of thumb: ~200GB per Android version you want to build for_
+- if you want to use CCACHE _(recommended)_:
+  - the amount depends again on how many Android versions (and/or kernels) you want to build for and can be set via `ccache_max_size` in your semaphore inventory
+  - if building for 2 Android versions (e.g. A11 + A13) the disk usage is `ccache_max_size x 2` and `ccache_max_size x 3`  when building for 3 versions and so on.
+  - example when building A15 for multiple devices: 50G _(ccache uncompressed)_
+  - example when building A10 for 1 device only: 20-30G _(ccache uncompressed)_
+  - you can optionally enable compression _(`CCACHE_COMPRESS: 1` in your semaphore inventory)_ to reduce disk usage at the cost of CPU usage
 - can run in LXC, docker, full VM, or even on your laptop/PC
 - OS: Ubuntu 24.04
 
