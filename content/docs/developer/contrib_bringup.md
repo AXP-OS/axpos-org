@@ -36,9 +36,9 @@ AXP.OS might not offer the latest available Android version for your device (by 
 1. map LineageOS version with Android version: [click](https://en.wikipedia.org/wiki/LineageOS#Version_history)
 1. you need both versions later so note them
 
-#### update the issue:
+#### update your request:
 
-Update the issue with the following information:
+Update your request with the following information:
 - Suggested AXP.OS version: `Android XXX , lineageOS-XXX`
 
 _keep in mind that the AXP.OS version must be a stable or planned Android version. That means if LOS supports A13-A16 but AXP.OS only A13 or A15, then A15 is the suggested AXP.OS version._
@@ -53,9 +53,9 @@ _keep in mind that the AXP.OS version must be a stable or planned Android versio
 
 If there is a folder with the requested codename (e.g. `enchilada`), check the file `AndroidBoardVendor.mk`. It should contain several `$(call add-radio-file.....`.
 
-#### update the issue:
+#### update your request:
 
-Update the issue with the following information:
+Update your request with the following information:
 
 - vendor_firmware - AndroidBoardVendor.mk: `<link>` (or, if not found: `not supported/found`)
 
@@ -68,11 +68,11 @@ Update the issue with the following information:
 1. find the repo with the codename
 1. select the correct `branch` (axp-a13 = `lineage-20.0`, etc)
 1. find the `Android.mk` within
-1. add a link to that Android.mk file in the issue ([example](https://github.com/TheMuppets/proprietary_vendor_fairphone_FP3/blob/lineage-20.0/Android.mk))
+1. add a _link_ to that Android.mk file in your request (example: `https://github.com/TheMuppets/proprietary_vendor_fairphone_FP3/blob/lineage-20.0/Android.mk`)
 
-#### update the issue:
+#### update your request:
 
-Update the issue with the following information:
+Update your request with the following information:
 
 - TheMuppets - Android.mk: `<link>`
 
@@ -87,9 +87,9 @@ For these devices AXP.OS automatically downloads and includes the latest availab
 
 You need to find the latest and _Android-version-matching_ STOCK-OS ZIP from a [trusted source](/docs/developer/port/#extract-and-push-vendorfirmware). That means it must match the _AXP.OS_ Android version.
 
-#### update the issue:
+#### update your request:
 
-Update the issue with the following information:
+Update your request with the following information:
 
 ```
 vendor_firmware_source: "https://the-website-where-the-firmware-is-located"
@@ -99,14 +99,14 @@ vendor_firmware_download_sha512: "" # one of sha512, sha256 or md5 is required (
 
 ### Automation
 
-open the [copytemplate](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common_init_device/vars/copytemplate.yml)
+#### update your request:
 
-#### update the issue:
+Update your request as follows:
 
-Update the issue with the following information:
-1. find all `REQUIRED` lines and copy them here, add them as a **code block** _(mark the **whole** block, then click the `<>` icon)_
-1. fill in as much as you can, leave blank when you are unsure or do not know what to do _(you can always ask in the Matrix bringup chat ofc)_
-
+1. copy the whole content of this [copytemplate](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common_init_device/vars/copytemplate.yml)
+2. add a new comment and paste it there _(do not save yet)_
+3. select the **whole** block, then click the `<>` icon, from now on you can save that comment or directly proceed with 4:
+4. fill in what you can, blocks with `REQUIRED` are more important than others, if you have no idea ask or simply skip. ensure you _ignore_ any `DO NOT TOUCH` blocks _(do **not** remove them though)_.
 
 ### Prepare _other_ requests
 
