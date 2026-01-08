@@ -70,7 +70,7 @@ Update your request as follows:
 ![copytemplate](/img/copytemplate.png)
 2. add a new comment to your request and paste it there _(do not save yet)_
 3. select the **whole** block, then click the `<>` icon, from now on you can save that comment or directly proceed with 4:
-4. fill in what you can, blocks with `REQUIRED` are more important than others, if you have no idea ask or simply skip it. ensure you _ignore_ any `DO NOT TOUCH` blocks _(do **not** remove them though)_.
+4. fill in what you can, related blocks are marked with `DEFINE-IF-YOU-CAN`. If you have no idea ask or simply skip it. ensure you _ignore_ any `DO NOT TOUCH` blocks _(do **not** remove them though)_.
 
 ### Prepare _other_ requests
 
