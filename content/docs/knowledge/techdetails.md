@@ -6,7 +6,7 @@ aliases:
     - /Technical-Details
 ---
 
-> [!IMPORTANT]
+> [!IMPORTANT] NOTE
 > The whole document is a markdown replacement of the original made by: [Divested Computing Group](https://web.archive.org/web/20241231213231/https://divestos.org/pages/technical_details), so all credits goes to them.
 >
 > AXP.OS used DivestOS as a base up to December 2024 (see [Divest_EOL](/Divest_EOL)) but the following still reflects the current state for AXP.OS (as of January 2025).
@@ -15,7 +15,7 @@ aliases:
 > 
 > Nevertheless the whole page get a full re-work after the `Divest->AXP.OS` cleanups are finalized and the dust has settled again..  
 
-Last updated: `2025-01-30`
+Last updated: `2026-01-08`
 
 ### Overview
 
@@ -47,7 +47,7 @@ The kernel also sports many built-in security features, that most devices actual
 
 #### The Patcher
 
-We do not maintain forks of repos to store modifications. Instead we keep all of our changes and scripts to apply them in a single repository. This has various benefits and downsides, but works best for our needs.
+We maintain forks of all repos which receives modifications and also provide reproducible builds even.
 
 ##### Steps performed when running patchWorkspace()
 
@@ -65,6 +65,36 @@ We do not maintain forks of repos to store modifications. Instead we keep all of
 #### The Changes
 
 We currently support several Android versions. We try our best to ensure parity between them. The below is non-exhaustive and does not include the many changes made using the vendor overlay.
+
+#### What changes does `axp_lowend_device` make?
+
+devices usually having this setting enabled:
+
+- 14.1 - 16.0: <2GB RAM
+- 17.1 - 18.1: <3GB RAM
+- 19.1 - 20.0: <4GB RAM
+- 22.2: _TBD_
+
+What changes are applied on these devices:
+
+- **Multiple user** support is disabled (while still allowing a Work Profile)
+- **Split screen** is disabled
+- **Some smaller animations** are disabled
+- SystemUI: In Recents, **apps do not overlay and have lower resolution previews**
+- SystemUI: In Recents, the **`Clear all` button is at the very bottom and always visible**
+- Launcher3/Trebuchet: **Some extra accents** are disabled
+- Contacts/Dialer/Email: **Icon cache is altered**
+- Settings: **Many settings are hidden**
+- Signal/Silence: **Max resolution for MMS image size reduction is lower**
+- Muzei: **Blur isn't as aggressive by default**
+
+How much RAM is saved?
+- Under 15.1 after boot settles:
+  - mako: ~370MB -> ~310MB
+  - d852: ~850MB -> ~680MB
+
+Most but not all changes can be found here:
+- Patches/Common/android_vendor_divested/build/target/product/lowram.mk
 
 ##### Included Apps
 
