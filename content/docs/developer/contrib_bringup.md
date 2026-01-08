@@ -27,75 +27,38 @@ In order to speed up your device request to be worked on you can:
 1. prepare additional information (listed in the next topics) to ***your own*** request
 1. add the same for ***other*** device requests which are older than your own _(usually the order of processing is from oldest->newest - with exceptions though)_
 
-## Android version
+## Prepare your _own_ request
 
-AXP.OS might not offer the latest available Android version for your device (by design):
+### Firmware
 
-1. check the current latest stable or planned [Android version](/docs/knowledge/requirements/#android-version)
-1. check what LineageOS version is supported for your device [LineageOS wiki](https://wiki.lineageos.org/devices/)
-1. map LineageOS version with Android version: [click](https://en.wikipedia.org/wiki/LineageOS#Version_history)
-1. you need both versions later so note them
-
-#### update your request:
-
-Update your request with the following information:
-- Suggested AXP.OS version: `Android XXX , lineageOS-XXX`
-
-_keep in mind that the AXP.OS version must be a stable or planned Android version. That means if LOS supports A13-A16 but AXP.OS only A13 or A15, then A15 is the suggested AXP.OS version._
-
-## Firmware / Bootloader
-
-### Firmware check
-
-1. open https://code.binbash.rocks/AXP.OS/vendor_firmware
-1. select the correct `branch` _(must match the AXP.OS Android version)_
-1. click the folder with the `codename` for your device<br/>_(if you do not know it: https://wiki.lineageos.org/devices/ -> select your device and find its codename)_
-
-If there is a folder with the requested codename (e.g. `enchilada`), check the file `AndroidBoardVendor.mk`. It should contain several `$(call add-radio-file.....`.
-
-#### update your request:
-
-Update your request with the following information:
-
-- vendor_firmware - AndroidBoardVendor.mk: `<link>` (or, if not found: `not supported/found`)
-
-### Blobs check
+#### Legacy devices/versions not receiving vendor firmware updates anymore
 
 > [!CAUTION] EXCEPTIONS
-> _Skip this topic for **any** device which still provides firmware updates for the suggested Android version of the device (e.g. Fairphone or SHIFTphone might still offer updates for that Android version. In that case skip to the next topic)._
+> _Skip this topic only for devices which still gets firmware updates for the suggested Android version of the device. For example Fairphone or SHIFTphone might still offer updates for that Android version you want to use with AXP.OS. Only then skip that topic and proceed with the next topic._
 
 1. open https://github.com/TheMuppets
-1. find the repo with the codename
-1. select the correct `branch` (axp-a13 = `lineage-20.0`, etc)
-1. find the `Android.mk` within
-1. add a _link_ to that Android.mk file in your request (example: `https://github.com/TheMuppets/proprietary_vendor_fairphone_FP3/blob/lineage-20.0/Android.mk`)
+2. find the repo with the codename
+3. select the correct `branch` (axp-a13 = `lineage-20.0`, etc)
+4. find the `Android.mk` within
 
-#### update your request:
+##### update your request:
 
 Update your request with the following information:
 
-- TheMuppets - Android.mk: `<link>`
+- TheMuppets: `<link-to-Android.mk>`
 
-### Any device which still gets vendor firmware updates
+(e.g.: `https://github.com/TheMuppets/proprietary_vendor_google_blueline/blob/lineage-20/Android.mk`)
+
+#### Devices which still gets vendor firmware updates
 
 > [!CAUTION] EXCEPTIONS
-> _This topic can be skipped if the previous **Blobs check** topic matched for your device_
+> _This topic can be skipped if the previous **"Legacy devices/versions not receiving vendor firmware updates anymore"** topic matched for your device already._
 
-Usually this topic covers mostly Fairphone / SHIFTphone but even then that has to be verified first! For example Fairphone recently released A15 for the FP4 model and so stopped providing updates for A13. If A13 is the suggested Android version it means you have to follow the _blobs check_ above instead, otherwise (i.e. if the Android version matches what the vendor provides updates for, go on).
+This topic covers mostly Fairphone / SHIFTphone but even then that has to be verified first! For example Fairphone recently released A15 for the FP4 model and so stopped providing updates for A13. If A13 is the suggested Android version it means you have to follow the *"Legacy devices/versions not receiving vendor firmware updates anymore"* above instead, otherwise (i.e. if the Android version matches what the vendor provides updates for, go on).
 
-For these devices AXP.OS automatically downloads and includes the latest available firmware if properly set up.
+For these devices AXP.OS automatically downloads and includes the latest available firmware and live-extract all required blobs.
 
-You need to find the latest and _Android-version-matching_ STOCK-OS ZIP from a [trusted source](/docs/developer/port/#extract-and-push-vendorfirmware). That means it must match the _AXP.OS_ Android version.
-
-#### update your request:
-
-Update your request with the following information:
-
-```
-vendor_firmware_source: "https://the-website-where-the-firmware-is-located"
-vendor_firmware_download_url: "" # DIRECT download link
-vendor_firmware_download_sha512: "" # one of sha512, sha256 or md5 is required (in that order)
-```
+No action required here but you have to fill in the whole **Firmware info** block in the copytemplate of the next topic _"Automation"_
 
 ### Automation
 
@@ -103,10 +66,11 @@ vendor_firmware_download_sha512: "" # one of sha512, sha256 or md5 is required (
 
 Update your request as follows:
 
-1. copy the whole content of this [copytemplate](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common_init_device/vars/copytemplate.yml)
-2. add a new comment and paste it there _(do not save yet)_
+1. copy the whole content of this [copytemplate (click to open)](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common_init_device/vars/copytemplate.yml)
+![copytemplate](/img/copytemplate.png)
+2. add a new comment to your request and paste it there _(do not save yet)_
 3. select the **whole** block, then click the `<>` icon, from now on you can save that comment or directly proceed with 4:
-4. fill in what you can, blocks with `REQUIRED` are more important than others, if you have no idea ask or simply skip. ensure you _ignore_ any `DO NOT TOUCH` blocks _(do **not** remove them though)_.
+4. fill in what you can, blocks with `REQUIRED` are more important than others, if you have no idea ask or simply skip it. ensure you _ignore_ any `DO NOT TOUCH` blocks _(do **not** remove them though)_.
 
 ### Prepare _other_ requests
 
