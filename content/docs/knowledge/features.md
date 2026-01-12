@@ -103,11 +103,11 @@ The following is just a **simplified** comparison between some popular custom OS
 
 Examples of more detailed comparisons (_even though without AXP.OS_) can be found:
 - [here](https://eylenburg.github.io/android_comparison.htm) or
-- [here](https://eylenburg.github.io/old/android_comparison_2024old.htm) (_hint:  AXP.OS was based on Divest until Dec 2024_)
+- [here](https://eylenburg.github.io/old/android_comparison_2024old.htm) (_hint: AXP.OS has always been based on DivestOS and therefore always contained all of its features. Since January 2025, AXP.OS has been developed independently on this last available DivestOS code base._)
 
 The _Main(!) focus_ column is a bit vague or better said subjective as all OS claim to be all of these 3: _user-friendly, secure and privacy-friendly_.
 
-Yes, _Privacy_ always requires having a _secure_ device, too! Thats why OS in the following table having _Privacy_ as their main focus doing this more intensively than others. See _Privacy Examples_ to get an idea.
+Yes, _Privacy_ always requires having a _secure_ device, too! Although _security_ and _privacy_ are often mentioned in the same breath, the two terms are **not** synonymous ([details](https://threema.com/en/blog/security-vs-privacy)). OS in the following table having _Privacy_ as their main focus doing this more intensively than others. See _Privacy Examples_ to get an idea.
 
 |OS|Main(!) focus|Pro|Contra|
 |-|-|-|-|
@@ -115,23 +115,24 @@ Yes, _Privacy_ always requires having a _secure_ device, too! Thats why OS in th
 |[CalyxOS](https://calyxos.org/)|Usability, Privacy|_high_ usability, customizable|no focus on security, does not support older Android versions, recently [paused](https://calyxos.org/news/2025/08/01/a-letter-to-our-community/) development, mostly Pixel devices focussed|
 |[GrapheneOS](http://grapheneos.org/)|Security|best in class focus on security, _good_ usability|Google Pixel devices only, usually does not support older Android versions|
 |[/e/ OS](https://e.foundation/e-os/)|Usability, Privacy|wide range of supported devices, _very high_ usability|no focus on security, does not support devices with older Android versions, late ASB patches|
-|AXP.OS - Pro ⚙️|Usability, Privacy|_best_ balance between modding, usability, security and privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported, reduced security compared to the _Slim_ flavor|
-|AXP.OS - Slim 🛡️|Security, Privacy|provides _good_ usability while focussing strictly on security and privacy, supports devices with older Android versions|only a subset of LineageOS devices currently supported, reduced usability compared to the _Pro_ flavor|
+|AXP.OS - Pro ⚙️|Usability, Privacy|_best_ balance between modding, usability, security and privacy, supports devices with older Android versions, _good_ range of supported devices, extensive testing _(no blind builds!)_|only a subset of LineageOS devices currently supported, reduced security compared to the _Slim_ flavor|
+|AXP.OS - Slim 🛡️|Security, Privacy|provides _good_ usability while focussing strictly on security and privacy, supports devices with older Android versions, _good_ range of supported devices, extensive testing _(no blind builds!)_|only a subset of LineageOS devices currently supported, reduced usability compared to the _Pro_ flavor|
 
-Privacy examples:
+_Privacy_ examples:
 - reducing/disabling Call-Home functions
 - reducing/removing Google dependencies
 - deblobbing of proprietary parts
+- ...
 
-Usability examples:
+_Usability_ examples:
 - allow or even include custom extensions (e.g. microG)
 - pre-configurations
 - including certain Apps
 - support installing Apps from F-Droid
 - ...
 
-Security examples:
-- fast ASB patching
+_Security_ examples:
+- ASB patching/backporting
 - (CVE related) Kernel patching
 - intensive hardening (e.g. malloc replacement)
-
+- ...
