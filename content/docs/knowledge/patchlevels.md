@@ -69,14 +69,14 @@ A new patch level `"YYYY-MM-03"` has been added to distinguish better between fu
 
 {{< callout type="info" emoji="💽" >}}
 Fixes from `SoC manufacturers` _(SoC = System-on-Chip, e.g. QualComm)_ and/or `OEM's` _(Original Equipment Manufacturer, e.g. Samsung, Google, Sony, ...)_ can be usually provided for modern _(i.e. still OEM supported)_ devices only _(e.g. Fairphone, SHIFT)_.
-<br/>_Note: These updates are usually simply referred to as `"Firmware"`._
+<br/>_Note: These updates are usually simply referred to as **`"Firmware"`**._
 <br/>Many devices get these updates for a short period of time only and they are always proprietary / closed source.<br/>
 Besides that they are always bound to the _Android_ version used by the AXP.OS release and so can be even _outdated_ _(i.e. if AXP.OS is A13 and there are A14 SoC/OEM patches they can **not** be applied)_.<br/>
 Check out the `Patchlevel` row of the [Devices](/devices) page for your model to see what is covered for your device.
 {{< /callout >}}
 
 {{< callout type="info" emoji="🐧" >}}
-One of the outstanding AXP.OS features is patching each and every Kernel. OEM's or other OS developers usually "just" take Google patches and backport them to their devices. If they do it at all! AXP.OS on the other hand uses the [CVE-Patcher](https://git.disroot.org/AXP.OS/kernel_patches) _(originally developed by DivestOS)_ and that often before they are even/ever part of a Google ASB. Kernel patches sometimes can take months until they get merged by Google which already resulted in several open security holes for longer than necessary. Additionally the CVE-Patcher covers a lot more than an ASB does, legacy devices easily have 1000+ patches applied _(exact amount can be revealed in the Kernel version shown as `-pXXXX` in Android's About-Info page)_.<br/><br/>
+One of the outstanding AXP.OS features is patching each and every `Android Linux Kernel`. OEM's or other OS developers usually "just" take Google patches and backport them to their devices. If they do it at all! AXP.OS on the other hand applies kernel patches by using the [CVE-Patcher](https://git.disroot.org/AXP.OS/kernel_patches) _(originally developed by DivestOS)_ which often fixes issues before they are even/ever part of a Google ASB _(Kernel patches sometimes can take months until they get merged by Google which already resulted in several open security holes for longer than necessary)_. Additionally the CVE-Patcher covers a lot more than an ASB does, legacy devices easily have 1000+ patches applied _(exact amount can be revealed in the Kernel version shown as `-pXXXX` in Android's About-Info page)_.<br/><br/>
 AXP.OS `Linux kernel` patches include:
 - [patches](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/kernel_patcher/tasks/asb.yml) by [Google](https://source.android.com/docs/security/bulletin/asb-overview)
 - [patches](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/kernel_patcher/tasks/cip.yml) by the [CIP project](https://gitlab.com/cip-project/cip-kernel/cip-kernel-sec)
