@@ -29,6 +29,7 @@
           {{ $relockable_pro := .Param "relockable_pro" }}
           {{ $verifiedboot_pro := .Param "verifiedboot_pro" }}
           {{ $flavors_pro := .Param "flavors_pro" }}
+          {{ $patchlevel_pro := .Param "patchlevel_pro" }}
           {{ $state_pro := .Param "state_pro" }}
           {{ $supportlevel_pro := .Param "supportlevel_pro" }}
 
@@ -39,6 +40,7 @@
           {{ $relockable_slim := .Param "relockable_slim" }}
           {{ $verifiedboot_slim := .Param "verifiedboot_slim" }}
           {{ $flavors_slim := .Param "flavors_slim" }}
+          {{ $patchlevel_slim := .Param "patchlevel_slim" }}
           {{ $state_slim := .Param "state_slim" }}
           {{ $supportlevel_slim := .Param "supportlevel_slim" }}
 
@@ -66,6 +68,8 @@
               "isab" $isab
               "ispixel" $ispixel
               "kilink" $kilink
+              "patchlevel_pro" $patchlevel_pro
+              "patchlevel_slim" $patchlevel_slim
               "relock_pro" $relockable_pro
               "relock_slim" $relockable_slim
               "state_pro" $state_pro

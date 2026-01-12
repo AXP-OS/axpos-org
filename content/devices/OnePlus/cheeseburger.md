@@ -20,6 +20,7 @@ android_pro: 13
 encryption_pro: "ICE"
 firstrelease_pro: "2025-08-05"
 flavors_pro: True
+patchlevel_pro: "Platform + Kernel"
 relockable_pro: "no"
 state_pro: "stable"
 supportlevel_pro: community
@@ -30,6 +31,7 @@ android_slim:
 encryption_slim: ""
 firstrelease_slim: ""
 flavors_slim: 
+patchlevel_slim: "Platform + Kernel"
 relockable_slim: ""
 state_slim: ""
 supportlevel_slim: 

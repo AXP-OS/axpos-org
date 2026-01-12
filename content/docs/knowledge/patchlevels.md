@@ -40,27 +40,49 @@ And security aside, it still has substantial benefits over the stock/final relea
 
 ## The AXP.OS patch level
 
-Each month Google releases an Android Security Bulletin ("ASB") which contains important patches _(check next topic, as their content has heavily changed)_ and marked with 2 different patch dates ([details](https://source.android.com/docs/security/bulletin/2025-01-01#Common-questions-and-answers)).
+Each month Google releases an Android Security Bulletin ("ASB") which contains important patches _(check next topic, as their content has heavily changed)_ and marked with different patch dates.
+
+#### until 2025-12
+
+Up to 2025-12 AXP.OS re-used Google's [patch dates](https://source.android.com/docs/security/bulletin/2025-01-01#Common-questions-and-answers) and mapped `-05` for all devices where the Linux kernel could be patched, regardless if they were `Firmware` updates included.
 
 |Patch date|STOCK OS|AXP.OS|
 |-|-|-|
-|`YYYY-MM-01`|Android platform fixes|Android platform fixes*|
-|`YYYY-MM-05`|SOC manufacturers, <br/>Linux kernel|SOC manufacturers (🏭), <br/>Linux kernel (🐧)|
+|`YYYY-MM-01`|🧩 Android platform fixes only|🧩 Android platform fixes only|
+|`YYYY-MM-05`|🧩 Android platform fixes +<br/>💽 SoC manufacturers/OEM's +<br/>🐧 Linux kernel|🧩 Android platform fixes +<br/>💽 SoC manufacturers/OEM's +<br/>🐧 Linux kernel|
 
-{{< callout type="info" emoji="🏭" >}}
-Fixes from _SOC manufacturers_ can be provided for modern (i.e. still vendor supported) devices only. Many devices get these updates for a short period of time only and are proprietary / closed source.<br/>
-Besides that they are always bound to the _Android_ version used by the AXP.OS release and so can be even _outdated_ (i.e. if AXP.OS is A13 and there are A14 SOC patches they cannot be applied).
+#### since 2026-01
+
+A new patch level `"YYYY-MM-03"` has been added to distinguish better between fully patched _(i.e. including `Firmware`)_ and "just" including `Kernel` patches:
+
+|Patch date|STOCK OS|AXP.OS|
+|-|-|-|
+|`YYYY-MM-01`|🧩 Android platform fixes only|🧩 Android platform fixes only|
+|`YYYY-MM-03`|N/A|🧩 Android platform fixes +<br/>🐧 Linux kernel|
+|`YYYY-MM-05`|🧩 Android platform fixes +<br/>💽 SoC manufacturers/OEM's +<br/>🐧 Linux kernel|🧩 Android platform fixes +<br/>💽 SoC manufacturers/OEM's +<br/>🐧 Linux kernel|
+
+
+{{< callout type="info" emoji="🧩" >}}
+`Android platform fixes` _(often referred to as just `ASB`, meaning Android Security Bulletins)_ are backports of [official released fixes](https://source.android.com/docs/security/bulletin/) by Google and can be provided for a wide range of devices. Backports will usually **not** cover _all_ ASB patches as code is constantly evolving and so might not even apply to older versions, especially on ultra legacy Android versions _(i.e. ~5 or more versions older than the latest Android version)_.<br/>
+<br/>*_see next topic `New (2025) ASB release cycle` for more details_
+{{< /callout >}}
+
+{{< callout type="info" emoji="💽" >}}
+Fixes from `SoC manufacturers` _(SoC = System-on-Chip, e.g. QualComm)_ and/or `OEM's` _(Original Equipment Manufacturer, e.g. Samsung, Google, Sony, ...)_ can be usually provided for modern _(i.e. still OEM supported)_ devices only _(e.g. Fairphone, SHIFT)_.
+<br/>_Note: These updates are usually simply referred to as `"Firmware"`._
+<br/>Many devices get these updates for a short period of time only and they are always proprietary / closed source.<br/>
+Besides that they are always bound to the _Android_ version used by the AXP.OS release and so can be even _outdated_ _(i.e. if AXP.OS is A13 and there are A14 SoC/OEM patches they can **not** be applied)_.<br/>
+Check out the `Patchlevel` row of the [Devices](/devices) page for your model to see what is covered for your device.
 {{< /callout >}}
 
 {{< callout type="info" emoji="🐧" >}}
-Upstream _Linux kernel_ fixes include:
+One of the outstanding AXP.OS features is patching each and every Kernel. OEM's or other OS developers usually "just" take Google patches and backport them to their devices. If they do it at all! AXP.OS on the other hand uses the [CVE-Patcher](https://git.disroot.org/AXP.OS/kernel_patches) _(originally developed by DivestOS)_ and that often before they are even/ever part of a Google ASB. Kernel patches sometimes can take months until they get merged by Google which already resulted in several open security holes for longer than necessary. Additionally the CVE-Patcher covers a lot more than an ASB does, legacy devices easily have 1000+ patches applied _(exact amount can be revealed in the Kernel version shown as `-pXXXX` in Android's About-Info page)_.<br/><br/>
+AXP.OS `Linux kernel` patches include:
 - [patches](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/kernel_patcher/tasks/asb.yml) by [Google](https://source.android.com/docs/security/bulletin/asb-overview)
 - [patches](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/kernel_patcher/tasks/cip.yml) by the [CIP project](https://gitlab.com/cip-project/cip-kernel/cip-kernel-sec)
 - [patches](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/kernel_patcher/tasks/incremental.yml) by [kernel.org](https://kernel.org/)
 - Note: not _all_ these patches can be applied on _all_ devices. These exclusions are handled via [Fix_CVE_Patchers.sh](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Fix_CVE_Patchers.sh)
 {{< /callout >}}
-
-*_see next topic for an important change_
 
 ### New (2025) ASB release cycle
 

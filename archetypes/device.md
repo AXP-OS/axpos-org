@@ -20,6 +20,7 @@ android_pro: {{ getenv "HUGO_PRO_ANDROID" }}
 encryption_pro: "{{ getenv "HUGO_PRO_ENCRYPTION" }}"
 firstrelease_pro: "{{ getenv "HUGO_PRO_FIRSTRELEASE" }}"
 flavors_pro: {{ getenv "HUGO_PRO_FLAVOR" }}
+patchlevel_pro: "{{ with getenv "HUGO_PRO_PATCHLEVEL" }}{{ . }}{{ else }}Platform + Kernel{{ end }}"
 relockable_pro: "{{ getenv "HUGO_PRO_RELOCKABLE" }}"
 state_pro: "{{ getenv "HUGO_PRO_STATE" }}"
 supportlevel_pro: {{ getenv "HUGO_PRO_SUPPORTLEVEL" }}
@@ -30,6 +31,7 @@ android_slim: {{ getenv "HUGO_SLIM_ANDROID" }}
 encryption_slim: "{{ getenv "HUGO_SLIM_ENCRYPTION" }}"
 firstrelease_slim: "{{ getenv "HUGO_SLIM_FIRSTRELEASE" }}"
 flavors_slim: {{ getenv "HUGO_SLIM_FLAVOR" }}
+patchlevel_slim: "{{ with getenv "HUGO_SLIM_PATCHLEVEL" }}{{ . }}{{ else }}Platform + Kernel{{ end }}"
 relockable_slim: "{{ getenv "HUGO_SLIM_RELOCKABLE" }}"
 state_slim: "{{ getenv "HUGO_SLIM_STATE" }}"
 supportlevel_slim: {{ getenv "HUGO_SLIM_SUPPORTLEVEL" }}

@@ -20,6 +20,7 @@ android_pro:
 encryption_pro: ""
 firstrelease_pro: ""
 flavors_pro: 
+patchlevel_pro: "Platform + Kernel"
 relockable_pro: ""
 state_pro: ""
 supportlevel_pro: 
@@ -30,6 +31,7 @@ android_slim: 13
 encryption_slim: "FBEv1"
 firstrelease_slim: "2025-02-08"
 flavors_slim: True
+patchlevel_slim: "Platform + Kernel"
 relockable_slim: "yes"
 state_slim: "stable"
 supportlevel_slim: community

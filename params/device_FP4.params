@@ -26,3 +26,4 @@ export HUGO_SLIM_STATE="stable"
 export HUGO_SLIM_SUPPORTLEVEL="community"
 export HUGO_SLIM_VERIFIEDBOOT="v2.0"
 export HUGO_SLIM_FLAVOR=True
+export HUGO_SLIM_PATCHLEVEL="Platform + Kernel<br/><i>(Firmware until 2025-11)</i>"

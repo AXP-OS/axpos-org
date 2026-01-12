@@ -35,7 +35,7 @@
 {{ end }}
   </tr>
 <tr>
-  <td style="text-align:left;"><strong>Flavor (<a href="/Flavors">?</a>):</strong></td>
+  <td style="text-align:left;"><strong>Flavor (<a href="/Flavors" target="_blank">?</a>):</strong></td>
   {{ if .flavor_pro }}<th style="text-align:center;"><strong>Pro</strong></th>{{ end }}
   {{ if .flavor_slim }}<th style="text-align:center;"><strong>Slim</strong></th>{{ end }}
 </tr>
@@ -55,7 +55,7 @@
   {{ if .flavor_slim }}<td style="text-align:center;">{{ .firmware }}</td>{{ end }}
 </tr>
 <tr>
-  <th style="text-align:left;"><strong>Encryption (<a href="https://source.android.com/docs/security/features/encryption">?</a>):</strong></th>
+  <th style="text-align:left;"><strong>Encryption (<a href="https://source.android.com/docs/security/features/encryption" target="_blank">?</a>):</strong></th>
   {{ if .flavor_pro }}<td style="text-align:center;background-color: {{ if eq .encryption_pro "FBEv2" }}#33cc33{{ else if eq .encryption_pro "FDE" }}#ff9933{{ else }}#66ffcc{{ end }}">{{ .encryption_pro }}</td>{{ end }}
   {{ if .flavor_slim }}<td style="text-align:center;background-color: {{ if eq .encryption_slim "FBEv2" }}#33cc33{{ else if eq .encryption_slim "FDE" }}#ff9933{{ else }}#66ffcc{{ end }}">{{ .encryption_slim }}</td>{{ end }}
 </tr>
@@ -65,9 +65,14 @@
   {{ if .flavor_slim }}<td style="text-align:center;background-color: {{ if hasPrefix .relock_slim "yes" }}#33cc33{{ else }}#ff9933{{ end }}">{{ .relock_slim }}</td>{{ end }}
 </tr>
 <tr>
-  <th style="text-align:left;"><strong>VerifiedBoot/AVB (<a href="/AVB">?</a>):</strong></th>
+  <th style="text-align:left;"><strong>VerifiedBoot/AVB (<a href="/AVB" target="_blank">?</a>):</strong></th>
   {{ if .flavor_pro }}<td style="text-align:center;background-color: {{ if hasPrefix .verifiedboot_pro "v2" }}#33cc33{{ else if hasPrefix .verifiedboot_pro "v1" }}#ebf500{{ else }}#f23000{{ end }}">{{ .verifiedboot_pro }}</td>{{ end }}
   {{ if .flavor_slim }}<td style="text-align:center;background-color: {{ if hasPrefix .verifiedboot_slim "v2" }}#33cc33{{ else if hasPrefix .verifiedboot_slim "v1" }}#ebf500{{ else }}#f23000{{ end }}">{{ .verifiedboot_slim }}</td>{{ end }}
+</tr>
+<tr>
+  <th style="text-align:left;"><strong>Patchlevel (<a href="/docs/knowledge/patchlevels/#the-axpos-patch-level" target="_blank">?</a>):</strong></th>
+  {{ if .flavor_pro }}<td style="text-align:center;background-color: {{ if eq .patchlevel_pro "Platform + Kernel + Firmware" }}#33cc33{{ else if hasPrefix .patchlevel_pro "Platform + Kernel" }}#66ffcc{{ else if hasPrefix .patchlevel_pro "Kernel" }}#ff9933{{ else }}#ff0000{{ end }}">{{ .patchlevel_pro }}</td>{{ end }}
+  {{ if .flavor_slim }}<td style="text-align:center;background-color: {{ if eq .patchlevel_slim "Platform + Kernel + Firmware" }}#33cc33{{ else if hasPrefix .patchlevel_slim "Platform + Kernel" }}#66ffcc{{ else if hasPrefix .patchlevel_slim "Kernel" }}#ff9933{{ else }}#ff0000{{ end }}">{{ .patchlevel_slim }}</td>{{ end }}
 </tr>
 <tr>
   <th style="text-align:left;"><strong>Verified & tested by:</strong></th>

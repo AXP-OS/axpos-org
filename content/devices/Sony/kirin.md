@@ -20,6 +20,7 @@ android_pro:
 encryption_pro: ""
 firstrelease_pro: ""
 flavors_pro: 
+patchlevel_pro: "Platform + Kernel"
 relockable_pro: ""
 state_pro: ""
 supportlevel_pro: 
@@ -30,6 +31,7 @@ android_slim: 13
 encryption_slim: "ICE"
 firstrelease_slim: "_[WIP](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/34)_"
 flavors_slim: True
+patchlevel_slim: "Platform + Kernel"
 relockable_slim: "no"
 state_slim: "!! ALPHA !!"
 supportlevel_slim: community

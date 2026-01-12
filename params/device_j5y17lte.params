@@ -26,3 +26,4 @@ export HUGO_PRO_STATE="stable"
 export HUGO_PRO_SUPPORTLEVEL="team"
 export HUGO_PRO_VERIFIEDBOOT="no"
 export HUGO_PRO_FLAVOR=True
+export HUGO_PRO_PATCHLEVEL="Kernel only<br/><i>(since Sep. 2025)<i>"
