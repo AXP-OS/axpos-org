@@ -20,7 +20,7 @@ android_pro: 10
 encryption_pro: "FBEv1"
 firstrelease_pro: "2024-06-20"
 flavors_pro: True
-patchlevel_pro: "Kernel only<br/><i>(since Sep. 2025)<i>"
+patchlevel_pro: "Kernel only<br/><i>(Platform until 2025-08)<i>"
 relockable_pro: "no"
 state_pro: "stable"
 supportlevel_pro: team
