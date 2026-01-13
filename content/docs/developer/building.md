@@ -108,7 +108,7 @@ SELECT CONCAT('ALTER TABLE ', table_name, ' CONVERT TO CHARACTER SET utf8mb4 COL
 
 Semaphore can be configured in different ways:
 
-- interactive setup: `cd /etc/semaphore; semaphore setup` #for local semaphore use, the usual response for web host prompt is either leaving it blank or inputting http://localhost:3000
+- interactive setup: `cd /etc/semaphore; semaphore setup` #for local Semaphore use, the usual response for web host prompt is either leaving it blank or inputting http://localhost:3000
 - or via web configurator: https://semaphoreui.com/install/binary --> `Server config`
 - see:[ https://docs.semaphoreui.com](https://semaphoreui.com/docs/administration-guide/configuration) for details and other options
 
