@@ -49,7 +49,7 @@ The control node holds the automation software:
 
 - **Ansible** 2.18 or later - see [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
     - |+ `ansible-galaxy collection install community.general`
-- **Semaphore** UI 2.16 or later - see [here](https://docs.ansible-semaphore.com/administration-guide/installation)
+- **Semaphore** UI 2.16 or later - see [here](https://docs.ansible-semaphore.com/administration-guide/installation) #it allows controlling Ansible inside of a web browser.
 
 Recommended specs (standalone, i.e. when using a **separate(!)** Buildserver):
 - 4 CPU cores
@@ -108,7 +108,7 @@ SELECT CONCAT('ALTER TABLE ', table_name, ' CONVERT TO CHARACTER SET utf8mb4 COL
 
 Semaphore can be configured in different ways:
 
-- interactive setup: `cd /etc/semaphore; semaphore setup`
+- interactive setup: `cd /etc/semaphore; semaphore setup` #for local Semaphore use, the usual response for web host prompt is either leaving it blank or inputting http://localhost:3000
 - or via web configurator: https://semaphoreui.com/install/binary --> `Server config`
 - see:[ https://docs.semaphoreui.com](https://semaphoreui.com/docs/administration-guide/configuration) for details and other options
 
@@ -216,7 +216,7 @@ wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ub
 sudo dpkg -i lib*.deb
 ```
 
-it is not required nore recommended to build as root user:
+it is neither required nor recommended to build as a root user:
 ```
 sudo useradd -m <BUILD-USER>
 ```
@@ -294,16 +294,17 @@ $[BUILD-USER]> deactivate
 
 ## Setup Semaphore
 
-1. Download the JSON project according to your semaphore version:
+1. Log into Semaphore's Dashboard in your browser of choice, using username and password set up during Semaphore's configuration. The usual Dashboard's address is http://localhost:3000
+2. Download the JSON project according to your semaphore version:
    -  [semaphore v2.16](/semaphore_project.json)
    -  [semaphore v2.17](/semaphore_project_v217.json)
-2. Click top left menu and `Restore Project`
-3. Select the downloaded JSON file and set a project name, e.g. `AXP.OS` and let it import
-4. you might see a message that some keys are empty, that is expected as they are private keys
-5. Menu: `Key Store`
+3. Click top left menu and `Restore Project`
+4. Select the downloaded JSON file and set a project name, e.g. `AXP.OS` and let it import
+5. you might see a message that some keys are empty, that is expected as they are private keys
+6. Menu: `Key Store`
    - adapt `buildserver` to your setup
    - ignore `vault_pw` as this is nothing you need
-6. Menu: `Inventory`
+7. Menu: `Inventory`
    - adapt `buildserver` to your setup
    - ignore `downloadserver` as you won't upload any builds
    - in the `all -> vars` section adapt all variables according to your setup
