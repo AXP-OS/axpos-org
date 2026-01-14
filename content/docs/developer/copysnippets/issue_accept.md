@@ -27,7 +27,6 @@ _Please note: Even if this does not happen often, it may turn out during this pr
 - [ ] setup [vendor/firmware](https://code.binbash.rocks/AXP.OS/vendor_firmware)
 - [ ] setup [automation repo](https://github.com/sfX-android/automation_scripts/tree/ansible/roles/axp)
 - [ ] setup semaphore
-- [ ] check/enable [verity](https://github.com/AXP-OS/build/blob/a4536167f37731618f83045b9996cf9b4552520b/Scripts/Common/Enable_Verity.sh#L293) or [AVB](https://github.com/AXP-OS/build/blob/a4536167f37731618f83045b9996cf9b4552520b/Scripts/Common/Enable_Verity.sh#L98) 
 - [ ] build
 - add/update device guide on [the AXP.OS website](https://code.binbash.rocks/AXP.OS/axpos-org)
     - [ ] add [params](https://code.binbash.rocks/AXP.OS/axpos-org/src/branch/hugo/params)
