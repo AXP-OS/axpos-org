@@ -3443,8 +3443,8 @@
       "suppress_success_alerts": false,
       "survey_vars": [
         {
-          "default_value": "2026-",
-          "description": "format: YYYY-MM.id",
+          "default_value": "2026.00",
+          "description": "format: YYYY.id",
           "name": "semaphore_aos_template_startversion",
           "required": true,
           "title": "Set build ID",

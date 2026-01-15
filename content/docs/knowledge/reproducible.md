@@ -33,7 +33,7 @@ For every(!) patch process run all repositories where a **change** (_current vs.
 
 - will be automatically created in the AXP.OS org
 - a branch `upstream_a<Android-Version>` will be uploaded which contains the untouched base for that repo (i.e origin & untouched LOS/AOSP)
-- a tag `<YYYY-MM-DD>_<device>_a<Android-version>` will be added which contains all changes from the untouched base
+- a tag `<BUILD-ID>_<device>_a<Android-version>` will be added which contains all changes from the untouched base _([build id meaning & examples](/docs/knowledge/faq/#meaning-of-the-axpos-build-id))_
 - a manifest file (`axp.xml`) in the [manifest repo](https://github.com/AXP-OS/manifest) will be created containing all tag names for that unique combination of `device + model + patch-date`
 
 All this has been implemented via the Ansible build [automation](https://github.com/sfX-android/automation_scripts/tree/ansible/roles/axp/common/tasks) which is used to sync, build and patch any AXP.OS build.
@@ -48,15 +48,15 @@ _(*) see the "Final note" topic_
 
 #### Compare between origin and AXP.OS
 
-AS noted above AXP.OS creates the branch `upstream_a<Android-Version>` (untouched source) and a build tag `<YYYY-MM-DD>_<device>_a<Android-version>` (patched state) for every repo which gets touched.
+AS noted above AXP.OS creates the branch `upstream_a<Android-Version>` (untouched source) and a build tag `<BUILD-ID>_<device>_a<Android-version>` (patched state) for every repo which gets touched.
 
 Comparing those via github is easy:
 
 - Commits view (3 dots between):<br/>
-`https://github.com/AXP-OS/<REPO-NAME>/compare/upstream_a<Android-Version>...<YYYY-MM-DD>_<device>_a<Android-version>`
+`https://github.com/AXP-OS/<REPO-NAME>/compare/upstream_a<Android-Version>...<BUILD-ID>_<device>_a<Android-version>`
 
 - Changes view (2 dots between):<br/>
-`https://github.com/AXP-OS/<REPO-NAME>/compare/upstream_a<Android-Version>..<YYYY-MM-DD>_<device>_a<Android-version>`
+`https://github.com/AXP-OS/<REPO-NAME>/compare/upstream_a<Android-Version>..<BUILD-ID>_<device>_a<Android-version>`
 
 Example:
 
@@ -69,10 +69,10 @@ Example:
 Additionally you can now also compare between patch dates easily. For example if you want to see all kernel changes between 2 patch dates do:
 
 - Commits view (3 dots between):<br/>
-`https://github.com/AXP-OS/<REPO-NAME>/compare/<YYYY-MM-DD>_<DEVICE-NAME>_a<Android-Version>...<YYYY-MM-DD>_<DEVICE-NAME>_a<Android-Version>`
+`https://github.com/AXP-OS/<REPO-NAME>/compare/<BUILD-ID>_<DEVICE-NAME>_a<Android-Version>...<BUILD-ID>_<DEVICE-NAME>_a<Android-Version>`
 
 - Changes view (2 dots between):<br/>
-`https://github.com/AXP-OS/<REPO-NAME>/compare/<YYYY-MM-DD>_<DEVICE-NAME>_a<Android-Version>..<YYYY-MM-DD>_<DEVICE-NAME>_a<Android-Version>`
+`https://github.com/AXP-OS/<REPO-NAME>/compare/<BUILD-ID>_<DEVICE-NAME>_a<Android-Version>..<BUILD-ID>_<DEVICE-NAME>_a<Android-Version>`
 
 Example (_due to the ramp-up phase the tags are missing the `_a13` here_):
 

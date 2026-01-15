@@ -114,19 +114,24 @@ The main goal is to have all needed on the projects self-hosted Gitea instance a
 1. You can build AXP.OS **without** these repositories by just using the normal [AXP.OS manifest](https://github.com/AXP-OS/manifest/) and add vendor blobs and firmware on your own
 1. Splitting the problematic parts from the rest of the sources also makes it easier keeping the main project/builds alive in case of trouble
 
-
 ## meaning of the AXP.OS build id
 
 You might noticed the build ID already when checking the [Changelog](/Changelog) or when looking at the [automation channel](/docs/overview/#support) when a new release is announced.
 
 The format of the AXP.OS build ID is:
 
-- until August 2025: `YYYY-MM-05.<ID>`
-- since September 2025: `YYYY-MM.<ID>`
+|History|Format|Example|Build id is based on|
+|-:|-|:-|-:|
+|since **January 2026**|`YYYY.<ID>`<br/>_ID: 3 digits, prefixed with zero(es)_|`2026.001`...`2026.013`...`2027.006`|_year_ of creation<br/>_(id resets per year)_|
+|||||
+|until **December 2025**|`YYYY-MM.<ID>`<br/>_ID: 1 digit_|`2025-09.1`...`2025-10.1`|_month_ of creation<br/>_(id was reset per month)_|
+|until **August 2025**|`YYYY-MM-05.<ID>`<br/>_ID: 1 digit_|`2024-01-05.1`...`2025-08-05.1`|included [ASB](https://source.android.com/docs/security/bulletin/2025-01-01#Common-questions-and-answers) _patchlevel_<br/>_(id was reset per month)_|
 
-It gets set once a build "freeze" starts and uses the current year and month of that start date. The `<ID>` begins with `1` and increases if there is any other build in that same year and month (which rarely happens though).
+It gets set once a build "freeze" _(common snapshot at a fixed date + time for all devices based on features, fixes + patches)_ starts and uses the current year and month of that start date. The `<ID>` begins with `1` _(prefixed with zeroes to a 3-digit id since 2026)_ and increases accordingly. As you can see the id got more and more _condensed_ for several reasons, mainly due to [changes Google made](/News) for publishing updates but also to be more flexible when it comes to legacy devices which might not receive backported [Platform patches](/Patchlevel) anymore which makes an independent identifier necessary.
 
-This build ID is used in several places: Changelog, build release announcments, reproducible buid manifest, testing checklist, and more. When referring to a build ID it is possible to get all relevant information and it ensures that all builds run with the same config, same included app versions etc.
+This build ID is used in several places: Changelog, build release announcements, Android's "About" screen _(since 2026)_, reproducible build manifests _(and their related repos)_, testing checklist, and more. When referring to a build ID it is possible to get all relevant information and it ensures that all builds run with the same config, same included app versions or simply using the same _"freeze date+time snapshot"_.
+
+If you want to know more about how that impacts the build & testing process read on [here](/Buildtest).
 
 ## AOSmium Browser / WebView
 
