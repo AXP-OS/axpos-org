@@ -13,6 +13,10 @@ aliases:
 
 ## AXP.OS Quality Control Checklist
 
+{{< callout emoji="💡" type="info" >}}
+_A community based set of helper scripts exists, huge thanks to @SerYo who maintains these. Use at your own risk 😏 --> [Test Helper Scripts](https://code.binbash.rocks/SerYo/AXP-OS-bash-utilities)_
+{{< /callout >}}
+
 ```
 _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL` is per the IETF standard defined in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)._
 
