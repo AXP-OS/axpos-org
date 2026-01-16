@@ -136,3 +136,13 @@ _Security_ examples:
 - (CVE related) Kernel patching
 - intensive hardening (e.g. malloc replacement)
 - ...
+
+## Find another OS
+
+Your device or flavor is currently not supported or AXP.OS does not fit your requirements?<br/>
+Then these pages might help finding a suitable one:
+
+- [sustaphones.com](https://www.sustaphones.com/)
+- [empty_oser page - maintained by @SerYo](https://empty_oser.codeberg.page/)
+
+_([let us know](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose) if you want to see any other site listed)_

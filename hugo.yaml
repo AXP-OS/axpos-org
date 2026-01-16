@@ -49,7 +49,7 @@ params:
 
   footer:
     enable: true
-    displayCopyright: true
+    displayCopyright: false
     displayPoweredBy: false
     width: full
   
