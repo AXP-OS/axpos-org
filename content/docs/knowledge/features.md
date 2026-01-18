@@ -143,6 +143,6 @@ Your device or flavor is currently not supported or AXP.OS does not fit your req
 Then these pages might help finding a suitable one:
 
 - [sustaphones.com](https://www.sustaphones.com/)
-- [empty_oser page - maintained by @SerYo](https://git.disroot.org/empto/CoolAndroids_devices_scrapers/wiki)
+- [empto @disroot](https://git.disroot.org/empto/CoolAndroids_devices_scrapers/wiki)
 
 _([let us know](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose) if you want to see any other site listed)_
