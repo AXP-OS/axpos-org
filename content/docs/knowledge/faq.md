@@ -91,20 +91,21 @@ If you using Google play it might want updating the Google play services. Please
 ### Is there a list where the source code is hosted?
 
 {{< callout emoji="💡" type="info" >}}
-AXP.OS is in the progress of moving away from Github.<br/>
-The main goal is to have all needed on the projects self-hosted Gitea instance and mirror everything to e.g. (but not limited to) Codeberg.org.
+Unfortunately and for different reasons we needed to shift our repos several times in the past. The following lists the current state.
 {{< /callout >}}
 
 |Hoster|URL|Public**|Purpose|Repos|
-|-|-|:-:|-|-:|
-|disroot|[https://git.disroot.org/AXP.OS](https://git.disroot.org/AXP.OS)|✅|mirror of code.binbash.rocks public available repos, APK releases, reproducible builds|~191*|
-|Self-Hosted|[https://code.binbash.rocks/AXP.OS](https://code.binbash.rocks/AXP.OS)|❌**|main, CI/CD, APK build, internals, sensitive parts of build|~211*|
-|Codeberg|[https://codeberg.org/AXP-OS_limited](https://codeberg.org/AXP-OS_limited)|❌**|mirror of code.binbash.rocks non-public available repos, APK releases|~23*|
-|**_DEPRECATED:_**|||||
-|Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|DEPRECATED: proprietary, acquired by Microsoft. was used for reproducible builds, manifests, public parts of build|~208*|
-|Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|DEPRECATED: repo/size limits, see [#1123](https://codeberg.org/Codeberg-e.V./requests/issues/1123#issuecomment-8422650) was used as mirror of code.binbash.rocks public available repos, APK releases|100|
+|:-|:-|:-:|-|-:|
+|disroot|[https://git.disroot.org/AXP.OS](https://git.disroot.org/AXP.OS)|✅|all public available repos, APK releases, reproducible builds|~205*|
+|Self-Hosted|[https://code.binbash.rocks/AXP.OS](https://code.binbash.rocks/AXP.OS)|❌|all available repos, CI/CD, APK build, internals, sensitive parts of build|~227*|
+|Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|some public available repos, Website (https://axpos.org), APK releases|~12*|
+|Codeberg|[https://codeberg.org/AXP-OS_limited](https://codeberg.org/AXP-OS_limited)|❌|some non-public available repos used for reproducible builds|~26*|
+|Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|APK releases **mirror** _(AOSmium, PhoneSky, OpenEUICC, ..)_|~4*|
+|**_DEPRECATED_**|||**_DEPRECATED_**||
+|Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|was used for reproducible builds, manifests, all public parts of build<br/>_(AXP.OS avoids using proprietary services where possible. Github is [owned by Microsoft](https://en.wikipedia.org/wiki/GitHub) since October 2018)_|~217*|
+|Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|was used for all public available repos, APK releases<br/>_(they declined hosting AXP.OS repos since 2025-12, almost all repos have been removed on 2026-01-19)_|100+|
 
-- *) _state: November 2025_
+- *) _state: January 2026_
 - **) _see next topic_
 
 ### Why do some repositories require a (free) registration?
