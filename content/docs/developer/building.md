@@ -270,7 +270,7 @@ root#> sudo -u $[BUILD-USER] gpg --expert --full-gen-key
 add both, SSH and GPG keys, to your accounts (and.. yes repeat that for _all_ sites):
 - https://code.binbash.rocks
 - and: https://github.com
-- and: https://git.disroot.org
+- and: https://git.disroot.org _(**NOT** on disroot.org)_
 
 #### When building for Android 9 or 10 only
 
