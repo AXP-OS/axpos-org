@@ -164,11 +164,11 @@ This can be used as an alternative or additional way to verify builds have not b
 3. enter:
 ```bash
 gpg --import axpos_signing.key # need to be done only ONCE ever, skip next time
-gpg --verify AXP.OS*sha512sum
+gpg --verify AXP.OS*sha512sum # if you have more than 1 sha512sum file in the same dir, specify the exact filename!
 ```
 4. verify the output of the second command:
    - the key ID must match (see _Download_ above)
-   - it must show `Good signature` (_also see [Examples](/docs/knowledge/signatures/#example-verifychecksum-output)_)
+   - it must show `Good signature` (_see [Examples](/docs/knowledge/signatures/#example-verifychecksum-output)_)
 
 #### How to verify GPG signed files on _Windows_
 
@@ -180,11 +180,11 @@ gpg --verify AXP.OS*sha512sum
 6. enter:
 ```bash
 gpg --import axpos_signing.key # need to be done only ONCE ever, skip next time
-gpg --verify AXP.OS*sha512sum
+gpg --verify AXP.OS*sha512sum # if you have more than 1 sha512sum file in the same dir, specify the exact filename!
 ```
 7. verify the output of the second command:
    - the key ID must match (see _Download_ above)
-   - it must show `Good signature` (_also see [Examples](/docs/knowledge/signatures/#example-verifychecksum-output)_)
+   - it must show `Good signature` (_see [Examples](/docs/knowledge/signatures/#example-verifychecksum-output)_)
 
 ### SHA
 
@@ -197,11 +197,11 @@ Before starting, ensure you have verified the SHA512 hash file as shown above in
 2. switch to the folder where you downloaded the SHA file and the OS zip
 3. enter:
 ```bash
-sha512sum -c AXP.OS*sha512sum
+sha512sum -c AXP.OS*sha512sum # if you have more than 1 sha512sum file in the same dir, specify the exact filename!
 # or SHA256, for example for legacy signed files:
-sha256sum -c AXP.OS*sha256sum
+sha256sum -c AXP.OS*sha256sum # if you have more than 1 sha256sum file in the same dir, specify the exact filename!
 ```
-4. The following should be displayed: `AXP.OS-xxxxx.zip: OK` (_also see [Examples](/docs/knowledge/signatures/#example-verifychecksum-output)_)
+4. The following should be displayed: `AXP.OS-xxxxx.zip: OK` (_see [Examples](/docs/knowledge/signatures/#example-verifychecksum-output)_)
 
 #### How to verify a SHA512 hash on _Windows_
 
@@ -220,7 +220,7 @@ Get-FileHash -Path AXP.OS-xxxxx.zip -Algorithm SHA512
 
 GPG verify:
 ```bash
-gpg --verify AXP.OS-20.0-20251116-dos-bluejay.zip.sha512sum
+gpg --verify AXP.OS-20.0-20251116-PRO-bluejay.zip.sha512sum
 
 gpg: Signature made Sun Nov 16 11:24:01 2025 UTC
 gpg:                using EDDSA key FE4B2FA2B225F0AB903AF4136740E645718A8E47
@@ -232,7 +232,7 @@ gpg:                 aka "droidme <sfx-bot@binbash.rocks>" [ultimate]
 
 SHA512 verify:
 ```bash
-sha512sum -c AXP.OS-20.0-20251116-dos-bluejay.zip.sha512sum
+sha512sum -c AXP.OS-20.0-20251116-PRO-bluejay.zip.sha512sum
 AXP.OS-20.0-20251116-dos-bluejay.zip: OK
 #                                     ^^
 ```
