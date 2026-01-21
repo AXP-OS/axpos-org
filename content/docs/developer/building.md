@@ -305,12 +305,12 @@ $[BUILD-USER]> deactivate
 4. Select the downloaded JSON file and set a project name, e.g. `AXP.OS` and let it import
 5. you might see a message that some keys are empty, that is expected as they are private keys
 6. Menu: `Key Store`
-   - adapt `buildserver` to your setup
-   - edit `vault_pw` and store anything _(this is not used in an user setup but must be non-empty)_
+   - edit `buildserver` select _override_ and adapt to your setup
+   - edit `vault_pw`, select _override_ and type in anything _(this is not used in an user setup but it must be non-empty)_
 7. Menu: `Inventory`
    - adapt `buildserver` to your setup
    - ignore `downloadserver` as you won't upload any builds
-   - in the `all -> vars` section adapt all variables according to your setup
+   - in the `all -> vars` section, adapt all variables according to your setup
 
 ## Build AXP.OS 
 
