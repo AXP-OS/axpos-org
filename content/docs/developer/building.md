@@ -230,6 +230,7 @@ sudo su - <BUILD-USER>
 
 $[BUILD-USER]> mkdir -p ~/.local/bin
 $[BUILD-USER]> curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.local/bin/repo
+$[BUILD-USER]> chmod +x ~/.local/bin/repo
 ```
 
 ensure locale is as expected:
