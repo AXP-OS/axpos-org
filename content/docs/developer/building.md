@@ -306,7 +306,7 @@ $[BUILD-USER]> deactivate
 5. you might see a message that some keys are empty, that is expected as they are private keys
 6. Menu: `Key Store`
    - adapt `buildserver` to your setup
-   - ignore `vault_pw` as this is nothing you need
+   - edit `vault_pw` and store anything _(this is not used in an user setup but must be non-empty)_
 7. Menu: `Inventory`
    - adapt `buildserver` to your setup
    - ignore `downloadserver` as you won't upload any builds
