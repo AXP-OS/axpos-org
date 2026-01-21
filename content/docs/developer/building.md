@@ -246,9 +246,9 @@ $[BUILD-USER]> repo init -u https://github.com/LineageOS/android.git -b lineage-
 $[BUILD-USER]> repo sync -c --no-clone-bundle --jobs-network=6
 ```
 
-create a ssh key:
+create a ssh key - **without password**:
 ```
-$[BUILD-USER]> ssh-keygen -a 500 -t ed25519 -C "some comment"
+$[BUILD-USER]> ssh-keygen -a 500 -t ed25519 -C "some comment" -P ''
 ```
 
 create a gpg key (optional but recommended):
