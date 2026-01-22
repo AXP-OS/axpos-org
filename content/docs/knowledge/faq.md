@@ -156,12 +156,7 @@ see [here](https://docs.github.com/en/authentication/keeping-your-account-and-da
 
 #### git.disroot.org
 
-it seems there is no official public available source _(we requested to add that recently)_, but here the one we know:
-
-```
-SHA256:B8RHZmR8N7oyt0DG04jn+SWDDRpFrQh4F2Vo3PfUNqY git.disroot.org (ED25519)
-```
-_(at least verified from multiple clients, internet providers & geo locations, while this does not help if a MITM happens just before the SSH server itself)_
+see [here](https://disroot.org/services/git)
 
 #### codeberg.org
 
