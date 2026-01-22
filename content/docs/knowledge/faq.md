@@ -97,7 +97,7 @@ Unfortunately and for different reasons we needed to shift our repos several tim
 |Hoster|URL|Public**|Purpose|Repos|
 |:-|:-|:-:|-|-:|
 |disroot|[https://git.disroot.org/AXP.OS](https://git.disroot.org/AXP.OS)|✅|all public available repos, APK releases, reproducible builds|~205*|
-|Self-Hosted|[https://code.binbash.rocks/AXP.OS](https://code.binbash.rocks/AXP.OS)|❌|all available repos, CI/CD, APK build, internals, sensitive parts of build|~227*|
+|_self-hosted_|[https://code.binbash.rocks/AXP.OS](https://code.binbash.rocks/AXP.OS)|❌|all available repos, CI/CD, APK build, internals, sensitive parts of build|~227*|
 |Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|some public available repos, Website (https://axpos.org), APK releases|~12*|
 |Codeberg|[https://codeberg.org/AXP-OS_limited](https://codeberg.org/AXP-OS_limited)|❌|some non-public available repos used for reproducible builds|~26*|
 |Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|APK releases **mirror** _(AOSmium, PhoneSky, OpenEUICC, ..)_|~4*|
@@ -114,6 +114,58 @@ Unfortunately and for different reasons we needed to shift our repos several tim
 1. If an official mirror(s) requires a registration it is for [reproducible builds](/Reproducible-builds) **only**
 1. You can build AXP.OS **without** these repositories by just using the normal [AXP.OS manifest](https://github.com/AXP-OS/manifest/) and add vendor blobs and firmware on your own
 1. Splitting the problematic parts from the rest of the sources also makes it easier keeping the main project/builds alive in case of trouble
+
+### SSH fingerprints
+
+
+When you connect to any of the above hosters via SSH, for example
+if you want to [build AXP.OS](/Build) or to [clone or commit](/git/clone-commit-via-cli/), you need to make sure that
+you're actually connected to the **real** server and not someone else's
+who's attempting to execute a so-called [man-in-the-middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack).
+
+To protect you against these sort of attacks,
+SSH will ask you whether or not you want to trust a server the first time
+you connect to it _(here an example for code.binbash.rocks)_:
+
+```bash
+$> git clone ssh://git@code.binbash.rocks:22443/AXP.OS/app_aosmium /tmp/aosmium
+
+The authenticity of host '[code.binbash.rocks]:22443 ([148.251.225.181]:22443)' can't be established.
+ED25519 key fingerprint is: SHA256:3QPf8Xv7/VZypx9yJVCvR2kzeWmXQJkKM/YO8S0D/CM
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+
+When connecting, it is important that you compare the displayed fingerprint
+against one of the following fingerprints published according to the hoster.
+
+**If they match, you're good to go** and can safely answer `yes`.
+
+**If they don't, don't connect** because your credentials may be at risk!
+
+#### code.binbash.rocks
+
+```
+SHA256:3QPf8Xv7/VZypx9yJVCvR2kzeWmXQJkKM/YO8S0D/CM (ED25519)
+SHA256:XYv653OBlPJAr0AjIfMrNPmaNDrhsF64l52qWlIDYzQ (RSA)
+```
+
+#### github.com
+
+see [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
+
+#### git.disroot.org
+
+it seems there is no official public available source _(we requested to add that recently)_, but here the one we know:
+
+```
+SHA256:B8RHZmR8N7oyt0DG04jn+SWDDRpFrQh4F2Vo3PfUNqY git.disroot.org (ED25519)
+```
+_(at least verified from multiple clients, internet providers & geo locations, while this does not help if a MITM happens just before the SSH server itself)_
+
+#### codeberg.org
+
+see [here](https://docs.codeberg.org/security/ssh-fingerprint/)
 
 ## meaning of the AXP.OS build id
 
