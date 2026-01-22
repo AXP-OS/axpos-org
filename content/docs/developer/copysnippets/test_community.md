@@ -176,7 +176,7 @@ _This is a space for comments by the tester, remarks, notable changes and any ot
 
 ### command results
 
-##### Pro/Slim: `grep dm- /proc/mounts | grep -E "\s/(system|system_ext|product|vendor|odm)\s"`
+##### Pro/Slim: `grep dm- /proc/mounts | grep -E " /(system|system_ext|product|vendor|odm) "`
 
 _paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `< >` ("Add code") in the format menu above_
 
