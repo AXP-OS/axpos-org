@@ -194,7 +194,7 @@ Recommended specs (standalone, i.e. when using a **separate(!)** Buildserver):
 - 64 GB RAM
   - _if you have less than that, you might need a SWAP file_
   - _the amount of RAM and/or SWAP depends on the Android version you build for! E.g. A9 just requires 8 GB and A15 at least 48 GB to build without workarounds_
-- at least 200 GB free disk space (on `/usr/src`).
+- at least 300 GB free disk space (on `/usr/src`).
   - _the amount depends though. as a rule of thumb: ~200GB per Android version you want to build for_
 - if you want to use CCACHE _(recommended)_:
   - the amount depends again on how many Android versions (and/or kernels) you want to build for and can be set via `ccache_max_size` in your semaphore inventory
@@ -238,11 +238,22 @@ ensure locale is as expected:
 sudo dpkg-reconfigure locales
 ```
 
-now you can already start downloading the android sources to speed up your first build. The following is an example for A13, adapt the LineageOS version if needed:
+now you start downloading the android sources to speed up your first build.
+The following is an example for A13, adapt the LineageOS version if needed:
 ```
+# prepare build dir
 $[BUILD-USER]> sudo mkdir -p /usr/src/android/axp/Build/LineageOS-20.0
 $[BUILD-USER]> sudo chown -R $[BUILD-USER] /usr/src/android
 $[BUILD-USER]> cd /usr/src/android/axp/Build/LineageOS-20.0
+
+# check if you had setup ssh keys correctly:
+$[BUILD-USER]> ssh git@code.binbash.rocks -p22443
+$[BUILD-USER]> ssh git@codeberg.org
+$[BUILD-USER]> ssh git@disroot.org
+# you should get on each command an output that auth was successful even though there is no ssh access
+# if you get an error: ensure you setup the key correctly on that hoster and it is not password protected
+
+# initial sync, this can take several hours
 $[BUILD-USER]> repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
 $[BUILD-USER]> repo sync -c --no-clone-bundle --jobs-network=6
 ```
