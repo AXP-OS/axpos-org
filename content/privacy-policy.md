@@ -29,6 +29,13 @@ TOR alias:<br/>`http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.
 - **Main purpose:** Downloads
     - downloads for all OS relevant parts of AXP.OS (i.e. OS + factory zip's, recovery images and more)
     - Protected by [CrowdSec](#crowdsec)
+- What is received: User Agent, URI path, **NO** IP Address (replaced by `0.0.0.0` _before_ logging)
+- How often: On every page visit
+- Why it is received: creating [Download stats](https://leech.binbash.rocks:8008/theme/stats_axp_dl.html)
+- When it will be deleted: Logs are kept for no longer than 90 days
+- What else will it be used for: rate & bandwidth limiting
+- How to anonymize: Use e.g. the Tor Browser
+- Example: `0.0.0.0 - - [TIMESTAMP] "GET /axp/sunfish/ HTTP/2.0" 200 11584 "https://leech.binbash.rocks:8008/axp/sunfish/tests/" "-"`
 
 ##### `https://sfxota[-unstable].binbash.rocks`:
 ---
@@ -92,17 +99,16 @@ About [CrowdSec](https://www.crowdsec.net/about)
 
 ### Updater
 
-*   What is received: Device Model, Incremental Build ID, Default User Agent, **NO** IP Address (redacted before logging)
-*   How often: On every boot and also once per week (note: 14.1 only is daily)
+*   What is received: Device Model, Flavor, Incremental Build ID, Default User Agent, **NO** IP Address (redacted _before_ logging)
+*   How often: On every boot and also once per week
 *   Why it is received: Used to serve system updates
-*   When it will be deleted: Logs are kept for no longer than 15 days
-*   What else will it be used for: creating [OTA stats](https://leech.binbash.rocks:8008/theme/ota_stats_axp.html)
+*   When it will be deleted: Logs are kept for no longer than 90 days
+*   What else will it be used for: creating [OTA stats](https://leech.binbash.rocks:8008/theme/stats_axp_ota.html)
 *   How to anonymize: Install Orbot and enable 'Perform requests over Tor'
 *   How to disable: Disable 'Auto updates check'
 *   Settings can be accessed via:
     *   9+: Settings > System > Advanced > AXP.OS updates > 3dot > Preferences
-    *   <9: Settings > About > AXP.OS updates > 3dot > Preferences
-*   Example: `- - - [TIMESTAMP] "GET /axp-unstable/api/v1/cheetah/dos/engemy20250123212920 HTTP/1.1" 200 3683 "-" "Dalvik/2.1.0 (Linux; U; Android 13; Pixel 7 Pro Build/TQ3A.230901.001)"`
+*   Example: `- - - [TIMESTAMP] "GET /axp-slim/api/v1/cheetah/slim/engemy20250123212920 HTTP/1.1" 200 3683 "-" "Dalvik/2.1.0 (Linux; U; Android 13; Pixel 7 Pro Build/TQ3A.230901.001)"`
 
 ### AXP.OS F-Droid Repos
 
