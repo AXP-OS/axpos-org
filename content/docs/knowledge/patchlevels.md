@@ -5,6 +5,8 @@ toc: true
 aliases:
     - /Patchlevel
     - /Patchlevels
+    - /PatchLevel
+    - /PatchLevels
     - /patchlevel
     - /patchlevels
 ---
@@ -12,7 +14,7 @@ aliases:
 ## A note on operating system security
 There is a singular all-or-nothing, all-encompassing Android security bulletin released every month that covers security issues across the entire system.
 Below we break it into five parts solely for ease of understanding for you to determine the general security of a given operating system.
-Being behind on any one part means the system is inherently insecure.
+Being behind on _any_ one part means the system is **inherently insecure**:
 
 1. the [version](https://developer.android.com/about/versions) of Android itself, _newer versions have more security features/hardening_
 1. the [ASB](https://source.android.com/security/bulletin) patch level, _these are essential security patches_
@@ -26,7 +28,7 @@ The short answer: No. "Just" _more_ secure.
 The long answer is that AXP.OS is likely the best harm reduction option if your device is no longer in support by its manufacturer or vendor.
 Any project or product claiming they make end-of-life devices _secure_ should be rigorously scrutinized.
 
-AXP.OS tries to fill a gap mainly for end-of-life devices and offers more security and privacy than e.g. an outdated STOCK OS version of such a device. Compared to other custom OS it even offers highly increased security due to the integrated kernel patching (see [The AXP.OS patch level](#the-axpos-patch-level))
+AXP.OS tries to fill a gap mainly for end-of-life devices and offers _more_ security and privacy than e.g. an outdated STOCK OS version of such a device. Compared to other custom OS it even offers highly increased security due to the integrated kernel patching (see [The AXP.OS patch level](#the-axpos-patch-level)) and highly increased privacy by intensive deblobbing of proprietary parts.
 
 Lastly it must be noted that _privacy_ and _security_ go hand-in-hand, there is a fundamental limit of how much privacy you can achieve if you do not have security backing it up.
 
@@ -72,7 +74,6 @@ Fixes from `SoC manufacturers` _(SoC = System-on-Chip, e.g. QualComm)_ and/or `O
 <br/>_Note: These updates are usually simply referred to as **`"Firmware"`**._
 <br/>Many devices get these updates for a short period of time only and they are always proprietary / closed source.<br/>
 Besides that they are always bound to the _Android_ version used by the AXP.OS release and so can be even _outdated_ _(i.e. if AXP.OS is A13 and there are A14 SoC/OEM patches they can **not** be applied)_.<br/>
-Check out the `Patchlevel` row of the [Devices](/devices) page for your model to see what is covered for your device.
 {{< /callout >}}
 
 {{< callout type="info" emoji="🐧" >}}
@@ -83,6 +84,12 @@ AXP.OS `Linux kernel` patches include:
 - [patches](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/kernel_patcher/tasks/incremental.yml) by [kernel.org](https://kernel.org/)
 - Note: not _all_ these patches can be applied on _all_ devices. These exclusions are handled via [Fix_CVE_Patchers.sh](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Fix_CVE_Patchers.sh)
 {{< /callout >}}
+
+### Checking a device's patch level
+
+- check the `Patchlevel` row of the [Devices](/Devices) page for your specific device
+- on your device: `Android Settings -> Info/About Phone -> Android Version (touch it to open)`
+
 
 ### New (2025) ASB release cycle
 

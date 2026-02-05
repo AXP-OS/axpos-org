@@ -12,7 +12,7 @@ The following describes the differences between including the impact on each AXP
 
 verified & tested: **by the AXP team** 
 
-|By|Test|Pro|Slim|
+|By|Test|Pro ⚙️|Slim 🛡️|
 |:-:|-|:-:|:-:|
 |`AXP team`|AXP.OS was successfully build on the AXP infrastructure and its build systems|**X**|**X**|
 |`AXP team`|AXP.OS apps and the OS are properly signed with [AXP keys](/Signatures) and can therefore be verified|**X**|**X**|
@@ -25,7 +25,7 @@ verified & tested: **by the AXP team**
 
 verified & tested: **by the AXP community**
 
-|By|Test|Pro|Slim|
+|By|Test|Pro ⚙️|Slim 🛡️|
 |:-:|-|:-:|:-:|
 |`AXP team`|AXP.OS was successfully build on the AXP infrastructure and its build systems|**X**|**X**|
 |`AXP team`|AXP.OS apps and the OS are properly signed with [AXP keys](/Signatures) and can therefore be verified|**X**|**X**|

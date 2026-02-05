@@ -13,23 +13,22 @@ aliases:
 
 |Feature|Pro ⚙️|Slim 🛡️|
 |-|:-:|:-:|
+|On **device** testing* before each release _(no blind builds)_<br/>_(*see also "[verified by ...](/docs/knowledge/supportlevels)")_|**X**|**X**|
 |Using Graphene's [hardened malloc](https://github.com/GrapheneOS/hardened_malloc) ([comparison](https://github.com/struct/isoalloc/blob/master/SECURITY_COMPARISON.MD))|**X**|**X**|
 |OTA (Over The Air) updates|**X**|**X**|
 |Including [ASB patches](https://source.android.com/docs/security/bulletin) (see [AXP.OS patch level](/Patchlevel) for details)|**X**|**X**|
 |Hardened and focusing on [security and privacy](/docs/knowledge/techdetails/#the-changes)|**X**|**X**|
-|Hardened [Browser & WebView](Browser) by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES) |**X**|**X**|
-|Extra hardened Kernel for Pixel devices _([GrapheneOS](https://github.com/GrapheneOS-Archive/kernel_manifest-pixel) based, plus [CVE patches](/Patchlevel), since A15)_|**X**|**X**|
+|Hardened [AOSmium](/Browser) System WebView by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES)|**X**|**X**|
 |[Hardened](/docs/knowledge/techdetails/#automated-mass-changes-to-android_kernel_) Kernel for any device|**X**|**X**|
 |[CVE patched](/Patchlevel) Kernel for any device|**X**|**X**|
 |Extra _Privacy_ by extensive [deblobbing](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Deblob.sh) and privacy-focused settings ([config](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common/templates/axp.vars.j2))|**X**||
-|Super _Privacy_ by even **more extensive** [deblobbing](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Deblob.sh) and privacy-focused settings ([config](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common/templates/axpslim.vars.j2))<br/>(while reducing usability)||**X**|
+|Super _Privacy_ by even **more extensive** [deblobbing](https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Deblob.sh) and privacy-focused settings ([config](https://github.com/sfX-android/automation_scripts/blob/ansible/roles/axp/common/templates/axpslim.vars.j2))<br/>_(while reducing usability)_||**X**|
 |SELinux enforced|**X**|**X**|
-|Data encryption enforced|**X**|**X**|
+|Data encryption enforced *(except on low-end devices)*|**X**|**X**|
 |Signed (by [AXP.OS keys](/Signatures))|**X**|**X**|
-|Increased key size + hash (8192 / sha512) for AVB, APK signing and dm-verity<br/>_(incl. adjustments in recovery and OTA Updater to support higher hash algo)_|**X**|**X**|
+|Increased key size + hash (8192 / sha512) for AVB, APK signing and dm-verity<br/>_(incl. adjustments in recovery and OTA Updater to support these)_|**X**|**X**|
 |Advanced boot debug log ([EXTENDROM_BOOT_DEBUG](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_BOOT_DEBUG))|**X**|**X**|
 |Advanced Signature spoofing support by [EXTENDROM_SIGNATURE_SPOOFING](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_SIGNATURE_SPOOFING)<br/>(**must be explicitly enabled**)|**X**|**X**|
-|Using the [AOSmium](/Browser) System WebView by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES)|**X**|**X**|
 |Extra Apps included by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES)<br/>_([F-Droid](https://f-droid.org/), [AuroraStore](https://f-droid.org/de/packages/com.aurora.store/), [FossifyGallery](https://f-droid.org/en/packages/org.fossify.gallery/))_|**X**|**X**|
 |extended list of F-Droid repositories ([1](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/molly.xml),[2](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/nailyk.xml),[3](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/threema.xml),[4](https://github.com/sfX-android/android_vendor_extendrom/blob/main/fdroid_repos/futo_org.xml))<br/>(**must be explicitly enabled**)|**X**|**X**|
 |[eSIM](https://github.com/AXP-OS/packages_apps_OpenEUICC) support (A10 and later) for devices supporting euicc<br/>(**must be explicitly enabled**)|**X**|**X**|
@@ -44,7 +43,6 @@ aliases:
 |Basic (i.e. w/o SafetyNet) support for [Widevine DRM](https://developers.google.com/widevine/drm/overview)|**X**||
 |Supporting a FULL(!) app & settings [backup & restore](/Backup-and-Restore)|**X**||
 |Advanced _Usability Support_ by [EXTENDROM_PACKAGES](https://github.com/sfX-android/android_vendor_extendrom/wiki/EXTENDROM_PACKAGES)<br/>_(Magisk, MicrogGmsCore, GsfProxy, Phonesky, [NeoLauncher](https://github.com/NeoApplications/Neo-Launcher))_|**X**||
-|On **device*** testing before release<br/>_(*for devices marked as "[verified by the AXP Team](/docs/knowledge/supportlevels/#by-the-axp-team)")_|**X**||
 
 - ¹ while not supported (and not possible on bootloader-locked devices) you can flash microG as in LineageOS.<br/>AXP.OS [Phonesky](https://github.com/AXP-OS/packages_apps_phonesky/releases) can be installed manually (via a custom recovery: place it in `/system/priv-app/Phonesky/`).<br/>Regardless if using the microG FakeStore or AXP.OS Phonesky you need to follow [the setup guide](/docs/guides/setup/aos/#optional-activate-google-support)) as well.
 - ² some kernels have the wireguard patches already included - the Slim flavor will not remove them while you need root to _activate_ it
@@ -55,14 +53,14 @@ Freedom of choice also brings with it a sometimes overwhelming flood of informat
 
 |Feature|Flavor|
 |:-|:-:|
-|Purchasing apps (incl. _In-App_) via Google Play required?|Pro ⚙️|
-|Root/Magisk required?|Pro ⚙️|
-|Debugging required (really _own_ your device)?|Pro ⚙️|
-|Full(!) backup of any(!) app needed?|Pro ⚙️|
-|Installing Google Play apps required (no purchase)?|Pro ⚙️ / Slim 🛡️|
-|Installing FOSS apps by F-Droid|Pro ⚙️ / Slim 🛡️|
-|Security is more important than usability?|Slim 🛡️|
-|Privacy is more important than usability?|Slim 🛡️|
+|Purchasing apps (incl. _In-App_) via **Google Play** strictly required?|Pro ⚙️|
+|**Root**/Magisk required?|Pro ⚙️|
+|**Full** device access required _(really **own** your device)_?|Pro ⚙️|
+|Full(!) **backup of any**(!) app needed?|Pro ⚙️|
+|Installing **Google Play apps** required _(no purchase)_?<br/>_(by AuroraStore)_|Pro ⚙️ / Slim 🛡️|
+|Installing **[FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) apps**<br/>_(by F-Droid or AuroraStore)_|Pro ⚙️ / Slim 🛡️|
+|**Security** is more important than *usability*?|Slim 🛡️|
+|**Privacy** is more important than *usability*?|Slim 🛡️|
 |_... still uncertain?_|Slim 🛡️|
 
 #### Pro flavor

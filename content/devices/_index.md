@@ -4,6 +4,7 @@ type: docs
 aliases:
     - /dl
     - /dl.html
+    - /Devices
 ---
 
 Select your vendor and model from the left menu

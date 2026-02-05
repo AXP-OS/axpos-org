@@ -4,6 +4,9 @@ type: docs
 toc: true
 aliases:
     - /Device-Requirements
+    - /device-requirements
+    - /Requirements
+    - /requirements
 ---
 If you are applying for a currently unsupported device or [AXP.OS flavor](/Flavors), some requirements must be met before the request is (possibly) accepted.
 
@@ -11,14 +14,20 @@ If you are applying for a currently unsupported device or [AXP.OS flavor](/Flavo
 
 ### Android version
 
-- oldest supported: Android **9**
-- newest supported: Android **13**
-- in progress: Android **15** (see [#94](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/94))
+The following Android versions are supported by AXP.OS, regardless of the device age:
 
-At the moment **Android 9** is the oldest supported version and **Android 13** the newest supported version, regardless of the device age.<br/>
-If your device does not fit between these versions but matches all other requirements feel free to request anyways. Just expect a way longer [bring-up time](#processing-requests) then.
+- Android **9**
+- Android **10**
+- Android **11**
+- Android **13**
+- Android **15**
 
-Note: This might also take more of _your_ time when it comes to debugging issues during the process.
+{{< callout type="warning" >}}
+**A note regarding security patches:** not all versions receive the same level of patches _(and it differs even per device!)_, see [AXP.OS patchlevels](/PatchLevels).<br/>
+If your device is already supported check out the `Patchlevel` row at the [Devices](/Devices) page.
+{{< /callout >}}
+
+If your device does not support any of these versions but matches all other requirements feel free to request anyways. In that case expect a way longer [bring-up time](#processing-requests) though - if it gets accepted at all _(this might also take more of **your** time when it comes to debugging issues during the process)_.
 
 ## Hard requirements
 
