@@ -6,6 +6,8 @@ aliases:
     - /lovelace
     - /lovelaceav
     - /lovelaceAV
+    - /LoveLace
+    - /LoveLaceAV
     - /lav
     - /LAV
 ---
@@ -40,17 +42,18 @@ The _icon color_ was chosen to be similar to [AOSmium](/AOSmium), the other AXP.
 
 ## LoveLaceAV vs. MaintainTeam-Hypatia
 
-Time passed by and in the meantime another fork has been created [here](https://github.com/MaintainTeam/Hypatia) with some useful additions and fixes. At the moment LoveLaceAV is in sync with the MaintainTeam-Hypatia code and will continue this way as long as there is no important reason to change this.
+Time passed by and in the meantime another fork has been created [here](https://github.com/MaintainTeam/Hypatia) with some useful additions and fixes. LoveLaceAV was in sync with the MaintainTeam-Hypatia code for a while but switched to pure maintenance mode now. 
+As soon as the LoveLaceAV databases are available in MaintainTeam-Hypatia by a button LoveLaceAV will (likely) be discontinued _(this might or might not change at any time)_. The requested change has been merged already [here](https://github.com/MaintainTeam/Hypatia/issues/69) while it is not yet available in any public build.
 
-That means LoveLaceAV merges changes from MaintainTeam-Hypatia via CI/CD and the only difference between the both projects are different signature databases at the moment.
+The main difference between the both projects is they are using a different default signature database. Both apps can be configured to use the database of the other project though.
 
-That being said the database of LoveLaceAV is updated more frequently, contains more signatures and also domains for the integrated link scanner which are not integrated in MaintainTeam-Hypatia at the moment.
+That being said the database of LoveLaceAV is updated more frequently and contains more & different signatures ~~and also domains for the integrated link scanner which are not integrated in MaintainTeam-Hypatia at the moment~~ _(domain scanning has been re-added in their v3.17)_. 
 
-See also the [Signature Databases](/docs/knowledge/lovelace/#signature-databases) topic on this page for all details.
+For all details see the [Signature Databases](/docs/knowledge/lovelace/#signature-databases) topic on this page for all details.
 
 #### TL;DR
 
-Feel free to use the MaintainTeam-Hypatia app and add the LoveLaceAV databases there or directly use LoveLaceAV. Up to you! We also created a request to integrate the LoveLaceAV databases by a button: [here](https://github.com/MaintainTeam/Hypatia/issues/69).
+Feel free to use the MaintainTeam-Hypatia app and add the LoveLaceAV databases there or directly use LoveLaceAV. Just try out what you like better! 
 
 ## Features
 
@@ -72,25 +75,25 @@ Feel free to use the MaintainTeam-Hypatia app and add the LoveLaceAV databases t
 	- Signing key: `14C17E7F99EABF3F`
 	- Database: https://lav.axpos.org/db
     - Hashes: 
-        - `> 10 million`* (regular database)
-        - `> 51 million`* (with extended database enabled)
-    - Malicious domains detection (on-screen scanner): `> 800k`*
-    - Update interval: `daily at 7:00 AM and 08:00 PM (UTC)`
+        - `> 16 million`* _(regular database)_
+        - `> 46 million`* _(with extended database enabled)_
+    - Malicious domains detection (on-screen scanner): `> 900k`*
+    - Update interval: `daily at 3:55 AM (UTC)`
 
 - MaintainTeam-Hypatia:
-	- Signing key:`5298C0C0C3E73288`
-	- Database (button `Github Mirror`): https://github.com/MaintainTeam/HypatiaDatabases/
-    - Mirror Database (can be added manually): https://codeberg.org/MaintainTeam/HypatiaDatabases/
+	- Signing key: `5298C0C0C3E73288`
+	- Database (button: `Github Mirror`): https://github.com/MaintainTeam/HypatiaDatabases/
+    - Mirror Database _(can be added manually)_: https://codeberg.org/MaintainTeam/HypatiaDatabases/
     - Hashes:
-        - `> 5 million`* (regular database)
+        - `> 1 million`* _(regular database)_
         - _(no extended database available atm)*_
-    - Malicious domains detection (on-screen scanner): `0`*
+    - Malicious domains detection (on-screen scanner): `> 1 million`*
     - Update interval: `every 2 days at 1:00 AM (UTC)`
 
-> [!TIP]
-> _*) see [All database statistics](/docs/knowledge/lovelace/#all-database-statistics) for current values_
+> [!TIP] Footnotes
+> _*) see [Live database statistics](/docs/knowledge/lovelace/#live-database-statistics) for current values_
 
-### All database statistics
+### Live database statistics
 
 - LoveLaceAV: [https://lav.axpos.org/db](https://lav.axpos.org/db)
 - MaintainTeam-Hypatia: [https://maintainteam.codeberg.page/HypatiaDatabases](https://maintainteam.codeberg.page/HypatiaDatabases)
