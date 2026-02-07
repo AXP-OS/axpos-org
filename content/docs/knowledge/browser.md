@@ -18,8 +18,6 @@ The WebView is _built-in_ and will be automatically kept updated with OS updates
 Out-of-Band updates can be installed via the [AXP.OS F-Droid repo](/F-Droid) (recommended) or manually via: [Releases](https://codeberg.org/AXP-OS/app_aosmium/releases).<br/>
 The builds there are properly signed so you can safely use them without trouble on next OTA update.
 
-_Note: At the moment it is unclear if or when there will be an F-Droid version for the webview or the browser._
-
 ### Webview?!
 
 The Android WebView component allows developers to display web content within their mobile applications.
