@@ -19,6 +19,9 @@ There is no need to walk through _all_ steps if you do not like to, it is up to 
 Before you can start you must register an account _(this is already required for opening a device request anyways, so you might have that already)_:
 
 - register a [code.binbash.rocks (click)](https://code.binbash.rocks) account
+- search [(click)](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&state=open&labels=26) if there is an existent request for your device+flavor combo
+    - **if not:** create a [new request](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose)
+    - **if yes:** join the discussion of that issue to get a notification when help is needed
 
 ## Prepare additional information
 
