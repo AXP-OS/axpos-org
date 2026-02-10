@@ -22,7 +22,7 @@ firstrelease_pro: "2024-01-16 (A13)<br/>2026-02-10 (A15)"
 flavors_pro: True
 patchlevel_pro: "Platform + Kernel"
 relockable_pro: "yes"
-state_pro: "stable (A13)<br/>stable (A15)"
+state_pro: "stable"
 supportlevel_pro: team
 verifiedboot_pro: v2.0
 
@@ -33,7 +33,7 @@ firstrelease_slim: "2025-02-05 (A13)<br/>TBD (A15)"
 flavors_slim: True
 patchlevel_slim: "Platform + Kernel"
 relockable_slim: "yes"
-state_slim: "stable (A13)<br/>stable (A15)"
+state_slim: "stable"
 supportlevel_slim: community
 verifiedboot_slim: v2.0
 
