@@ -8,7 +8,7 @@ export HUGO_CI_GUIDE=""
 export HUGO_CI_GUIDE_PATH=""
 export HUGO_CODENAME="sunfish"
 export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
-export HUGO_FACTORYZIP="yes"
+export HUGO_FACTORYZIP="no"
 export HUGO_FIRMWARE="included"
 export HUGO_ISAB="yes"
 export HUGO_ISPIXEL="yes"
@@ -18,21 +18,22 @@ export HUGO_VENDOR="Google"
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a13-official-microg-hardened-sunfish-axp-os-20.4651368/"
 
 # PRO Block
-export HUGO_PRO_ANDROID="13"
-export HUGO_PRO_ENCRYPTION="FBEv1"
-export HUGO_PRO_FIRSTRELEASE="2024-01-16"
-export HUGO_PRO_FLAVOR=True
+export HUGO_PRO_ANDROID="15"
+export HUGO_PRO_FLAVOR=Trueexport HUGO_PRO_ENCRYPTION="FBEv1"
+export HUGO_PRO_FIRSTRELEASE="2024-01-16 (A13)<br/>2026-02-10 (A15)"
 export HUGO_PRO_RELOCKABLE="yes"
-export HUGO_PRO_STATE="stable"
+export HUGO_PRO_PATCHLEVEL="Platform + Kernel"
+export HUGO_PRO_STATE="stable (A13)<br/>stable (A15)"
 export HUGO_PRO_SUPPORTLEVEL="team"
-export HUGO_PRO_VERIFIEDBOOT=v2.0
+export HUGO_PRO_VERIFIEDBOOT="v2.0"
 
 # SLIM Block
 export HUGO_SLIM_ANDROID="13"
-export HUGO_SLIM_ENCRYPTION="FBEv1"
-export HUGO_SLIM_FIRSTRELEASE="2025-02-05"
-export HUGO_SLIM_FLAVOR=True
+export HUGO_SLIM_FLAVOR=Trueexport HUGO_SLIM_ENCRYPTION="FBEv1"
+export HUGO_SLIM_FIRSTRELEASE="2025-02-05 (A13)<br/>TBD (A15)"
 export HUGO_SLIM_RELOCKABLE="yes"
-export HUGO_SLIM_STATE="stable"
+export HUGO_SLIM_PATCHLEVEL="Platform + Kernel"
+export HUGO_SLIM_STATE="stable (A13)<br/>stable (A15)"
 export HUGO_SLIM_SUPPORTLEVEL="community"
-export HUGO_SLIM_VERIFIEDBOOT=v2.0
+export HUGO_SLIM_VERIFIEDBOOT="v2.0"
+
