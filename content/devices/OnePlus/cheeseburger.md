@@ -12,6 +12,7 @@ kilink: cheeseburgerdumpling
 name: OnePlus 5
 vendor: OnePlus
 xdalink: "N/A"
+trackerlink: ""
 custominstall: ""
 custominstall_path: 
 
