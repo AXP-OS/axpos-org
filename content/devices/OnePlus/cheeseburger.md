@@ -8,11 +8,11 @@ factoryzip: "no"
 firmware: included
 isab: "no"
 ispixel: "no"
-kilink: cheeseburgerdumpling
+kilink: #cheeseburgerdumpling
 name: OnePlus 5
 vendor: OnePlus
-xdalink: "N/A"
-trackerlink: ""
+xdalink: ""
+trackerlink: "https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=61"
 custominstall: ""
 custominstall_path: 
 
@@ -22,7 +22,7 @@ encryption_pro: "ICE"
 firstrelease_pro: "2025-08-05"
 flavors_pro: True
 patchlevel_pro: "Platform + Kernel"
-relockable_pro: "no"
+relockable_pro: "yes"
 state_pro: "stable"
 supportlevel_pro: community
 verifiedboot_pro: no (v1.0)<br/><i>dropped in A11</i>
