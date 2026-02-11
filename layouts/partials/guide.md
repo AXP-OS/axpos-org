@@ -11,12 +11,12 @@ If you miss a flavor you can request it [here](https://code.binbash.rocks/AXP.OS
 - Issue tracker - [won't fix](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=closed&labels=36)
 
 {{ if or .kilink .trackerlink }}
-Specific for ***{{ .codename }}***:
+Specific for your device:
   {{ if .kilink }}
-  - Knowledgebase -> [{{ .codename }}]({{ printf "%s" .docbaseurl }}/docs/knowledge/knownissues/#{{ printf "%s" .kilink }})
+  - Knowledgebase: _[{{ .codename }}]({{ printf "%s" .docbaseurl }}/docs/knowledge/knownissues/#{{ printf "%s" .kilink }})_
   {{ end }}
   {{ if .trackerlink }}
-  - Issue tracker -> [{{ .codename }}]({{ printf "%s" .trackerlink }})
+  - Issue tracker: _[{{ .codename }}]({{ printf "%s" .trackerlink }})_
   {{ end }}
 {{ end }}
 
