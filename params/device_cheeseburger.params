@@ -1,6 +1,6 @@
 #!/bin/bash
 ###############################################################################
-# device specs for creating a new page
+# device specs for cheeseburger
 ###############################################################################
 
 # COMMON Block
@@ -12,17 +12,20 @@ export HUGO_FACTORYZIP="no"
 export HUGO_FIRMWARE="included"
 export HUGO_ISAB="no"
 export HUGO_ISPIXEL="no"
-export HUGO_KILINK="cheeseburgerdumpling"
+export HUGO_KILINK="#cheeseburgerdumpling"
 export HUGO_NAME="OnePlus 5"
 export HUGO_VENDOR="OnePlus"
-export HUGO_XDALINK="N/A"
+export HUGO_XDALINK=""
+export HUGO_TRACKER="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=61"
 
 # PRO Block
 export HUGO_PRO_ANDROID="13"
+export HUGO_PRO_FLAVOR=True
 export HUGO_PRO_ENCRYPTION="ICE"
 export HUGO_PRO_FIRSTRELEASE="2025-08-05"
-export HUGO_PRO_RELOCKABLE="no"
+export HUGO_PRO_RELOCKABLE="yes"
+export HUGO_PRO_PATCHLEVEL="Platform + Kernel"
 export HUGO_PRO_STATE="stable"
 export HUGO_PRO_SUPPORTLEVEL="community"
 export HUGO_PRO_VERIFIEDBOOT="no (v1.0)<br/><i>dropped in A11</i>"
-export HUGO_PRO_FLAVOR=True
+
