@@ -12,6 +12,7 @@ kilink: {{ getenv "HUGO_KILINK" }}
 name: {{ getenv "HUGO_NAME" }}
 vendor: {{ getenv "HUGO_VENDOR" }}
 xdalink: "{{ getenv "HUGO_XDALINK" }}"
+trackerlink: "{{ getenv "HUGO_TRACKER" }}"
 custominstall: "{{ getenv "HUGO_CI_GUIDE" }}"
 custominstall_path: {{ getenv "HUGO_CI_GUIDE_PATH" }}
 

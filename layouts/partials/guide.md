@@ -7,11 +7,16 @@ If you miss a flavor you can request it [here](https://code.binbash.rocks/AXP.OS
 
 ### Known issues
 
-- General [Known Issues]({{ printf "%s" .docbaseurl }}/Known-Issues)
+- AXP.OS - [Known Issues]({{ printf "%s" .docbaseurl }}/Known-Issues)
+- Issue tracker - [won't fix](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=closed&labels=36)
+
+Specific for ***{{ .codename }}***:
   {{ if .kilink }}
-  - Specific for [{{ .codename }}]({{ printf "%s" .docbaseurl }}/docs/knowledge/knownissues/#{{ printf "%s" .kilink }})
+  - Knowledgebase -> [{{ .codename }}]({{ printf "%s" .docbaseurl }}/docs/knowledge/knownissues/#{{ printf "%s" .kilink }})
   {{ end }}
-- Issue tracker [won't fix](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?type=all&state=closed&labels=36)
+  {{ if .trackerlink }}
+  - Issue tracker -> [{{ .codename }}]({{ printf "%s" .trackerlink }})
+  {{ end }}
 
 ### Boot modes
 
