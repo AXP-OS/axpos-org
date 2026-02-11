@@ -4,6 +4,7 @@ type: docs
 toc: true
 aliases:
     - /Grab-Logs
+    - /GrabLogs
     - /Logs
     - /Log
 ---
@@ -71,28 +72,56 @@ This sets the buffer in your terminal to the max possible which is needed due to
 ## Boot logs
 
 First of all: not every device shares the same path where the boot logs get stored. This is due to different partitioning and so depends on the device.
- 
+
 Check the value of `[DEVICE-BOOT-DEBUG-PATH]` in the "Debugging" topic of the [Installation guide](/devices) for your device.
 
-#### if you can boot
+#### if you can boot _(requires root!)_
 
 1. boot Android
-1. ensure you have USB debugging enabled in developer options
-1. open a terminal on your PC and execute (obviously replace `[DEVICE-BOOT-DEBUG-PATH]` with the real value):
-~~~
+2. ensure you have USB debugging enabled in developer options
+3. this requires root, you have the following options:
+   - AXP.OS Pro: [activate Magisk](/docs/guides/setup/aos/#setup-magisk)
+   - AXP.OS Slim: flash Magisk manually - if you can/want, otherwise skip to the next topic
+   - any other: check if you can enable `adb root` in Developer options _(requires a `USERDEBUG` or `ENG` build)_
+4. open a terminal on your PC and execute _(replace [DEVICE-BOOT-DEBUG-PATH](/devices) with the real value)_:
+- for those having `adb root`:
+```
+adb root
 adb shell
-su     (Magisk prompt should appear which you need to accept)
-tar cvfz /sdcard/Download/logs.tgz [DEVICE-BOOT-DEBUG-PATH]/boot_debug
+```
+- for those having `Magisk`:
+```
+adb shell
+su     #(a Magisk prompt should appear in Android which you have to accept)
+```
+5. now do:
+```
+rm -rf /sdcard/Download/logs  #(don't worry if that one fails it might not exist)
+
+mkdir /sdcard/Download/logs
+cp [DEVICE-BOOT-DEBUG-PATH]/boot_debug/* /sdcard/Download/logs/
+
+cat /proc/cmdline > /sdcard/Download/logs/more.txt
+mount >> /sdcard/Download/logs/more.txt
+dmesg >> /sdcard/Download/logs/more.txt
+
+cd /sdcard/Download/logs/
+tar cvzf ../logs.tgz *
+
 exit
 adb pull /sdcard/Download/logs.tgz
-~~~
-4. share the file `logs.tgz` you pulled by attaching it to a [new issue](https://github.com/AXP-OS/issue-tracker/issues) or to a related XDA post
+```
+6. share the file `logs.tgz` you pulled by attaching it to an [issue](https://code.binbash.rocks/AXP.OS-public/issue-tracker) or to a related XDA post
+   - _**bonus:** extract all files from `logs.tgz` and attach / paste them one by one instead of the `logs.tgz` itself_
 
-#### if you can not boot
 
-1. if you encounter a bootloop instead: you need to install TWRP first
-1. once in TWRP ensure that "`[DEVICE-BOOT-DEBUG-PATH]`" is mounted in the "Mount" menu (if not mount it by ticking the box)
-1. open a terminal on your PC and type (obviously replace `[DEVICE-BOOT-DEBUG-PATH]` with the real value):
+#### if you can not boot / no root _(requires TWRP)_
+
+1. if you cannot boot or if there is no root available, you have the following options:
+   - boot TWRP _(e.g. `fastboot boot twrp.img`)_
+   - install TWRP _(some devices won't allow / work with `fastboot boot`)_
+2. when in TWRP: ensure that "[DEVICE-BOOT-DEBUG-PATH](/devices)" is mounted in the "Mount" menu _(if not, mount it by ticking the box)_
+3. open a terminal on your PC and type _(replace [DEVICE-BOOT-DEBUG-PATH](/devices) with the real value)_:
 ~~~
 adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/crash.txt   (don't worry if that one fails it might not exists)
 adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/full.txt
@@ -100,7 +129,7 @@ adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/full.txt.1   (don't worry if that o
 adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/kernel.txt   (don't worry if that one fails it might not exists)   
 adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/selinux.txt   (don't worry if that one fails it might not exists)
 ~~~~
-4. share the log(s) you pulled by a paste service (see [Share logs](#share-logs)) or create /attach it to [an issue](https://github.com/AXP-OS/issue-tracker/issues)
+1. share the log(s) you pulled by a paste service (see [Share logs](#share-logs)) or create /attach it to [an issue](https://code.binbash.rocks/AXP.OS-public/issue-tracker)
 
 ## Recovery logs (TWRP)
 

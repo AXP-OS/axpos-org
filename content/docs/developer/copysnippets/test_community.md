@@ -18,7 +18,7 @@ _A community based set of helper scripts exists, huge thanks to @SerYo who maint
 {{< /callout >}}
 
 ```
-`copytemplate: v1.8`
+`copytemplate: v1.9`
 
 _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL` is per the IETF standard defined in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)._
 
@@ -31,7 +31,7 @@ _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`
 
 _Major tests which MUST succeed for any flavor_
 
-- [ ] **AXP.OS [build id](https://axpos.org/docs/knowledge/faq/#meaning-of-the-axpos-build-id)** shown in **recovery** _(reboot to recovery, check if you see e.g. `Version xxx (2026.001)` where `2026.001` is the expected build id)_
+- [ ] **AXP.OS [build id](https://axpos.org/docs/knowledge/faq/#meaning-of-the-axpos-build-id)** shown in **recovery** _(reboot to recovery, check if you see e.g. `Version xxx (2026.001)`, in this example `2026.001` would be the expected build id which should match the issue tracker's title)_
 - [ ] **current ASB patch - System** (`Android Settings -> Info/About Phone -> Android Version (touch it to open)` must be [on expected version](https://axpos.org/Changelog))
 - [ ] **current ASB patch - Kernel** (`Android Settings -> Info/About Phone -> Android Version (touch it to open) -> Kernel version -> build date` must be current. Kernel version must have `-pXXX` inside the version string)
 - [ ] paste a **screenshot** of the Android version screen (`Android Settings -> Info/About Phone -> Android Version (touch it to open)`. `AXP.OS version, Android security update, Kernel version`, all must be visible)
