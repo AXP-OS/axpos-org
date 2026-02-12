@@ -12,13 +12,13 @@ If you miss a flavor you can request it [here](https://code.binbash.rocks/AXP.OS
 
 {{ if or .kilink .trackerlink }}
 Specific for your device:
+{{ end }}
   {{ if .kilink }}
   - Knowledgebase: _[{{ .codename }}]({{ printf "%s" .docbaseurl }}/docs/knowledge/knownissues/#{{ printf "%s" .kilink }})_
   {{ end }}
   {{ if .trackerlink }}
   - Issue tracker: _[{{ .codename }}]({{ printf "%s" .trackerlink }})_
   {{ end }}
-{{ end }}
 
 ### Boot modes
 

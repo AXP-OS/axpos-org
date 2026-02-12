@@ -33,10 +33,20 @@ menu:
     - name: FAQ
       pageRef: /FAQ
       weight: 8
+    - name: Sources
+      weight: 49
+      url: "/docs/knowledge/faq/#is-there-a-list-where-the-source-code-is-hosted"
+      params:
+        icon: github
     - name: Search
-      weight: 9
+      weight: 50
       params:
         type: search
+    - name: Theme Toggle
+      weight: 999
+      params:
+        type: theme-toggle
+
 params:
 
   theme:

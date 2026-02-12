@@ -3,6 +3,6 @@ title: Samsung
 type: docs
 ---
 
-Select your device from the left menu
+Select your device from the navigation menu
 
-If you miss a device you can request it [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose).
+If you miss a device or flavor you can request it [here](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/new/choose).

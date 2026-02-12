@@ -101,12 +101,19 @@ Unfortunately and for different reasons we needed to shift our repos several tim
 |Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|some public available repos, Website (https://axpos.org), APK releases|~12*|
 |Codeberg|[https://codeberg.org/AXP-OS_limited](https://codeberg.org/AXP-OS_limited)|❌|some non-public available repos used for reproducible builds|~26*|
 |Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|APK releases **mirror** _(AOSmium, PhoneSky, OpenEUICC, ..)_|~4*|
-|**_DEPRECATED_**|||**_DEPRECATED_**||
+
+- *) _state: January 2026_
+- **) _see next topic_
+
+{{% details title="Deprecated hostings" closed="true" %}}
+
+|Hoster|URL|Public**|Purpose|Repos|
+|:-|:-|:-:|-|-:|
 |Github|[https://github.com/AXP-OS](https://github.com/AXP-OS)|✅|was used for reproducible builds, manifests, all public parts of build<br/>_(AXP.OS avoids using proprietary services where possible. Github is [owned by Microsoft](https://en.wikipedia.org/wiki/GitHub) since October 2018)_|~217*|
 |Codeberg|[https://codeberg.org/AXP-OS](https://codeberg.org/AXP-OS)|✅|was used for all public available repos, APK releases<br/>_(they declined hosting AXP.OS repos since 2025-12, almost all repos have been removed on 2026-01-19)_|100+|
 
 - *) _state: January 2026_
-- **) _see next topic_
+{{% /details %}}
 
 ### Why do some repositories require a (free) registration?
 

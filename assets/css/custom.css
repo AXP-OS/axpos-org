@@ -1,0 +1,47 @@
+/* Stronger table borders + vertical lines */
+.content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.content table th,
+.content table td {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.75rem;
+}
+
+/* stronger header line */
+.content table thead th {
+  border-bottom: 2px solid #9ca3af;
+}
+
+/* remove hextra horizontal-only style */
+.content table tbody tr {
+  border-bottom: none;
+}
+
+/* Restore zebra striping */
+.content table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.dark .content table tbody tr:nth-child(even) {
+  background-color: #262b30;
+}
+
+/* Fix table cell padding */
+.content table th,
+.content table td,
+.prose table th,
+.prose table td {
+  padding: 0.5rem 0.75rem !important;
+}
+
+/* Increase table font size */
+.content table th,
+.content table td,
+.prose table th,
+.prose table td {
+  font-size: 1rem !important;
+  line-height: 1.6;
+}

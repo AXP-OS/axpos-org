@@ -12,6 +12,7 @@ kilink:
 name: Google Pixel 4a
 vendor: Google
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-sunfish-axp-os-20.4651368/"
+trackerlink: ""
 custominstall: ""
 custominstall_path: 
 
@@ -27,9 +28,9 @@ supportlevel_pro: team
 verifiedboot_pro: v2.0
 
 # SLIM
-android_slim: 13
+android_slim: 15
 encryption_slim: "FBEv1"
-firstrelease_slim: "2025-02-05 (A13)<br/>TBD (A15)"
+firstrelease_slim: "2025-02-05 (A13)<br/>2026-02-11 (A15)"
 flavors_slim: True
 patchlevel_slim: "Platform + Kernel"
 relockable_slim: "yes"

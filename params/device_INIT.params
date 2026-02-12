@@ -16,6 +16,7 @@ export HUGO_VENDOR=
 export HUGO_XDALINK=
 export HUGO_CI_GUIDE=
 export HUGO_CI_GUIDE_PATH=
+export HUGO_TRACKER=
 
 # PRO Block
 export HUGO_PRO_ANDROID=
