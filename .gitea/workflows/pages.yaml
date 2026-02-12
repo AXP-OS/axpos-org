@@ -84,7 +84,7 @@ jobs:
         run: |
           git submodule update --remote
 
-          cd themes/hextra/ && git fetch --tags && git checkout refs/tags/v${HUGO_VERSION}
+          cd themes/hextra/ && git fetch --tags && git checkout refs/tags/v${HEXTRA_VERSION}
           cd ../..
 
           if [ -z "${{ inputs.forceimp }}" ] || [ "${{ inputs.forceimp }}" == "true" ];then
