@@ -8,13 +8,13 @@ aliases:
     - /Logs
     - /Log
 ---
-## Application / System logs
+# Application & System logs
 
-For debugging you need to have adb up and running. If you have trouble with that consider using the special Android distro [mAid](https://maid.binbash.rocks/).
+For debugging you need to have `adb` up and running. If you have trouble with that consider using the special Android distro [mAid](https://maid.binbash.rocks/).
 
-### Windows & Linux: Log to a file (recommended way!)
+## Windows & Linux: Log to a file (recommended way!)
 
-#### specific issue (e.g. app crashes etc)
+### specific issue (e.g. app crashes etc)
 
 1. type: `adb shell` (or just open your favorite terminal app + become root via `su`)
 1. type: `logcat -c -b all` (this will print nothing - it will just clear the log buffer)
@@ -26,7 +26,7 @@ For debugging you need to have adb up and running. If you have trouble with that
 1. upload the log, see topic [Share logs](#share-logs)
 1. always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, ...)
 
-#### unspecific / general issue
+### unspecific / general issue
 
 1. type: `adb shell` (or just open your favorite terminal app + become root via `su`)
 1. type: `logcat -b all -d -D > /sdcard/Download/logcat.txt`
@@ -36,19 +36,18 @@ For debugging you need to have adb up and running. If you have trouble with that
 1. upload the log, see topic [Share logs](#share-logs)
 1. always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, ...)
 
-### Alternative: Windows & Linux: Log to terminal window
+## Alternative: Windows & Linux: Log to terminal window
 
 If the recommended way fails for any reason you can also print the logcat output in the terminal window. It's not very funny but might get the things done.
 
-#### Windows preparation
+### Windows preparation
 
 1. open a terminal and type:
     - `mode con lines=32766` and ENTER
 
 This sets the buffer in your terminal to the max possible which is needed due to the log verbosity.
 
-
-#### specific issue (e.g. app crashes etc)
+### specific issue (e.g. app crashes etc)
 
 1. type: `adb shell` (or just open your favorite terminal app + become root via `su`)
 1. type: `logcat -c -b all` (this will print nothing - it will just clear the log buffer)
@@ -59,7 +58,7 @@ This sets the buffer in your terminal to the max possible which is needed due to
 1. upload the log, see topic [Share logs](#share-logs)
 1. always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, ...)
 
-#### unspecific / general issue
+### unspecific / general issue
 
 1. type: `adb shell` (or just open your favorite terminal app + become root via `su`)
 1. type: `logcat -b all -d -D`
@@ -68,20 +67,19 @@ This sets the buffer in your terminal to the max possible which is needed due to
 1. upload the log, see topic [Share logs](#share-logs)
 1. always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, ...)
 
-
 ## Boot logs
 
-First of all: not every device shares the same path where the boot logs get stored. This is due to different partitioning and so depends on the device.
+First of all: not every device shares the same path where the special AXP.OS boot logs get and so depends per device.
 
 Check the value of `[DEVICE-BOOT-DEBUG-PATH]` in the "Debugging" topic of the [Installation guide](/devices) for your device.
 
-#### if you can boot _(requires root!)_
+### if you can boot _(requires root!)_
 
 1. boot Android
 2. ensure you have USB debugging enabled in developer options
 3. this requires root, you have the following options:
    - AXP.OS Pro: [activate Magisk](/docs/guides/setup/aos/#setup-magisk)
-   - AXP.OS Slim: flash Magisk manually - if you can/want, otherwise skip to the next topic
+   - AXP.OS Slim: flash Magisk manually - if you can/want, otherwise check the next topic
    - any other: check if you can enable `adb root` in Developer options _(requires a `USERDEBUG` or `ENG` build)_
 4. open a terminal on your PC and execute _(replace [DEVICE-BOOT-DEBUG-PATH](/devices) with the real value)_:
 - for those having `adb root`:
@@ -112,10 +110,21 @@ exit
 adb pull /sdcard/Download/logs.tgz
 ```
 6. share the file `logs.tgz` you pulled by attaching it to an [issue](https://code.binbash.rocks/AXP.OS-public/issue-tracker) or to a related XDA post
-   - _**bonus:** extract all files from `logs.tgz` and attach / paste them one by one instead of the `logs.tgz` itself_
+   - _**bonus:** extract all files from `logs.tgz` and attach / paste them one by one (see topic [Share logs](#share-logs)) instead of the `logs.tgz` itself_
 
+##### Early kernel log
+Sometimes it is also required to get an early kernel log, this is how:<br/>_(ensure you walked through the above steps first because this ensures all is properly set up)_
 
-#### if you can not boot / no root _(requires TWRP)_
+1. Power off your device
+2. start adb on your PC:
+   - for those having _adb root_:<br/>
+   `adb wait-for-device && adb root && adb shell dmesg`
+   - for those having _Magisk_:<br/>
+   `adb wait-for-device && adb shell "su -c dmesg"`
+3. connect an USB cable & power on the device
+4. share the output, see topic [Share logs](#share-logs)
+
+### if you can not boot / no root _(requires TWRP)_
 
 1. if you cannot boot or if there is no root available, you have the following options:
    - boot TWRP _(e.g. `fastboot boot twrp.img`)_
@@ -175,28 +184,29 @@ adb pull /tmp/dmesg.txt
 When sharing logs or longer texts it is recommended using a so-called "paste service". This is useful to keep a forum / chat / issue readable for everyone and it dramatically helps a developer to read the log without saving tons of log files on their phones/PC's.
 
 {{< callout type="error" >}}
-Logs can contain sensitive information (like phone numbers, location etc)! Keep that in mind and if you are not sure choose to set a password. In the case of Android logs this is almost always the case so it is recommended not sharing these in public.
+**Logs can contain sensitive information (like phone numbers, location, IP's, WiFi data, etc)!<br/>**
+In case of Android logs this is almost always the case so it is generally not recommended sharing these in public (exceptions are e.g. _specific issue_ logs or the _early kernel_ log).
 
-If you are unsure, follow the _"Sensitive log files"_ topic.
+Keep that in mind and if you are unsure, follow the _"Sensitive log files"_ topic.
 
 In general:
 - Do not add several logs into 1 paste. **Always use a separate paste for each log!**
-- Do not add any _additional_ filters to the above commands. While you _think_ that these might be useful, it often enough hides the most relevant information or context.
+- Do not add any _additional_ filters to the above commands. While you _think_ that these might be useful, it often enough hides the most relevant information or an important/useful context.
 {{< /callout >}}
 
 ### Sensitive log files
 
-While there are several paste services which can encrypt your data the following is the recommended process for AXP.OS:
+While there are several paste services which can encrypt your data the following is the recommended process for **AXP.OS** users:
 
 1. Open https://paste.axpos.org/ _(running on AXP.OS servers)_
 1. Set `Expires` = `1 year` _(min. 3 months, keep in mind that you need to provide a new log if selecting a too short time period)_
 1. Do **not(!)** select "Burn after reading"
-1. Set a strong password in the `Password` field _(and record it for later)_
-1. Paste the log into the `Editor` frame
+1. Set a strong password in the `Password` field<br/>_(and record it for later. Note: it is recommended to use the same password when pasting multiple outputs)_
+1. Paste the log into the `Editor` frame _(remember: 1 paste per log/output)_
 1. Click on `Create` at the top right
 1. Click `Copy link` to save your unique link
-1. Share that unique link from the previous step where the log was requested _(e.g. in your [issue](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues) or in the [Matrix room](/Support))_
-1. Share the password **in private** only _(send the developer a DM via [Matrix](/Support), do not use the public rooms for this)_
+1. Share that unique link from the previous step where the log was requested<br/>_(e.g. in your [issue](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues) or in the [Matrix room](/Support))_
+1. Share the password **in private** only _(send the requestor a DM via [Matrix](/Support), do not use the public rooms for this)_
 
 ### Non-sensitive log files
 
