@@ -100,6 +100,7 @@ mkdir /sdcard/Download/logs
 cp [DEVICE-BOOT-DEBUG-PATH]/boot_debug/* /sdcard/Download/logs/
 
 cat /proc/cmdline > /sdcard/Download/logs/more.txt
+cat /proc/bootconfig >> /sdcard/Download/logs/more.txt
 mount >> /sdcard/Download/logs/more.txt
 dmesg >> /sdcard/Download/logs/more.txt
 
