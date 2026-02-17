@@ -10,6 +10,23 @@ aliases:
 Some major news related to the project can be found here. Do not expect updates here often, check the [changelog](/Changelog) and the Matrix [Support room](/docs/overview/#support) for more updates.
 {{< /callout >}}
 
+## 2026-02-17
+
+### Android 15 is there 🎉
+
+It took [a while](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/94) but finally the Android 15 move has been completed. That means all technical requirements are met and successful builds have been released which can be considered as "stable" _(build id `2026.001`)_.
+While they are _stable_ they are not _feature-complete_ though, so if you plan migrating to an Android 15 build here some important things to know:
+
+1. The **internet/network permission** is not available yet
+2. The **sensor permission** is not available yet
+3. **Disabling apps** is not available yet
+4. **LTE-only mode** might not be available
+5. ... some unidentified problems may occur
+
+Ensure you understand the above limitations before migrating to an Android 15 build. It is planned to add these features to Android 15 builds _asap_ and changes will be pushed via OTA when they become available as usual.
+
+For Android 15, it is also planned to support the **deactivation of Hardened Malloc on an app basis**. This is useful for bad programmed apps which are crashing due to wrong memory allocation. Although this is a reduction in security, it then makes it possible to run such applications under AXP.OS, provided the user accepts the risks and switches it off for this explicit app. _Note: This feature will not be backported to older versions_.
+
 ## 2025-09-23
 
 ### The ASB drama
