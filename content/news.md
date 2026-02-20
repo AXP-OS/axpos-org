@@ -17,8 +17,8 @@ Some major news related to the project can be found here. Do not expect updates 
 It took [a while](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/94) but finally the Android 15 move has been completed. That means all technical requirements are met and successful builds have been released which can be considered as "stable" _(build id `2026.001`)_.
 While they are _stable_ they are not _feature-complete_ though, so if you plan migrating to an Android 15 build here some important things to know:
 
-1. The **internet/network permission** is not available yet
-2. The **sensor permission** is not available yet
+1. The **internet/network permission** is not available yet<br/>_(will be available with `2026.002`, credits: GrapheneOS + adaptions by AXP.OS)_
+2. The **sensor permission** is not available yet<br/>_(will be available with `2026.002`, credits: GrapheneOS + adaptions by AXP.OS)_
 3. **Disabling apps** is not available yet
 4. **LTE-only mode** might not be available
 5. ... some unidentified problems may occur
@@ -26,6 +26,16 @@ While they are _stable_ they are not _feature-complete_ though, so if you plan m
 Ensure you understand the above limitations before migrating to an Android 15 build. It is planned to add these features to Android 15 builds _asap_ and changes will be pushed via OTA when they become available as usual.
 
 For Android 15, it is also planned to support the **deactivation of Hardened Malloc on an app basis**. This is useful for bad programmed apps which are crashing due to wrong memory allocation. Although this is a reduction in security, it then makes it possible to run such applications under AXP.OS, provided the user accepts the risks and switches it off for this explicit app. _Note: This feature will not be backported to older versions_.
+
+#### New features
+
+Besides what you can expect from [LineageOS 22.2](https://lineageos.org/Changelog-29/) some hand-picked new AXP.OS _A15-Only_ features have been added:
+
+- new: an *updated* version of [Neo Launcher](https://codeberg.org/AXP-OS/packages_apps_neo-launcher)
+- new: when *installing* an app which requests Internet permission you can disable it directly now: `Allow Network permission`<br/>_(will be available with `2026.002`, credits: GrapheneOS)_
+![allow_network.jpg](img/allow_network.jpg)
+- new: option added: `Privacy -> Allow Sensors permission to apps by default`<br/>_(default: `enabled`. will be available with `2026.002`, credits: GrapheneOS)_
+- new: deactivation of *Hardened Malloc* on an app basis<br/>_(will be available with `"TBD"`, credits: GrapheneOS)_
 
 ## 2025-09-23
 
