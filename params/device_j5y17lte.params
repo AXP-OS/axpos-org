@@ -18,4 +18,14 @@ export HUGO_VENDOR="Samsung"
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a10-official-microg-hardened-j5y17lte-axp-os-17-1.4644557/"
 export HUGO_TRACKER="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=60"
 
+# PRO Block
+export HUGO_PRO_ANDROID="10"
+export HUGO_PRO_FLAVOR=True
+export HUGO_PRO_ENCRYPTION="FBEv1"
+export HUGO_PRO_FIRSTRELEASE="2024-06-20"
+export HUGO_PRO_RELOCKABLE="no"
+export HUGO_PRO_PATCHLEVEL="Platform + Kernel"
+export HUGO_PRO_STATE="stable"
+export HUGO_PRO_SUPPORTLEVEL="team"
+export HUGO_PRO_VERIFIEDBOOT="no"
 
