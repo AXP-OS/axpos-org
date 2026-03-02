@@ -541,6 +541,7 @@ Most but not all changes can be found here:
 *   Misc sysctl changes
 *   Q/R/S/T: Add a property for controlling ptrace_scope (GrapheneOS)
 *   P/Q/R: GRAPHENE_BIONIC=true: Zero sensitive information with explicit_bzero (GrapheneOS)
+*   A15: AVB dm-verity fallback if legacy device detected (AXP.OS)
 
 ##### android_system_extras
 

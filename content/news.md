@@ -36,6 +36,11 @@ Besides what you can expect from [LineageOS 22.2](https://lineageos.org/Changelo
 ![allow_network.jpg](img/allow_network.jpg)
 - new: option added: `Privacy -> Allow Sensors permission to apps by default`<br/>_(default: `enabled`. will be available with `2026.002`, credits: GrapheneOS)_
 - new: deactivation of *Hardened Malloc* on an app basis<br/>_(will be available with `"TBD"`, credits: GrapheneOS)_
+- new: _(still)_ support legacy devices bootloader lock + verity _(see_ 🔐_)_ <br/>_(will be available with `2026.002`, credits: AXP.OS + community)_
+
+{{< callout type="info" emoji="🔐" >}}
+_while other custom OS stops supporting bootloader lock for A15 on devices with legacy kernel versions, AXP.OS implemented a fallback based on A13 behavior:<br/>A15 changed the vbmeta metadata handling after the bootloader verification passed, which requires having a kernel v5.6 or later _(+ `CONFIG_BOOT_OPTION` set)_ or having that information backed into the bootloader (resulting in a kernel cmdline with valid vbmeta data). Both options are not available on legacy devices as the bootloader itself is proprietary and kernel versions often cannot be upgraded to 5.6 or later without massive effort. AXP.OS detects available options for the device it builds for and enable that patch fallback if required (only). Other devices won't get that patch and work as expected in A15._
+{{< /callout >}}
 
 ## 2025-09-23
 
