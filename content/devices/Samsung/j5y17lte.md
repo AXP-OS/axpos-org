@@ -17,15 +17,15 @@ custominstall: "yes"
 custominstall_path: content/devices/custom_.guide
 
 # PRO
-android_pro: 
-encryption_pro: ""
-firstrelease_pro: ""
-flavors_pro: 
+android_pro: 10
+encryption_pro: "FBEv1"
+firstrelease_pro: "2024-06-20"
+flavors_pro: True
 patchlevel_pro: "Platform + Kernel"
-relockable_pro: ""
-state_pro: ""
-supportlevel_pro: 
-verifiedboot_pro: 
+relockable_pro: "no"
+state_pro: "stable"
+supportlevel_pro: team
+verifiedboot_pro: no
 
 # SLIM
 android_slim: 
