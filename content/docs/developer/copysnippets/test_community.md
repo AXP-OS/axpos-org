@@ -18,7 +18,7 @@ _A community based set of helper scripts exists, huge thanks to @SerYo who maint
 {{< /callout >}}
 
 ```
-`copytemplate: v1.9`
+`copytemplate: v1.10`
 
 _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL` is per the IETF standard defined in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)._
 
@@ -63,9 +63,9 @@ _Major tests which MUST succeed for any flavor_
 - **Verified Boot**: check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
     - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
     - [ ] enter: `grep dm- /proc/mounts | grep -E " /(system|system_ext|product|vendor|odm) "` _(the spaces at start and end are important!)_
-        - [ ] add the output to the bottom of this checklist
+        - [ ] output added to the bottom of this checklist
     - [ ] enter: `getprop | grep verity`
-        - [ ] add the output to the bottom of this checklist
+        - [ ] output added to the bottom of this checklist
 
 #### AXP.OS - Pro tests
 
@@ -82,15 +82,17 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
         - [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, IronFox (since July25)`
         - [ ] enable all disabled repos: no error should occur
 - **boot debug** log existence:
-    - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
-    - [ ] enter: `su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` (you can find the definition of `[DEVICE-BOOT-DEBUG-PATH]` in the [install guide](https://axpos.org/devices)
-    - [ ] add the output to the bottom of this checklist
+    - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):<br/>
+    - enter: `su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` _(you can find the definition of `[DEVICE-BOOT-DEBUG-PATH]` in the [install guide](https://axpos.org/devices))_
+      - [ ] output added to the bottom of this checklist
 - **Verified Boot**: addtional check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
     - connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
-    - [ ] enter: `su -c dmctl list devices -v`
-        - [ ] add the output to the bottom of this checklist
-    - [ ] enter: `su -c cat /proc/cmdline`
-        - [ ] add the output to the bottom of this checklist
+    - enter: `su -c dmctl info system-verity`
+      - [ ] output added to the bottom of this checklist
+    - enter: `su -c dmctl info vendor-verity`
+      - [ ] output added to the bottom of this checklist
+    - enter: `su -c cat /proc/cmdline`
+      - [ ] output added to the bottom of this checklist
 
 _Secondary tests which SHOULD succeed when the flavor you are testing is: Pro_
 
@@ -197,7 +199,13 @@ _paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A S
 
 ...
 
-##### Pro: `su -c dmctl list devices -v`
+##### Pro: `su -c dmctl info system-verity`
+
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `< >` ("Add code") in the format menu above_
+
+...
+
+##### Pro: `su -c dmctl info vendor-verity`
 
 _paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `< >` ("Add code") in the format menu above_
 
