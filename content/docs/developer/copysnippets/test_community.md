@@ -18,7 +18,7 @@ _A community based set of helper scripts exists, huge thanks to @SerYo who maint
 {{< /callout >}}
 
 ```
-`copytemplate: v1.10`
+`copytemplate: v1.11`
 
 _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL` is per the IETF standard defined in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)._
 
@@ -39,7 +39,7 @@ _Major tests which MUST succeed for any flavor_
 - [ ] **Encryption is auto-enabled** (`Android Settings -> Privacy -> Trust`) _SKIP if your device has [autoencryption disabled (click to find out)](https://github.com/search?q=repo%3AsfX-android%2Fautomation_scripts+%22axp_auto_encrypt%3A+False%22+NOT+path%3A%22roles%2Faxp%2Fcommon%22&type=code)_
 - [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
 - [ ] **F-Droid** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
-- [ ] **OpenEUICC** app included for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device)) _(enabling is required only on =< A13. If you are on >= A14 and your device supports eSIMs, you should find the OpenEUICC without any extra steps in the app drawer)_
+- [ ] **OpenEUICC** app included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags) - for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device)) _(enabling is required only on =< A13. If you are on >= A14 and your device supports eSIMs, you should find the OpenEUICC without any extra steps in the app drawer)_
 - [ ] **AuroraStore** App included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] **AOSmium WebView** installed (`Developer Options -> WebView implementation` -> verify it is selected)
 - **AOSmium WebView** quick test: `AuroraStore -> search & install "Webview test"` ([link](https://play.google.com/store/search?q=webview+test&c=apps))
