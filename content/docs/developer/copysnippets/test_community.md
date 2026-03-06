@@ -18,7 +18,7 @@ _A community based set of helper scripts exists, huge thanks to @SerYo who maint
 {{< /callout >}}
 
 ```
-`copytemplate: v1.11`
+`copytemplate: v1.12`
 
 _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL` is per the IETF standard defined in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)._
 
@@ -27,7 +27,7 @@ _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`
 - codename: FILL_IN_THE_CODENAME
 - flavor: FILL_IN_THE_FLAVOR
 
-### AXP.OS - Core features
+## AXP.OS - Core features
 
 _Major tests which MUST succeed for any flavor_
 
@@ -42,8 +42,8 @@ _Major tests which MUST succeed for any flavor_
 - [ ] **OpenEUICC** app included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags) - for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device)) _(enabling is required only on =< A13. If you are on >= A14 and your device supports eSIMs, you should find the OpenEUICC without any extra steps in the app drawer)_
 - [ ] **AuroraStore** App included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] **AOSmium WebView** installed (`Developer Options -> WebView implementation` -> verify it is selected)
+    - [ ] and on [expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - **AOSmium WebView** quick test: `AuroraStore -> search & install "Webview test"` ([link](https://play.google.com/store/search?q=webview+test&c=apps))
-    - [ ] Open Webview test app & check `Webview Info` (hamburger menu), it should display the version in the [AXP.OS Changelog](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
     - [ ] click on the Globe icon or open the menu and choose `Webview` _(if no input popup appears click the globe icon at the top)_
     - [ ] enter any url and test if it opens
 - [ ] **OTA update** (`Android Settings -> Updater -> 3dots -> Preferences -> Server Choice -> "UNSTABLE"`):
@@ -67,7 +67,7 @@ _Major tests which MUST succeed for any flavor_
     - [ ] enter: `getprop | grep verity`
         - [ ] output added to the bottom of this checklist
 
-#### AXP.OS - Pro tests
+### AXP.OS - Pro tests
 
 _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 
@@ -98,7 +98,7 @@ _Secondary tests which SHOULD succeed when the flavor you are testing is: Pro_
 
 - [ ] **WireGuard VPN Kernel module** (Install [Wireguard](https://download.wireguard.com/android-client/) or [WG Tunnel](https://f-droid.org/packages/com.zaneschepke.wireguardautotunnel/). `Wireguard App -> grant root -> enable kernel support in settings`. `WG Tunnel -> Settings > App Mode > Kernel -> grant root`)
 
-#### AXP.OS - Slim tests
+### AXP.OS - Slim tests
 
 _Secondary tests which MUST succeed when the flavor you are testing is: Slim_
 
@@ -111,16 +111,17 @@ _Secondary tests which MUST succeed when the flavor you are testing is: Slim_
 
 _Secondary tests which SHOULD succeed when the flavor you are testing is: Slim_
 
-- **microG full install test** (microG is NOT included within Slim builds but its usage has been prepared):
-    - [ ] Install [microG](https://github.com/microg/GmsCore/wiki/Installation) + and its Companion App (enable `microG` F-Droid repo)
-    - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
-    - `microG Settings -> Selftest:`
-        - [ ] Signature spoofing support _(tick it once, it must be enabled after that)_
-        - [ ] Topic _Installed packages_ should have all items enabled
-- **microG minimal test** _(no install required)_. For those _NOT_ wanting to install microG:
+- **microG FULL install test** (microG is NOT included within Slim builds but its usage has been prepared)<br/>
+***WARNING: ONLY IF YOUR BOOTLOADER IS STILL `UNLOCKED` - SKIP TO "minimal test" IF YOUR BOOTLOADER IS `LOCKED`!***
+  - [ ] _if bootloader unlocked:_ Install [microG](https://github.com/microg/GmsCore/wiki/Installation) + and its Companion App (enable `microG` F-Droid repo)
+  - [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
+  - `microG Settings -> Selftest:`
+      - [ ] Signature spoofing support _(tick it once, it must be enabled after that)_
+      - [ ] Topic _Installed packages_ should have all items enabled
+- **microG MINIMAL test** _(no install required)_.<br/>For those _NOT_ wanting to install microG or ***if your bootloader is locked***:
     - [ ] check if signature spoofing support is available (`enable it -> move out of developer screen -> and open it again`: _is the toggle still enabled? if so, then you can toggle it off again and tick the box: ✅_ )
 
-### AXP.OS - Core functionality
+## AXP.OS - Core functionality
 
 _Tests which SHOULD succeed for any flavor_
 
@@ -149,7 +150,7 @@ _These tests are for critical parts of the system_
 - [ ] **ADB and Fastboot**: Verify ADB and Fastboot commands work.
 - [ ] **App install test**: F-Droid, Aurora Store, Play Store (_Pro_ only)
 
-### Additional tests
+## Additional tests
 
 _Tests which MAY succeed for any flavor_
 
@@ -175,7 +176,8 @@ _These tests are either not too critical or are primarily intended for overall s
 
 ### free form
 
-_This is a space for comments by the tester, remarks, notable changes and any other report about the result which might be useful:_
+_This is a space for comments by the tester, remarks, notable changes and any other report about the result which might be useful._<br/>
+_Especially if a test does not succeed, report here what happened (not in the above checklist)._
 
 ...
 
