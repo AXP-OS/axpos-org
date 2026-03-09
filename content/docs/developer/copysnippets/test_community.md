@@ -18,7 +18,7 @@ _A community based set of helper scripts exists, huge thanks to @SerYo who maint
 {{< /callout >}}
 
 ```
-`copytemplate: v1.12`
+`copytemplate: v1.13`
 
 _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL` is per the IETF standard defined in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)._
 
@@ -72,7 +72,8 @@ _Major tests which MUST succeed for any flavor_
 _Secondary tests which MUST succeed when the flavor you are testing is: Pro_
 
 - [ ] **Pre-rooted** (`Magisk App -> "Magisk" must be shown as "installed"`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
-- [ ] **microG included** (`microG Settings -> Selftest -> ensure all checkboxes are ticked`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] **microG included** (`microG Settings -> Selftest -> ensure all* checkboxes are ticked`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+    - _*note: `Permission to interact with work profile` will not be auto-selected and can be ticked only if there **is** a work profile actually. if you do not have any work profile simply ignore._
 - [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] Home **Launcher Neo Launcher** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - **F-Droid**: extended list of **F-Droid repositories**
