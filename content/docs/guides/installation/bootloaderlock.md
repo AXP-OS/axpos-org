@@ -222,8 +222,4 @@ _Examples for those tools:_
 
 ### Known Low-Level recovery tools
 
-- bkerler [EDL tool](https://github.com/bkerler/edl)
-- Oneplus MSM tool (e.g. for: [fajita](https://xdaforums.com/t/op6t-latest-10-3-8-collection-of-unbrick-tools.3914746/) or [hotdog](https://xdaforums.com/t/op7tpro-oos-hd01aa-hd01ba-unbrick-tool-to-restore-your-device-to-oxygenos.4002909/))
-- LG QFIL tool (e.g. for: [H815](https://xdaforums.com/t/guide-proper-h815-unbrick-through-qfil-files-included.3709212/))
-- Samsung [Heimdall tool](https://github.com/Benjamin-Dobell/Heimdall) (included in [mAid Linux](https://maid.binbash.rocks/))
-- Google Pixels: [gs201/gs301](https://github.com/JoshuaDoes/tensor-usbdl)
+See the [FAQ](/docs/knowledge/faq/#known-low-level-recovery-tools)

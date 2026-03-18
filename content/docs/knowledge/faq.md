@@ -203,6 +203,53 @@ Resolution:
 3. type in the domain / website which does not work (e.g. `paste.axpos.org`)
 4. do **not** enable the toggle for JavaScript JIT at the top - unless you want to *allow* JIT for *any* website (not recommended)
 
+## Known Low-Level recovery tools
+
+- bkerler [EDL tool](https://github.com/bkerler/edl) _(soon included in [mAid Linux](https://maid.binbash.rocks/))_
+- Oneplus MSM tool _(e.g. for: [fajita](https://xdaforums.com/t/op6t-latest-10-3-8-collection-of-unbrick-tools.3914746/) or [hotdog](https://xdaforums.com/t/op7tpro-oos-hd01aa-hd01ba-unbrick-tool-to-restore-your-device-to-oxygenos.4002909/))_
+- LG QFIL tool _(e.g. for: [H815](https://xdaforums.com/t/guide-proper-h815-unbrick-through-qfil-files-included.3709212/))_
+- Samsung [Heimdall tool](https://github.com/Benjamin-Dobell/Heimdall) _(included in [mAid Linux](https://maid.binbash.rocks/))_
+- Google Pixels: [gs201/gs301](https://github.com/JoshuaDoes/tensor-usbdl) _(soon included in [mAid Linux](https://maid.binbash.rocks/))_
+
+### Google Pixel 7/7a/7Pro + 8/8Pro
+
+- Download:
+  - [v0.1.0](https://github.com/JoshuaDoes/tensor-usbdl/releases/tag/010) 
+  - [v0.2.0](https://github.com/JoshuaDoes/tensor-usbdl/actions/runs/22641245765) _(login required)_
+  - [other](https://github.com/JoshuaDoes/tensor-usbdl/releases)
+- Support: https://t.me/tensorusbdl
+
+Requirements:
+1. device must be in this mode _(output of `lsusb` while connected)_:
+    - `Bus 003 Device 012: ID 18d1:4f00 >>>Google Inc. Pixel ROM Recovery<<<`
+2. tensor-usbdl HAS TO be started with _sudo_
+
+Minimal guide:
+1. download the **_factory_** zip for your **exact device** ([@Google](https://developers.google.com/android/images))
+2. extract the factory zip into `~/factory-zip-extracted` , it should contain:
+   - another `image*.zip`
+   - the `bootloader` image
+   - one ore more _flash_ scripts (e.g. `flash-base, flash-all`)
+3. `~/factory-zip-extracted/image*.zip` -> extract this into a folder `~/factory-zip-extracted/images`
+4. finally start _tensor-usbdl_, adapt the following command depending on your SoC (`gs201|gs301`), the following worked perfectly fine with Pixel 7  & 7 Pro _(sudo is required)_:
+```bash
+sudo ./tensor-usbdl \
+  --src ~/factory-zip-extracted/images \
+  -p sources/gs201/pbl.img \
+  -a sources/gs201/abl.img \
+  -2 sources/gs201/bl2.img \
+  -3 sources/gs201/bl31.img
+```
+5. it will detect the device in 1-10s latest, if it takes longer something is wrong:
+   - hard power reset via holding `Power + Vol Up` for 3-8s
+   - check/change: _cable, usb port_
+   - try: _v0.1.0 | v0.2.0_
+6. if all goes fine you will see the fastboot screen which is now a _**debug**_ one. now flash the device's _real_ bootloader, usually you will have a `flash-base` script in your `factory-zip-extracted/` which takes care of that, otherwise something like this should do:
+   - ` fastboot flash bootloader factory-zip-extracted/bootloader-XXXX.img `
+7. step 6 could be maybe even skipped but it ensures that the real bootloader is in place before flashing the full factory:
+   - `./flash-all.sh`
+   - alternatively: `fastboot -v update ~/factory-zip-extracted/image*.zip`
+
 
 ---
 
