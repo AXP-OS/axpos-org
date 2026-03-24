@@ -17,8 +17,8 @@ Some major news related to the project can be found here. Do not expect updates 
 It took [a while](https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/94) but finally the Android 15 move has been completed. That means all technical requirements are met and successful builds have been released which can be considered as "stable" _(build id `2026.001`)_.
 While they are _stable_ they are not _feature-complete_ though, so if you plan migrating to an Android 15 build here some important things to know:
 
-1. The **internet/network permission** is not available yet<br/>_(will be available with `2026.002`, credits: GrapheneOS + adaptions by AXP.OS)_
-2. The **sensor permission** is not available yet<br/>_(will be available with `2026.002`, credits: GrapheneOS + adaptions by AXP.OS)_
+1. The **internet/network permission** is not available yet<br/>_(available with `2026.002`, credits: GrapheneOS + adaptions by AXP.OS)_
+2. The **sensor permission** is not available yet<br/>_(available with `2026.002`, credits: GrapheneOS + adaptions by AXP.OS)_
 3. **Disabling apps** is not available yet
 4. **LTE-only mode** might not be available
 5. ... some unidentified problems may occur
@@ -32,11 +32,11 @@ For Android 15, it is also planned to support the **deactivation of Hardened Mal
 Besides what you can expect from [LineageOS 22.2](https://lineageos.org/Changelog-29/) some hand-picked new AXP.OS _A15-Only_ features have been added:
 
 - new: an *updated* version of [Neo Launcher](https://codeberg.org/AXP-OS/packages_apps_neo-launcher)
-- new: when *installing* an app which requests Internet permission you can disable it directly now: `Allow Network permission`<br/>_(will be available with `2026.002`, credits: GrapheneOS)_
+- new: when *installing* an app which requests Internet permission you can disable it directly now: `Allow Network permission`<br/>_(available with `2026.002`, credits: GrapheneOS)_
 ![allow_network.jpg](img/allow_network.jpg)
-- new: option added: `Privacy -> Allow Sensors permission to apps by default`<br/>_(default: `enabled`. will be available with `2026.002`, credits: GrapheneOS)_
+- new: option added: `Privacy -> Allow Sensors permission to apps by default`<br/>_(default: `enabled`. available with `2026.002`, credits: GrapheneOS)_
 - new: deactivation of *Hardened Malloc* on an app basis<br/>_(will be available with `"TBD"`, credits: GrapheneOS)_
-- new: _(still)_ support legacy devices bootloader lock + verity _(see_ 🔐_)_ <br/>_(will be available with `2026.002`, credits: AXP.OS + community)_
+- new: _(still)_ support legacy devices bootloader lock + verity _(see_ 🔐_)_ <br/>_(available with `2026.002`, credits: AXP.OS + community)_
 
 {{< callout type="info" emoji="🔐" >}}
 _while other custom OS stops supporting bootloader lock for A15 on ultra legacy devices (i.e. legacy kernel version + legacy bootloader), AXP.OS implemented a fallback based on A13 behavior:<br/>A15 changed the vbmeta metadata handling after the bootloader verification passed, which requires having a kernel v5.6 or later _(+ `CONFIG_BOOT_OPTION` set)_ or retrieving that information from the bootloader (resulting in a kernel cmdline with valid vbmeta data). Both options are not available on legacy devices as the bootloader itself is proprietary and kernel versions often cannot be upgraded to 5.6 or later without massive effort. AXP.OS enables that patch fallback if required (only). Other devices won't get that patch and work as expected in A15._
