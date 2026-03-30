@@ -12,8 +12,9 @@ kilink:
 name: Google Pixel 6a
 vendor: Google
 xdalink: "https://xdaforums.com/t/rom-a13-official-microg-hardened-bluejay-axp-os-20-0.4663844/"
-custominstall: ""
-custominstall_path: 
+trackerlink: ""
+custominstall: "yes"
+custominstall_path: content/devices/install_pixel-arb.guide
 
 # PRO
 android_pro: 13

@@ -28,21 +28,27 @@ See: [{{ .codename }} (@LineageOS wiki)](https://wiki.lineageos.org/devices/{{ .
 ### Firmware
 
 {{ if eq .firmware "included" }}
-AXP.OS for the *{{ .devicename }}* includes the latest available bootloader and modem firmware.  
-No manual firmware flashing needed if you follow the Install guide.
+AXP.OS for the *{{ .devicename }}* includes the appropriate bootloader and modem firmware for the corresponding Android version provided.
 {{ else }}
 AXP.OS for the *{{ .devicename }}* does **not** include firmware.  
 You must ensure correct firmware manually to avoid unexpected problems.
 
-Follow the [firmware guide]({{ printf "%s" .docbaseurl }}/fw-{{ .vendor }}).  
-If missing, check the [{{ .codename }} firmware guide](
-https://wiki.lineageos.org/devices/{{ .codename }}/fw_update/) and match the Android version.
+Follow the [AXP.OS firmware guide]({{ printf "%s" .docbaseurl }}/fw-{{ .vendor }}).<br/>
+If there is no specific AXP.OS guide, check if there is a LineageOS [firmware guide for {{ .codename }}](
+https://wiki.lineageos.org/devices/{{ .codename }}/fw_update/) and match it with the AXP.OS Android version.
 {{ end }}
+
+> [!IMPORTANT]
+> _Unfortunately, some manufacturers enable so-called “[Anti-Rollback Protection](/docs/knowledge/faq/#anti-roll-back-arb)” (ARB), which in the worst-case scenario can even take effect within the bootloader (notable examples include various LG models, as well as Samsung and even some Google Pixel devices)._
+> 
+> _In these cases, special caution must be exercised, as this can often result in a hard brick, which may be unreparable depending on the manufacturer and model. This is not a problem with AXP.OS itself, but affects all custom OSes for such devices._
+> 
+> _If you are unsure, please check with the support room **before** flashing AXP.OS._
 
 ### Install / Upgrade
 
 {{ if eq .custominstall "yes" }}
-    {{ $guide := printf "content/devices/install_%s.guide" .codename }}
+    {{ $guide := printf "%s" .custominstall_path }}
     {{ if fileExists $guide }}
 {{ readFile $guide | markdownify }}
     {{ else }}

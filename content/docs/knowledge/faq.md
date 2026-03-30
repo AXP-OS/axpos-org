@@ -124,7 +124,6 @@ Unfortunately and for different reasons we needed to shift our repos several tim
 
 ### SSH fingerprints
 
-
 When you connect to any of the above hosters via SSH, for example
 if you want to [build AXP.OS](/Build) or to [clone or commit](/git/clone-commit-via-cli/), you need to make sure that
 you're actually connected to the **real** server and not someone else's
@@ -250,6 +249,17 @@ sudo ./tensor-usbdl \
    - `./flash-all.sh`
    - alternatively: `fastboot -v update ~/factory-zip-extracted/image*.zip`
 
+## Anti Roll Back (ARB)
+
+Google holds patents ([1](https://patents.google.com/patent/US8745612), [2](https://patents.google.com/patent/US20140130151A1/en)) for a method protecting you from downgrading a device/OS. These patents also describe why and how, but TL;DR this is a major drawback for the custom OS community.
+
+Some vendors _(or their OEMs)_ make extensive use of this ARB feature, others use it less frequently, and still others do not use it at all. Most important thing is that if your device is affected and you flash a rejected OS _(firmware)_ version it may lead to a state which is called _hard brick_.
+
+Recovering from this state may or may not be possible which depends again on the device. Some devices have a low-level recovery mode _(e.g. most QCOM based ones)_ and if you're lucky, there are also publicly available [recovery tools](/docs/knowledge/faq/#known-low-level-recovery-tools) that can help you restore your device to working order (i.e. _unbrick_).
+
+Unfortunately not all devices can be recovered from such a hard brick on your own and must be send to a repair shop. They usually have specific software and hardware tools to recover your device - which is a paid service in most cases though.
+
+You could also try to open a request on the vendors support page and ask for a free repair due to a bad flash _(like "I flashed the latest Google Pixel update and now it does not turn on anymore", some vendors reject any request if you have flashed a custom OS though - while they **might** do not check for it in practice. If they do they might just send it back to you or you might need to pay for it)_.
 
 ---
 

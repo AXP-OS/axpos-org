@@ -14,7 +14,7 @@ vendor: Samsung
 xdalink: "https://xdaforums.com/t/rom-a10-official-microg-hardened-j5y17lte-axp-os-17-1.4644557/"
 trackerlink: "https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=60"
 custominstall: "yes"
-custominstall_path: content/devices/custom_.guide
+custominstall_path: content/devices/install_j5y17lte.guide
 
 # PRO
 android_pro: 10

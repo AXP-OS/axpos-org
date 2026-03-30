@@ -5,7 +5,7 @@
 
 # COMMON Block
 export HUGO_CI_GUIDE="yes"
-export HUGO_CI_GUIDE_PATH="content/devices/custom_klte.guide"
+export HUGO_CI_GUIDE_PATH="content/devices/install_klte.guide"
 export HUGO_CODENAME="klte"
 export HUGO_DEBUGBOOTPATH="/cache"
 export HUGO_FACTORYZIP="no"

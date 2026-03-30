@@ -12,8 +12,9 @@ kilink: klte-and-maybe-hlte
 name: Samsung S5
 vendor: Samsung
 xdalink: "https://xdaforums.com/t/rom-a11-official-microg-hardened-klte-axp-os-18-1.4703947/"
+trackerlink: ""
 custominstall: "yes"
-custominstall_path: content/devices/custom_klte.guide
+custominstall_path: content/devices/install_klte.guide
 
 # PRO
 android_pro: 11

@@ -4,8 +4,8 @@
 ###############################################################################
 
 # COMMON Block
-export HUGO_CI_GUIDE=""
-export HUGO_CI_GUIDE_PATH=""
+export HUGO_CI_GUIDE="yes"
+export HUGO_CI_GUIDE_PATH="content/devices/install_pixel-arb.guide"
 export HUGO_CODENAME="oriole"
 export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
 export HUGO_FACTORYZIP="yes"
