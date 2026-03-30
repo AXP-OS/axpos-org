@@ -1,6 +1,6 @@
 #### Required firmware/bootloader
 
-Your firmware/OS must be on _**April 2025** or **older**_!
+Your firmware/OS must be on _**April 2025** or **older**_ when flashing AXP.OS **A13** builds!
 
 {{< callout type="error" emoji="⚠️" >}}
 **IMPORTANT NOTICE**
