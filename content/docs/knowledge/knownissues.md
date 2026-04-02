@@ -29,9 +29,9 @@ This page documents known problems, along with workarounds if available, for the
 *   Changing device identifiers like the IMEI is NOT supported.
 *   Encryption cannot be disabled.
 *   Fonts cannot be easily added to the system.
-*   Google Apps or microG or Sandboxed Play Services are NOT supported.
+*   ***Slim*** flavor: Google Apps or microG might work but are NOT supported.
 *   Granting apps special permissions via ADB is NOT supported and can/will compromise privacy/security/reliability of your device.
-*   Other WebView providers such as Bromite are not currently supported. They were briefly supported in the past but caused boot issues on 15.1 for unknown reasons.
+*   Other WebView providers such as Chromite are not currently supported. They were briefly supported in the past but caused boot issues on 15.1 for unknown reasons.
 *   Remote desktop host apps like AnyDesk and TeamViewer are not supported. They rely on special system permissions enabled by vendors signing helper apps on their behalf.
 *   Removing system apps via ADB is NOT supported and will break things.
 *   Torrents will not be offered for downloads/updates. They don't work well on mobile and they leak IP addresses of users.
