@@ -192,8 +192,8 @@ Do **NOT** attempt to lock the bootloader if `fastboot flashing get_unlock_abili
 ## g4
 (h815)
 
-- offline charger: animation will start after ~10m first. to get the animation more quickly you have to: `plug in > when the ugly battery appears > wait at least ~30s > plug off > plug in again > wait ~1m > animation comes up`.
-- SIM detection: it can take between 0-5m until your SIM gets detected, if you do not get a PIN request or cell service within that time range: reboot.
+- offline charger: animation will start after ~10m first. to get the animation more quickly you have to: `plug in > when the grey empty battery logo appears > wait at least ~30s > plug off > plug in again > wait ~1m > animation comes up`.
+- SIM detection: it can take between 0-5m until your SIM gets detected. In rare cases, if you do not receive a PIN request or have no cell service during this period: *reboot*.
 
 ## guacamole\*/hotdog\*
 
