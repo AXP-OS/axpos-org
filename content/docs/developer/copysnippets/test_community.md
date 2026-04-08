@@ -40,12 +40,12 @@ _Major tests which MUST succeed for any flavor_
 - [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
 - [ ] **F-Droid** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] **OpenEUICC** app included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags) - for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device)) _(enabling is required only on =< A13. If you are on >= A14 and your device supports eSIMs, you should find the OpenEUICC without any extra steps in the app drawer)_
-- [ ] **AuroraStore** App included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] **Aurora Store** App included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
 - [ ] **AOSmium WebView** installed (`Developer Options -> WebView implementation` -> verify it is selected)
     - [ ] and on [expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
-- **AOSmium WebView** quick test: `AuroraStore -> search & install "Webview test"` ([link](https://play.google.com/store/search?q=webview+test&c=apps))
-    - [ ] click on the Globe icon or open the menu and choose `Webview` _(if no input popup appears click the globe icon at the top)_
-    - [ ] enter any url and test if it opens
+- **AOSmium WebView** quick test: `F-Droid -> search & install "CanIWebView"` ([link](https://f-droid.org/packages/com.caniwebview.android))
+    - [ ] scroll to the bottom to see the WebView details
+    - [ ] enter any url and press "Load" to test it
 - [ ] **OTA update** (`Android Settings -> Updater -> 3dots -> Preferences -> Server Choice -> "UNSTABLE"`):
     - [ ] shows up the next/current version
     - Testing the OTA update process _(requires Internet)_:
