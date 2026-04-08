@@ -166,7 +166,6 @@ This has been verified by [the GrapheneOS team](https://www.reddit.com/r/Graphen
 Do **NOT** attempt to lock the bootloader if `fastboot flashing get_unlock_ability` returns zero or else it will brick. EDL access is not available on this device and you will have to send it in for service. \[upstream\][\[forum thread\]](https://forum.fairphone.com/t/trapped-in-fastboot-mode-with-locked-bootloader-and-corrupted-custom-rom/80985)
 
 
-
 ## d850/d851/d852/d855/f400/ls990/vs985/G3
 
 *   Wi-Fi tethering may not work. \[???\]\[help wanted\]
@@ -195,7 +194,6 @@ Do **NOT** attempt to lock the bootloader if `fastboot flashing get_unlock_abili
 
 - offline charger: animation will start after ~10m first. to get the animation more quickly you have to: `plug in > when the ugly battery appears > wait at least ~30s > plug off > plug in again > wait ~1m > animation comes up`.
 - SIM detection: it can take between 0-5m until your SIM gets detected, if you do not get a PIN request or cell service within that time range: reboot.
-- SIM detection: if you do not enter a requested SIM pin within 10 minutes after reboot you have to reboot to show its dialog again.
 
 ## guacamole\*/hotdog\*
 
