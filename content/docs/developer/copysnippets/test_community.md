@@ -18,7 +18,7 @@ _A community based set of helper scripts exists, huge thanks to @SerYo who maint
 {{< /callout >}}
 
 ```
-`copytemplate: v1.13`
+`copytemplate: v1.14`
 
 _Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL` is per the IETF standard defined in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)._
 
@@ -51,7 +51,9 @@ _Major tests which MUST succeed for any flavor_
     - Testing the OTA update process _(requires Internet)_:
         - [ ] flashing from the previous version to the latest unstable was successful _(why: this test checks if the OTA process is not broken in the previous stable)_
         - [ ] re-flash the latest unstable from that same latest unstable again was successful _(why: this test checks if the OTA process is not broken in the latest unstable)_
-- [ ] **Developer options**: `OEM unlock` option is **NOT** shown in developer options
+- **Developer options**:
+    - [ ] _Non-Fairphone_: `OEM unlock` option is **NOT** shown in developer options
+    - [ ] _Fairphone_: `OEM unlock` option **IS** shown in developer options
 - **Call recording option**: follow the [guide](https://axpos.org/r) to find & enable it
     - [ ] it must be possible to set & unset the toggle (`enable it -> move out of developer screen -> and open it again`: _is the toggle still enabled? if so, then you can toggle it off again and tick the box: ✅_ )
     - [ ] if possible: test the call recording
