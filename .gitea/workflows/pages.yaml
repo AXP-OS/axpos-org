@@ -52,8 +52,8 @@ jobs:
   build:
     runs-on: docker-node-latest
     env:
-      HUGO_VERSION: 0.155.3
-      HEXTRA_VERSION: 0.11.1
+      HUGO_VERSION: 0.159.2
+      HEXTRA_VERSION: 0.12.1
     steps:
       - name: Install Hugo CLI
         run: |
