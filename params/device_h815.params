@@ -1,28 +1,31 @@
 #!/bin/bash
 ###############################################################################
-# device specs for creating a new page
+# device specs for h815
 ###############################################################################
 
 # COMMON Block
 export HUGO_CI_GUIDE="yes"
 export HUGO_CI_GUIDE_PATH="content/devices/install_h815.guide"
 export HUGO_CODENAME="h815"
-export HUGO_DEBUGBOOTPATH="/mnt/vendor/persist"
+export HUGO_DEBUGBOOTPATH="/persist"
 export HUGO_FACTORYZIP="no"
 export HUGO_FIRMWARE="manual"
 export HUGO_ISAB="no"
-export HUGO_ISPIXEL=""
-export HUGO_KILINK=""
-export HUGO_NAME="LG G4 (H815)"
-export HUGO_VENDOR="LG"
+export HUGO_ISPIXEL="no"
+export HUGO_KILINK="g4"
+export HUGO_NAME="LGE G4 (h815)"
+export HUGO_VENDOR="LGE"
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a11-official-microg-hardened-h815-axp-os-18-1.4708920/"
+export HUGO_TRACKER="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=74"
 
 # PRO Block
 export HUGO_PRO_ANDROID="11"
+export HUGO_PRO_FLAVOR=True
 export HUGO_PRO_ENCRYPTION="FDE"
 export HUGO_PRO_FIRSTRELEASE="2024-12-20"
 export HUGO_PRO_RELOCKABLE="no"
+export HUGO_PRO_PATCHLEVEL="Platform + Kernel"
 export HUGO_PRO_STATE="stable"
 export HUGO_PRO_SUPPORTLEVEL="team"
 export HUGO_PRO_VERIFIEDBOOT="no"
-export HUGO_PRO_FLAVOR=True
+
