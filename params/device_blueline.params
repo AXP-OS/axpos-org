@@ -29,3 +29,13 @@ export HUGO_PRO_STATE="!! ALPHA !!"
 export HUGO_PRO_SUPPORTLEVEL="community"
 export HUGO_PRO_VERIFIEDBOOT="v2.0"
 
+# SLIM Block
+export HUGO_SLIM_ANDROID="15"
+export HUGO_SLIM_FLAVOR=True
+export HUGO_SLIM_ENCRYPTION="ICE"
+export HUGO_SLIM_FIRSTRELEASE="TBD"
+export HUGO_SLIM_RELOCKABLE="yes"
+export HUGO_SLIM_PATCHLEVEL="Platform + Kernel"
+export HUGO_SLIM_STATE="!! ALPHA !!"
+export HUGO_SLIM_SUPPORTLEVEL="community"
+export HUGO_SLIM_VERIFIEDBOOT="v2.0"
