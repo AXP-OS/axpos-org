@@ -31,7 +31,7 @@ F_CHKFILES(){
 
     if [ ! -f "static/img/devices/${HUGO_CODENAME}_icon.png" -o ! -f "static/img/devices/${HUGO_CODENAME}.png" ];then
         wget "https://wiki.lineageos.org/images/devices/${HUGO_CODENAME}.png" -O static/img/devices/${HUGO_CODENAME}.png \
-            && magick convert -resize x120 -gravity center static/img/devices/${HUGO_CODENAME}.png -background transparent static/img/devices/${HUGO_CODENAME}_icon.png
+            && convert -resize x120 -gravity center static/img/devices/${HUGO_CODENAME}.png -background transparent static/img/devices/${HUGO_CODENAME}_icon.png
     fi
 }
 
