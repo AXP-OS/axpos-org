@@ -3,7 +3,7 @@ title: Privacy Policy
 toc: true
 ---
 
-Last [changed](https://codeberg.org/AXP-OS_releases/axpos-org/blame/branch/hugo/content/privacy-policy.md): `2025-02-10`
+Last [changed](https://codeberg.org/AXP-OS_releases/axpos-org/blame/branch/hugo/content/privacy-policy.md): `2026-04-26`
 
 # The AXP.OS Project
 
@@ -82,20 +82,36 @@ About [CrowdSec](https://www.crowdsec.net/about)
 
 ## Operating System
 
-*   The operating system does not contain any analytics and any requests are used only for supporting it
+*   The operating system itself does not contain any analytics and any requests are used only for supporting it
 
 ### Connectivity Checks
+
+#### if `AXP.OS` is selected
 
 *   What is received: Static User Agent, IP Address
 *   How often: On every Wi-Fi and cell connection
 *   Why it is received: Used to determine if there is a working connection and if there is a captive portal
-*   When it will be deleted _(if `AXP.OS` is selected)_: All requests to `generate_204` are never logged
-*   What else will it be used for _(if `AXP.OS` is selected)_: Nothing else
+*   When it will be deleted: All requests to `generate_204` are never logged
+*   What else will it be used for: Nothing else
 *   How to disable: Toggle in settings app (noted below) or `adb shell settings put global captive_portal_mode 0;`
 *   Settings can be accessed via:
     *   14.1/15.1: Settings > Network > Data usage > Disable Captive Portal
     *   16.0/17.1: Settings > Network & Internet > Advanced > Captive portal mode
     *   18.1/19.1/20.0/22.2: Settings > Network & Internet > Advanced > Internet connectivity check
+
+#### if `nothing` is selected (the default)
+
+*   Who: Google
+*   Description: Used to determine if there is a working connection and if there is a captive portal
+*   What they receive: Static User Agent, IP Address
+*   How often: On every Wi-Fi and cell connection
+*   How to disable: Toggle in settings app (noted below) or `$ adb shell settings put global captive_portal_mode 0;`
+*   Settings can be accessed via:
+    *   14.1/15.1: Settings > Network > Data usage > Disable Captive Portal
+    *   16.0/17.1: Settings > Network & Internet > Advanced > Captive portal mode
+    *   18.1/19.1/20.0: Settings > Network & Internet > Advanced > Internet connectivity check
+*   Privacy Policy: [Google](https://policies.google.com/privacy)
+
 
 ### Updater
 
@@ -224,19 +240,6 @@ Third parties are used to support basic functions along with features and apps.
 *   What else will it be used for: Nothing else
 *   How to anonymize: Visit the site using the Tor Browser
 *   Privacy Policy: [Codeberg](https://codeberg.org/Codeberg/org/src/branch/main/PrivacyPolicy.md)
-
-## Connectivity Checks
-
-*   Who: Google
-*   Description: Used to determine if there is a working connection and if there is a captive portal
-*   What they receive: Static User Agent, IP Address
-*   How often: On every Wi-Fi and cell connection
-*   How to disable: Toggle in settings app (noted below) or `$ adb shell settings put global captive_portal_mode 0;`
-*   Settings can be accessed via:
-    *   14.1/15.1: Settings > Network > Data usage > Disable Captive Portal
-    *   16.0/17.1: Settings > Network & Internet > Advanced > Captive portal mode
-    *   18.1/19.1/20.0: Settings > Network & Internet > Advanced > Internet connectivity check
-*   Privacy Policy: [Google](https://policies.google.com/privacy)
 
 ## Network Time Protocol
 
