@@ -1,0 +1,31 @@
+#!/bin/bash
+###############################################################################
+# device specs for blueline
+###############################################################################
+
+# COMMON Block
+export HUGO_CI_GUIDE=""
+export HUGO_CI_GUIDE_PATH=""
+export HUGO_CODENAME="blueline"
+export HUGO_DEBUGBOOTPATH="/metadata"
+export HUGO_FACTORYZIP="yes"
+export HUGO_FIRMWARE="included"
+export HUGO_ISAB="yes"
+export HUGO_ISPIXEL="yes"
+export HUGO_KILINK=""
+export HUGO_NAME="Google Pixel 3"
+export HUGO_VENDOR="Google"
+export HUGO_XDALINK="TBD"
+export HUGO_TRACKER=""
+
+# PRO Block
+export HUGO_PRO_ANDROID="15"
+export HUGO_PRO_FLAVOR=True
+export HUGO_PRO_ENCRYPTION="ICE"
+export HUGO_PRO_FIRSTRELEASE="WIP"
+export HUGO_PRO_RELOCKABLE="yes"
+export HUGO_PRO_PATCHLEVEL="Platform + Kernel"
+export HUGO_PRO_STATE="!! ALPHA !!"
+export HUGO_PRO_SUPPORTLEVEL="community"
+export HUGO_PRO_VERIFIEDBOOT="v2.0"
+
