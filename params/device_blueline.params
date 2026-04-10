@@ -16,7 +16,7 @@ export HUGO_KILINK=""
 export HUGO_NAME="Google Pixel 3"
 export HUGO_VENDOR="Google"
 export HUGO_XDALINK="TBD"
-export HUGO_TRACKER=""
+export HUGO_TRACKER="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=63"
 
 # PRO Block
 export HUGO_PRO_ANDROID="15"
