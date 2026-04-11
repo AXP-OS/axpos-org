@@ -16,23 +16,26 @@ export HUGO_KILINK="enchiladafajita"
 export HUGO_NAME="OnePlus 6"
 export HUGO_VENDOR="OnePlus"
 export HUGO_XDALINK="https://xdaforums.com/t/rom-a13-official-microg-hardened-enchilada-axp-os-20-0.4711844/"
+export HUGO_TRACKER="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=56"
 
 # PRO Block
-export HUGO_PRO_ANDROID="13"
+export HUGO_PRO_ANDROID="15"
+export HUGO_PRO_FLAVOR=True
 export HUGO_PRO_ENCRYPTION="FBEv1"
-export HUGO_PRO_FIRSTRELEASE="2025-01-05"
+export HUGO_PRO_FIRSTRELEASE="2025-01-05 (A13)<br/>2026-04-01 (A15)"
 export HUGO_PRO_RELOCKABLE="yes"
+export HUGO_PRO_PATCHLEVEL="Platform + Kernel"
 export HUGO_PRO_STATE="stable"
 export HUGO_PRO_SUPPORTLEVEL="community"
 export HUGO_PRO_VERIFIEDBOOT="v2.0"
-export HUGO_PRO_FLAVOR=True
 
 # SLIM Block
-export HUGO_SLIM_ANDROID="13"
+export HUGO_SLIM_ANDROID="15"
+export HUGO_SLIM_FLAVOR=True
 export HUGO_SLIM_ENCRYPTION="FBEv1"
-export HUGO_SLIM_FIRSTRELEASE="2025-03-05"
+export HUGO_SLIM_FIRSTRELEASE="2025-01-23 (A13)<br/>2026-04-03 (A15)"
 export HUGO_SLIM_RELOCKABLE="yes"
+export HUGO_SLIM_PATCHLEVEL="Platform + Kernel"
 export HUGO_SLIM_STATE="stable"
 export HUGO_SLIM_SUPPORTLEVEL="community"
 export HUGO_SLIM_VERIFIEDBOOT="v2.0"
-export HUGO_SLIM_FLAVOR=True
