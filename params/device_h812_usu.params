@@ -1,0 +1,31 @@
+#!/bin/bash
+###############################################################################
+# device specs for h812_usu
+###############################################################################
+
+# COMMON Block
+export HUGO_CI_GUIDE="yes"
+export HUGO_CI_GUIDE_PATH="content/devices/install_g4.guide"
+export HUGO_CODENAME="h812_usu"
+export HUGO_DEBUGBOOTPATH="/persist"
+export HUGO_FACTORYZIP="no"
+export HUGO_FIRMWARE="manual"
+export HUGO_ISAB="no"
+export HUGO_ISPIXEL="no"
+export HUGO_KILINK="g4"
+export HUGO_NAME="LGE G4 (h812_usu)"
+export HUGO_VENDOR="LG"
+export HUGO_XDALINK="https://xdaforums.com/t/rom-a11-official-microg-hardened-h815-axp-os-18-1.4708920/"
+export HUGO_TRACKER="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=74"
+
+# PRO Block
+export HUGO_PRO_ANDROID="11"
+export HUGO_PRO_FLAVOR=True
+export HUGO_PRO_ENCRYPTION="FDE"
+export HUGO_PRO_FIRSTRELEASE="TBD"
+export HUGO_PRO_RELOCKABLE="no"
+export HUGO_PRO_PATCHLEVEL="Platform + Kernel"
+export HUGO_PRO_STATE="!! ALPHA !!"
+export HUGO_PRO_SUPPORTLEVEL="community"
+export HUGO_PRO_VERIFIEDBOOT="no"
+
