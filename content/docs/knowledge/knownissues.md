@@ -190,7 +190,7 @@ Do **NOT** attempt to lock the bootloader if `fastboot flashing get_unlock_abili
 *   On select devices Wi-Fi may be very broken. \[hardware?\][\[upstream tracking\]](https://gitlab.com/LineageOS/issues/android/-/issues/4667)
 
 ## g4
-(h815)
+(f500_usu, h810_usu, h811, h812_usu, h815, h815_usu, h819_usu, ls991_usu, us991_usu, vs986_usu)
 
 - offline charger: after plugging in the animation will start between 3-10m first. to get the animation more quickly you have to: `plug in > when the grey empty battery logo appears > wait at least ~30s > plug off > plug in again > wait ~1m > animation comes up`.
 - SIM detection: it can take between 0-5m until your SIM gets detected. In rare cases, if you do not receive a PIN request or have no cell service during this period: *reboot*.
