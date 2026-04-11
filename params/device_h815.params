@@ -5,7 +5,7 @@
 
 # COMMON Block
 export HUGO_CI_GUIDE="yes"
-export HUGO_CI_GUIDE_PATH="content/devices/install_h815.guide"
+export HUGO_CI_GUIDE_PATH="content/devices/install_g4.guide"
 export HUGO_CODENAME="h815"
 export HUGO_DEBUGBOOTPATH="/persist"
 export HUGO_FACTORYZIP="no"
