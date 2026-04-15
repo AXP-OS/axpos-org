@@ -261,6 +261,21 @@ Unfortunately not all devices can be recovered from such a hard brick on your ow
 
 You could also try to open a request on the vendors support page and ask for a free repair due to a bad flash _(like "I flashed the latest Google Pixel update and now it does not turn on anymore", some vendors reject any request if you have flashed a custom OS though - while they **might** do not check for it in practice. If they do they might just send it back to you or you might need to pay for it)_.
 
+## 32-bit warning popup
+
+If you see the message:
+
+`This is a 32 bit app, which is a likely indicator that this app is outdated and potentially unmaintained. Try checking for updates, or contact the developer.`
+
+then you should obviously check for an update of that app. This warning will be shown only once. If you still want/need to use it, keep in mind that:
+- *hardened memory allocator* will not apply
+- *improved ASLR* will not apply
+- other optimizations may not apply
+
+> [!TIP] Details
+> *[Hardened malloc](https://github.com/GrapheneOS/hardened_malloc/blob/main/README.md) is providing extra protection against attacks and vulnerabilities by preventing heap memory corruption*<br/>
+> *ASLR ([Address Space Layout Randomization](https://en.wikipedia.org/wiki/Address_space_layout_randomization)) is a security technique that randomizes the memory addresses of the system’s modules and user programs. It reduces predictability and limits vulnerability exposure by making it difficult for attackers to predict the program’s starting address. AXP.OS uses an extended address space approach taken from GrapheneOS.*
+
 ---
 
 ## DivestOS-based FAQ
