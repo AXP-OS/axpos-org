@@ -118,7 +118,7 @@ params:
       For this reason, there are so-called [flavors](/Flavors), namely “Slim” and “Pro”, from which users can choose based on their personal requirements.</i>
       <br/><br/>
       <b>For more details checkout the<br/><a href="/docs/knowledge/features/#flavor-comparison" target="_blank">Features page</a></b>
-    downloadServerBaseUrl: "https://leech.binbash.rocks:8008"
+    downloadServerBaseUrl: "https://download.axpos.org"
 
 markup:
   # allow raw html / used e.g. in steps

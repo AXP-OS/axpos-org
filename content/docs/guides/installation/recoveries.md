@@ -15,8 +15,8 @@ That being said there is one **exception** to this rule:<br/>
 If there is a factory image available (e.g. any Google Pixel device) it is required to flash the factory image via _**fastboot**_ (see the installation guide for your device!) for the very first flash. If you switch between [Flavors](/Flavors) you can safely use the recovery instead as they share the same firmware.
 
 Official AXP.OS recovery images can be found in the subdirectory named `recovery/` of each device's download path.
-- Pro: https://leech.binbash.rocks:8008/axp/ ([tor](http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/))
-- Slim: https://leech.binbash.rocks:8008/axp-slim/ ([tor](http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/))
+- Pro: https://download.axpos.org/axp/ ([tor](http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/))
+- Slim: https://download.axpos.org/axp-slim/ ([tor](http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/))
 
 Flashing the recovery image depends on the device but is usually made in fastboot mode:
 ```
@@ -57,7 +57,7 @@ Main page: [all devices](https://twrp.me/Devices/)
 #### Unofficial TWRP builds
 _(often newer, more features, often more bugfixes - but unofficial)_
 
-Main page: [all devices](https://leech.binbash.rocks:8008/TWRP/)
+Main page: [all devices](https://download.axpos.org/TWRP/)
 
 - LG G4 (h815,h815_usu, ...) {{< globalvar key="downloadServerBaseUrl" uripath="/TWRP/g4/" linkname="(download)" >}} known issues + source: [here](https://xdaforums.com/t/recovery-official-f500-ls991-h81x-us991-vs986-n-o-p-twrp-2020-06-22.3442424/)
 - Oneplus 6T {{< globalvar key="downloadServerBaseUrl" uripath="/TWRP/fajita/" linkname="(download)" >}} known issues + source: [here](https://github.com/AXP-OS/android_device_oneplus_fajita/blob/twrp-a12)

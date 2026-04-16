@@ -22,7 +22,7 @@ The server is physically located in: Germany (Frankfurt am Main).
     - Issue tracking (e.g. Feature Requests, Bugs, but also the Project Roadmap and some Documentation)
     - Protected by [CrowdSec](#crowdsec)
 
-##### `https://leech.binbash.rocks`
+##### `https://download.axpos.org`
 ---
 TOR alias:<br/>`http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion`
 
@@ -31,14 +31,16 @@ TOR alias:<br/>`http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.
     - Protected by [CrowdSec](#crowdsec)
 - What is received: User Agent, URI path, **NO** IP Address (replaced by `0.0.0.0` _before_ logging)
 - How often: On every page visit
-- Why it is received: creating [Download stats](https://leech.binbash.rocks:8008/theme/stats_axp_dl.html)
+- Why it is received: creating [Download stats](https://download.axpos.org/theme/stats_axp_dl.html)
 - When it will be deleted: Logs are kept for no longer than 90 days
 - What else will it be used for: rate & bandwidth limiting
 - How to anonymize: Use e.g. the Tor Browser
-- Example: `0.0.0.0 - - [TIMESTAMP] "GET /axp/sunfish/ HTTP/2.0" 200 11584 "https://leech.binbash.rocks:8008/axp/sunfish/tests/" "-"`
+- Example: `0.0.0.0 - - [TIMESTAMP] "GET /axp/sunfish/ HTTP/2.0" 200 11584 "https://download.axpos.org/axp/sunfish/tests/" "-"`
 
-##### `https://sfxota[-unstable].binbash.rocks`:
+##### `https://update[-unstable].axpos.org`:
 ---
+
+(before build `2026.005` -> `https://sfxota[-unstable].binbash.rocks:8010`)
 
 - **Main purpose:** OTA (Over The Air) Update Service
     - See [Updater](#updater)
@@ -119,7 +121,7 @@ About [CrowdSec](https://www.crowdsec.net/about)
 *   How often: On every boot and also once per week
 *   Why it is received: Used to serve system updates
 *   When it will be deleted: Logs are kept for no longer than 90 days
-*   What else will it be used for: creating [OTA stats](https://leech.binbash.rocks:8008/theme/stats_axp_ota.html)
+*   What else will it be used for: creating [OTA stats](https://download.axpos.org/theme/stats_axp_ota.html)
 *   How to anonymize: Install Orbot and enable 'Perform requests over Tor'
 *   How to disable: Disable 'Auto updates check'
 *   Settings can be accessed via:

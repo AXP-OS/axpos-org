@@ -2,7 +2,7 @@
 
 While not recommended you can use any other recovery of course but keep in mind that only the official one is able to verify the AXP.OS OTA signature and is hardened* like the OS itself. **So it is HIGHLY recommended to use the official AXP.OS recovery.**
 
-Download the latest official AXP.OS recovery from here: [leech server](https://leech.binbash.rocks:8008/axp/j5y17lte/recovery/)
+Download the latest official AXP.OS recovery from here: [leech server](https://download.axpos.org/axp/j5y17lte/recovery/)
 
 *) _note: the hardened recovery by AXP.OS for the J5 includes all security patches and hardening as the OS except for being permissive. exploiting this recovery is not easy though as the only attack surface is the OTA or sideload mechanism (i.e. those must have vulnerabilities and then an attacker still might require additional vulns to get any further). In any case it is WAY more secure then using TWRP or any other custom recovery._
 

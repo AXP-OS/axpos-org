@@ -26,7 +26,7 @@ boot into TWRP and flash the required firmware for your model:
 ### h815 (officially unlocked)
 
 required firmware:
-- [h815_20p_bootloader_20p_modem_TWRP-flashable.zip](https://leech.binbash.rocks:8008/stock/LG/h815/20p/) (i.e. **no** `UsU` in its name)
+- [h815_20p_bootloader_20p_modem_TWRP-flashable.zip](https://download.axpos.org/stock/LG/h815/20p/) (i.e. **no** `UsU` in its name)
 
 1. download `h815_20p_bootloader_20p_modem_TWRP-flashable.zip` *(it is crucial important you are selecting the exact filename)*
 1. download `h815_20p_bootloader_20p_modem_TWRP-flashable.zip.md5`
@@ -39,7 +39,7 @@ required firmware:
 ### h812_usu (UsU unlocked)
 
 required firmware *(`20z` is untested but should also work)*:
-- [h812_20x_ARB-0_UsU_bootloader_TWRP-flashable.zip](https://leech.binbash.rocks:8008/stock/LG/h812/20x/h812_20x_ARB-0_UsU_bootloader_TWRP-flashable.zip) (i.e. **with** **with** `UsU` in its name)
+- [h812_20x_ARB-0_UsU_bootloader_TWRP-flashable.zip](https://download.axpos.org/stock/LG/h812/20x/h812_20x_ARB-0_UsU_bootloader_TWRP-flashable.zip) (i.e. **with** **with** `UsU` in its name)
 
 1. download the `h812_20x_ARB-0_UsU_bootloader_TWRP-flashable.zip` *(it is crucial important you are selecting the exact filename)*
 1. download `h812_20x_ARB-0_UsU_bootloader_TWRP-flashable.zip.md5`
@@ -52,7 +52,7 @@ required firmware *(`20z` is untested but should also work)*:
 ### h815_usu (UsU unlocked)
 
 required firmware:
-- [h815_UsU_20p_bootloader_20p_modem_TWRP-flashable.zip](https://leech.binbash.rocks:8008/stock/LG/h815/20p/) (i.e. **with** `UsU` in its name)
+- [h815_UsU_20p_bootloader_20p_modem_TWRP-flashable.zip](https://download.axpos.org/stock/LG/h815/20p/) (i.e. **with** `UsU` in its name)
 
 1. download `h815_UsU_20p_bootloader_20p_modem_TWRP-flashable.zip` *(it is crucial important you are selecting the exact filename)*
 1. download `h815_UsU_20p_bootloader_20p_modem_TWRP-flashable.zip.md5`

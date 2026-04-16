@@ -46,7 +46,7 @@ _Please note: Even if this does not happen often, it may turn out during this pr
 A test build has been released :tada: !
 
 Check it out here:
-- [download](https://leech.binbash.rocks:8008/axp-unstable/)
+- [download](https://download.axpos.org/axp-unstable/)
 
 Installation guide:
 - [here](https://axpos.org/devices/xxxx/yyyy/)
@@ -67,7 +67,7 @@ when having any questions pls just ask in the [Matrix Bring-Up room](https://axp
 A test build has been released :tada: !
 
 Check it out here:
-- [download](https://leech.binbash.rocks:8008/axp-unstable/)
+- [download](https://download.axpos.org/axp-unstable/)
 
 Upgrade guide:
 - [here](https://axpos.org/MRU)

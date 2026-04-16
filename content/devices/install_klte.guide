@@ -4,7 +4,7 @@ Required firmware/bootloader: Android **6.0.1** (recommendation [here](https://w
 
 While not recommended you can use any other recovery of course but keep in mind that only the official one is able to verify the AXP.OS OTA signature and is hardened like the OS itself. **So it is HIGHLY recommended to use the official AXP.OS recovery.**
 
-Download the latest official AXP.OS recovery from here: [leech server](https://leech.binbash.rocks:8008/axp/klte/recovery/)
+Download the latest official AXP.OS recovery from here: [leech server](https://download.axpos.org/axp/klte/recovery/)
 
 Flashing the recovery should be done by using _heimdall_ (a tool which is e.g. included in [mAid](https://maid.binbash.rocks/)):
 

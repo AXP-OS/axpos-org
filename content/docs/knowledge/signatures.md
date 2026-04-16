@@ -150,7 +150,7 @@ Besides the above OTA signatures (see _OTA & AVB_ topic) of the OS zips all OS s
 This can be used as an alternative or additional way to verify builds have not been tampered with by this server or in transit.
 
 #### Download
-- [axpos_signing.key](/axpos_signing.key) ([mirror1](https://codeberg.org/AXP-OS/axpos-org/src/branch/hugo/static/axpos_signing.key), [mirror2](https://leech.binbash.rocks:8008/axp/axpos_signing.key), [mirror3](https://keyserver.ubuntu.com/pks/lookup?search=FE4B2FA2B225F0AB903AF4136740E645718A8E47&fingerprint=on&op=index), [mirror4](https://keys.openpgp.org/search?q=FE4B2FA2B225F0AB903AF4136740E645718A8E47), [mirror5](https://github.com/AXP-OS/axpos-org/blob/hugo/static/axpos_signing.key))
+- [axpos_signing.key](/axpos_signing.key) ([mirror1](https://codeberg.org/AXP-OS/axpos-org/src/branch/hugo/static/axpos_signing.key), [mirror2](https://download.axpos.org/axp/axpos_signing.key), [mirror3](https://keyserver.ubuntu.com/pks/lookup?search=FE4B2FA2B225F0AB903AF4136740E645718A8E47&fingerprint=on&op=index), [mirror4](https://keys.openpgp.org/search?q=FE4B2FA2B225F0AB903AF4136740E645718A8E47), [mirror5](https://github.com/AXP-OS/axpos-org/blob/hugo/static/axpos_signing.key))
 
 `ID: FE4B2FA2B225F0AB903AF4136740E645718A8E47`
 

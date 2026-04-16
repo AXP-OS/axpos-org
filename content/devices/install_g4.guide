@@ -7,7 +7,7 @@ So to get the most out of your device we enforce the usage of F2FS which require
 _**Note: The following process will WIPE all your user data, photos, everything. .. and no, there is no other option. So you better have a backup and you better have tested the restore of that backup actually works.**_
 
 1. flash latest **"321 or later" <-- !** TWRP build first!
-   - download from [here](https://leech.binbash.rocks:8008/TWRP/g4/)
+   - download from [here](https://download.axpos.org/TWRP/g4/)
    - `fastboot flash recovery <TWRP.....img>`
 1. boot TWRP
 1. Select `Wipe`
