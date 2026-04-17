@@ -267,7 +267,11 @@ If you see the message:
 
 `This is a 32 bit app, which is a likely indicator that this app is outdated and potentially unmaintained. Try checking for updates, or contact the developer.`
 
-then you should obviously check for an update of that app. This warning will be shown only once. If you still want/need to use it, keep in mind that:
+then you should obviously check for an update of that app. This warning will be shown only once.
+
+**NOTE:** *There is a known issue with F-Droid which sometimes installs the **32-bit** version of an app (depends on how and when the 32-bit variant gets released) - even though there are (older) 64-bit versions available! In F-Droid - Settings -> enable `Expert mode`, then in the app of your choice: check `Versions` > expand the version and ensure it says `arm64-v8a`. If it says `armeabi-v7a` or `armeabi` then you have installed the 32-bit variant.*
+
+If you still want/need to use a 32-bit variant, keep in mind that:
 - *hardened memory allocator* will not apply
 - *improved ASLR* will not apply
 - other optimizations may not apply
