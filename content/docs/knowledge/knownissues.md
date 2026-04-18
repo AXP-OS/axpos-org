@@ -194,6 +194,11 @@ Do **NOT** attempt to lock the bootloader if `fastboot flashing get_unlock_abili
 
 - offline charger: after plugging in the animation will start between 3-10m first. to get the animation more quickly you have to: `plug in > when the grey empty battery logo appears > wait at least ~30s > plug off > plug in again > wait ~1m > animation comes up`.
 - SIM detection: it can take between 0-5m until your SIM gets detected. In rare cases, if you do not receive a PIN request or have no cell service during this period: *reboot*.
+- OTA: if the device bootloops after an OTA this usually can be fixed as follows:
+  1. boot into TWRP
+  1. choose install
+  1. browse to /data/lineageos_updates
+  1. select the OS zip you had installed as OTA 
 
 ## guacamole\*/hotdog\*
 
