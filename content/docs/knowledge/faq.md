@@ -40,7 +40,7 @@ See [Grab-Logs](/Grab-Logs)
 
 - [Magisk: App not installed?!](https://github.com/sfX-android/android_vendor_extendrom/wiki/FAQ#magisk-app-not-installed)
 - [Magisk: "Requires Additional Setup" on start](https://github.com/sfX-android/android_vendor_extendrom/wiki/FAQ#magisk-requires-additional-setup-on-start)
-- [Banking/Hide root](hide-root)
+- [Banking/Hide root](/hide-root)
 
 ### no GCM available / Google Play service required
 
