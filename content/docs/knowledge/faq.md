@@ -56,7 +56,7 @@ If you still get this message also check the next topic here: [Possible fixes fo
 
 It depends. Many apps will check for a custom OS and/or root and so might fail to start / refuse to work.
 
-Many of these apps will work if following [this guide](hide-root) though  _(but also check the next topics regarding Play integrity which can be a requirement for some apps)_.
+Many of these apps will work if following [this guide](/hide-root) though  _(but also check the next topics regarding Play integrity which can be a requirement for some apps)_.
 
 ### what is Play Integrity / SafetyNet?
 
