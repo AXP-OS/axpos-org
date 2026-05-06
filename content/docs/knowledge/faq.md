@@ -7,6 +7,9 @@ aliases:
     - /faq
     - /Frequently-Asked-Questions
 ---
+
+## AXP.OS specific
+
 ### What's inside AXP.OS?
 
 See [Features](/Features) and [Technical Details](/Technical-Details)
@@ -168,7 +171,7 @@ see [here](https://disroot.org/services/git)
 
 see [here](https://docs.codeberg.org/security/ssh-fingerprint/)
 
-## meaning of the AXP.OS build id
+### meaning of the AXP.OS build id
 
 You might noticed the build ID already when checking the [Changelog](/Changelog) or when looking at the [automation channel](/docs/overview/#support) when a new release is announced.
 
@@ -187,9 +190,9 @@ This build ID is used in several places: Changelog, build release announcements,
 
 If you want to know more about how that impacts the build & testing process read on [here](/Buildtest).
 
-## AOSmium Browser / WebView
+### AOSmium Browser / WebView
 
-### WebAssembly error
+#### WebAssembly error
 
 By default and as a [security pre-caution](https://www.jit.io/blog/6-security-risks-to-consider-with-webassembly) AOSmium blocks JIT ("Just In Time" compilation) which can cause error messages like:
 
@@ -202,7 +205,7 @@ Resolution:
 3. type in the domain / website which does not work (e.g. `paste.axpos.org`)
 4. do **not** enable the toggle for JavaScript JIT at the top - unless you want to *allow* JIT for *any* website (not recommended)
 
-## Known Low-Level recovery tools
+### Known Low-Level recovery tools
 
 - bkerler [EDL tool](https://github.com/bkerler/edl) _(soon included in [mAid Linux](https://maid.binbash.rocks/))_
 - Oneplus MSM tool _(e.g. for: [fajita](https://xdaforums.com/t/op6t-latest-10-3-8-collection-of-unbrick-tools.3914746/) or [hotdog](https://xdaforums.com/t/op7tpro-oos-hd01aa-hd01ba-unbrick-tool-to-restore-your-device-to-oxygenos.4002909/))_
@@ -210,7 +213,7 @@ Resolution:
 - Samsung [Heimdall tool](https://github.com/Benjamin-Dobell/Heimdall) _(included in [mAid Linux](https://maid.binbash.rocks/))_
 - Google Pixels: [gs201/gs301](https://github.com/JoshuaDoes/tensor-usbdl) _(soon included in [mAid Linux](https://maid.binbash.rocks/))_
 
-### Google Pixel 7/7a/7Pro + 8/8Pro
+#### Google Pixel 7/7a/7Pro + 8/8Pro
 
 - Download:
   - [v0.1.0](https://github.com/JoshuaDoes/tensor-usbdl/releases/tag/010) 
@@ -249,19 +252,7 @@ sudo ./tensor-usbdl \
    - `./flash-all.sh`
    - alternatively: `fastboot -v update ~/factory-zip-extracted/image*.zip`
 
-## Anti Roll Back (ARB)
-
-Google holds patents ([1](https://patents.google.com/patent/US8745612), [2](https://patents.google.com/patent/US20140130151A1/en)) for a method protecting you from downgrading a device/OS. These patents also describe why and how, but TL;DR this is a major drawback for the custom OS community.
-
-Some vendors _(or their OEMs)_ make extensive use of this ARB feature, others use it less frequently, and still others do not use it at all. Most important thing is that if your device is affected and you flash a rejected OS _(firmware)_ version it may lead to a state which is called _hard brick_.
-
-Recovering from this state may or may not be possible which depends again on the device. Some devices have a low-level recovery mode _(e.g. most QCOM based ones)_ and if you're lucky, there are also publicly available [recovery tools](/docs/knowledge/faq/#known-low-level-recovery-tools) that can help you restore your device to working order (i.e. _unbrick_).
-
-Unfortunately not all devices can be recovered from such a hard brick on your own and must be send to a repair shop. They usually have specific software and hardware tools to recover your device - which is a paid service in most cases though.
-
-You could also try to open a request on the vendors support page and ask for a free repair due to a bad flash _(like "I flashed the latest Google Pixel update and now it does not turn on anymore", some vendors reject any request if you have flashed a custom OS though - while they **might** do not check for it in practice. If they do they might just send it back to you or you might need to pay for it)_.
-
-## 32-bit warning popup
+### 32-bit warning popup
 
 If you see the message:
 
@@ -280,9 +271,21 @@ If you still want/need to use a 32-bit variant, keep in mind that:
 > *[Hardened malloc](https://github.com/GrapheneOS/hardened_malloc/blob/main/README.md) is providing extra protection against attacks and vulnerabilities by preventing heap memory corruption*<br/>
 > *ASLR ([Address Space Layout Randomization](https://en.wikipedia.org/wiki/Address_space_layout_randomization)) is a security technique that randomizes the memory addresses of the system’s modules and user programs. It reduces predictability and limits vulnerability exposure by making it difficult for attackers to predict the program’s starting address. AXP.OS uses an extended address space approach taken from GrapheneOS.*
 
+### Anti Roll Back (ARB)
+
+Google holds patents ([1](https://patents.google.com/patent/US8745612), [2](https://patents.google.com/patent/US20140130151A1/en)) for a method protecting you from downgrading a device/OS. These patents also describe why and how, but TL;DR this is a major drawback for the custom OS community.
+
+Some vendors _(or their OEMs)_ make extensive use of this ARB feature, others use it less frequently, and still others do not use it at all. Most important thing is that if your device is affected and you flash a rejected OS _(firmware)_ version it may lead to a state which is called _hard brick_.
+
+Recovering from this state may or may not be possible which depends again on the device. Some devices have a low-level recovery mode _(e.g. most QCOM based ones)_ and if you're lucky, there are also publicly available [recovery tools](/docs/knowledge/faq/#known-low-level-recovery-tools) that can help you restore your device to working order (i.e. _unbrick_).
+
+Unfortunately not all devices can be recovered from such a hard brick on your own and must be send to a repair shop. They usually have specific software and hardware tools to recover your device - which is a paid service in most cases though.
+
+You could also try to open a request on the vendors support page and ask for a free repair due to a bad flash _(like "I flashed the latest Google Pixel update and now it does not turn on anymore", some vendors reject any request if you have flashed a custom OS though - while they **might** do not check for it in practice. If they do they might just send it back to you or you might need to pay for it)_.
+
 ---
 
-## DivestOS-based FAQ
+## DivestOS-based (partly outdated)
 
 The document starting from here is a markdown replacement of the original made by: [Divested Computing Group](https://web.archive.org/web/20241231213231/https://divestos.org/pages/faq), so all credits goes to them.
 
@@ -790,7 +793,7 @@ Android is a legitimately fantastic operating system and no other mobile platfor
 
 #### Where can I talk to other users?
 
-Please see the [community](/pages/community) page.
+Please see the [support](/support) page.
 
 
 #### What VPN/email/boat rental services do you recommend?
