@@ -13,7 +13,7 @@ Details how to make use out of it can be found <a href="/docs/knowledge/signatur
       <th>OS zip</th>
       <th>Recovery image</th>
       {{- if eq .factory "yes" -}}<th>FACTORY zip</th>{{ end }}
-      {{ if or (eq .relock_pro "yes") (eq .relock_slim "yes") }}{{- if or (hasPrefix .verifiedboot_pro "v2") (hasPrefix .verifiedboot_slim "v2") -}}<th>AVB key<br><i style="font-size: small">(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</i></th>{{ end }}{{ end }}
+      {{ if or (eq .relock_pro "yes") (eq .relock_slim "yes") }}<th>AVB key<br><i style="font-size: small">(<a href="/Bootloader-Lock" target="_blank">what's this?</a>)</i></th>{{ end }}{{ end }}
       <th>Release key<br><i style="font-size: small">(<a href="/docs/knowledge/signatures/#build-signatures" target="_blank">what's this?</a>)</i></th>
     </tr>
   </thead>
