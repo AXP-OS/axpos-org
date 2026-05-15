@@ -38,7 +38,7 @@ Details how to make use out of it can be found <a href="/docs/knowledge/signatur
       </td>
   {{ end }}
 
-  {{- if and (eq .relock_pro "yes") (hasPrefix .verifiedboot_pro "v2") -}}
+  {{- if eq .relock_pro "yes" -}}
       <td>
         <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_avb_pkmd.bin" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
       </td>
@@ -68,7 +68,7 @@ Details how to make use out of it can be found <a href="/docs/knowledge/signatur
       </td>
   {{ end }}
 
-  {{- if and (eq .relock_pro "yes") (hasPrefix .verifiedboot_pro "v2") -}}
+  {{- if eq .relock_pro "yes" -}}
       <td>
         <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS/{{ .codename }}_AXP.OS_avb_pkmd.bin.sha512sum" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"hashtag\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i style="font-size: small">(right click, save-as)</a><br/>click<a href="/docs/knowledge/signatures/#sha" target="_blank"> here </a>for info</i></center>
       </td>
@@ -98,7 +98,7 @@ Details how to make use out of it can be found <a href="/docs/knowledge/signatur
       </td>
   {{ end }}
 
-  {{- if and (eq .relock_slim "yes") (hasPrefix .verifiedboot_slim "v2") -}}
+  {{- if eq .relock_slim "yes" -}}
       <td>
         <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_avb_pkmd.bin" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"avbkey\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i>(click)</i></center></a>
       </td>
@@ -127,7 +127,7 @@ Details how to make use out of it can be found <a href="/docs/knowledge/signatur
       </td>
   {{ end }}
 
-  {{- if and (eq .relock_slim "yes") (hasPrefix .verifiedboot_slim "v2") -}}
+  {{- if eq .relock_slim "yes" -}}
       <td>
         <a href="https://github.com/sfX-android/update_verifier/raw/refs/heads/main/AXP.OS-slim/{{ .codename }}_AXP.OS-slim_avb_pkmd.bin.sha512sum" target="_blank"><div style="text-align: center;">{{ (printf "{{< icon name=\"hashtag\" attributes=\"height=2em\" >}}" | markdownify) }}</div><center><i style="font-size: small">(right click, save-as)</a><br/>click<a href="/docs/knowledge/signatures/#sha" target="_blank"> here </a>for info</i></center>
       </td>
