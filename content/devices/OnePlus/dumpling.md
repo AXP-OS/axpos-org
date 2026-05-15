@@ -12,6 +12,7 @@ kilink: cheeseburgerdumpling
 name: OnePlus 5T
 vendor: OnePlus
 xdalink: "N/A"
+trackerlink: ""
 custominstall: ""
 custominstall_path: 
 
@@ -21,7 +22,7 @@ encryption_pro: "ICE"
 firstrelease_pro: "2025-08-05 (A13)"
 flavors_pro: True
 patchlevel_pro: "Platform + Kernel"
-relockable_pro: "yes (since 2025-12-03)"
+relockable_pro: "yes"
 state_pro: "stable"
 supportlevel_pro: community
 verifiedboot_pro: no (v1.0)<br/><i>dropped in A11</i>
