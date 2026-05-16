@@ -249,7 +249,7 @@ $[BUILD-USER]> cd /usr/src/android/axp/Build/LineageOS-20.0
 # check if you had setup ssh keys correctly:
 $[BUILD-USER]> ssh git@code.binbash.rocks -p22443
 $[BUILD-USER]> ssh git@codeberg.org
-$[BUILD-USER]> ssh git@disroot.org
+$[BUILD-USER]> ssh git@git.disroot.org # (not git@disroot.org)
 # you should get on each command an output that auth was successful even though there is no ssh access
 # if you get an error: ensure you setup the key correctly on that hoster and it is not password protected
 
