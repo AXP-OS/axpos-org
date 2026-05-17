@@ -293,6 +293,15 @@ Flashing unverified third-party tools is thus effectively prevented, which serve
 
 Temporarily booting via a custom recovery such as TWRP on devices without a locked bootloader can bypass this restriction; therefore, it is recommended to lock the bootloader whenever possible (always check for known issues specific to your device, as a locked bootloader does not provide 100% protection if, for example, [EDL mode](https://axpos.org/docs/knowledge/faq/#known-low-level-recovery-tools) is available).
 
+### F-Droid: unknown permission
+
+More recent versions of F-Droid display a message saying “App has unexpected permission: android.permission.OTHER_SENSORS” after installing any app. What does this mean?
+
+For some time now, F-Droid has been checking whether apps receive expected permissions, i.e., in accordance with standard Android permissions. AXP.OS includes the GrapheneOS feature that allows you to deny an app access to the device’s “sensors” [(details)](https://grapheneos.org/features#sensors-permission-toggle). By default, Android always allows access to internal sensors without any way to prevent or view this. However, this is possible in AXP.OS.
+
+TL;DR<br/>
+To make all this possible, GrapheneOS has created a new permission: OTHER_SENSORS. Since this is not defined in stock Google Android, F-Droid displays a corresponding message, which is normal under AXP.OS (or GrapheneOS). In other words: this F-Droid message cannot be influenced or changed by AXP.OS (see also [here](https://gitlab.com/fdroid/fdroidclient/-/work_items/2914)).
+
 ---
 
 ## DivestOS-based (partly outdated)
