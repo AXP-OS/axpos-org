@@ -283,6 +283,16 @@ Unfortunately not all devices can be recovered from such a hard brick on your ow
 
 You could also try to open a request on the vendors support page and ask for a free repair due to a bad flash _(like "I flashed the latest Google Pixel update and now it does not turn on anymore", some vendors reject any request if you have flashed a custom OS though - while they **might** do not check for it in practice. If they do they might just send it back to you or you might need to pay for it)_.
 
+### Why can't I flash *XYZ* via recovery (signature verification failed)?
+
+Unlike most custom OSes, AXP.OS comes with a recovery mode that only allows updates signed by AXP.OS. This means you cannot flash third-party tools (or malware) via the official recovery mode; instead, you will receive an error message stating that the signature is invalid.
+
+However, you are not permanently tied to AXP.OS and can switch to another OS at any time; to do so, you simply need to install the other OS’s recovery and use it to perform the installation.
+
+Flashing unverified third-party tools is thus effectively prevented, which serves to ensure the stability, security, and integrity of the system. 
+
+Temporarily booting via a custom recovery such as TWRP on devices without a locked bootloader can bypass this restriction; therefore, it is recommended to lock the bootloader whenever possible (always check for known issues specific to your device, as a locked bootloader does not provide 100% protection if, for example, [EDL mode](https://axpos.org/docs/knowledge/faq/#known-low-level-recovery-tools) is available).
+
 ---
 
 ## DivestOS-based (partly outdated)
