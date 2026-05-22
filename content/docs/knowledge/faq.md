@@ -302,6 +302,38 @@ For some time now, F-Droid has been checking whether apps receive expected permi
 TL;DR<br/>
 To make all this possible, GrapheneOS has created a new permission: OTHER_SENSORS. Since this is not defined in stock Google Android, F-Droid displays a corresponding message, which is normal under AXP.OS (or GrapheneOS). In other words: this F-Droid message cannot be influenced or changed by AXP.OS (see also [here](https://gitlab.com/fdroid/fdroidclient/-/work_items/2914)).
 
+### Revert Magisk activation (_Pro_ flavor)
+
+During the initial setup you get prompted to download the full Magisk app and to setup Magisk when opening the app. The latter will actually *activate* Magisk first, without that step the necessary binaries are not available within the OS at all.
+
+If you want to deactivate Magisk again after you followed the initial setup steps the recommended way doing so is a full ***factory reset***.
+
+{{< callout type="error" emoji="⚠️" >}}
+Just *disabling* or *uninstalling* the Magisk app will ***not*** disable/remove Magisk/root! All previously given approvals on apps/permissions remain!
+{{< /callout >}}
+
+The following ***manual*** process avoids a factory reset but might stop working at any time.
+
+1. connect your device to your PC and enter: `adb shell "which su; which magisk"` -> *it should print something like:*
+   > /system_ext/bin/su<br/>
+   > /system_ext/bin/magisk
+2. connect your device to your PC and enter: `adb shell "su -c rm -rf /data/adb/magisk*"` _(check your device for any prompts & accept if requested)_
+3. uninstall the Magisk app (`Settings -> Apps -> Magisk -> Uninstall`), **NEVER** choose *"Uninstall Magisk"* within the Magisk app!!
+4. reboot
+5. after fully booted, connect your device to your PC and enter:
+   - `adb shell "which su || echo -e '\n\nsu binary not available\n'"`, should return:
+   > "su binary not available"<br/>
+   - `adb shell "which magisk || echo -e '\n\nmagisk binary not available\n'"`, should return:
+   > "magisk binary not available"
+
+***If you get in step 5 the same output as with step 1, something is wrong!***
+
+You will notice in the app drawer the default Android bot icon for Magisk appeared again, like on a fresh install / factory reset you need to activate it again.
+
+The whole procedure of activating & deactivating can be repeated whenever needed.
+
+*secret tip: if you know how, you could also adjust step 2 to move instead of remove the magisk files. These contain the given approvals which can recover your current setup later.*
+
 ---
 
 ## DivestOS-based (partly outdated)
