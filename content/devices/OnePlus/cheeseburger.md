@@ -1,0 +1,44 @@
+---
+title: "OnePlus 5"
+
+# COMMON (shared)
+codename: cheeseburger
+debugbootpath: /mnt/vendor/persist
+factoryzip: "no"
+firmware: included
+isab: "no"
+ispixel: "no"
+kilink: cheeseburgerdumpling
+name: OnePlus 5
+vendor: OnePlus
+xdalink: "https://xdaforums.com/t/os-a13-official-microg-hardened-cheeseburger-axp-os-20-0.4789561/"
+trackerlink: "https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=61"
+custominstall: ""
+custominstall_path: 
+
+# PRO
+android_pro: 13
+encryption_pro: "ICE"
+firstrelease_pro: "2025-08-05"
+flavors_pro: True
+patchlevel_pro: "Platform + Kernel"
+relockable_pro: "yes"
+state_pro: "stable"
+supportlevel_pro: community
+verifiedboot_pro: no (v1.0)<br/><i>dropped in A11</i>
+
+# SLIM
+android_slim: 
+encryption_slim: ""
+firstrelease_slim: ""
+flavors_slim: 
+patchlevel_slim: "Platform + Kernel"
+relockable_slim: ""
+state_slim: ""
+supportlevel_slim: 
+verifiedboot_slim: 
+
+type: docs
+layout: device
+toc: true
+---
