@@ -7,7 +7,7 @@ toc: true
 
 ## Title
 ~~~
-[ROM][A-xxxAOS-VERxxx][OFFICIAL][microG][hardened][xxxCODENAMExxx] AXP.OS xxxLOS-VERxxx
+[OS][A-xxxAOS-VERxxx][OFFICIAL][microG][hardened][xxxCODENAMExxx] AXP.OS xxxLOS-VERxxx
 ~~~
 
 ## Post
