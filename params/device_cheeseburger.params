@@ -15,7 +15,7 @@ export HUGO_ISPIXEL="no"
 export HUGO_KILINK="cheeseburgerdumpling"
 export HUGO_NAME="OnePlus 5"
 export HUGO_VENDOR="OnePlus"
-export HUGO_XDALINK=""
+export HUGO_XDALINK="https://xdaforums.com/t/os-a13-official-microg-hardened-cheeseburger-axp-os-20-0.4789561/"
 export HUGO_TRACKER="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues?q=&type=all&state=all&labels=61"
 
 # PRO Block
