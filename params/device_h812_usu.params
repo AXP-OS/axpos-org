@@ -25,7 +25,7 @@ export HUGO_PRO_ENCRYPTION="FDE"
 export HUGO_PRO_FIRSTRELEASE="TBD"
 export HUGO_PRO_RELOCKABLE="no"
 export HUGO_PRO_PATCHLEVEL="Platform + Kernel"
-export HUGO_PRO_STATE="!! ALPHA !!"
+export HUGO_PRO_STATE="BETA"
 export HUGO_PRO_SUPPORTLEVEL="community"
 export HUGO_PRO_VERIFIEDBOOT="no"
 
