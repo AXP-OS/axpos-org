@@ -23,7 +23,7 @@ firstrelease_pro: "TBD"
 flavors_pro: True
 patchlevel_pro: "Platform + Kernel"
 relockable_pro: "no"
-state_pro: "!! ALPHA !!"
+state_pro: "BETA"
 supportlevel_pro: community
 verifiedboot_pro: no
 
