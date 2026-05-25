@@ -25,7 +25,7 @@ export HUGO_PRO_ENCRYPTION="FDE"
 export HUGO_PRO_FIRSTRELEASE="2024-12-20"
 export HUGO_PRO_RELOCKABLE="no"
 export HUGO_PRO_PATCHLEVEL="Platform + Kernel"
-export HUGO_PRO_STATE="stable"
+export HUGO_PRO_STATE="BETA"
 export HUGO_PRO_SUPPORTLEVEL="team"
 export HUGO_PRO_VERIFIEDBOOT="no"
 
