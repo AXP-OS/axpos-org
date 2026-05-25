@@ -1,0 +1,13 @@
+#### Required firmware/bootloader
+
+Your firmware/OS must be on _**April 2025** or **older**_ when flashing AXP.OS **A13** builds!
+
+{{< callout type="error" emoji="⚠️" >}}
+**IMPORTANT NOTICE**
+
+If your current firmware is on **May 2025 or _later_** you can **NOT** flash AXP.OS - **A13** builds! This is due to a rollback implementation by Google **which will lead to a hard-brick** on these devices!
+If you are not sure, request support **before** flashing!
+[Details](https://developers.google.com/android/images#special_instructions_for_updating_pixel_devices_to_the_may_2025_monthly_release)
+{{< /callout >}}
+
+If you are **100% sure** your device met the above requirements follow the regular _Install (Pixel devices)_ guide:

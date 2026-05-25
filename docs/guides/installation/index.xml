@@ -1,0 +1,461 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The AXP.OS Project – Installation</title><link>https://axpos.org/docs/guides/installation/</link><description>Recent content in Installation on The AXP.OS Project</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://axpos.org/docs/guides/installation/index.xml" rel="self" type="application/rss+xml"/><item><title>A/B devices</title><link>https://axpos.org/docs/guides/installation/a-b/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/installation/a-b/</guid><description>
+&lt;h2&gt;About&lt;span class="hx:absolute hx:-mt-20" id="about"&gt;&lt;/span&gt;
+&lt;a href="#about" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A/B devices have different slots for it&amp;rsquo;s bootloader stack for easier recovery in case of boot errors.&lt;/p&gt;
+&lt;p&gt;For some devices AXP.OS comes with the latest official vendor firmware included which requires the flash of AXP.OS twice (once for each slot) at the very first time. Any later flashes (OTA or manually) can be simply flashed once.&lt;/p&gt;
+&lt;p&gt;If you are unsure about what firmware you have it never hurts to flash it twice.&lt;/p&gt;
+&lt;h2&gt;Requirements&lt;span class="hx:absolute hx:-mt-20" id="requirements"&gt;&lt;/span&gt;
+&lt;a href="#requirements" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;a recent &lt;strong&gt;recovery image&lt;/strong&gt; (see &lt;a href="https://axpos.org/Recovery-images"&gt;Recovery Images&lt;/a&gt; for options)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;a PC&lt;/strong&gt; to push AXP.OS to recovery (OTA is supported once installed)&lt;/li&gt;
+&lt;li&gt;an unlocked bootloader (not part of this guide! use &lt;a href="https://www.google.com"target="_blank" rel="noopener"&gt;www.google.com&lt;/a&gt; to find instructions)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;New to AXP.OS&lt;span class="hx:absolute hx:-mt-20" id="new-to-axpos"&gt;&lt;/span&gt;
+&lt;a href="#new-to-axpos" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Note: Only if you are &lt;strong&gt;100%&lt;/strong&gt; sure that you are using &lt;strong&gt;compatible&lt;/strong&gt; firmware that matches the AXP.OS build you can skip &lt;strong&gt;step 6 and 7&lt;/strong&gt;. Note: mismatching firmware can lead into a non-booting system or weird behavior within Android later.&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;create a FULL &lt;a href="https://axpos.org/Backup-and-Restore"&gt;backup&lt;/a&gt; of all your data, pictures, etc and and save them somewhere &lt;strong&gt;other&lt;/strong&gt; than on the phone (all data needs to be &lt;strong&gt;wiped&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;flash the official AXP.OS &lt;a href="https://axpos.org/docs/guides/installation/recoveries/#official-axpos-recovery"&gt;recovery image&lt;/a&gt; - &lt;em&gt;dated on the same day or older than the target OS zip&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;boot into recovery (e.g. by &lt;code&gt;adb reboot recovery&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;write down the current &lt;code&gt;active slot&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;flash AXP.OS:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Apply update -&amp;gt; Apply from ADB&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb sideload AXP.OS.zip&lt;/code&gt; &amp;ndash;&amp;gt; do &lt;strong&gt;not&lt;/strong&gt; &lt;em&gt;boot&lt;/em&gt; yet though!&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;note: some devices report something similar to: &lt;code&gt;(~94%) adb: failed to read command: No error&lt;/code&gt;, which can be safely ignored&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;ensure you check the result in the log, it must show &lt;code&gt;succeeded and/or return code: 0&lt;/code&gt; or similar on the screen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;while in reboot mode, choose to reboot into &lt;strong&gt;recovery&lt;/strong&gt; &lt;em&gt;again&lt;/em&gt; (e.g. choose &lt;code&gt;Yes, reboot to recovery to install additional packages&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;check the current &lt;code&gt;active slot&lt;/code&gt; again: it must have &lt;strong&gt;changed&lt;/strong&gt;!
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;if not:&lt;/em&gt; flash AXP.OS again and briefly check the log message and return code!&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;if it has changed:&lt;/em&gt; start sideload and flash AXP.OS again (&lt;em&gt;see step 5&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ensure you factory reset (all your data will be erased!):
+&lt;ul&gt;
+&lt;li&gt;choose &lt;code&gt;Factory reset&lt;/code&gt; -&amp;gt; &lt;code&gt;Format data/factory reset&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;boot into system / AXP.OS&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Update AXP.OS&lt;span class="hx:absolute hx:-mt-20" id="update-axpos"&gt;&lt;/span&gt;
+&lt;a href="#update-axpos" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;See &lt;a href="https://axpos.org/Updating"&gt;Updating AXP.OS&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Final note&lt;span class="hx:absolute hx:-mt-20" id="final-note"&gt;&lt;/span&gt;
+&lt;a href="#final-note" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;p class="hx:flex hx:items-center hx:font-medium"&gt;&lt;svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/&gt;&lt;/svg&gt;Caution&lt;/p&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;AXP.OS comes with its own recovery so if you &lt;strong&gt;flash&lt;/strong&gt; a custom recovery it gets overwritten on next update! Even worse if you own a device which does not have a dedicated recovery partition (e.g. the OnePlus 6T) flashing TWRP will remove Magisk and needs to be manually re-flashed afterwards, so causing just trouble at the end.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>Bootloader Lock</title><link>https://axpos.org/docs/guides/installation/bootloaderlock/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/installation/bootloaderlock/</guid><description>
+&lt;p&gt;Yes you read correctly: some devices can lock their bootloader again &lt;em&gt;(check your device&amp;rsquo;s overview table &amp;ldquo;Relockable&amp;rdquo;)&lt;/em&gt;!&lt;/p&gt;
+&lt;p&gt;&amp;hellip; so why should you?&lt;/p&gt;
+&lt;h2&gt;Sensible?&lt;span class="hx:absolute hx:-mt-20" id="sensible"&gt;&lt;/span&gt;
+&lt;a href="#sensible" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;The very first question is:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Are there &lt;em&gt;Low-Level recovery / &amp;ldquo;unbrick&amp;rdquo; tools&lt;/em&gt; for your device available? See &lt;a href="#known-low-level-recovery-tools"&gt;Known Low-Level recovery tools&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If your device has one (e.g. many if not all QualComm devices) then anything you can do is (almost) useless or &amp;ldquo;just&amp;rdquo; makes it a bit &lt;em&gt;harder&lt;/em&gt; for a &lt;strong&gt;serious&lt;/strong&gt; attacker but will not avoid it completely.&lt;/p&gt;
+&lt;p&gt;So what is the practical risk of such low-level recovery tools?&lt;/p&gt;
+&lt;p&gt;If the attacker has physical access: every writable partition can be tampered with, even when your bootloader is &lt;strong&gt;locked&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Will you notice it? Not if he is good. That means if he flashes in this mode malicious code and ensures the vbmeta (VerifiedBoot) gets updated as well even VerifiedBoot won&amp;rsquo;t help you out here.&lt;/p&gt;
+&lt;p&gt;Still locking the bootloader on such devices:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;will avoid quick &lt;code&gt;fastboot boot / flash&lt;/code&gt; attacks&lt;/li&gt;
+&lt;li&gt;will limit the attacking vector to a low-recovery tool (which often requires time to access and/or even shorten pins on the mainboard)&lt;/li&gt;
+&lt;li&gt;will not help much if your phone gets lost or stolen&lt;/li&gt;
+&lt;li&gt;will make it a little more difficult for hobby attackers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In any case you are &lt;em&gt;strongly&lt;/em&gt; advised to use a &lt;strong&gt;secure PIN/password&lt;/strong&gt; to prevent access to your data.&lt;/p&gt;
+&lt;h2&gt;Going further&lt;span class="hx:absolute hx:-mt-20" id="going-further"&gt;&lt;/span&gt;
+&lt;a href="#going-further" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;All AXP.OS builds &lt;strong&gt;force encrypt&lt;/strong&gt; your userdata partition so as long as:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;you set a &lt;strong&gt;secure&lt;/strong&gt; PIN/password&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;and&lt;/strong&gt; the build enforces &lt;strong&gt;&lt;a href="https://source.android.com/docs/security/features/verifiedboot/verified-boot"target="_blank" rel="noopener"&gt;VerifiedBoot&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;(check your device&amp;rsquo;s overview table: &amp;ldquo;VerfiedBoot&amp;rdquo;)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;and&lt;/strong&gt; there are no &lt;a href="#known-low-level-recovery-tools"&gt;Known Low-Level recovery tools&lt;/a&gt; (e.g. EDL/QDL mode) available&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;then you are already in &lt;em&gt;good&lt;/em&gt; safety.&lt;/p&gt;
+&lt;p&gt;There are 2 scenarios why locking the bootloader &lt;strong&gt;still&lt;/strong&gt; enhances your security:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;your phone gets lost or stolen&lt;/li&gt;
+&lt;li&gt;you leave your phone unattended at a public spot&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Not &lt;strong&gt;all&lt;/strong&gt; partitions are part of &lt;a href="https://source.android.com/docs/security/features/verifiedboot/verified-boot"target="_blank" rel="noopener"&gt;VerifiedBoot&lt;/a&gt;. That means if an attacker has physical access to your device and its bootloader is unlocked he can flash in 10 seconds malicious code into such a partition and you won&amp;rsquo;t even notice it. It also makes the device more exploitable especially in case 1 above when time does not matter (e.g. LG devices could be exploited by a complete unexciting and inconspicuous partition at that time).&lt;/p&gt;
+&lt;p&gt;Locking the bootloader ensures that this is no longer possible.&lt;/p&gt;
+&lt;p&gt;If your device&amp;rsquo;s build does &lt;strong&gt;not&lt;/strong&gt; support &lt;a href="https://source.android.com/docs/security/features/verifiedboot/verified-boot"target="_blank" rel="noopener"&gt;VerifiedBoot&lt;/a&gt; it is highly recommended to lock your bootloader whenever possible.&lt;/p&gt;
+&lt;p&gt;In any case you are &lt;em&gt;strongly&lt;/em&gt; advised to use a &lt;strong&gt;secure PIN/password&lt;/strong&gt; to prevent access to your data for cases not covered by the above.&lt;/p&gt;
+&lt;h1&gt;Checklist: is bootloader lock for you?!&lt;/h1&gt;&lt;p&gt;If you answer anyone - even just 1 - of the following with YES - then &lt;strong&gt;KEEP AWAY FROM LOCKING your bootloader&lt;/strong&gt;!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I want to remove (not just disable) system apps&lt;/li&gt;
+&lt;li&gt;I want to add / convert apps into system apps (e.g. Titanium Backup offers such an option)&lt;/li&gt;
+&lt;li&gt;I want to update Magisk to the latest version&lt;/li&gt;
+&lt;li&gt;I want to change init scripts, XMLs or anything else within system/, product/ etc partitions&lt;/li&gt;
+&lt;li&gt;I want to use an ad-blocker which modifies the &amp;ldquo;hosts&amp;rdquo; file (system partition - using the magisk module works fine though!)&lt;/li&gt;
+&lt;li&gt;I want to install another recovery then the one coming with AXP.OS&lt;/li&gt;
+&lt;li&gt;I want to flash GApps (THIS WILL &lt;strong&gt;NOT&lt;/strong&gt; WORK ANYWAYS! AXP.OS comes with microG included)&lt;/li&gt;
+&lt;li&gt;I want to flash anything else in recovery which modifies: boot, recovery, system or any other partition then userdata&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Do you have answered at least 1 of the above with YES ? Then do &lt;strong&gt;NOT&lt;/strong&gt; lock your bootloader. &lt;strong&gt;It WILL brick your device if you try&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;if you can live with the above - &lt;strong&gt;GO GO GO&lt;/strong&gt; :)&lt;/p&gt;
+&lt;h1&gt;Lock your bootloader!&lt;/h1&gt;&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;div class="hx:select-none hx:text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"&gt;⚠️&lt;/div&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Before attempting to relock the bootloader on your device, ensure that it allows to &lt;em&gt;unlock&lt;/em&gt; again by executing the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;fastboot flashing get_unlock_ability&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This &lt;em&gt;must&lt;/em&gt; return &lt;code&gt;1&lt;/code&gt;, if it does return &lt;code&gt;0&lt;/code&gt; do not proceed as you risk a hard-brick!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Backup!&lt;span class="hx:absolute hx:-mt-20" id="backup"&gt;&lt;/span&gt;
+&lt;a href="#backup" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;backup all your data. I am serious -&amp;gt; EVERYTHING. Your userdata partition will be &lt;strong&gt;FORMATTED&lt;/strong&gt; during the lock process and there is no way around. so use e.g. NeoBackup or any other you trust. It will not hurt also having a TWRP backup - just for the case..&lt;/p&gt;
+&lt;h2&gt;Android Verified Boot&lt;span class="hx:absolute hx:-mt-20" id="android-verified-boot"&gt;&lt;/span&gt;
+&lt;a href="#android-verified-boot" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Identify your AVB version, which can be either v1.x or v2.x. You can find this information at the table at the &lt;a href="https://axpos.org/devices"target="_blank" rel="noopener"&gt;device page&lt;/a&gt;.
+You can find out more about AVB and the differences between these versions &lt;a href="https://axpos.org/AVB"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Depending on if your device supports AVB v1 or v2 the guide is slightly different:&lt;/p&gt;
+&lt;h3&gt;AVB v1&lt;span class="hx:absolute hx:-mt-20" id="avb-v1"&gt;&lt;/span&gt;
+&lt;a href="#avb-v1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;boot recovery&lt;/li&gt;
+&lt;li&gt;flash AXP.OS&lt;/li&gt;
+&lt;li&gt;reboot to the bootloader / fastboot&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;fastboot oem lock&lt;/code&gt; or: &lt;code&gt;fastboot flashing lock&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;approve locking the bootloader on the phone&amp;rsquo;s screen&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt; take a deeeeeeep breath &amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;on some devices recovery will load and format userdata automatically&lt;/li&gt;
+&lt;li&gt;if not: choose factory reset -&amp;gt; format(!) data (there is no way around)&lt;/li&gt;
+&lt;li&gt;boot Android -&amp;gt; you will likely see a new bootloader message warning that you have a custom OS installed - but it will load
+&lt;ol&gt;
+&lt;li&gt;if you see an ID string like &amp;ldquo;&lt;code&gt;ID: aabbcc112ddd...&lt;/code&gt;&amp;rdquo; verify it against the one in the installation guide&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;congrats! you now running on a locked bootloader + AXP.OS&lt;/li&gt;
+&lt;li&gt;start the Magisk app (requires internet), accept the install request and open the magisk app afterwards and let it reboot when asked&lt;/li&gt;
+&lt;li&gt;enjoooooy :)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;AVB v2&lt;span class="hx:absolute hx:-mt-20" id="avb-v2"&gt;&lt;/span&gt;
+&lt;a href="#avb-v2" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;First of all you need the &lt;strong&gt;AVB key&lt;/strong&gt; for your device, you can find it in your device&amp;rsquo;s page, browse from &lt;a href="https://axpos.org/devices"target="_blank" rel="noopener"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;boot recovery&lt;/li&gt;
+&lt;li&gt;flash AXP.OS&lt;/li&gt;
+&lt;li&gt;reboot to the bootloader / fastboot&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;note: if you ever flashed a &lt;strong&gt;factory&lt;/strong&gt; image (pixel device) you can skip the following 2 steps&lt;/em&gt;
+&lt;ol&gt;
+&lt;li&gt;type: &lt;code&gt;fastboot erase avb_custom_key&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;fastboot flash avb_custom_key &amp;lt;device&amp;gt;_AXP.OS_avb_pkmd.bin&lt;/code&gt; (which is the file you downloaded earlier)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;fastboot oem lock&lt;/code&gt; or: &lt;code&gt;fastboot flashing lock&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;approve locking the bootloader on the phone&amp;rsquo;s screen&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt; take a deeeeeeep breath &amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;on some devices recovery will load and format userdata automatically&lt;/li&gt;
+&lt;li&gt;if not: choose factory reset -&amp;gt; format(!) data (there is no way around)&lt;/li&gt;
+&lt;li&gt;boot Android -&amp;gt; you will likely see a new bootloader message warning that you have a custom OS installed - but it will load
+&lt;ol&gt;
+&lt;li&gt;if you see an ID string like &amp;ldquo;&lt;code&gt;ID: aabbcc112ddd...&lt;/code&gt;&amp;rdquo; verify it against the one in the installation guide&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;congrats! you now running on a locked bootloader + AXP.OS&lt;/li&gt;
+&lt;li&gt;start the Magisk app (requires internet), accept the install request and open the magisk app afterwards and let it reboot when asked&lt;/li&gt;
+&lt;li&gt;enjoooooy :)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Locked - now what?&lt;/h1&gt;&lt;h2&gt;OEM unlock option&lt;span class="hx:absolute hx:-mt-20" id="oem-unlock-option"&gt;&lt;/span&gt;
+&lt;a href="#oem-unlock-option" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;div class="hx:select-none hx:text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"&gt;⚠️&lt;/div&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;&lt;em&gt;Note: the following was possible in builds made before 2024-12-16. The toggle has been removed because people still used it regardless of any warnings.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Even though it is possible to bypass that removal in AXP.OS Pro (as this requires root) it is (really) strongly recommended &lt;strong&gt;not touching&lt;/strong&gt; it. I am serious: &lt;strong&gt;keep your hands off&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;The above locking process does not mention an additional possible step: &lt;em&gt;disabling OEM unlock in developer options&lt;/em&gt;. For a reason. You &lt;em&gt;can&lt;/em&gt; uncheck that option now that all is running fine &lt;strong&gt;but&lt;/strong&gt; you do &lt;strong&gt;NOT&lt;/strong&gt; get any more security win &lt;strong&gt;or any other (real) benefit&lt;/strong&gt;! On the other site deactivating this will close the door to unbrick your device when in trouble!&lt;/p&gt;
+&lt;p&gt;If you keep it checked an attacker is able to unlock your device in fastboot - but it WILL &lt;em&gt;&lt;strong&gt;format the encryption keys + wipe your data&lt;/strong&gt;&lt;/em&gt; when doing so. That means: &lt;strong&gt;there is no way to access your data anyways&lt;/strong&gt;. So simply keep it &lt;strong&gt;enabled&lt;/strong&gt;, you can sleep well doing so!&lt;/p&gt;
+&lt;p&gt;If you &lt;strong&gt;&lt;em&gt;really&lt;/em&gt;&lt;/strong&gt; want to avoid even that then uncheck OEM unlock in developer settings (&lt;em&gt;see note above. removed in builds since 2024-12-16&lt;/em&gt;) as well but then a brick will require &lt;em&gt;low-level recovery tools&lt;/em&gt; to bring your device back to life in case of a brick.&lt;/p&gt;
+&lt;p&gt;The problem: &lt;strong&gt;such low-level recovery tools are not available for all devices!!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;*) see also: &lt;a href="#bricked-o_o"&gt;Bricked O_o&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;TL;DR: do NOT(!!) disable OEM unlock&lt;span class="hx:absolute hx:-mt-20" id="tldr-do-not-disable-oem-unlock"&gt;&lt;/span&gt;
+&lt;a href="#tldr-do-not-disable-oem-unlock" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;there is ZERO security or any other benefit in doing so&lt;br/&gt;
+it can even turn your device into a paperweight - i.e in an IRREVERSIBLE way*&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;*) see also: &lt;a href="#bricked-o_o"&gt;Bricked O_o&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Magisk&lt;span class="hx:absolute hx:-mt-20" id="magisk"&gt;&lt;/span&gt;
+&lt;a href="#magisk" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I recommend to disable &lt;em&gt;automatic update checking&lt;/em&gt; within magisk settings - remember: when flashing a newer version of magisk it WILL brick your device. you have to wait for me updating it within AXP.&lt;/p&gt;
+&lt;p&gt;Almost everything you do within Magisk can EASILY BRICK your device, e.g. installing a magisk module which tampers your system partition: &lt;strong&gt;BRICK&lt;/strong&gt;. So really really check if a module touches anything mentioned in the above checklist topic.&lt;/p&gt;
+&lt;p&gt;You can use all standard root functions, magisk hide, zygisk, systemless-hosts-list, deny-lists and even re-pack the magisk app without a problem though.&lt;/p&gt;
+&lt;h2&gt;Bricked O_o&lt;span class="hx:absolute hx:-mt-20" id="bricked-o_o"&gt;&lt;/span&gt;
+&lt;a href="#bricked-o_o" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Always keep an eye on the above &amp;ldquo;Checklist&amp;rdquo; topic! If you change/do something mentioned there you will brick your device with a snap of a finger.&lt;/p&gt;
+&lt;h3&gt;bootloader locked/unlocked &amp;amp; OEM unlock=ON (default)&lt;span class="hx:absolute hx:-mt-20" id="bootloader-lockedunlocked--oem-unlockon-default"&gt;&lt;/span&gt;
+&lt;a href="#bootloader-lockedunlocked--oem-unlockon-default" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Android does not boot anymore (e.g. because you installed a &amp;ldquo;bad&amp;rdquo; Magisk module or changed something within the protected partitions):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;boot recovery&lt;/li&gt;
+&lt;li&gt;flash the current AXP.OS version (&lt;code&gt;adb sideload ...&lt;/code&gt;) or a later release and reboot&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Recovery does not load bc you flashed another recovery:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;wait for the next OTA and it will be fixed automatically&lt;/li&gt;
+&lt;li&gt;or if you do not want to wait:
+&lt;ul&gt;
+&lt;li&gt;boot into fastboot&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;if bl is locked:&lt;/em&gt; unlock (&lt;em&gt;&lt;strong&gt;note: this will wipe all your data!&lt;/strong&gt;&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;flash AXP.OS&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;optional/depends on device:&lt;/em&gt; re-lock the bootloader again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Any other bricks:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;boot into fastboot&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;if bl is locked:&lt;/em&gt; unlock the bootloader (&lt;em&gt;&lt;strong&gt;note: this will wipe all your data!&lt;/strong&gt;&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;flash AXP.OS again (follow the regular install guide for your device)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;bootloader locked &amp;amp; OEM unlock=DISABLED&lt;span class="hx:absolute hx:-mt-20" id="bootloader-locked--oem-unlockdisabled"&gt;&lt;/span&gt;
+&lt;a href="#bootloader-locked--oem-unlockdisabled" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;While it is possible to disable OEM unlock in Android settings it is not recommended. See the above topic: &lt;em&gt;OEM unlock option&lt;/em&gt; for details. Also there are situations where you cannot unlock your bootloader even though you have not disabled this option. In both cases read on.&lt;/p&gt;
+&lt;h4&gt;non-A/B device&lt;span class="hx:absolute hx:-mt-20" id="non-ab-device"&gt;&lt;/span&gt;
+&lt;a href="#non-ab-device" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;use a low-level recovery tool* to flash a STOCK image (&lt;em&gt;be sure to use the same Android version though to make things easier for the next steps and avoid barriers like ARB etc&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;if there is no low-level recovery tool: buy a new phone&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;A/B device&lt;span class="hx:absolute hx:-mt-20" id="ab-device"&gt;&lt;/span&gt;
+&lt;a href="#ab-device" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;first thing to try: force power off (us the specific key combo, usually power+voldown or volup or take out the battery if removable)&lt;/li&gt;
+&lt;li&gt;now wait 2 min&lt;/li&gt;
+&lt;li&gt;now let it bootloop 7 times&lt;/li&gt;
+&lt;li&gt;it should switch to the other slot and &lt;strong&gt;&lt;em&gt;might&lt;/em&gt;&lt;/strong&gt; boot (depends on what &lt;em&gt;exactly&lt;/em&gt; caused the brick)&lt;/li&gt;
+&lt;li&gt;use a low-level recovery tool* to flash a STOCK image (&lt;em&gt;be sure to use the same Android version though to make things easier for the next steps and avoid barriers like ARB etc&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;if there is no low-level recovery tool: buy a new phone&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;*) &lt;em&gt;some devices (e.g. OnePlus, LG, ..) have a so called &lt;em&gt;EDL/QDL mode&lt;/em&gt; which can unbrick a device no matter what. actually these are almost impossible to hard-brick. Many Google Pixels on the other site do &lt;strong&gt;not&lt;/strong&gt; have such an easy to access mode and so will be for sure gone forever if that happens.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Examples for those tools:&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Known Low-Level recovery tools&lt;span class="hx:absolute hx:-mt-20" id="known-low-level-recovery-tools"&gt;&lt;/span&gt;
+&lt;a href="#known-low-level-recovery-tools" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;See the &lt;a href="https://axpos.org/docs/knowledge/faq/#known-low-level-recovery-tools"&gt;FAQ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Non A/B devices</title><link>https://axpos.org/docs/guides/installation/non_a-b/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/installation/non_a-b/</guid><description>
+&lt;h2&gt;About&lt;span class="hx:absolute hx:-mt-20" id="about"&gt;&lt;/span&gt;
+&lt;a href="#about" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Non-A/B devices do &lt;strong&gt;not&lt;/strong&gt; have different slots for it&amp;rsquo;s bootloader stack.&lt;/p&gt;
+&lt;h2&gt;Requirements&lt;span class="hx:absolute hx:-mt-20" id="requirements"&gt;&lt;/span&gt;
+&lt;a href="#requirements" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;a recent &lt;strong&gt;recovery image&lt;/strong&gt; (see &lt;a href="https://axpos.org/Recovery-images"&gt;Recovery Images&lt;/a&gt; for options)&lt;/li&gt;
+&lt;li&gt;a PC to load AXP.OS in recovery (OTA is supported once installed)&lt;/li&gt;
+&lt;li&gt;an unlocked bootloader (not part of this guide! use &lt;a href="https://www.google.com"target="_blank" rel="noopener"&gt;www.google.com&lt;/a&gt; to find instructions)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;New to AXP.OS&lt;span class="hx:absolute hx:-mt-20" id="new-to-axpos"&gt;&lt;/span&gt;
+&lt;a href="#new-to-axpos" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h4&gt;running incompatible vendor firmware (or if unknown)&lt;span class="hx:absolute hx:-mt-20" id="running-incompatible-vendor-firmware-or-if-unknown"&gt;&lt;/span&gt;
+&lt;a href="#running-incompatible-vendor-firmware-or-if-unknown" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;If you are not sure whether the current firmware matches the AXP.OS build you want to install:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;create a FULL &lt;a href="https://axpos.org/Backup-and-Restore"&gt;backup&lt;/a&gt; of all your data, pictures, etc and and save them somewhere &lt;strong&gt;other&lt;/strong&gt; than on the phone (all data needs to be &lt;strong&gt;wiped&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;flash latest device firmware as described in the device&amp;rsquo;s install section&lt;/li&gt;
+&lt;li&gt;boot into recovery (e.g. by &lt;code&gt;adb reboot recovery&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;flash AXP.OS (e.g. with &lt;code&gt;adb sideload AXP.OS.zip&lt;/code&gt;)
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;note: some devices report something similar to: &lt;code&gt;(~94%) adb: failed to read command: No error&lt;/code&gt;, which can be safely ignored&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ensure you factory reset (all your data will be erased!):
+&lt;ul&gt;
+&lt;li&gt;choose &lt;code&gt;Factory reset&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;choose &lt;code&gt;Format data/factory reset&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;boot into system / AXP.OS&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;running compatible vendor firmware&lt;span class="hx:absolute hx:-mt-20" id="running-compatible-vendor-firmware"&gt;&lt;/span&gt;
+&lt;a href="#running-compatible-vendor-firmware" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;If you are 100% sure that you are using &lt;strong&gt;compatible&lt;/strong&gt; firmware that matches the AXP.OS build:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;create a FULL &lt;a href="https://axpos.org/Backup-and-Restore"&gt;backup&lt;/a&gt; of all your data, pictures, etc and and save them somewhere &lt;strong&gt;other&lt;/strong&gt; than on the phone (all data needs to be &lt;strong&gt;wiped&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;boot into recovery (e.g. by &lt;code&gt;adb reboot recovery&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;flash AXP.OS (e.g. with &lt;code&gt;adb sideload AXP.OS.zip&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;ensure you factory reset (all your data will be erased!):
+&lt;ul&gt;
+&lt;li&gt;choose &lt;code&gt;Factory reset&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;choose &lt;code&gt;Format data/factory reset&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;boot into system / AXP.OS&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Update AXP.OS&lt;span class="hx:absolute hx:-mt-20" id="update-axpos"&gt;&lt;/span&gt;
+&lt;a href="#update-axpos" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;See &lt;a href="https://axpos.org/Updating"&gt;Updating AXP.OS&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Final note&lt;span class="hx:absolute hx:-mt-20" id="final-note"&gt;&lt;/span&gt;
+&lt;a href="#final-note" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;p class="hx:flex hx:items-center hx:font-medium"&gt;&lt;svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/&gt;&lt;/svg&gt;Caution&lt;/p&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;AXP.OS comes with its own recovery so if you &lt;strong&gt;flash&lt;/strong&gt; a custom recovery it usually gets overwritten on next update! Even worse if you own a device which does not have a dedicated recovery partition (e.g. the OnePlus 6T) flashing TWRP will remove Magisk and needs to be manually re-flashed afterwards, so causing just trouble at the end.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>Pixel devices</title><link>https://axpos.org/docs/guides/installation/pixel-devices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/installation/pixel-devices/</guid><description>
+&lt;h2&gt;About&lt;span class="hx:absolute hx:-mt-20" id="about"&gt;&lt;/span&gt;
+&lt;a href="#about" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;On Google Pixel devices, a so-called factory image must be flashed when installing AXP.OS for the first time. This is needed only on the very first installation, between &lt;a href="https://axpos.org/MRU"&gt;MRUs&lt;/a&gt; or when you need to recover from a bad flash.&lt;/p&gt;
+&lt;p&gt;This is also why a factory image will &lt;strong&gt;not&lt;/strong&gt; be generated &lt;em&gt;regularly&lt;/em&gt; and so are likely older than the latest OTA zip. Don&amp;rsquo;t worry simply do an OTA afterwards and you are on the latest version.&lt;/p&gt;
+&lt;h2&gt;Requirements&lt;span class="hx:absolute hx:-mt-20" id="requirements"&gt;&lt;/span&gt;
+&lt;a href="#requirements" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;download the latest AXP.OS &lt;strong&gt;factory(!)&lt;/strong&gt; image for your device (see &lt;em&gt;FACTORY zip&lt;/em&gt; column for your &lt;a href="https://axpos.org/devices/"&gt;device&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;a PC&lt;/strong&gt; to push the AXP.OS factory image via &lt;strong&gt;fastboot&lt;/strong&gt; (OTA and &lt;code&gt;adb sideload&lt;/code&gt; via recovery are supported once installed)&lt;/li&gt;
+&lt;li&gt;an &lt;strong&gt;unlocked&lt;/strong&gt; bootloader &lt;em&gt;(e.g. described &lt;a href="https://source.android.com/docs/core/architecture/bootloader/locking_unlocking"target="_blank" rel="noopener"&gt;here&lt;/a&gt;)&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Flashing instructions&lt;span class="hx:absolute hx:-mt-20" id="flashing-instructions"&gt;&lt;/span&gt;
+&lt;a href="#flashing-instructions" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;div class="hx:select-none hx:text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"&gt;⚠️&lt;/div&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;Do not skip flashing the OS &lt;em&gt;&lt;strong&gt;twice&lt;/strong&gt;&lt;/em&gt; as mentioned in the following guide. Otherwise you &lt;strong&gt;risk a hard-brick&lt;/strong&gt;!&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;div class="hx:select-none hx:text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"&gt;⚠️&lt;/div&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;&lt;strong&gt;IMPORTANT NOTICE&lt;/strong&gt; for the following devices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pixel 6 (6, 6 Pro, 6a | raven, oriole, bluejay)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pixel 8 (8, 8 Pro, 8a | shiba, husky, akita)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If your firmware is on &lt;strong&gt;May 2025 or &lt;em&gt;later&lt;/em&gt;&lt;/strong&gt; you can &lt;strong&gt;NOT&lt;/strong&gt; flash AXP.OS - &lt;strong&gt;A13&lt;/strong&gt; builds! This is due to a rollback implementation by Google &lt;strong&gt;which will lead to a hard-brick&lt;/strong&gt; on these devices!
+If you are not sure, request support &lt;strong&gt;before&lt;/strong&gt; flashing!
+&lt;a href="https://developers.google.com/android/images#special_instructions_for_updating_pixel_devices_to_the_may_2025_monthly_release"target="_blank" rel="noopener"&gt;Details&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;extract the downloaded AXP.OS &lt;em&gt;factory&lt;/em&gt; zip&lt;/li&gt;
+&lt;li&gt;open a terminal / command window in that extracted directory&lt;/li&gt;
+&lt;li&gt;reboot to the bootloader (&lt;strong&gt;not&lt;/strong&gt; fastboot&lt;strong&gt;d&lt;/strong&gt;), note down the current &lt;em&gt;BOOT SLOT&lt;/em&gt; name (&lt;code&gt;a|b&lt;/code&gt;)&lt;br/&gt;&lt;em&gt;(you can also get it via &lt;code&gt;fastboot getvar current-slot&lt;/code&gt;)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;flash AXP.OS - this also includes the AXP.OS signing key so you can lock your device - &lt;strong&gt;if supported&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;when on Windows, type: &lt;code&gt;flash-all.bat&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;when on Linux, type: &lt;code&gt;./flash-all.sh&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;during the process you will see the &lt;em&gt;SLOT&lt;/em&gt; which gets flashed, here an excerpt where it flashes slot &lt;strong&gt;&amp;gt;b&amp;lt;&lt;/strong&gt; (e.g. boot_&lt;strong&gt;b&lt;/strong&gt;):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;Sending &amp;#39;boot_b&amp;#39; (65536 KB) OKAY [ 1.675s]
+Writing &amp;#39;boot_b&amp;#39;
+...
+Sending &amp;#39;dtbo_b&amp;#39; (16384 KB) OKAY [ 0.423s]
+Writing &amp;#39;dtbo_b&amp;#39; OKAY [ 0.028s]
+... (and much more)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ol start="6"&gt;
+&lt;li&gt;once completed &lt;strong&gt;successfully&lt;/strong&gt; reboot to the &lt;em&gt;bootloader&lt;/em&gt; (aka &lt;code&gt;fastboot&lt;/code&gt;) again!&lt;br/&gt; &lt;em&gt;(request support if you see errors during flashing and do NOT reboot or poweroff!)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;the &lt;em&gt;BOOT SLOT&lt;/em&gt; must be changed to the updated one of step 5 as follows:
+&lt;ul&gt;
+&lt;li&gt;if it has &lt;em&gt;&lt;strong&gt;NOT&lt;/strong&gt;&lt;/em&gt; changed already, switch the slot manually via:&lt;br/&gt;
+&lt;code&gt;fastboot --set-active=&amp;gt;UNPATCHED-SLOT&amp;lt;&lt;/code&gt; so to stick with the example above &lt;em&gt;(where we flashed &amp;gt;b&amp;lt;)&lt;/em&gt;:&lt;br/&gt;
+&lt;code&gt;fastboot --set-active=a&lt;/code&gt; &lt;em&gt;(replace &amp;gt;a&amp;lt; according to your device)&lt;/em&gt;&lt;br/&gt;
+⚠️ &lt;em&gt;&lt;strong&gt;DO NOT REBOOT or POWER-OFF NOW, otherwise you might brick your device!&lt;/strong&gt;&lt;/em&gt; ⚠️&lt;/li&gt;
+&lt;li&gt;check the screen on your phone &lt;em&gt;(you can also get it via &lt;code&gt;fastboot getvar current-slot&lt;/code&gt;)&lt;/em&gt;, it should show the &lt;em&gt;new&lt;/em&gt; boot slot name immediately
+&lt;br/&gt;&lt;em&gt;(request support if you have any issues and do NOT reboot or poweroff in that case!)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;repeat step 4 and ensure it flashes the &lt;em&gt;OTHER&lt;/em&gt; slot now &lt;em&gt;(to stick with the example above: it should flash slot &lt;strong&gt;&amp;gt;a&amp;lt;&lt;/strong&gt; now)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;if this also went fine: boot into &lt;em&gt;recovery&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;perform a factory reset&lt;/li&gt;
+&lt;li&gt;reboot into AXP.OS. If it takes more than 10 minutes to boot then something is wrong. Do not let it sit for more than 10 minutes!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Update AXP.OS&lt;span class="hx:absolute hx:-mt-20" id="update-axpos"&gt;&lt;/span&gt;
+&lt;a href="#update-axpos" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;See &lt;a href="https://axpos.org/Updating"&gt;Updating AXP.OS&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Final note&lt;span class="hx:absolute hx:-mt-20" id="final-note"&gt;&lt;/span&gt;
+&lt;a href="#final-note" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;div class="hx:select-none hx:text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"&gt;⚠️&lt;/div&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;AXP.OS comes with its &lt;em&gt;own&lt;/em&gt; recovery so if you flash a &lt;strong&gt;custom&lt;/strong&gt; recovery it gets overwritten on next update. If you own a device which does not have a dedicated recovery partition &lt;em&gt;(like most modern devices)&lt;/em&gt; flashing a custom recovery like TWRP will also remove Magisk on AXP.OS - &lt;em&gt;Pro&lt;/em&gt; and the ability to re-lock the bootloader.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>Recovery Images</title><link>https://axpos.org/docs/guides/installation/recoveries/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/installation/recoveries/</guid><description>
+&lt;p&gt;AXP.OS comes with a restricted and limited recovery which ensures no one can tamper with your device (as far as possible - as the bootloader cannot be locked on every device).&lt;/p&gt;
+&lt;h2&gt;Official AXP.OS recovery&lt;span class="hx:absolute hx:-mt-20" id="official-axpos-recovery"&gt;&lt;/span&gt;
+&lt;a href="#official-axpos-recovery" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The recommended way to install AXP.OS when you come from any OS including STOCK or when switching between &lt;a href="https://axpos.org/Flavors"&gt;Flavors&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That being said there is one &lt;strong&gt;exception&lt;/strong&gt; to this rule:&lt;br/&gt;
+If there is a factory image available (e.g. any Google Pixel device) it is required to flash the factory image via &lt;em&gt;&lt;strong&gt;fastboot&lt;/strong&gt;&lt;/em&gt; (see the installation guide for your device!) for the very first flash. If you switch between &lt;a href="https://axpos.org/Flavors"&gt;Flavors&lt;/a&gt; you can safely use the recovery instead as they share the same firmware.&lt;/p&gt;
+&lt;p&gt;Official AXP.OS recovery images can be found in the subdirectory named &lt;code&gt;recovery/&lt;/code&gt; of each device&amp;rsquo;s download path.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pro: &lt;a href="https://download.axpos.org/axp/"target="_blank" rel="noopener"&gt;https://download.axpos.org/axp/&lt;/a&gt; (&lt;a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp/"target="_blank" rel="noopener"&gt;tor&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Slim: &lt;a href="https://download.axpos.org/axp-slim/"target="_blank" rel="noopener"&gt;https://download.axpos.org/axp-slim/&lt;/a&gt; (&lt;a href="http://e3tx35xwvqoihx36tjmnzurjcghs6kjwrwnen55jg7ujqilbaicutpid.onion:8008/axp-slim/"target="_blank" rel="noopener"&gt;tor&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Flashing the recovery image depends on the device but is usually made in fastboot mode:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;fastboot flash recovery AXP.OS-18.1-20250124-RECOVERY-klte.img&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;or if there is no dedicated recovery partition:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;fastboot flash boot AXP.OS-18.1-20250124-BOOT-fajita.img&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Custom recovery&lt;span class="hx:absolute hx:-mt-20" id="custom-recovery"&gt;&lt;/span&gt;
+&lt;a href="#custom-recovery" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;AXP.OS provides OTA (Over The Air) updates which are signed with the releasekey to allow verifying the integrity of an update.
+That means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;when the Updater downloaded a new build it verifies the signature and fails if it is compromised&lt;/li&gt;
+&lt;li&gt;when the AXP.OS recovery loads an update via ADB sideload it verifies the signature and fails if it is compromised&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Read here how and where to find those keys: &lt;a href="https://axpos.org/docs/knowledge/signatures/#build-signatures"&gt;build-signatures&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Note&lt;span class="hx:absolute hx:-mt-20" id="note"&gt;&lt;/span&gt;
+&lt;a href="#note" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;em&gt;AXP.OS comes with its &lt;strong&gt;own&lt;/strong&gt; recovery so if you flash a custom recovery it might gets overwritten on next update (does not apply to devices having a dedicated recovery partition AND when they opt-out from updating the recovery)! Even worse if you own a device which does not have a dedicated recovery partition (e.g. the OnePlus 6T) flashing TWRP will remove Magisk and last but not least in a worst case scenario it can even brick your device if your booloader is locked.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;TWRP&lt;span class="hx:absolute hx:-mt-20" id="twrp"&gt;&lt;/span&gt;
+&lt;a href="#twrp" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Sometimes it is required to boot into a more advanced recovery and while not supported you can check my own TWRP builds or the latest official ones:&lt;/p&gt;
+&lt;h4&gt;Official TWRP builds&lt;span class="hx:absolute hx:-mt-20" id="official-twrp-builds"&gt;&lt;/span&gt;
+&lt;a href="#official-twrp-builds" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;em&gt;(often older and well - official)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Main page: &lt;a href="https://twrp.me/Devices/"target="_blank" rel="noopener"&gt;all devices&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LG G4 (h815,h815_usu, &amp;hellip;) &lt;a href="https://twrp.me/lg/lgg4.html"target="_blank" rel="noopener"&gt;(download)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Oneplus 6T &lt;a href="https://twrp.me/oneplus/oneplus6t.html"target="_blank" rel="noopener"&gt;(download)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Oneplus 7T &lt;a href="https://twrp.me/oneplus/oneplus7t.html"target="_blank" rel="noopener"&gt;(download)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Oneplus 7T pro &lt;a href="https://twrp.me/oneplus/oneplus7tpro.html"target="_blank" rel="noopener"&gt;(download)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Unofficial TWRP builds&lt;span class="hx:absolute hx:-mt-20" id="unofficial-twrp-builds"&gt;&lt;/span&gt;
+&lt;a href="#unofficial-twrp-builds" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;em&gt;(often newer, more features, often more bugfixes - but unofficial)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Main page: &lt;a href="https://download.axpos.org/TWRP/"target="_blank" rel="noopener"&gt;all devices&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LG G4 (h815,h815_usu, &amp;hellip;)
+&lt;a href="https://download.axpos.org/TWRP/g4/" target="_blank" rel="noopener noreferrer"&gt;(download)&lt;/a&gt;
+known issues + source: &lt;a href="https://xdaforums.com/t/recovery-official-f500-ls991-h81x-us991-vs986-n-o-p-twrp-2020-06-22.3442424/"target="_blank" rel="noopener"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Oneplus 6T
+&lt;a href="https://download.axpos.org/TWRP/fajita/" target="_blank" rel="noopener noreferrer"&gt;(download)&lt;/a&gt;
+known issues + source: &lt;a href="https://github.com/AXP-OS/android_device_oneplus_fajita/blob/twrp-a12"target="_blank" rel="noopener"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Oneplus 7T pro
+&lt;a href="https://download.axpos.org/TWRP/hotdog/" target="_blank" rel="noopener noreferrer"&gt;(download)&lt;/a&gt;
+known issues + source: &lt;a href="https://github.com/AXP-OS/android_device_oneplus_hotdog/tree/twrp-a12"target="_blank" rel="noopener"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Samsung J5 2017
+&lt;a href="https://download.axpos.org/TWRP/j5y17lte/" target="_blank" rel="noopener noreferrer"&gt;(download)&lt;/a&gt;
+known issues + source: &lt;a href="https://github.com/AXP-OS/device_samsung_j5y17lte/tree/android-10.0_twrp"target="_blank" rel="noopener"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sony Xperia XZ2 Compact &lt;a href="https://www.dhsfileserver.de/ftp/MartinX3/Xperia%20XZ2%20Compact/android_11/twrp/sodp/"target="_blank" rel="noopener"&gt;(download)&lt;/a&gt; known issues + source: &lt;a href="https://xdaforums.com/t/recovery-android-10-11-stock-sodp-xz2-c-p-3-twrp-3-4-0-0-unofficial.4074305/"target="_blank" rel="noopener"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Usage (official TWRP or not)&lt;span class="hx:absolute hx:-mt-20" id="usage-official-twrp-or-not"&gt;&lt;/span&gt;
+&lt;a href="#usage-official-twrp-or-not" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;fastboot boot twrp.img&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;or if that fails:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;fastboot flash recovery twrp.img
+fastboot reboot-recovery # or use the key combo for your device&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

@@ -1,0 +1,335 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The AXP.OS Project – Copy Snippets</title><link>https://axpos.org/docs/developer/copysnippets/</link><description>Recent content in Copy Snippets on The AXP.OS Project</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://axpos.org/docs/developer/copysnippets/index.xml" rel="self" type="application/rss+xml"/><item><title>Request: accepted</title><link>https://axpos.org/docs/developer/copysnippets/issue_accept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/developer/copysnippets/issue_accept/</guid><description>
+&lt;h2&gt;AXP.OS accepted info&lt;span class="hx:absolute hx:-mt-20" id="axpos-accepted-info"&gt;&lt;/span&gt;
+&lt;a href="#axpos-accepted-info" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;## current implementation STATE of this device request
+:tada: **Congratulations!**
+Your device request has been accepted after an initial (rough) check. This means that the standard process for introducing this device into AXP.OS will now begin. The following overview shows the current STATUS. Please avoid asking for any ETA&amp;#39;s (Estimated Time of Arrival).
+_Please note: Even if this does not happen often, it may turn out during this process that a device CANNOT be included after all. This may be for technical reasons, but may also be due to a lack of co-operation on the part of the requester._
+---
+**This is a status page for information purposes only and will be updated by the AXP.OS team on an ongoing basis.**
+**NO action is required on your part until you are explicitly requested to do so.**
+---
+- [ ] setup [AXP.OS manifest](https://github.com/AXP-OS/manifest)
+- [ ] setup [vendor/firmware](https://code.binbash.rocks/AXP.OS/vendor_firmware)
+- [ ] setup [automation repo](https://github.com/sfX-android/automation_scripts/tree/ansible/roles/axp)
+- [ ] setup semaphore
+- [ ] build
+- add/update device guide on [the AXP.OS website](https://code.binbash.rocks/AXP.OS/axpos-org)
+- [ ] add [params](https://code.binbash.rocks/AXP.OS/axpos-org/src/branch/hugo/params)
+- [ ] add [bootloader id](https://code.binbash.rocks/AXP.OS/axpos-org/src/branch/hugo/content/devices)
+- [ ] upload [signing keys](https://github.com/sfX-android/update_verifier)
+- [ ] provide a public UNSTABLE version
+- [ ] validating test results of all AXP.OS [core features](https://axpos.org/Features)
+- [ ] release to STABLE channel
+- [ ] announce on XDA&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;AXP.OS test build info&lt;span class="hx:absolute hx:-mt-20" id="axpos-test-build-info"&gt;&lt;/span&gt;
+&lt;a href="#axpos-test-build-info" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;bring-up&lt;span class="hx:absolute hx:-mt-20" id="bring-up"&gt;&lt;/span&gt;
+&lt;a href="#bring-up" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;A test build has been released :tada: !
+Check it out here:
+- [download](https://download.axpos.org/axp-unstable/)
+Installation guide:
+- [here](https://axpos.org/devices/xxxx/yyyy/)
+## YOUR feedback is required:
+1. copy the following snippet: [Quality Control Checklist](https://axpos.org/docs/developer/copysnippets/test_community/#axpos-quality-control-checklist)
+2. add a new comment with that snippet as content
+3. save it
+4. go through the list and tick each item you have tested
+when having any questions pls just ask in the [Matrix Bring-Up room](https://axpos.org/docs/overview/#support)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;MR upgrade&lt;span class="hx:absolute hx:-mt-20" id="mr-upgrade"&gt;&lt;/span&gt;
+&lt;a href="#mr-upgrade" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;A test build has been released :tada: !
+Check it out here:
+- [download](https://download.axpos.org/axp-unstable/)
+Upgrade guide:
+- [here](https://axpos.org/MRU)
+**_note: a factory reset is mandatory so ensure you have a current backup before doing anything else!_**
+## YOUR feedback is required:
+1. copy the following snippet: [Quality Control Checklist](https://axpos.org/docs/developer/copysnippets/test_community/#axpos-quality-control-checklist)
+2. add a new comment with that snippet as content
+3. save it
+4. go through the list and tick each item you have tested
+when having any questions pls just ask in the [Matrix Bring-Up room](https://axpos.org/docs/overview/#support)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Troubleshooting notes&lt;span class="hx:absolute hx:-mt-20" id="troubleshooting-notes"&gt;&lt;/span&gt;
+&lt;a href="#troubleshooting-notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;if kernel defconfig can&amp;rsquo;t be found: add it manually to &lt;a href="https://github.com/AXP-OS/build/blob/a1508ef817cded844cb984131e0868b2cbc84801/Scripts/Common/Functions.sh#L873"target="_blank" rel="noopener"&gt;getDefconfig&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;if it does not &lt;em&gt;compile&lt;/em&gt;: follow &lt;a href="https://axpos.org/docs/developer/port/#generate--test-kernel-patches"target="_blank" rel="noopener"&gt;generate &amp;amp; test kernel patches&lt;/a&gt; and add exceptions to &lt;a href="https://github.com/AXP-OS/build/blob/axp/Scripts/Common/Fix_CVE_Patchers.sh"target="_blank" rel="noopener"&gt;Fix_CVE_Patchers.sh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;if it does not &lt;em&gt;boot&lt;/em&gt;: overwrite the device default CONFIG (e.g. like &lt;a href="https://github.com/sfX-android/automation_scripts/blob/d20f7dce494c72e956eb4e7efde2c0705cb969b3/roles/axp/common/templates/divested.vars.j5y17lte.j2#L13C8-L13C28"target="_blank" rel="noopener"&gt;this&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Test: community</title><link>https://axpos.org/docs/developer/copysnippets/test_community/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/developer/copysnippets/test_community/</guid><description>
+&lt;h2&gt;AXP.OS Quality Control Checklist&lt;span class="hx:absolute hx:-mt-20" id="axpos-quality-control-checklist"&gt;&lt;/span&gt;
+&lt;a href="#axpos-quality-control-checklist" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;div class="hx:select-none hx:text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"&gt;💡&lt;/div&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;em&gt;A community based set of helper scripts exists, huge thanks to @SerYo who maintains these. Use at your own risk 😏 &amp;ndash;&amp;gt; &lt;a href="https://code.binbash.rocks/SerYo/AXP-OS-bash-utilities"target="_blank" rel="noopener"&gt;Test Helper Scripts&lt;/a&gt;&lt;/em&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;`copytemplate: v1.14`
+_Note: The use of `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL` is per the IETF standard defined in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)._
+## Device
+- codename: FILL_IN_THE_CODENAME
+- flavor: FILL_IN_THE_FLAVOR
+## AXP.OS - Core features
+_Major tests which MUST succeed for any flavor_
+- [ ] **AXP.OS [build id](https://axpos.org/docs/knowledge/faq/#meaning-of-the-axpos-build-id)** shown in **recovery** _(reboot to recovery, check if you see e.g. `Version xxx (2026.001)`, in this example `2026.001` would be the expected build id which should match the issue tracker&amp;#39;s title)_
+- [ ] **current ASB patch - System** (`Android Settings -&amp;gt; Info/About Phone -&amp;gt; Android Version (touch it to open)` must be [on expected version](https://axpos.org/Changelog))
+- [ ] **current ASB patch - Kernel** (`Android Settings -&amp;gt; Info/About Phone -&amp;gt; Android Version (touch it to open) -&amp;gt; Kernel version -&amp;gt; build date` must be current. Kernel version must have `-pXXX` inside the version string)
+- [ ] paste a **screenshot** of the Android version screen (`Android Settings -&amp;gt; Info/About Phone -&amp;gt; Android Version (touch it to open)`. `AXP.OS version, Android security update, Kernel version`, all must be visible)
+- [ ] **SELinux enforced** (`Android Settings -&amp;gt; Privacy -&amp;gt; Trust`)
+- [ ] **Encryption is auto-enabled** (`Android Settings -&amp;gt; Privacy -&amp;gt; Trust`) _SKIP if your device has [autoencryption disabled (click to find out)](https://github.com/search?q=repo%3AsfX-android%2Fautomation_scripts&amp;#43;%22axp_auto_encrypt%3A&amp;#43;False%22&amp;#43;NOT&amp;#43;path%3A%22roles%2Faxp%2Fcommon%22&amp;amp;type=code)_
+- [ ] **signature spoofing support** (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
+- [ ] **F-Droid** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] **OpenEUICC** app included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags) - for devices supporting euicc ([Enable eSIM](https://axpos.org/docs/knowledge/faq/#esim-management-if-supported-by-device)) _(enabling is required only on =&amp;lt; A13. If you are on &amp;gt;= A14 and your device supports eSIMs, you should find the OpenEUICC without any extra steps in the app drawer)_
+- [ ] **Aurora Store** App included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] **AOSmium WebView** installed (`Developer Options -&amp;gt; WebView implementation` -&amp;gt; verify it is selected)
+- [ ] and on [expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- **AOSmium WebView** quick test: `F-Droid -&amp;gt; search &amp;amp; install &amp;#34;CanIWebView&amp;#34;` ([link](https://f-droid.org/packages/com.caniwebview.android))
+- [ ] scroll to the bottom to see the WebView details
+- [ ] enter any url and press &amp;#34;Load&amp;#34; to test it
+- [ ] **OTA update** (`Android Settings -&amp;gt; Updater -&amp;gt; 3dots -&amp;gt; Preferences -&amp;gt; Server Choice -&amp;gt; &amp;#34;UNSTABLE&amp;#34;`):
+- [ ] shows up the next/current version
+- Testing the OTA update process _(requires Internet)_:
+- [ ] flashing from the previous version to the latest unstable was successful _(why: this test checks if the OTA process is not broken in the previous stable)_
+- [ ] re-flash the latest unstable from that same latest unstable again was successful _(why: this test checks if the OTA process is not broken in the latest unstable)_
+- **Developer options**:
+- [ ] _Non-Fairphone_: `OEM unlock` option is **NOT** shown in developer options
+- [ ] _Fairphone_: `OEM unlock` option **IS** shown in developer options
+- **Call recording option**: follow the [guide](https://axpos.org/r) to find &amp;amp; enable it
+- [ ] it must be possible to set &amp;amp; unset the toggle (`enable it -&amp;gt; move out of developer screen -&amp;gt; and open it again`: _is the toggle still enabled? if so, then you can toggle it off again and tick the box: ✅_ )
+- [ ] if possible: test the call recording
+- **locking the bootloader**: on supported devices (see the [device page](https://axpos.org/devices))
+- [ ] re-lock the device or ensure it still boots when in locked state
+- [ ] verify the bootloader ID (string on startup) matches with your device [device](https://axpos.org/devices)
+_HINT: LEAVE UNCHECKED only if the ID does NOT match!_
+***If your device does not show any ID at all: SET(!) the check mark!***
+- **Verified Boot**: check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
+- connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
+- [ ] enter: `grep dm- /proc/mounts | grep -E &amp;#34; /(system|system_ext|product|vendor|odm) &amp;#34;` _(the spaces at start and end are important!)_
+- [ ] output added to the bottom of this checklist
+- [ ] enter: `getprop | grep verity`
+- [ ] output added to the bottom of this checklist
+### AXP.OS - Pro tests
+_Secondary tests which MUST succeed when the flavor you are testing is: Pro_
+- [ ] **Pre-rooted** (`Magisk App -&amp;gt; &amp;#34;Magisk&amp;#34; must be shown as &amp;#34;installed&amp;#34;`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] **microG included** (`microG Settings -&amp;gt; Selftest -&amp;gt; ensure all* checkboxes are ticked`) and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- _*note: `Permission to interact with work profile` will not be auto-selected and can be ticked only if there **is** a work profile actually. if you do not have any work profile simply ignore._
+- [ ] current **[Google Play Store](https://github.com/AXP-OS/microg-phonesky-iap-support/releases)** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- [ ] Home **Launcher Neo Launcher** included and [on expected version](https://code.binbash.rocks/AXP.OS/axp_versioning/tags)
+- **F-Droid**: extended list of **F-Droid repositories**
+- step1: `long press F-Droid icon -&amp;gt; App info -&amp;gt; Storage and cache -&amp;gt; Clear storage`
+- step2: `F-Droid App -&amp;gt; Settings -&amp;gt; Repositories` and check:
+- [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
+- [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, IronFox (since July25)`
+- [ ] enable all disabled repos: no error should occur
+- **boot debug** log existence:
+- connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):&amp;lt;br/&amp;gt;
+- enter: `su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug` _(you can find the definition of `[DEVICE-BOOT-DEBUG-PATH]` in the [install guide](https://axpos.org/devices))_
+- [ ] output added to the bottom of this checklist
+- **Verified Boot**: addtional check if verity is enabled (if your device supports _Verified Boot_, (see the [device page](https://axpos.org/devices))
+- connect via ADB (`adb shell`) or open a terminal emulator (e.g. [termux](https://f-droid.org/de/packages/com.termux/)):
+- enter: `su -c dmctl info system-verity`
+- [ ] output added to the bottom of this checklist
+- enter: `su -c dmctl info vendor-verity`
+- [ ] output added to the bottom of this checklist
+- enter: `su -c cat /proc/cmdline`
+- [ ] output added to the bottom of this checklist
+_Secondary tests which SHOULD succeed when the flavor you are testing is: Pro_
+- [ ] **WireGuard VPN Kernel module** (Install [Wireguard](https://download.wireguard.com/android-client/) or [WG Tunnel](https://f-droid.org/packages/com.zaneschepke.wireguardautotunnel/). `Wireguard App -&amp;gt; grant root -&amp;gt; enable kernel support in settings`. `WG Tunnel -&amp;gt; Settings &amp;gt; App Mode &amp;gt; Kernel -&amp;gt; grant root`)
+### AXP.OS - Slim tests
+_Secondary tests which MUST succeed when the flavor you are testing is: Slim_
+- **F-Droid**: extended list of **F-Droid repositories**
+- step1: `long press F-Droid icon -&amp;gt; App info -&amp;gt; Storage and cache -&amp;gt; Clear storage`
+- step2: `F-Droid App -&amp;gt; Settings -&amp;gt; Repositories` and check:
+- [ ] _enabled:_ `F-Droid, AXP.OS - Stable`
+- [ ] _disabled:_ `AXP.OS - Cutting Edge, Molly, Molly FOSS, nailyk, Threema, FUTO, Cromite, IzzyOnDroid, microG, IronFox (since July25)`
+- [ ] enable all disabled repos: no error should occur
+_Secondary tests which SHOULD succeed when the flavor you are testing is: Slim_
+- **microG FULL install test** (microG is NOT included within Slim builds but its usage has been prepared)&amp;lt;br/&amp;gt;
+***WARNING: ONLY IF YOUR BOOTLOADER IS STILL `UNLOCKED` - SKIP TO &amp;#34;minimal test&amp;#34; IF YOUR BOOTLOADER IS `LOCKED`!***
+- [ ] _if bootloader unlocked:_ Install [microG](https://github.com/microg/GmsCore/wiki/Installation) &amp;#43; and its Companion App (enable `microG` F-Droid repo)
+- [ ] signature spoofing support (see Enable [Google Support](https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support))
+- `microG Settings -&amp;gt; Selftest:`
+- [ ] Signature spoofing support _(tick it once, it must be enabled after that)_
+- [ ] Topic _Installed packages_ should have all items enabled
+- **microG MINIMAL test** _(no install required)_.&amp;lt;br/&amp;gt;For those _NOT_ wanting to install microG or ***if your bootloader is locked***:
+- [ ] check if signature spoofing support is available (`enable it -&amp;gt; move out of developer screen -&amp;gt; and open it again`: _is the toggle still enabled? if so, then you can toggle it off again and tick the box: ✅_ )
+## AXP.OS - Core functionality
+_Tests which SHOULD succeed for any flavor_
+_These tests are for critical parts of the system_
+- [ ] **Wi-Fi Connectivity**: Ensure the device can connect to Wi-Fi networks.
+- [ ] **Bluetooth and Bluetooth Audio**: Verify Bluetooth functionality and audio transmission.
+- [ ] **Mobile Network and Data**: Confirm that the device can connect to mobile networks and use data services.
+- [ ] **Airplane Mode**: Test the functionality of airplane mode.
+- [ ] **Call Functionality**: Check speaker and microphone functions during calls.
+- [ ] **Accelerometer and Step Counter**: Ensure the device can accurately track movement and steps.
+- [ ] **Front and Back Cameras**: Test the cameras for proper image and video capture, including flash and zoom features.
+- [ ] **Speaker Functionality**: Confirm that the device plays ringtone and alarm sounds correctly.
+- [ ] **Battery Usage**: Ensure the battery lasts more than two hours under normal use.
+- [ ] **Battery Saver Modes**: Test for effectiveness.
+- [ ] **Battery Health Status**: Check the battery&amp;#39;s health status.
+- [ ] **Internal Storage Accessibility**: Ensure you can access and manage internal storage.
+- [ ] **GPS and Location Services**: successfully acquire a GPS lock (can take up to 10min, must be tried outside, e.g. using [Organic Maps](https://f-droid.org/de/packages/app.organicmaps/))
+- [ ] **USB OTG Support**: Test USB On-The-Go functionality.
+- [ ] **SIM Card Detection**: Verify that the device can detect and use SIM cards.
+- [ ] **SMS and MMS**: Test sending and receiving SMS and MMS messages.
+- [ ] **Fingerprint Scanner (if applicable)**: Test fingerprint scanner functionality.
+- [ ] **Screen Rotation**: Ensure the screen rotates properly in different orientations.
+- [ ] **Vibration Motor**: Check the vibration motor for proper functionality.
+- [ ] **System Stability**: Monitor the system for crashes, freezes, or other stability issues.
+- [ ] **ADB and Fastboot**: Verify ADB and Fastboot commands work.
+- [ ] **App install test**: F-Droid, Aurora Store, Play Store (_Pro_ only)
+## Additional tests
+_Tests which MAY succeed for any flavor_
+_These tests are either not too critical or are primarily intended for overall system stability_
+- [ ] **Flashlight (if applicable)**: Test the flashlight (torch) function.
+- [ ] **Touchscreen Responsiveness**: Test the responsiveness of the touchscreen.
+- [ ] **Face Unlock (if applicable)**: Verify face unlock functionality.
+- [ ] **NFC (if applicable)**: Ensure Near Field Communication (NFC) works as expected.
+- [ ] **Headphone Jack (if applicable)**: Test audio output through the headphone jack.
+- [ ] **RAM Management and CPU Performance**: Test RAM management and CPU performance using benchmarks.
+- [ ] **Gestures and Motion Controls**: Test gesture and motion control features.
+- [ ] **Screen Lock Functionality**: Verify face unlock and fingerprint unlock functions.
+- [ ] **Settings Review**: Check all settings for any anomalies.
+- [ ] **Do Not Disturb and Notification Settings**: Ensure these settings work as expected.
+- [ ] **VPN and DNS Support**: Test the functionality of VPN and DNS settings.
+- [ ] **App Permissions**: Verify that app permissions are working correctly.
+- [ ] **Screen Shot**: Ensure the screenshot function works.
+- [ ] **Battery Stats and Usage**: Review battery stats and usage patterns.
+- [ ] **Language and Region Settings**: Ensure language and region settings are applied correctly.
+## Tester feedback / command outputs
+### free form
+_This is a space for comments by the tester, remarks, notable changes and any other report about the result which might be useful._&amp;lt;br/&amp;gt;
+_Especially if a test does not succeed, report here what happened (not in the above checklist)._
+...
+### command results
+##### Pro/Slim: `grep dm- /proc/mounts | grep -E &amp;#34; /(system|system_ext|product|vendor|odm) &amp;#34;`
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `&amp;lt; &amp;gt;` (&amp;#34;Add code&amp;#34;) in the format menu above_
+...
+##### Pro/Slim: `getprop | grep verity`
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `&amp;lt; &amp;gt;` (&amp;#34;Add code&amp;#34;) in the format menu above_
+...
+##### Pro: `su -c ls -la [DEVICE-BOOT-DEBUG-PATH]/boot_debug`
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `&amp;lt; &amp;gt;` (&amp;#34;Add code&amp;#34;) in the format menu above_
+...
+##### Pro: `su -c dmctl info system-verity`
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `&amp;lt; &amp;gt;` (&amp;#34;Add code&amp;#34;) in the format menu above_
+...
+##### Pro: `su -c dmctl info vendor-verity`
+_paste the result here, then mark the WHOLE TEXT BLOCK (REALLY ALL, NOT JUST A SINGLE LINE!), then click the symbol `&amp;lt; &amp;gt;` (&amp;#34;Add code&amp;#34;) in the format menu above_
+...
+##### Pro: `su -c cat /proc/cmdline`
+_paste the result here, then mark the whole text block and click the symbol `&amp;lt; &amp;gt;` (&amp;#34;Add code&amp;#34;) in the format menu above_
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Base for the above checklist: &lt;a href="https://github.com/LineageOS/charter/blob/main/device-support-requirements.md"target="_blank" rel="noopener"&gt;LineageOS Device Requirements&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Howto use the QA checklist&lt;span class="hx:absolute hx:-mt-20" id="howto-use-the-qa-checklist"&gt;&lt;/span&gt;
+&lt;a href="#howto-use-the-qa-checklist" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BS8kweB2s58?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description></item><item><title>XDA Post</title><link>https://axpos.org/docs/developer/copysnippets/xda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/developer/copysnippets/xda/</guid><description>
+&lt;h2&gt;Title&lt;span class="hx:absolute hx:-mt-20" id="title"&gt;&lt;/span&gt;
+&lt;a href="#title" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;[OS][A-xxxAOS-VERxxx][OFFICIAL][microG][hardened][xxxCODENAMExxx] AXP.OS xxxLOS-VERxxx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Post&lt;span class="hx:absolute hx:-mt-20" id="post"&gt;&lt;/span&gt;
+&lt;a href="#post" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;[HEADING=1][CENTER][IMG]https://avatars.githubusercontent.com/u/139685517?s=200&amp;amp;v=4[/IMG][/CENTER][/HEADING]
+[HEADING=1][CENTER]AXP.OS (short for &amp;#34;Advanced XPerience OS&amp;#34;)[/CENTER][/HEADING]
+[HEADING=2][CENTER]is a more private and secure mobile operating system that is based on AOSP &amp;amp; LineageOS and has emerged from the well-known but discontinued [I]DivestOS[/I] project.[/CENTER][/HEADING]
+[CENTER]
+In particular AXP.OS aims to support devices that would otherwise no longer receive any (Android/Kernel) updates and are therefore easily vulnerable.
+All this is based on a best-effort principle, also because outdated devices no longer receive updates for proprietary firmware and are therefore insecure by definition.
+AXP.OS at least [I]tries[/I] to close all the gaps that are possible.
+In addition to this main goal, this project attempts to strike a balance between a
+[B]privacy and
+security-oriented[/B]
+yet [B]usable[/B]
+operating system - not least for [I]advanced[/I] users.
+Read all about [B]AXP.OS[/B] on its [URL=&amp;#39;https://axpos.org&amp;#39;]homepage[/URL]
+[/CENTER]
+[HEADING=1][CENTER][B]Installation Guide &amp;amp; Download:[/B] [URL=&amp;#39;https://axpos.org/devices/xxxVENDORxxx/xxxCODENAMExxx&amp;#39;]here[/URL][/CENTER][/HEADING]
+[HEADING=2][CENTER]if you skip reading the guide ^^^ you WILL fail[/CENTER][/HEADING]
+[HEADING=1][CENTER][/CENTER][/HEADING]
+[HEADING=1][CENTER]Support:[/CENTER][/HEADING]
+[HEADING=2][CENTER]via this thread and [URL=&amp;#39;https://axpos.org/docs/overview/#support&amp;#39;]here[/URL][/CENTER][/HEADING]
+[HEADING=2][B]Sources[/B][/HEADING]
+- LineageOS [URL=&amp;#39;https://github.com/LineageOS/android/tree/lineage-xxxLOS-VERxxx&amp;#39;]manifest[/URL]
+- AXP.OS [URL=&amp;#39;https://git.disroot.org/AXP.OS/manifest/src/branch/axp-axxxAOS-VERxxx/axp.xml&amp;#39;]manifest[/URL] (extends the LOS one, including the related related [B]kernel[/B] [URL=&amp;#39;https://git.disroot.org/AXP.OS/xxxKERNELREPOxxx&amp;#39;]source[/URL])
+- Note: AXP.OS is one of the few projects that offer full [URL=&amp;#39;https://axpos.org/docs/knowledge/reproducible/&amp;#39;]reproducible builds[/URL].
+[HEADING=2]Credits[/HEADING]
+- See [URL=&amp;#39;https://axpos.org/docs/credits/&amp;#39;]here[/URL]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Tags&lt;span class="hx:absolute hx:-mt-20" id="tags"&gt;&lt;/span&gt;
+&lt;a href="#tags" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;axp, axp.os, hardened, magisk, microg, root,&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

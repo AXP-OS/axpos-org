@@ -1,0 +1,631 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The AXP.OS Project – User Guides</title><link>https://axpos.org/docs/guides/</link><description>Recent content in User Guides on The AXP.OS Project</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://axpos.org/docs/guides/index.xml" rel="self" type="application/rss+xml"/><item><title>Firmware</title><link>https://axpos.org/docs/guides/firmware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/firmware/</guid><description>
+&lt;p&gt;Check the menu for device specific firmware guides.&lt;/p&gt;</description></item><item><title>Installation</title><link>https://axpos.org/docs/guides/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/installation/</guid><description/></item><item><title>Setup</title><link>https://axpos.org/docs/guides/setup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/setup/</guid><description>
+&lt;p&gt;Check the menu ;)&lt;/p&gt;</description></item><item><title>Updating</title><link>https://axpos.org/docs/guides/updating/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/updating/</guid><description>
+&lt;p&gt;Choose your preferred method for updating on the left.&lt;/p&gt;
+&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
+&lt;p class="hx:flex hx:items-center hx:font-medium"&gt;&lt;svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/&gt;&lt;/svg&gt;Tip&lt;/p&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Always prefer the &amp;ldquo;Automatic&amp;rdquo; one whenever possible&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>Backup &amp; Restore</title><link>https://axpos.org/docs/guides/backuprestore/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/backuprestore/</guid><description>
+&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;p class="hx:flex hx:items-center hx:font-medium"&gt;&lt;svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/&gt;&lt;/svg&gt;Caution&lt;/p&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;This guide is marked as outdated and requires a re-work&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;SeedVault is not recommended anymore&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;does not backport features nor bugfixes to older Android versions&lt;/li&gt;
+&lt;li&gt;had many backup issues&lt;/li&gt;
+&lt;li&gt;had many restore issues&lt;/li&gt;
+&lt;li&gt;misses important features like clean-up etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Recommended: &lt;code&gt;root + NeoBackup [+ RoundSync for remote-backups]&lt;/code&gt;&lt;/p&gt;
+&lt;h1&gt;About&lt;/h1&gt;&lt;p&gt;AXP.OS comes with the current OpenSource standard backup application &lt;a href="https://github.com/seedvault-app/seedvault"target="_blank" rel="noopener"&gt;SeedVault&lt;/a&gt;. It uses internal Android APIs to backup and restore your data and does not require root at all (while root is available in AXP.OS of course).&lt;/p&gt;
+&lt;p&gt;You can backup your &amp;ldquo;normal&amp;rdquo; profile but SeedVault supports working profiles as well (e.g. when using Insular or Shelter to isolate apps). Choose whatever you like most, using &lt;code&gt;USB flash drive&lt;/code&gt; is the easiest and fastest method.&lt;/p&gt;
+&lt;h2&gt;Limitations&lt;span class="hx:absolute hx:-mt-20" id="limitations"&gt;&lt;/span&gt;
+&lt;a href="#limitations" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Please note that SeedVault will not backup &lt;strong&gt;all&lt;/strong&gt; app&amp;rsquo;s &lt;strong&gt;&lt;em&gt;data&lt;/em&gt;&lt;/strong&gt;. An app developer can decide if its app data is allowed to be included in a backup or not. This is nothing we can change! Request allowing data backup by the App dev.. or proceed with this guide and overcome these limitations by using a 2-step method.&lt;/p&gt;
+&lt;p&gt;SeedVault might overcome these limitations with Android14 as they recently added an &amp;ldquo;hack&amp;rdquo; to backup even those apps data which usually deny doing so (see &lt;a href="https://github.com/seedvault-app/seedvault/pull/562"target="_blank" rel="noopener"&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;h1&gt;Backup&lt;/h1&gt;&lt;h2&gt;Option 1: Easy method (fast + manual)&lt;span class="hx:absolute hx:-mt-20" id="option-1-easy-method-fast--manual"&gt;&lt;/span&gt;
+&lt;a href="#option-1-easy-method-fast--manual" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;in SeedVault (&lt;code&gt;Settings - System - Backup - Choose Backup Provider SeedVault&lt;/code&gt;) choose &lt;code&gt;USB flash drive&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;setup SeedVault as written in the topic: &amp;ldquo;Setup SeedVault / overcoming the limitations&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Manually select &amp;ldquo;Backup Now&amp;rdquo; (3 dots at the top right in SeedVault) at any time you want or keep the USB drive connected over night&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Option 2: Advanced &amp;ldquo;setup-and-forget&amp;rdquo; method (slower + automatic)&lt;span class="hx:absolute hx:-mt-20" id="option-2-advanced-setup-and-forget-method-slower--automatic"&gt;&lt;/span&gt;
+&lt;a href="#option-2-advanced-setup-and-forget-method-slower--automatic" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A more advanced and &amp;ldquo;setup-and-forget&amp;rdquo; method is by using webdav. Unfortunately and due to the way how SeedVault works there are limitations, i.e. it will NOT work with owncloud or nextcloud. Even though it might work sometimes it will fail sooner or later. You can find reports in their issue trackers as well. Besides that I tried all simple webdav alternatives I could find but either there were outdated or incompatible, slow or had security issues.&lt;/p&gt;
+&lt;p&gt;The only reliable way which works for me - while still supported by its devs - seems to be DUFS:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Running &lt;a href="https://github.com/sigoden/dufs"target="_blank" rel="noopener"&gt;DUFS&lt;/a&gt; on your server&lt;/li&gt;
+&lt;li&gt;setup a SSL certificate for DUFS&lt;/li&gt;
+&lt;li&gt;example DUFS config which actually works (separated main + work profile for backup, 1 restore account for both):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;# see: https://github.com/sigoden/dufs
+serve_path: /var/opt/dufs
+bind: &amp;lt;your-pub-IP&amp;gt;
+port: &amp;lt;your-pub-IP-port&amp;gt;
+#path_prefix: /path
+hidden:
+- &amp;#39;*.log&amp;#39;
+auth:
+- &amp;lt;restore-readonly-username&amp;gt;:&amp;lt;a-secure-password&amp;gt;@/
+- &amp;lt;backup-readwrite-username-MAINPROFILE&amp;gt;:&amp;lt;a-secure-password&amp;gt;@/main:rw
+- &amp;lt;backup-readwrite-username-MAINPROFILE&amp;gt;:&amp;lt;a-secure-password&amp;gt;@/work:rw
+auth-method: digest
+allow-all: false
+allow-upload: true
+allow-delete: true
+allow-search: false
+allow-symlink: false
+allow-archive: false
+enable-cors: false
+render-index: false
+render-try-index: false
+render-spa: false
+tls-cert: /etc/dufs/cert.crt
+tls-key: /etc/dufs/key.pem&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ol start="4"&gt;
+&lt;li&gt;install &lt;a href="https://f-droid.org/packages/at.bitfire.davdroid/"target="_blank" rel="noopener"&gt;DAVx5&lt;/a&gt; on your phone&lt;/li&gt;
+&lt;li&gt;configure a webdav mount with the credentials set in &lt;code&gt;DUFS_AUTH&lt;/code&gt; (repeat for your work/insular/shelter profile)&lt;/li&gt;
+&lt;li&gt;setup SeedVault as written in the next topic: &amp;ldquo;Setup SeedVault / overcoming the limitations&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;SeedVault will backup automatically over night&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Setup SeedVault / overcoming the limitations&lt;span class="hx:absolute hx:-mt-20" id="setup-seedvault--overcoming-the-limitations"&gt;&lt;/span&gt;
+&lt;a href="#setup-seedvault--overcoming-the-limitations" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;As written in the &lt;em&gt;Limitations&lt;/em&gt; topic SeedVault will not backup all app&amp;rsquo;s data. Here AXP.OS comes to the rescue as it contains root by default allowing to overcome this. Of course you might want to use a backup tool which can upload backups directly wherever you like but as Titanium is not working reliable anymore these days I use Neo Backup instead. At the moment it does not allow to upload but that&amp;rsquo;s not a problem as we can combine SeedVault with Neo Backup to get the best of both worlds!&lt;/p&gt;
+&lt;p&gt;Here is my current way of backing up my devices:&lt;/p&gt;
+&lt;h3&gt;Main profile&lt;span class="hx:absolute hx:-mt-20" id="main-profile"&gt;&lt;/span&gt;
+&lt;a href="#main-profile" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Note: this will work great for the main profile - for the work/Insular/Shelter profile there is &amp;ldquo;just&amp;rdquo; the SeedVault way - if you want to keep this isolated area root-less.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install &lt;a href="https://f-droid.org/packages/com.machiav3lli.backup/"target="_blank" rel="noopener"&gt;Neo Backup&lt;/a&gt; - requires root (one of the main reasons why Magisk is included in AXP.OS)&lt;/li&gt;
+&lt;li&gt;Schedule your app backups as you like (if selected including the app&amp;rsquo;s data - regardless if that app allowing it or not)&lt;/li&gt;
+&lt;li&gt;Ensure you set in Neo Backup &amp;ldquo;keep max backup count&amp;rdquo; to &lt;code&gt;1&lt;/code&gt; (we do a daily SeedVault backup which will already handle multi versions)&lt;/li&gt;
+&lt;li&gt;In &lt;code&gt;Settings - System - Backup - Choose Backup Provider SeedVault&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Setup DAVx5 with your main profile (must match your &lt;code&gt;DUFS_AUTH&lt;/code&gt; setup)&lt;/li&gt;
+&lt;li&gt;Configure SeedVault:
+&lt;ul&gt;
+&lt;li&gt;deselect &amp;ldquo;Backup my apps&amp;rdquo; completely or select just mandatory ones (keep in mind that you have an app backup from Neo Backup)&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Backup my files&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Included files and folders&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;tap the + button and add the location where you store your NeoBackup backups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;From now on SeedVault will run a backup every night including any changes by Neo Backup (and what else you selected of course)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Work profile (Insular/Shelter)&lt;span class="hx:absolute hx:-mt-20" id="work-profile-insularshelter"&gt;&lt;/span&gt;
+&lt;a href="#work-profile-insularshelter" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Note: if you do &lt;strong&gt;not&lt;/strong&gt; want to keep this isolated area root-less you can configure root and Neo Backup and follow the above &amp;ldquo;Main profile&amp;rdquo; topic instead.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In &lt;code&gt;Settings - System - Backup - Choose Backup Provider SeedVault&lt;/code&gt;:&lt;/li&gt;
+&lt;li&gt;Setup DAVx5 with a different mount then your main profile! (must match your &lt;code&gt;DUFS_AUTH&lt;/code&gt; setup)&lt;/li&gt;
+&lt;li&gt;Configure SeedVault:
+&lt;ul&gt;
+&lt;li&gt;select &amp;ldquo;Backup my apps&amp;rdquo; - choose all or select just mandatory ones (keep in mind that you do NOT have an app backup from Neo Backup)&lt;/li&gt;
+&lt;li&gt;optional: select &amp;ldquo;Backup my files&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;select &amp;ldquo;Included files and folders&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;tap the + button and add any other location you want to backup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;From now on SeedVault will run a backup every night&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Restore&lt;/h1&gt;&lt;h2&gt;by USB flash drive&lt;span class="hx:absolute hx:-mt-20" id="by-usb-flash-drive"&gt;&lt;/span&gt;
+&lt;a href="#by-usb-flash-drive" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Restoring by &lt;code&gt;USB flash drive&lt;/code&gt; is straight forward when re-installing / factory reset your device.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ensure you plugin your USB device&lt;/li&gt;
+&lt;li&gt;When the wizard asks to restore choose &lt;code&gt;USB flash drive&lt;/code&gt; and go through the steps.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;by Webdav (advanced method above)&lt;span class="hx:absolute hx:-mt-20" id="by-webdav-advanced-method-above"&gt;&lt;/span&gt;
+&lt;a href="#by-webdav-advanced-method-above" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When restoring from a webdav location there is a bit more to do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;When the wizard asks to restore choose &lt;code&gt;DAVx5&lt;/code&gt; -&amp;gt; you will be prompted to install -&amp;gt; choose F-Droid here&lt;/li&gt;
+&lt;li&gt;Note: If F-Droid cannot find the app, just retry after some secs as the package db might not be downloaded yet&lt;/li&gt;
+&lt;li&gt;configure your webdav mount with the credentials set in &lt;code&gt;DUFS_AUTH&lt;/code&gt; (repeat for your work/insular/shelter profile)&lt;/li&gt;
+&lt;li&gt;you will be guided through the rest&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;once your data has been restored:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;install Neo Backup again&lt;/li&gt;
+&lt;li&gt;choose what apps to restore&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;after passing the wizard / restoring a work profile&lt;span class="hx:absolute hx:-mt-20" id="after-passing-the-wizard--restoring-a-work-profile"&gt;&lt;/span&gt;
+&lt;a href="#after-passing-the-wizard--restoring-a-work-profile" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SeedVault will show the restore dialog during the initial wizard process only. If you went through the wizard there is no way to bring back the restore window - usually. AXP.OS &lt;a href="https://github.com/LineageOS/android_packages_apps_Seedvault/compare/lineage-20.0...AXP-OS:android_packages_apps_Seedvault:axp-a13"target="_blank" rel="noopener"&gt;fixed that&lt;/a&gt; while it requires ADB to show the restore page.&lt;/p&gt;
+&lt;p&gt;The same applies when restoring a work profile (e.g. created by Insular/Shelter).&lt;/p&gt;
+&lt;p&gt;Bring up the restore dialog at any time:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Enable USB Debugging&lt;/li&gt;
+&lt;li&gt;restore dialog for the &lt;strong&gt;main&lt;/strong&gt; profile:&lt;br/&gt;
+&lt;code&gt;adb shell am start -a com.stevesoltys.seedvault.RESTORE_BACKUP&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;restore dialog for the &lt;strong&gt;work&lt;/strong&gt; profile (note the user is usually 10 but this might be different in your setup):&lt;br/&gt;
+&lt;code&gt;adb shell am start --user 10 -a com.stevesoltys.seedvault.RESTORE_BACKUP&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Disable Google Play Notifications</title><link>https://axpos.org/docs/guides/disableplaynotifies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/disableplaynotifies/</guid><description>
+&lt;p&gt;Google play will try to update the Google Play services which is not possible on a microG enabled device (i.e. AXP.OS or any other OS using microG instead of using the Google implementation).&lt;/p&gt;
+&lt;p&gt;There is no way to &lt;em&gt;disable&lt;/em&gt; these checks other than to deactivate the Play store (or modify the closed source code) whenever not needed but what you can do instead is at least hide the notifications for these failed attempts.&lt;/p&gt;
+&lt;p&gt;find the notification in the drop down:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://github.com/user-attachments/assets/f23b6214-b6b2-45e6-a288-486ba8d511e1" alt="2024-09-16-18-11-06-561_resized" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;looong press the notification:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://github.com/user-attachments/assets/24bcaf07-0270-41f0-a8b1-9b774aad1139" alt="2024-09-16-18-11-16-412_resized" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;press the &lt;code&gt;(i)&lt;/code&gt; or in newer Android versions the gears icon:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://github.com/user-attachments/assets/ca118279-0e1e-4f0d-9bf5-80b9ac6fa77a" alt="2024-09-16-18-11-41-447_resized" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;on some Android version you have to select &amp;ldquo;Notifications&amp;rdquo; there:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://github.com/user-attachments/assets/5b5299d3-5b5d-4dcf-84db-5d113ab4d131" alt="2024-09-16-18-11-59-034_resized" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;you should be redirected to the corresponding notification topic, deselect it and those notifications are gone:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://github.com/user-attachments/assets/f466d619-18f3-49aa-b11f-6966e379c7a4" alt="2024-09-16-18-12-15-986_resized" loading="lazy" /&gt;&lt;/p&gt;</description></item><item><title>Fix stubborn apps</title><link>https://axpos.org/docs/guides/fixstubborn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/fixstubborn/</guid><description>
+&lt;p&gt;Some problems you might encounter are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Google Play Services not installed&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Your app&amp;rsquo;s license check fails&lt;/li&gt;
+&lt;li&gt;Map data of a navigation/map app is not shown (or a map within an app)&lt;/li&gt;
+&lt;li&gt;The app does not behave as it should&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Background&lt;span class="hx:absolute hx:-mt-20" id="background"&gt;&lt;/span&gt;
+&lt;a href="#background" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some apps are quite stubborn when it comes to getting push notifications, showing map data, and/or license checking.
+Some apps known to misbehave are (to name some examples):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Threema&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Google Maps&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Tractive GPS&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Element / Schildi-Chat&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Google Rewards&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;They are not (just) checking if Google Play services is installed, but also checking if the app is &lt;strong&gt;linked&lt;/strong&gt; to the Play Store (i.e. the exact package name &lt;code&gt;com.android.vending&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;For these apps you likely get a warning/popup telling you that they cannot find Google Play services, and/or they simply refuse to work, and/or do not show any map data, or (in the case of Threema/Element/SchildiChat) they activate their own push notification service, instead of using the one provided by Google Play/microG (which may use more battery or work less reliably compared to Google&amp;rsquo;s push service or &lt;a href="https://unifiedpush.org"target="_blank" rel="noopener"&gt;UnifiedPush&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The solution is quite simple: the app &lt;strong&gt;has to&lt;/strong&gt; be linked to the Play Store (i.e. opening app info, &amp;ldquo;App installed from&amp;hellip;&amp;rdquo; should list &amp;ldquo;Google Play Store&amp;rdquo;, and not Aurora or F-Droid for example).&lt;/p&gt;
+&lt;h3&gt;Possible solutions&lt;span class="hx:absolute hx:-mt-20" id="possible-solutions"&gt;&lt;/span&gt;
+&lt;a href="#possible-solutions" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;Pro flavor (or Magisk manually installed)&lt;span class="hx:absolute hx:-mt-20" id="pro-flavor-or-magisk-manually-installed"&gt;&lt;/span&gt;
+&lt;a href="#pro-flavor-or-magisk-manually-installed" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Uninstall the app and install it directly from the Google Play Store&lt;/li&gt;
+&lt;li&gt;Backup the app with &lt;a href="https://f-droid.org/packages/com.machiav3lli.backup/"target="_blank" rel="noopener"&gt;Neo Backup&lt;/a&gt;, then in Neo Backup settings &lt;code&gt;Service -&amp;gt; &amp;quot;The installer package name&amp;quot;&lt;/code&gt; set the name to &lt;code&gt;com.android.vending&lt;/code&gt;, then simply restore the previously backed up app.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once done, check the app info screen again. It should show &amp;ldquo;App installed from Google Play Store&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;If you use e.g. Aurora Store to keep your apps updated, ensure you blacklist these apps there so they do not stop working after an update, or follow the Neo Backup steps above to restore them afterwards.&lt;/p&gt;
+&lt;p&gt;Last but not least, check the relevant topic in the &lt;a href="https://axpos.org/docs/knowledge/faq/#no-gcm-available--google-play-service-required"&gt;AXP.OS FAQ&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Slim flavor&lt;span class="hx:absolute hx:-mt-20" id="slim-flavor"&gt;&lt;/span&gt;
+&lt;a href="#slim-flavor" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Due to the absence of root in the new &lt;em&gt;Slim&lt;/em&gt; flavor, a different solution is in the works (&lt;a href="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/53"target="_blank" rel="noopener"&gt;details&lt;/a&gt;).&lt;/p&gt;
+&lt;h2&gt;Intercepting App installation check&lt;span class="hx:absolute hx:-mt-20" id="intercepting-app-installation-check"&gt;&lt;/span&gt;
+&lt;a href="#intercepting-app-installation-check" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Based on &lt;a href="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues/53"target="_blank" rel="noopener"&gt;#53&lt;/a&gt; an &lt;strong&gt;experimental&lt;/strong&gt; option is available for&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Android 11&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Android 13 (coming soon)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This option has some drawbacks when enabled:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;every app that gets installed will be marked &lt;strong&gt;persistently&lt;/strong&gt; as installed by &lt;code&gt;com.android.vending&lt;/code&gt; which is either &lt;em&gt;Google Play Store&lt;/em&gt; or the &lt;em&gt;microG Companion App&lt;/em&gt; (aka &lt;em&gt;FakeStore&lt;/em&gt;), depending on the AXP.OS flavor&lt;/li&gt;
+&lt;li&gt;a &lt;strong&gt;reboot is required&lt;/strong&gt; to make a newly installed/updated app work (again)&lt;/li&gt;
+&lt;li&gt;as the change is persistent, the only way to &lt;strong&gt;unmark an app as installed from &lt;code&gt;com.android.vending&lt;/code&gt;&lt;/strong&gt; is either using a 3rd party tool which can change the installation source (e.g. Neo Backup on the Pro flavor), or without any 3rd party tools like this:
+&lt;ul&gt;
+&lt;li&gt;uninstall the app&lt;/li&gt;
+&lt;li&gt;disable the installation check toggle in developer options&lt;/li&gt;
+&lt;li&gt;install it again&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Note: changing packages.xml manually requires root/TWRP access and can easily break things up to a phone brick if you are not careful&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;when using microG Companion App / FakeStore: some apps &lt;strong&gt;cause an app crash of the Companion App&lt;/strong&gt;. Just ignoring it is usually enough.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We will continuously look into solving/improving the above and hopefully get a better solution one day.&lt;/p&gt;
+&lt;details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" &gt;
+&lt;summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90"&gt;
+&lt;strong class="hx:text-lg"&gt;Developer hint: App crash of the Companion App&lt;/strong&gt;
+&lt;/summary&gt;
+&lt;div class="hx:p-2 hx:overflow-hidden"&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;E AndroidRuntime: java.lang.RuntimeException: Unable to bind to service com.android.vending.licensing.LicensingService@ca218e4 with Intent { act=com.android.vending.licensing.ILicensingService pkg=com.android.vending }: java.lang.SecurityException: Permission Denial: opening provider org.microg.gms.settings.SettingsProvider from ProcessRecord{621a62a 3113:com.android.vending/u0a94} (pid=3113, uid=10094) requires com.google.android.gms.permission.READ_SETTINGS or com.google.android.gms.permission.WRITE_SETTINGS&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;caused by: &lt;a href="https://github.com/microg/GmsCore/commit/9f4ac5951e534f646d4dee88c401397553d761e6"target="_blank" rel="noopener"&gt;this&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;h3&gt;Enabling installation interception&lt;span class="hx:absolute hx:-mt-20" id="enabling-installation-interception"&gt;&lt;/span&gt;
+&lt;a href="#enabling-installation-interception" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Enable &lt;a href="https://developer.android.com/studio/debug/dev-options#enable"target="_blank" rel="noopener"&gt;Developer Options&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Scroll down to near the bottom and enable &lt;code&gt;Intercept App installation check&lt;/code&gt;&lt;br/&gt;&lt;img src="https://axpos.org/img/guides/app_installsource_intercept.png" alt="app_installsource_intercept" loading="lazy" /&gt;&lt;/li&gt;
+&lt;li&gt;Scroll down and enable &lt;code&gt;Allow signature spoofing&lt;/code&gt; (which is part of the next step, but while you are here, do it now)&lt;/li&gt;
+&lt;li&gt;Fully setup microG: go through the &lt;a href="https://axpos.org/docs/guides/setup/aos/#optional-activate-google-support"target="_blank" rel="noopener"&gt;whole guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Assuming the microG Self-Check has no empty boxes, re-install any problematic apps&lt;/li&gt;
+&lt;li&gt;Reboot(!)&lt;/li&gt;
+&lt;li&gt;Enjoy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;
+&lt;em&gt;keep in mind that any app update will require one reboot after installing.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Grab Logs</title><link>https://axpos.org/docs/guides/grablogs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/grablogs/</guid><description>
+&lt;h1&gt;Application &amp;amp; System logs&lt;/h1&gt;&lt;p&gt;For debugging you need to have &lt;code&gt;adb&lt;/code&gt; up and running. If you have trouble with that consider using the special Android distro &lt;a href="https://maid.binbash.rocks/"target="_blank" rel="noopener"&gt;mAid&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Windows &amp;amp; Linux: Log to a file (recommended way!)&lt;span class="hx:absolute hx:-mt-20" id="windows--linux-log-to-a-file-recommended-way"&gt;&lt;/span&gt;
+&lt;a href="#windows--linux-log-to-a-file-recommended-way" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;specific issue (e.g. app crashes etc)&lt;span class="hx:absolute hx:-mt-20" id="specific-issue-eg-app-crashes-etc"&gt;&lt;/span&gt;
+&lt;a href="#specific-issue-eg-app-crashes-etc" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;type: &lt;code&gt;adb shell&lt;/code&gt; (or just open your favorite terminal app + become root via &lt;code&gt;su&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;logcat -c -b all&lt;/code&gt; (this will print nothing - it will just clear the log buffer)&lt;/li&gt;
+&lt;li&gt;now reproduce the issue. when the issue occurs immediately do this afterwards
+&lt;ul&gt;
+&lt;li&gt;type: &lt;code&gt;logcat -b all -d -D &amp;gt; /sdcard/Download/logcat.txt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;exit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;grab the log:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb pull /sdcard/Download/logcat.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;upload the log, see topic &lt;a href="#share-logs"&gt;Share logs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, &amp;hellip;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;unspecific / general issue&lt;span class="hx:absolute hx:-mt-20" id="unspecific--general-issue"&gt;&lt;/span&gt;
+&lt;a href="#unspecific--general-issue" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;type: &lt;code&gt;adb shell&lt;/code&gt; (or just open your favorite terminal app + become root via &lt;code&gt;su&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;logcat -b all -d -D &amp;gt; /sdcard/Download/logcat.txt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;exit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;grab the log:
+&lt;ul&gt;
+&lt;li&gt;type: &lt;code&gt;adb pull /sdcard/Download/logcat.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;upload the log, see topic &lt;a href="#share-logs"&gt;Share logs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, &amp;hellip;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Alternative: Windows &amp;amp; Linux: Log to terminal window&lt;span class="hx:absolute hx:-mt-20" id="alternative-windows--linux-log-to-terminal-window"&gt;&lt;/span&gt;
+&lt;a href="#alternative-windows--linux-log-to-terminal-window" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;If the recommended way fails for any reason you can also print the logcat output in the terminal window. It&amp;rsquo;s not very funny but might get the things done.&lt;/p&gt;
+&lt;h3&gt;Windows preparation&lt;span class="hx:absolute hx:-mt-20" id="windows-preparation"&gt;&lt;/span&gt;
+&lt;a href="#windows-preparation" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;open a terminal and type:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mode con lines=32766&lt;/code&gt; and ENTER&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This sets the buffer in your terminal to the max possible which is needed due to the log verbosity.&lt;/p&gt;
+&lt;h3&gt;specific issue (e.g. app crashes etc)&lt;span class="hx:absolute hx:-mt-20" id="specific-issue-eg-app-crashes-etc-1"&gt;&lt;/span&gt;
+&lt;a href="#specific-issue-eg-app-crashes-etc-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;type: &lt;code&gt;adb shell&lt;/code&gt; (or just open your favorite terminal app + become root via &lt;code&gt;su&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;logcat -c -b all&lt;/code&gt; (this will print nothing - it will just clear the log buffer)&lt;/li&gt;
+&lt;li&gt;now reproduce the issue. when the issue occurres immediately do this:
+&lt;ul&gt;
+&lt;li&gt;type: &lt;code&gt;logcat -b all -d -D&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;exit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;grab the log by copying the whole console output (yea u might need to scroll a lot up&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;upload the log, see topic &lt;a href="#share-logs"&gt;Share logs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, &amp;hellip;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;unspecific / general issue&lt;span class="hx:absolute hx:-mt-20" id="unspecific--general-issue-1"&gt;&lt;/span&gt;
+&lt;a href="#unspecific--general-issue-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;type: &lt;code&gt;adb shell&lt;/code&gt; (or just open your favorite terminal app + become root via &lt;code&gt;su&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;logcat -b all -d -D&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;type: &lt;code&gt;exit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;grab the log by copying the whole console output (yea u might need to scroll a lot up&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;upload the log, see topic &lt;a href="#share-logs"&gt;Share logs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;always share your model name (e.g. hotdog, pixel 7a, LG G4 H811, &amp;hellip;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Boot logs&lt;span class="hx:absolute hx:-mt-20" id="boot-logs"&gt;&lt;/span&gt;
+&lt;a href="#boot-logs" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;First of all: not every device shares the same path where the special AXP.OS boot logs get and so depends per device.&lt;/p&gt;
+&lt;p&gt;Check the value of &lt;code&gt;[DEVICE-BOOT-DEBUG-PATH]&lt;/code&gt; in the &amp;ldquo;Debugging&amp;rdquo; topic of the &lt;a href="https://axpos.org/devices/"&gt;Installation guide&lt;/a&gt; for your device.&lt;/p&gt;
+&lt;h3&gt;if you can boot &lt;em&gt;(requires root!)&lt;/em&gt;&lt;span class="hx:absolute hx:-mt-20" id="if-you-can-boot-requires-root"&gt;&lt;/span&gt;
+&lt;a href="#if-you-can-boot-requires-root" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;boot Android&lt;/li&gt;
+&lt;li&gt;ensure you have USB debugging enabled in developer options&lt;/li&gt;
+&lt;li&gt;this requires root, you have the following options:
+&lt;ul&gt;
+&lt;li&gt;AXP.OS Pro: &lt;a href="https://axpos.org/docs/guides/setup/aos/#setup-magisk"&gt;activate Magisk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AXP.OS Slim: flash Magisk manually - if you can/want, otherwise check the next topic&lt;/li&gt;
+&lt;li&gt;any other: check if you can enable &lt;code&gt;adb root&lt;/code&gt; in Developer options &lt;em&gt;(requires a &lt;code&gt;USERDEBUG&lt;/code&gt; or &lt;code&gt;ENG&lt;/code&gt; build)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;open a terminal on your PC and execute &lt;em&gt;(replace &lt;a href="https://axpos.org/devices/"&gt;DEVICE-BOOT-DEBUG-PATH&lt;/a&gt; with the real value)&lt;/em&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;for those having &lt;code&gt;adb root&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;adb root
+adb shell&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;for those having &lt;code&gt;Magisk&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;adb shell
+su #(a Magisk prompt should appear in Android which you have to accept)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ol start="5"&gt;
+&lt;li&gt;now do:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;rm -rf /sdcard/Download/logs #(don&amp;#39;t worry if that one fails it might not exist)
+mkdir /sdcard/Download/logs
+cp [DEVICE-BOOT-DEBUG-PATH]/boot_debug/* /sdcard/Download/logs/
+cat /proc/cmdline &amp;gt; /sdcard/Download/logs/more.txt
+cat /proc/bootconfig &amp;gt;&amp;gt; /sdcard/Download/logs/more.txt
+mount &amp;gt;&amp;gt; /sdcard/Download/logs/more.txt
+dmesg &amp;gt;&amp;gt; /sdcard/Download/logs/more.txt
+cd /sdcard/Download/logs/
+tar cvzf ../logs.tgz *
+exit
+adb pull /sdcard/Download/logs.tgz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ol start="6"&gt;
+&lt;li&gt;share the file &lt;code&gt;logs.tgz&lt;/code&gt; you pulled by attaching it to an &lt;a href="https://code.binbash.rocks/AXP.OS-public/issue-tracker"target="_blank" rel="noopener"&gt;issue&lt;/a&gt; or to a related XDA post
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;bonus:&lt;/strong&gt; extract all files from &lt;code&gt;logs.tgz&lt;/code&gt; and attach / paste them one by one (see topic &lt;a href="#share-logs"&gt;Share logs&lt;/a&gt;) instead of the &lt;code&gt;logs.tgz&lt;/code&gt; itself&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5&gt;Early kernel log&lt;span class="hx:absolute hx:-mt-20" id="early-kernel-log"&gt;&lt;/span&gt;
+&lt;a href="#early-kernel-log" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;Sometimes it is also required to get an early kernel log, this is how:&lt;br/&gt;&lt;em&gt;(ensure you walked through the above steps first because this ensures all is properly set up)&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Power off your device&lt;/li&gt;
+&lt;li&gt;start adb on your PC:
+&lt;ul&gt;
+&lt;li&gt;for those having &lt;em&gt;adb root&lt;/em&gt;:&lt;br/&gt;
+&lt;code&gt;adb wait-for-device &amp;amp;&amp;amp; adb root &amp;amp;&amp;amp; adb shell dmesg&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;for those having &lt;em&gt;Magisk&lt;/em&gt;:&lt;br/&gt;
+&lt;code&gt;adb wait-for-device &amp;amp;&amp;amp; adb shell &amp;quot;su -c dmesg&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;connect an USB cable &amp;amp; power on the device&lt;/li&gt;
+&lt;li&gt;share the output, see topic &lt;a href="#share-logs"&gt;Share logs&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;if you can not boot / no root &lt;em&gt;(requires TWRP)&lt;/em&gt;&lt;span class="hx:absolute hx:-mt-20" id="if-you-can-not-boot--no-root-requires-twrp"&gt;&lt;/span&gt;
+&lt;a href="#if-you-can-not-boot--no-root-requires-twrp" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;if you cannot boot or if there is no root available, you have the following options:
+&lt;ul&gt;
+&lt;li&gt;boot TWRP &lt;em&gt;(e.g. &lt;code&gt;fastboot boot twrp.img&lt;/code&gt;)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;install TWRP &lt;em&gt;(some devices won&amp;rsquo;t allow / work with &lt;code&gt;fastboot boot&lt;/code&gt;)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;when in TWRP: ensure that &amp;ldquo;&lt;a href="https://axpos.org/devices/"&gt;DEVICE-BOOT-DEBUG-PATH&lt;/a&gt;&amp;rdquo; is mounted in the &amp;ldquo;Mount&amp;rdquo; menu &lt;em&gt;(if not, mount it by ticking the box)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;open a terminal on your PC and type &lt;em&gt;(replace &lt;a href="https://axpos.org/devices/"&gt;DEVICE-BOOT-DEBUG-PATH&lt;/a&gt; with the real value)&lt;/em&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/crash.txt (don&amp;#39;t worry if that one fails it might not exists)
+adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/full.txt
+adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/full.txt.1 (don&amp;#39;t worry if that one fails it might not exists)
+adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/kernel.txt (don&amp;#39;t worry if that one fails it might not exists)
+adb pull [DEVICE-BOOT-DEBUG-PATH]/boot_debug/selinux.txt (don&amp;#39;t worry if that one fails it might not exists)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;share the log(s) you pulled by a paste service (see &lt;a href="#share-logs"&gt;Share logs&lt;/a&gt;) or create /attach it to &lt;a href="https://code.binbash.rocks/AXP.OS-public/issue-tracker"target="_blank" rel="noopener"&gt;an issue&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Recovery logs (TWRP)&lt;span class="hx:absolute hx:-mt-20" id="recovery-logs-twrp"&gt;&lt;/span&gt;
+&lt;a href="#recovery-logs-twrp" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;minimal (recovery.log)&lt;span class="hx:absolute hx:-mt-20" id="minimal-recoverylog"&gt;&lt;/span&gt;
+&lt;a href="#minimal-recoverylog" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Boot in TWRP and connect an USB cable to your device&lt;/li&gt;
+&lt;li&gt;Re-produce the issue you have&lt;/li&gt;
+&lt;li&gt;Menu: Advanced&lt;/li&gt;
+&lt;li&gt;Menu: Copy Log&lt;/li&gt;
+&lt;li&gt;Click Home button and go to Menu: Mount&lt;/li&gt;
+&lt;li&gt;Ensure MTP is enabled (button at the bottom)&lt;/li&gt;
+&lt;li&gt;Open the file explorer on your PC and go to Sdcard&lt;/li&gt;
+&lt;li&gt;open the file &amp;ldquo;recovery.log&amp;rdquo; in a text editor&lt;/li&gt;
+&lt;li&gt;share the log (see next topic)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Alternative approach:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Boot in TWRP and connect an USB cable to your device&lt;/li&gt;
+&lt;li&gt;Re-produce the issue you have&lt;/li&gt;
+&lt;li&gt;Execute on your PC: &lt;code&gt;adb pull /tmp/recovery.log&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;share the log (see next topic)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;full&lt;span class="hx:absolute hx:-mt-20" id="full"&gt;&lt;/span&gt;
+&lt;a href="#full" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Boot TWRP and connect an USB cable to your device&lt;/li&gt;
+&lt;li&gt;Re-produce the issue you have&lt;/li&gt;
+&lt;li&gt;Then on your PC (requires ADB installed! Check FAQ #3 of this post!!):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;adb shell
+dmesg &amp;gt; /tmp/dmesg.txt
+logcat -d -b all &amp;gt; /tmp/logcat.txt
+cat /proc/last_kmsg &amp;gt; /tmp/kmsg.txt
+exit
+adb pull /tmp/logcat.txt
+adb pull /tmp/kmsg.txt
+adb pull /tmp/recovery.log
+adb pull /tmp/dmesg.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy this"
+aria-label="Copy this"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ol start="4"&gt;
+&lt;li&gt;Open all logs one by one with a text editor like wordpad or similar and paste&lt;/li&gt;
+&lt;li&gt;share the log (see next topic)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Share logs&lt;span class="hx:absolute hx:-mt-20" id="share-logs"&gt;&lt;/span&gt;
+&lt;a href="#share-logs" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When sharing logs or longer texts it is recommended using a so-called &amp;ldquo;paste service&amp;rdquo;. This is useful to keep a forum / chat / issue readable for everyone and it dramatically helps a developer to read the log without saving tons of log files on their phones/PC&amp;rsquo;s.&lt;/p&gt;
+&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;&lt;strong&gt;Logs can contain sensitive information (like phone numbers, location, IP&amp;rsquo;s, WiFi data, etc)!&lt;br/&gt;&lt;/strong&gt;
+In case of Android logs this is almost always the case so it is generally not recommended sharing these in public (exceptions are e.g. &lt;em&gt;specific issue&lt;/em&gt; logs or the &lt;em&gt;early kernel&lt;/em&gt; log).&lt;/p&gt;
+&lt;p&gt;Keep that in mind and if you are unsure, follow the &lt;em&gt;&amp;ldquo;Sensitive log files&amp;rdquo;&lt;/em&gt; topic.&lt;/p&gt;
+&lt;p&gt;In general:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not add several logs into 1 paste. &lt;strong&gt;Always use a separate paste for each log!&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Do not add any &lt;em&gt;additional&lt;/em&gt; filters to the above commands. While you &lt;em&gt;think&lt;/em&gt; that these might be useful, it often enough hides the most relevant information or an important/useful context.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Sensitive log files&lt;span class="hx:absolute hx:-mt-20" id="sensitive-log-files"&gt;&lt;/span&gt;
+&lt;a href="#sensitive-log-files" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;While there are several paste services which can encrypt your data the following is the recommended process for &lt;strong&gt;AXP.OS&lt;/strong&gt; users:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;a href="https://paste.axpos.org/"target="_blank" rel="noopener"&gt;https://paste.axpos.org/&lt;/a&gt; &lt;em&gt;(running on AXP.OS servers)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Set &lt;code&gt;Expires&lt;/code&gt; = &lt;code&gt;1 year&lt;/code&gt; &lt;em&gt;(min. 3 months, keep in mind that you need to provide a new log if selecting a too short time period)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Do &lt;strong&gt;not(!)&lt;/strong&gt; select &amp;ldquo;Burn after reading&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Set a strong password in the &lt;code&gt;Password&lt;/code&gt; field&lt;br/&gt;&lt;em&gt;(and record it for later. Note: it is recommended to use the same password when pasting multiple outputs)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Paste the log into the &lt;code&gt;Editor&lt;/code&gt; frame &lt;em&gt;(remember: 1 paste per log/output)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Click on &lt;code&gt;Create&lt;/code&gt; at the top right&lt;/li&gt;
+&lt;li&gt;Click &lt;code&gt;Copy link&lt;/code&gt; to save your unique link&lt;/li&gt;
+&lt;li&gt;Share that unique link from the previous step where the log was requested&lt;br/&gt;&lt;em&gt;(e.g. in your &lt;a href="https://code.binbash.rocks/AXP.OS-public/issue-tracker/issues"target="_blank" rel="noopener"&gt;issue&lt;/a&gt; or in the &lt;a href="https://axpos.org/Support"&gt;Matrix room&lt;/a&gt;)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Share the password &lt;strong&gt;in private&lt;/strong&gt; only &lt;em&gt;(send the requestor a DM via &lt;a href="https://axpos.org/Support"&gt;Matrix&lt;/a&gt;, do not use the public rooms for this)&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Non-sensitive log files&lt;span class="hx:absolute hx:-mt-20" id="non-sensitive-log-files"&gt;&lt;/span&gt;
+&lt;a href="#non-sensitive-log-files" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Here are some examples (use your fav search engine to find more):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://paste.axpos.org/"target="_blank" rel="noopener"&gt;https://paste.axpos.org/&lt;/a&gt; &lt;em&gt;(running on AXP.OS servers)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://privatebin.at/"target="_blank" rel="noopener"&gt;https://privatebin.at/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hastebin.com/"target="_blank" rel="noopener"&gt;https://hastebin.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://controlc.com/"target="_blank" rel="noopener"&gt;https://controlc.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://privatebin.net/"target="_blank" rel="noopener"&gt;https://privatebin.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pastebin.com/"target="_blank" rel="noopener"&gt;https://pastebin.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/"target="_blank" rel="noopener"&gt;https://gist.github.com/&lt;/a&gt; (no size limit! req. login)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitlab.com/dashboard/snippets"target="_blank" rel="noopener"&gt;https://gitlab.com/dashboard/snippets&lt;/a&gt; (no size limit! req. login)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Always set &lt;code&gt;Expires&lt;/code&gt; = &lt;code&gt;1 year&lt;/code&gt; &lt;em&gt;(min. 3 months, keep in mind that you need to provide a new log if selecting a too short time period)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Please ensure you choose &lt;strong&gt;at least several months&lt;/strong&gt; (better 1 year) because developers have a real life, too and so its uncertain when they might find time to look into it.&lt;/p&gt;
+&lt;p&gt;Once you pasted your text in there you will get an unique &lt;strong&gt;paste URL&lt;/strong&gt; which you then can simply share in the support channel.&lt;/p&gt;</description></item><item><title>Hide Root</title><link>https://axpos.org/docs/guides/hideroot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://axpos.org/docs/guides/hideroot/</guid><description>
+&lt;p&gt;Some applications have very strict requirements before they will work. This affects mostly &lt;strong&gt;&lt;em&gt;banking&lt;/em&gt;&lt;/strong&gt; apps but also some &lt;em&gt;&lt;strong&gt;company&lt;/strong&gt;&lt;/em&gt; apps or apps from your government, etc.&lt;/p&gt;
+&lt;p&gt;The main culprit here is to follow the topics here briefly, really. step by step. If you miss a single step all will fail and of course there is no guarantee it works for all apps - while it does for many.&lt;/p&gt;
+&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;such an app causing issues because of device checks is named &amp;ldquo;&lt;em&gt;trouble-app&lt;/em&gt;&amp;rdquo; in the next topics.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Background&lt;span class="hx:absolute hx:-mt-20" id="background"&gt;&lt;/span&gt;
+&lt;a href="#background" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;There are usually multiple types of checks:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;root&lt;/em&gt; check&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;partly&lt;/strong&gt; covered here: &lt;em&gt;custom OS&lt;/em&gt; check (Insular is often enough to trick some apps)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;not&lt;/strong&gt; covered here: &lt;em&gt;AVB&lt;/em&gt; (&lt;a href="https://source.android.com/docs/security/features/verifiedboot/boot-flow"target="_blank" rel="noopener"&gt;Android verified boot&lt;/a&gt;) state&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;not&lt;/strong&gt; covered here: &lt;em&gt;&lt;a href="https://en.wikipedia.org/wiki/SafetyNet"target="_blank" rel="noopener"&gt;Safetynet&lt;/a&gt; / &lt;a href="https://developer.android.com/google/play/integrity/overview"target="_blank" rel="noopener"&gt;Play integrity/certified&lt;/a&gt; and for &amp;gt;= A13 &lt;a href="https://developer.android.com/google/play/integrity/improvements"target="_blank" rel="noopener"&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The problem is that the implementation in &lt;strong&gt;how&lt;/strong&gt; and how &lt;strong&gt;deep&lt;/strong&gt; they check differs and is of course app dependent. So even though the following guide works for many it may not work for you, i.e. only in situations where the app just checks for the existence of root and simple custom OS checks.&lt;/p&gt;
+&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;p class="hx:flex hx:items-center hx:font-medium"&gt;&lt;svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/&gt;&lt;/svg&gt;Caution&lt;/p&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;For each of those checks which are not covered here Magisk modules may exist:&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;AXP.OS strongly discourages using any of these if you do not want to expose your whole system to a third party. They might work just fine, might don&amp;rsquo;t do any harm and are not suspicious at all but we cannot and will not check or approve any of these modules.&lt;/p&gt;
+&lt;p&gt;Last but not least:&lt;br/&gt;&lt;strong&gt;If your bootloader is in &lt;em&gt;locked&lt;/em&gt; state Magisk modules can even brick your whole device!&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Simple hide&lt;span class="hx:absolute hx:-mt-20" id="simple-hide"&gt;&lt;/span&gt;
+&lt;a href="#simple-hide" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The following is quite easy to use and quickly done but it does not work for all apps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;uninstall your trouble-app (or force close and clear &lt;strong&gt;storage(!)&lt;/strong&gt; - not just the cache)&lt;/li&gt;
+&lt;li&gt;install the trouble-app but do &lt;strong&gt;NOT&lt;/strong&gt; start it yet&lt;/li&gt;
+&lt;li&gt;open Magisk -&amp;gt; &lt;em&gt;settings gear icon&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;select &lt;em&gt;Hide the Magisk app&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;give it a name you easily remember, e.g. &lt;em&gt;SettingsNG&lt;/em&gt; or anything non-suspicious (i.e. &lt;strong&gt;do not&lt;/strong&gt; name it &lt;em&gt;MyRootApp&lt;/em&gt; etc)&lt;/li&gt;
+&lt;li&gt;if you have installed a work-profile manager like &lt;a href="https://f-droid.org/en/packages/com.oasisfeng.island.fdroid/"target="_blank" rel="noopener"&gt;Insular&lt;/a&gt; uninstall the now HIDDEN Magisk app from that work profile (in the App drawer simply search for the &lt;em&gt;hidden custom Magisk app name&lt;/em&gt; you created before -&amp;gt; &lt;code&gt;select work profile apps tab -&amp;gt; long press -&amp;gt; uninstall&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;enable &lt;em&gt;Zygisk&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;enable to &lt;em&gt;force the deny list&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;open the denial list&lt;/li&gt;
+&lt;li&gt;find your trouble-app and select &lt;strong&gt;ALL&lt;/strong&gt; sub-options of that app (if you touch it it opens up)&lt;/li&gt;
+&lt;li&gt;reboot&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Start your trouble-app. If it works now - GREAT! if not don&amp;rsquo;t worry, go on with the next topic&lt;/p&gt;
+&lt;h3&gt;Advanced hide&lt;span class="hx:absolute hx:-mt-20" id="advanced-hide"&gt;&lt;/span&gt;
+&lt;a href="#advanced-hide" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The recommended work profile manager is: &lt;a href="https://f-droid.org/en/packages/com.oasisfeng.island.fdroid/"target="_blank" rel="noopener"&gt;Insular (recommended)&lt;/a&gt;*&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;install &amp;amp; start the work-profile manager to set it up&lt;/li&gt;
+&lt;li&gt;uninstall your trouble-app (or force close and clear &lt;strong&gt;storage(!)&lt;/strong&gt; - not just the cache). yes you have to do that again if you followed the above topic.&lt;/li&gt;
+&lt;li&gt;install the trouble-app but do &lt;strong&gt;NOT&lt;/strong&gt; start it (ever)&lt;/li&gt;
+&lt;li&gt;open Magisk -&amp;gt; &lt;em&gt;settings gear icon&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;select &lt;em&gt;Hide the Magisk app&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;give it a name you easily remember, e.g. &lt;em&gt;SettingsNG&lt;/em&gt; or anything non-suspicious (i.e. &lt;strong&gt;do not&lt;/strong&gt; name it &lt;em&gt;MyRootApp&lt;/em&gt; etc)&lt;/li&gt;
+&lt;li&gt;enable &lt;em&gt;Zygisk&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;enable to &lt;em&gt;force the deny list&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;open the denial list&lt;/li&gt;
+&lt;li&gt;find your trouble-app and select &lt;strong&gt;ALL&lt;/strong&gt; sub-options of that app (if you touch it it opens up)&lt;/li&gt;
+&lt;li&gt;do &lt;strong&gt;NOT&lt;/strong&gt; start the trouble-app! actually you will &lt;strong&gt;NEVER&lt;/strong&gt; start it from here and you can not uninstall** it either!&lt;/li&gt;
+&lt;li&gt;open the work-profile manager Insular&lt;/li&gt;
+&lt;li&gt;in the tab &amp;ldquo;Island&amp;rdquo; find the &lt;em&gt;hidden custom Magisk app name&lt;/em&gt; you created before and remove/uninstall it from there (i.e &lt;strong&gt;NOT&lt;/strong&gt; from Mainland). this has to be done after every AXP.OS upgrade (see topic &amp;ldquo;&lt;em&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;clone the trouble-app into your work profile (&lt;em&gt;Tab &amp;ldquo;Mainland&amp;rdquo; -&amp;gt; select trouble-app -&amp;gt; press &amp;ldquo;+&amp;rdquo; icon&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;in the tab &amp;ldquo;Island&amp;rdquo; find the trouble-app and create a quick start launcher (&lt;em&gt;select -&amp;gt; 3dots -&amp;gt; Create Unfreeze &amp;amp; Launch shortcut&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;place it on your home screen and start it - and &lt;strong&gt;only THAT from now on&lt;/strong&gt; (i.e. &lt;strong&gt;not&lt;/strong&gt; from your main profile)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If it works now - GREAT! but ensure you read the next &lt;em&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;&lt;/em&gt; topic!&lt;/p&gt;
+&lt;p&gt;If it does not work:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It can make sense to try another work-profile manager if the above way fails for you as the app devs are using different techniques.&lt;/li&gt;
+&lt;li&gt;If it still does detect root or a custom OS you either have not followed the above steps briefly or you are out of luck.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;*) &lt;em&gt;examples for other work-profile managers: &lt;a href="https://f-droid.org/en/packages/net.typeblog.shelter/"target="_blank" rel="noopener"&gt;Shelter&lt;/a&gt;, (if you do not care about google trackers: &lt;a href="https://play.google.com/store/apps/details?id=com.oasisfeng.island"target="_blank" rel="noopener"&gt;Island&lt;/a&gt;), or [fill-in-another] ,&amp;hellip;..&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;**) &lt;em&gt;You cannot uninstall the trouble-app from android (ever) because otherwise Magisk hide will not work. so you always need to keep that app(s) but remember: NEVER start it/them!&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;IMPORTANT: AXP.OS updates (Pro flavor)&lt;span class="hx:absolute hx:-mt-20" id="important-axpos-updates-pro-flavor"&gt;&lt;/span&gt;
+&lt;a href="#important-axpos-updates-pro-flavor" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200"&gt;
+&lt;p class="hx:flex hx:items-center hx:font-medium"&gt;&lt;svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/&gt;&lt;/svg&gt;Caution&lt;/p&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Magisk will clone itself into the work profile whenever you select to hide/unhide it. This is absolutely important to know as the root check of an app will for sure check if there is the origin Magisk app installed.&lt;/p&gt;
+&lt;p&gt;That means after every AXP.OS update (where you always should &lt;a href="https://axpos.org/docs/guides/updating/automatic/"&gt;unhide Magisk&lt;/a&gt; before) you have to open your work-profile manager (e.g. Insular) and remove the Magisk version there before you are safe again, so:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;before an AXP.OS upgrade: unhide Magisk, see the next topic &lt;em&gt;Undo hide&lt;/em&gt; (and do not start any apps)&lt;/li&gt;
+&lt;li&gt;do the AXP.OS upgrade&lt;/li&gt;
+&lt;li&gt;after the upgrade: hide Magisk again, remember its name and remove it from the work profile&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Undo hide&lt;span class="hx:absolute hx:-mt-20" id="undo-hide"&gt;&lt;/span&gt;
+&lt;a href="#undo-hide" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;open Magisk -&amp;gt; &lt;em&gt;settings gear icon&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;select &lt;em&gt;Restore the Magisk App&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;if you have installed a work-profile manager like &lt;a href="https://f-droid.org/en/packages/com.oasisfeng.island.fdroid/"target="_blank" rel="noopener"&gt;Insular&lt;/a&gt; uninstall Magisk app from that work profile (in the App drawer simply search for &amp;ldquo;Magisk&amp;rdquo; -&amp;gt; &lt;code&gt;select work profile apps tab -&amp;gt; long press -&amp;gt; uninstall&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;</description></item></channel></rss>
