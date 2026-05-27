@@ -20,12 +20,24 @@ See: [here](/Known-Issues)
 
 ### eSIM management (if supported by device)
 
-eSIM Management is not enabled by default and available on supported devices only:
+eSIM Management is available on supported devices only. Minimum required Android version is:<br/>**AXP.OS 18.1** *(Android 11)*
+
+#### Android >= A15
+
+Devices running AXP.OS 22.2 *(Android 15)* or later will see the app [OpenEUICC](https://gitea.angry.im/PeterCxy/OpenEUICC/) in the app drawer *(also available via `Android settings -> Network&Internet -> SIMs`)* and can use it right away (see *Usage*).
+
+#### Android =< A14
+
+Devices running AXP.OS 18.1 *(Android 11)* - 20.0 *(Android 13)* have to enable eSIM Management manually:
 
 *   `Android Settings -> Security -> "Enable eUICC management"`
 *   Reboot your device.
-*   You should now have an app 'OpenEUICC' in your launcher and you can also use `Android settings -> Network&Internet -> SIMs` to open it.
-*   If it says 'No eUICC found', then you need to tap the top right 3dot and enable "Dual SIM", then reboot.
+*   You should now have an app [OpenEUICC](https://gitea.angry.im/PeterCxy/OpenEUICC/) in your launcher *(you can also use `Android settings -> Network&Internet -> SIMs`)*.
+*   Next: see *Usage*
+
+#### Usage
+
+*   If it says 'No eUICC found', then you need to tap the top right 3dot and enable "Dual SIM", then wait until the modem has restarted.
 *   Tap the add button.
 *   If you received a QR code, then tap the barcode scanner button in top right, and scan it.
 *   If you received only a server and activation code, input it into the respective fields, and tap the checkbox to continue.
